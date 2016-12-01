@@ -1,0 +1,37 @@
+
+- Frontend und Backend in eigenen Jetty Instanzen laufen lassen?
+
+- App->Web anfragen per Callback 
+
+- In wie weit sollen Android, Vaadin und jetty/jersey Klassen die wir verwenden (Erben, Implementieren) beschrieben werden?
+
+- Model View Controller: Pro Teil Produkt eigens beschreiben? Wie sieht das beim Web-Dienst aus (nur Model)?
+
+- Sollen wir auf gängige Entwurfsmuster eingehen oder als bekannt voraussetzen?
+
+- Vorläufige Kapitel:  Architektur — Dateiorganisation(Ordnerstruktur etc..) — Modulübersicht — Klassenübersicht - Sequenzdiagramme/Weitere Darstellungen;  Sollen all diese Kapitel eigene Unterkapitel für App,WebD., WebInterface haben oder sollten App, WebD., WebInterface als Kapitel benannt werden und jeweils oben genannte Kapitel als Sections besitzen?
+
+- Einzelnen Klassen/Methoden beschreiben (Docs mit einfügen)? 
+
+- Davon abgesehen genauere Beschreibungen komplexerer Konstrukte (wie z.B. Skizzen für Ringpufferhandling)?
+
+- Klassenbeschreibungen mit UML Diagrammen + Text oder nur Text und UML in eigenem Kapitel?
+
+- Alle UML Diagramme zusammen auf ein Plakat/Seite packen?
+
+- Wie gut müssen Libraries beschrieben werden? 
+
+- Library für RSA ok?
+
+- Wie realisiert man Versionierung für das Web-Interface und für den Web-Dienst? In URL? In headers?
+
+- An Sprachen denken.. Strings in Frontend dynamisch sprachabhängig laden, aber natürlich nur deutsche Übersetzung hinzufügen.
+
+- Requests an Web-Dienst limitieren?
+
+- Woher bekommen wir die OpenCV Schnittstellenbeschreibung, den Algorithmus den wir einbinden sollen und wie gut sollen wir diesen Teil beschreiben?
+
+- Verwenden wir Binary und stellen OpenCV Schnittstellennutzung bereit oder andersrum / <-> nur eins von beiden realisieren?
+
+REST:-> Das sieht ganz gut aus http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+
