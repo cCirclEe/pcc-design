@@ -1,37 +1,63 @@
 
 - Frontend und Backend in eigenen Jetty Instanzen laufen lassen?
+OK
 
-- App->Web anfragen per Callback 
+- App->Web anfragen per Callback realisieren
 
 - In wie weit sollen Android, Vaadin und jetty/jersey Klassen die wir verwenden (Erben, Implementieren) beschrieben werden?
+Nur den Namen vermerken
 
 - Model View Controller: Pro Teil Produkt eigens beschreiben? Wie sieht das beim Web-Dienst aus (nur Model)?
 
 - Sollen wir auf gängige Entwurfsmuster eingehen oder als bekannt voraussetzen?
+Verwenden in Argumentation
 
 - Vorläufige Kapitel:  Architektur — Dateiorganisation(Ordnerstruktur etc..) — Modulübersicht — Klassenübersicht - Sequenzdiagramme/Weitere Darstellungen;  Sollen all diese Kapitel eigene Unterkapitel für App,WebD., WebInterface haben oder sollten App, WebD., WebInterface als Kapitel benannt werden und jeweils oben genannte Kapitel als Sections besitzen?
+Module als Kapitel, unterkapital verwenden für Details
 
-- Einzelnen Klassen/Methoden beschreiben (Docs mit einfügen)? 
+- Einzelnen Klassen/Methoden beschreiben (Docs mit einfügen)?
+Pro Methode ~ 1 Satz + Klassenbeschreibung
 
 - Davon abgesehen genauere Beschreibungen komplexerer Konstrukte (wie z.B. Skizzen für Ringpufferhandling)?
+Ja, Skizzen und weitere Erklärungen für RP, Verschl., offensichtliches nicht so ausführlich
 
 - Klassenbeschreibungen mit UML Diagrammen + Text oder nur Text und UML in eigenem Kapitel?
+text und sonst. Beschreibungen, UML getrennt.
 
 - Alle UML Diagramme zusammen auf ein Plakat/Seite packen?
+Eigene Entscheidung; In Großübersicht nur Klassennamen
 
 - Wie gut müssen Libraries beschrieben werden? 
+Name reicht
 
 - Library für RSA ok?
+Ja
 
 - Wie realisiert man Versionierung für das Web-Interface und für den Web-Dienst? In URL? In headers?
+Ignorieren
 
 - An Sprachen denken.. Strings in Frontend dynamisch sprachabhängig laden, aber natürlich nur deutsche Übersetzung hinzufügen.
+Android DE+EN, App darf nur Englisch sein. Web -> DE
 
 - Requests an Web-Dienst limitieren?
+Konfigurationssache…
 
 - Woher bekommen wir die OpenCV Schnittstellenbeschreibung, den Algorithmus den wir einbinden sollen und wie gut sollen wir diesen Teil beschreiben?
+Betreuer kümmern sich fürs erste darum
 
 - Verwenden wir Binary und stellen OpenCV Schnittstellennutzung bereit oder andersrum / <-> nur eins von beiden realisieren?
+Schnittstelle vorgezogen
 
 REST:-> Das sieht ganz gut aus http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+Head First Design Patterns…
+
+- Nutzer Authentifizierung: Wie PW auf Android speichern?
+PW auf Client in Klartext
+
+- Fragments in Android..?
+Activites dürften reichen.Aber abwägen…
+
+-Präsentation = Verteidigung?
+Demo + Präs. am Ende; In Präsentation alles rechtfertigen können, aber „Angriff“ der Entwurfsentscheidungen nicht geplant; In Treffen Verteidigung
+
 
