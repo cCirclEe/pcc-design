@@ -1,4 +1,4 @@
-
+﻿
 - Frontend und Backend in eigenen Jetty Instanzen laufen lassen?
 
 - App->Web anfragen per Callback 
@@ -34,4 +34,11 @@
 - Verwenden wir Binary und stellen OpenCV Schnittstellennutzung bereit oder andersrum / <-> nur eins von beiden realisieren?
 
 REST:-> Das sieht ganz gut aus http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+
+- Gibt es empfehlungen für Tools, evtl auch welche die Code erzeugen. Oder wünsche was wir verwenden sollen?
+
+- In welchem Ausmaß Sequenzdiagramme verwenden? Für jeden Testfall (ist das Overkill)? Mehrer Testfälle in 1 Sequenzdiagramm?
+
+- Wie sieht es mit der Datenbank aus? Wie weit soll diese Beschrieben werden? Wie beschreibt man sowas?
+
 
