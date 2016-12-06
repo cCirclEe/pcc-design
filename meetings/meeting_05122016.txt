@@ -60,11 +60,23 @@ Activites dürften reichen.Aber abwägen…
 -Präsentation = Verteidigung?
 Demo + Präs. am Ende; In Präsentation alles rechtfertigen können, aber „Angriff“ der Entwurfsentscheidungen nicht geplant; In Treffen Verteidigung
 
-
 - Gibt es empfehlungen für Tools, evtl auch welche die Code erzeugen. Oder wünsche was wir verwenden sollen?
+Sequenzdiagramm Editor, Draw IO, Enterprise Architect, Star UML, 
+
+
 
 - In welchem Ausmaß Sequenzdiagramme verwenden? Für jeden Testfall (ist das Overkill)? Mehrer Testfälle in 1 Sequenzdiagramm?
+Bei Sinvollen Testfällen. Auch Aktivitätsdiagramme.
+
+
 
 - Wie sieht es mit der Datenbank aus? Wie weit soll diese Beschrieben werden? Wie beschreibt man sowas?
+Datenbank an sich beschreiben und das Schema kein Diagramm.
+
+
+
+Für Anonymisierung: 
+Unterstützung von Ihnen
+
 
 
