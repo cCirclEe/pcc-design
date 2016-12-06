@@ -1,0 +1,4 @@
+1. Tool auswählen einrichten und zum laufen bringen.
+2. Einteilen 3 Teams oder allein 
+   und dann Klassen ausdenken und schonmal aufschreiben für App, Web-Dients und Web-Interface.
+3. Passende Testfälle auswählen für Sequenzdiagramme die zu beginn viel deutlich machen können.
