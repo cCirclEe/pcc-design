@@ -1,0 +1,33 @@
+Account
+- anmelden
+	- registrieren
+	- pruefen, ob registriert
+- verwalten
+	- Datenbankeintraege aendern
+- loeschen
+	- videos loschen
+	- datenbankeintraege loschen
+
+Videodaten
+- hochladen
+	- hab ich zu viel zu tun oder kann ich beginnen?
+	- entschluesseln
+	- persistieren
+	- anonymisieren
+	- abspeichern
+	- Datenbankeintrag hinzufuegen zum Account
+	- Request = SUCCESS\FAIL
+- loeschen
+	- Video loeschen mit Passwortbestaetigung
+	- Datenbankeintrag entfernen
+
+Metadaten auslesen
+
+Datenbank
+	- SQL anfragen sollen funktionieren mit JAVA/Jetty/Jersey 
+
+Mails versenden
+	- verifizierung bei Accountregistrierung
+	- Verifizierungslink??? Wie lange aktiv?
+
+
