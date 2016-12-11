@@ -10,7 +10,7 @@ Account
 
 Videodaten
 - hochladen
-	- hab ich zu viel zu tun oder kann ich beginnen?
+	- hab ich zu viel zu tun oder kann ich beginnen? --> queue
 	- entschluesseln
 	- persistieren
 	- anonymisieren
