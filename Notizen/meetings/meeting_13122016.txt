@@ -1,7 +1,43 @@
-﻿Web-Dienst
+Web-Dienst
 	- Wie soll Datenbank im Klassendiagramm stehen?
 	- Datenbank im Klassendiagramm?????
 	- Mails versenden??? Mit smtp von gmail adresse oder eigener Mail-Server? --> sehr aufwendig, bzw schwer
 	- Wie sollen REST-Anfragen aussehen? variablen in URL? Oder "/" in URL? Oder variablen in der Anfrage???
 	- ServerSicherheit??? SSL? Portzugang? meiner Meinung nach sehr wichtig... aber evtl unnoetig fuer das Projekt..
 
+
+
+- Ringpuffer mit Frame-Bytearray umsetzen
+Persistiere Aufruf nach 30 Sekunden ausführen.
+
+- Observer-Pattern zwischen View-Table(Vaadin) <-> Videomanager(Datenbankabfrage) sinnvoll? Oder einfach Videos direkt per REST Aufruf abfragen und Änderungen ebenso als REST Aufruf abfragen?
+Per REST, Manager dazwischen (siehe nächste Frage)
+
+- „Videomanager“ zwischen Video-Table und Proxy(DB/REST-API) schalten oder direkt auf Proxy zugreifen?
+Manager behalten
+
+- Button-Listener in Vaadin immer neu instanzieren oder einen erstellen und events per switch-case identifizieren?
+Immer neu instanzieren
+
+- UI kann so mächtig bleiben
+
+- Mails per Vaadin senden
+
+- VideoManager auseinanderziehen; ersetzbar designen -> decrypt() in andere Klasse
+
+- Anonymer (Filter) Generischer
+
+- Wie lange dauert Metadaten auslesen aus Header? Schnell genug.
+- Duplizierte Metadaten in eigenes Feld in Tabelle speichern zum optimieren der abfragezeit?
+Android API für Video Metadaten lesen..
+Metadaten in eigene Datei schreiben und an Server übertragen. Nach Anonymisierung in Container schreiben
+
+- Für REST parameter im link übergeben per /PARAM.
+
+- Decrypt -> Key übergeben.
+
+- Alle Videos in einen Ordner
+
+- DB-Proxy oder Persistenz-API für DB
+
+- Metadaten auch Verschlüsseln

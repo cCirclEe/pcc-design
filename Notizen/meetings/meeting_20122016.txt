@@ -1,0 +1,7 @@
+- Permission-Handling in Android 5.0 mit in UML-Diagramme modellieren?
+
+- Private Konstruktoren in Activities?
+
+- Siehe Notiz bei Android UML..
+
+- CustomListAdapter modellieren? Wird das als public class möglich sein?
