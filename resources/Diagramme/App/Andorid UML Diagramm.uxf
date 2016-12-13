@@ -331,9 +331,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
+      <x>400</x>
       <y>10</y>
-      <w>50</w>
+      <w>90</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>SurfaceHolderCallback</panel_attributes>
@@ -344,7 +344,7 @@
     <coordinates>
       <x>550</x>
       <y>10</y>
-      <w>50</w>
+      <w>95</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>CameraPreviewCallback</panel_attributes>
