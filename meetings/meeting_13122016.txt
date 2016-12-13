@@ -1,0 +1,7 @@
+﻿Web-Dienst
+	- Wie soll Datenbank im Klassendiagramm stehen?
+	- Datenbank im Klassendiagramm?????
+	- Mails versenden??? Mit smtp von gmail adresse oder eigener Mail-Server? --> sehr aufwendig, bzw schwer
+	- Wie sollen REST-Anfragen aussehen? variablen in URL? Oder "/" in URL? Oder variablen in der Anfrage???
+	- ServerSicherheit??? SSL? Portzugang? meiner Meinung nach sehr wichtig... aber evtl unnoetig fuer das Projekt..
+
