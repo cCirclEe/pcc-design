@@ -1,0 +1,35 @@
+\newpage
+\subsection{UI extends UI(com.vaadin.ui.UI)}
+Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten. Irgendwas zu Servlet sollte hier noch gesagt werden.
+\begin{itemize}
+\item \subsubsection{Attribute}
+\begin{itemize}
+\item \textbf{background VerticalLayout(com.vaadin.ui.VerticalLayout)} \hfill\\ 
+Der background ist die Grundlage der graphischen Oberfläche des Webinterface. Darauf werden dann die Komponenten für das Menü und für die Ansichten gelegt. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+
+\item \textbf{menuArea VerticalLayout (com.vaadin.ui.VerticalLayout)} \hfill\\ 
+Die menuArea ist die Grundlage für das Menü, in diesen Bereich wird das Menü gelegt. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+
+\item \textbf{contentArea VerticalLayout (com.vaadin.ui.UI)} \hfill\\ 
+Die contentArea ist die Grundlage für die Ansichten, in diesen Bereich werden die Ansichten gelegt. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+
+\item \textbf{menu Menu (com.NOCHFESTLEGEN)} \hfill\\ 
+Das menu bildet die Steuereinheit für den Benutzer. Durch das menu kann der Benutzer zwischen den verschiedenen Ansichten wechseln. Der Navigator wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+
+\item \textbf{navigator Navigator (com.vaadin.navigator.Navigator)} \hfill\\ 
+Der Navigator hat die Aufgabe, zwischen den verschiedenen Ansichten des Webinterface zu wechseln und diese in die contentArea zu laden. Der Navigator wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+
+\end{itemize}
+
+\item \subsubsection{Methoden}
+\begin{itemize}
+\item \textbf{init(VaadinRequest request} \hfill\\ 
+Eingabeparameter: request
+
+Ausgabeparameter:
+
+In dieser Methode wird zuerst die Grundlage für die graphische Oberfläche erzeugt. Dann werden alle graphischen Komponenten, der navigator und das menu erzeugt und initialisiert. Am Schluss wird noch das menu gesetzt und die LoginView angezeigt.
+
+\end{itemize}
+
+\end{itemize}

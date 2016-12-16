@@ -1,5 +1,7 @@
-%\newpage
-%\input{./subtopicsDesign/Klassen/WebInterface/Klasse1}
+\section{Webinterface}
+Das Webinterface Modul dient zur Bedienung des Webinterface. Dieses Modul enthält alle Klassen die zur Funktionalität des Webinterface beitragen. In diesem Modul wurde nach der Model-Präsentator-Anzeige Architektur entworfen. Wobei das Model hier mehr ein Stellvertreter von unserem tatsächlichen Model, dem Web-Dienst, ist. Dieser Stellvertreter übernimmt dann die Kommunikation mit dem Web-Dienst. Den Präsentator bilden die Klassen, Navigator und die Daten Manager. Navigator ist verantwortlich für das wechseln der Ansicht und die Daten Manager, sorgen dafür, dass die Daten in ihren Anzeige Objekten angezeigt werden können. Zuletzt die Anzeige, besteht aus verschiedenen Ansichten und einem Menü, in welchem zwischen den Ansichten gewechselt werden kann. Herzstück ist die Klasse UI, die für die Initialisierung verantwortlich ist und Navigator und das Menü hält.
+\newpage
+\input{./subtopicsDesign/Klassen/WebInterface/UI}
 %\newpage
 %\input{./subtopicsDesign/Klassen/WebInterface/Klasse2}
 %\newpage
