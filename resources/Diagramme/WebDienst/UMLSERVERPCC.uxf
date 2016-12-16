@@ -4,42 +4,30 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1272</x>
-      <y>0</y>
+      <x>996</x>
+      <y>258</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
-    <panel_attributes>ReceiverFassade
+    <panel_attributes>AccountProxy
 --
 
 --
++authenticate()
++register()
++isRegistered()
++delete()
++setEmail()
++setPassword()
+-passwordHasher()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1644</x>
-      <y>468</y>
-      <w>126</w>
-      <h>114</h>
-    </coordinates>
-    <panel_attributes>Account
---
-
---
-login()
-logout()
-register()
-isRegistered()
-delete()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1890</x>
-      <y>462</y>
+      <x>1080</x>
+      <y>606</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -55,24 +43,8 @@ restart()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1572</x>
-      <y>588</y>
-      <w>126</w>
-      <h>114</h>
-    </coordinates>
-    <panel_attributes>AccountManager
---
-
---
-changePassword()
-changeMail()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1890</x>
-      <y>594</y>
+      <x>1218</x>
+      <y>606</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -87,12 +59,12 @@ verify()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1266</x>
-      <y>930</y>
+      <x>1326</x>
+      <y>450</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
-    <panel_attributes>Database
+    <panel_attributes>AccountDatabase
 --
 
 --
@@ -392,104 +364,21 @@ IFileDecryptor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1374</x>
-      <y>456</y>
-      <w>126</w>
+      <x>696</x>
+      <y>258</y>
+      <w>162</w>
       <h>114</h>
     </coordinates>
-    <panel_attributes>VideoManagerDelete
+    <panel_attributes>VideoProxy
 --
-
+account :Account
 --
-+ edit()
-# delete(Video_id):ENUM</panel_attributes>
++getVideoList()
++getMetaData()
++upload(video :File, metaData: File)
++download()
++delete()</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1152</x>
-      <y>456</y>
-      <w>126</w>
-      <h>114</h>
-    </coordinates>
-    <panel_attributes>VideoManagerDownload
---
-
---
-+ edit()
-# download(Video_id):File</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1152</x>
-      <y>696</y>
-      <w>126</w>
-      <h>114</h>
-    </coordinates>
-    <panel_attributes>VideoManagerDownload
---
-Video_id: String
---
-+ download(Video_id):File</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1722</x>
-      <y>588</y>
-      <w>126</w>
-      <h>114</h>
-    </coordinates>
-    <panel_attributes>AccountVerifier
---
-
---
-verifyPassword()
-verifyMail()
-isRegistered()
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1212</x>
-      <y>564</y>
-      <w>18</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1374</x>
-      <y>696</y>
-      <w>126</w>
-      <h>114</h>
-    </coordinates>
-    <panel_attributes>VideoManagerDelete
---
-
---
-+ delete(Video_id):ENUM</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1428</x>
-      <y>564</y>
-      <w>18</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -574,5 +463,48 @@ output: File): boolean</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>48</y>
+      <w>252</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+-email :String
+-passwordHash :String
+--
+&lt;&lt;create&gt;&gt; tempAccount(email :String, passwordHash :String)
++checkUserData()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>366</y>
+      <w>216</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;260.0;340.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1356</x>
+      <y>726</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VideoDatabase
+--
+
+--
+createAccount</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
