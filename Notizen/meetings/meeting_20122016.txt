@@ -5,3 +5,7 @@
 - Siehe Notiz bei Android UML..
 
 - CustomListAdapter modellieren? Wird das als public class möglich sein?
+
+- „…“ for VarArg OK?
+
+- JSON String vom Server zurückgeben? (z.B. bei Video-Info)
