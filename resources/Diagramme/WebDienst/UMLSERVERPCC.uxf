@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>996</x>
-      <y>258</y>
+      <x>1008</x>
+      <y>240</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>606</y>
+      <x>1092</x>
+      <y>588</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -43,8 +43,8 @@ restart()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1218</x>
-      <y>606</y>
+      <x>1230</x>
+      <y>588</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -59,8 +59,8 @@ verify()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1326</x>
-      <y>450</y>
+      <x>1338</x>
+      <y>432</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -74,8 +74,8 @@ createAccount</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>402</x>
-      <y>522</y>
+      <x>414</x>
+      <y>504</y>
       <w>294</w>
       <h>114</h>
     </coordinates>
@@ -93,8 +93,8 @@ _- workingThreads: int_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
-      <y>696</y>
+      <x>264</x>
+      <y>678</y>
       <w>150</w>
       <h>114</h>
     </coordinates>
@@ -110,8 +110,8 @@ privateKey: File, output: File): boolean</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>840</y>
+      <x>480</x>
+      <y>822</y>
       <w>162</w>
       <h>114</h>
     </coordinates>
@@ -130,8 +130,8 @@ output: File): boolean
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>630</y>
+      <x>336</x>
+      <y>612</y>
       <w>138</w>
       <h>78</h>
     </coordinates>
@@ -141,8 +141,8 @@ output: File): boolean
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>444</x>
-      <y>630</y>
+      <x>456</x>
+      <y>612</y>
       <w>102</w>
       <h>78</h>
     </coordinates>
@@ -152,8 +152,8 @@ output: File): boolean
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>462</x>
-      <y>984</y>
+      <x>474</x>
+      <y>966</y>
       <w>174</w>
       <h>114</h>
     </coordinates>
@@ -168,8 +168,8 @@ IAnalyzer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>984</y>
+      <x>660</x>
+      <y>966</y>
       <w>174</w>
       <h>114</h>
     </coordinates>
@@ -184,8 +184,8 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>534</x>
-      <y>948</y>
+      <x>546</x>
+      <y>930</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -195,8 +195,8 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>534</x>
-      <y>948</y>
+      <x>546</x>
+      <y>930</y>
       <w>180</w>
       <h>48</h>
     </coordinates>
@@ -206,8 +206,8 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>462</x>
-      <y>1128</y>
+      <x>474</x>
+      <y>1110</y>
       <w>174</w>
       <h>114</h>
     </coordinates>
@@ -221,8 +221,8 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>1128</y>
+      <x>660</x>
+      <y>1110</y>
       <w>174</w>
       <h>114</h>
     </coordinates>
@@ -236,8 +236,8 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>708</x>
-      <y>1092</y>
+      <x>720</x>
+      <y>1074</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -247,8 +247,8 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>1092</y>
+      <x>534</x>
+      <y>1074</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -258,8 +258,8 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
-      <y>1128</y>
+      <x>264</x>
+      <y>1110</y>
       <w>204</w>
       <h>114</h>
     </coordinates>
@@ -273,8 +273,8 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
-      <y>984</y>
+      <x>264</x>
+      <y>966</y>
       <w>204</w>
       <h>114</h>
     </coordinates>
@@ -289,8 +289,8 @@ IKeyDecryptor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>984</y>
+      <x>12</x>
+      <y>966</y>
       <w>240</w>
       <h>114</h>
     </coordinates>
@@ -305,8 +305,8 @@ IFileDecryptor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
-      <y>942</y>
+      <x>318</x>
+      <y>924</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -316,8 +316,8 @@ IFileDecryptor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>156</x>
-      <y>942</y>
+      <x>168</x>
+      <y>924</y>
       <w>168</w>
       <h>54</h>
     </coordinates>
@@ -327,8 +327,8 @@ IFileDecryptor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>1128</y>
+      <x>12</x>
+      <y>1110</y>
       <w>240</w>
       <h>114</h>
     </coordinates>
@@ -342,8 +342,8 @@ IFileDecryptor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
-      <y>1092</y>
+      <x>318</x>
+      <y>1074</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -353,8 +353,8 @@ IFileDecryptor
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>162</x>
-      <y>1092</y>
+      <x>174</x>
+      <y>1074</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -364,8 +364,8 @@ IFileDecryptor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>258</y>
+      <x>510</x>
+      <y>354</y>
       <w>162</w>
       <h>114</h>
     </coordinates>
@@ -383,8 +383,8 @@ account :Account
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>444</x>
-      <y>630</y>
+      <x>456</x>
+      <y>612</y>
       <w>354</w>
       <h>78</h>
     </coordinates>
@@ -394,8 +394,8 @@ account :Account
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>666</x>
-      <y>696</y>
+      <x>678</x>
+      <y>678</y>
       <w>198</w>
       <h>114</h>
     </coordinates>
@@ -411,8 +411,8 @@ output: File): boolean
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>252</x>
-      <y>834</y>
+      <x>264</x>
+      <y>816</y>
       <w>150</w>
       <h>114</h>
     </coordinates>
@@ -428,8 +428,8 @@ privateKey: File, output: File): boolean</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
-      <y>804</y>
+      <x>318</x>
+      <y>786</y>
       <w>18</w>
       <h>42</h>
     </coordinates>
@@ -439,8 +439,8 @@ privateKey: File, output: File): boolean</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>696</y>
+      <x>480</x>
+      <y>678</y>
       <w>162</w>
       <h>114</h>
     </coordinates>
@@ -456,8 +456,8 @@ output: File): boolean</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>522</x>
-      <y>798</y>
+      <x>534</x>
+      <y>780</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -467,8 +467,8 @@ output: File): boolean</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>816</x>
-      <y>48</y>
+      <x>828</x>
+      <y>30</y>
       <w>252</w>
       <h>114</h>
     </coordinates>
@@ -484,19 +484,19 @@ output: File): boolean</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>366</y>
-      <w>216</w>
-      <h>168</h>
+      <x>558</x>
+      <y>462</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;260.0;340.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1356</x>
-      <y>726</y>
+      <x>1368</x>
+      <y>708</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -505,6 +505,106 @@ output: File): boolean</panel_attributes>
 
 --
 createAccount</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>30</y>
+      <w>366</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VideoProxy
+--
+
+--
++getVideoList(Acc) : JSON
++upload(email: String, password: String, video: InputStream, metdaData: InputStream): boolean
++download(videoIndentificator: String): File
++deleteVideo(): JSON
++getMetdaData(): JSON
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>474</x>
+      <y>30</y>
+      <w>282</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>AccountProxy
+--
+
+--
++setEmail(newAddress: String): JSON
++setPassword(oldPassword: String, newPassword: String): JSON
++login(email: String, pw: String): JSON
++registerUser(email: String, password: String): JSON
++deleteAccount(email: String, pw: String): JSON
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>498</x>
+      <y>198</y>
+      <w>252</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>AccDatabaseManager
+--
+
+--
++setEmail(account: Account, email: String): boolean
++setPassword(account: Account, passwordHash: String): boolean
++authenticate(email: String, passowordHash: String): boolean
++deleteAcc(account: Account): boolean
++register(email: String, passowordHash: String): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>198</y>
+      <w>198</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>VideoDatabaseManager
+--
+
+--
++addVideo(account Account): boolean
++getVideo(videoIndentificator: String): String
++getVideos(account Account): String[]
++deleteVideo(videoIndentificator: String): boolean
++getMetaData(videoIndentificator: String): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>372</y>
+      <w>168</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>AccountManager
+--
+
+--
+_+passwordHasher(String password): String_
+_+checkUserData(Acc): boolean_
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
