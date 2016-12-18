@@ -4,17 +4,125 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>230</x>
-      <y>140</y>
-      <w>190</w>
-      <h>160</h>
+      <x>550</x>
+      <y>150</y>
+      <w>200</w>
+      <h>170</h>
     </coordinates>
-    <panel_attributes>Package 1
+    <panel_attributes>ApplicationLogic
 --
--Content 1
-+Content 2
-bg=gray
++ CameraActivity
++ VideoActivity
++ AppActivity
+# LogInFragment
+# VideosFragment
+# SettingsFragment
+# LegalFragment
+# CameraView 
+bg=blue
 fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>830</x>
+      <y>490</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>MemoryAccess
+--
++ MemoryManager
++ Account
++ Metadata
++ Settings
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>550</x>
+      <y>350</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ApplicationLogic.Camera
+--
++ CameraHandler
+- CompatCameraHandler
+bg=blue
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>830</x>
+      <y>150</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Utils
+--
+
+bg=yellow
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>830</x>
+      <y>230</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Utils.DataStructures
+--
++ RingBuffer 
++ Persistor
+bg=yellow
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>830</x>
+      <y>320</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Utils.Ecryption
+--
++ IEncryptor
++ Encryptor
++ IFileEncryptor
++ IKeyEncryptor
++ RSAEncryptor
++ AESEncryptor
+bg=yellow
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>550</x>
+      <y>500</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ServerConnection
+--
++ ServerProxy
++ IServerResponseCallback
+# WebQueryTask
+bg=gray
+fg=black</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

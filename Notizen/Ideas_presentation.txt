@@ -1,3 +1,4 @@
 Erweiterungsmöglichkeiten aufzeigen, z.B. VideoProcessingChain, Camera2 Api
 Modulübersicht
 Alternative Designs und warum wir sie nicht genommen haben
+Schichtenarchitektur + Zyklischer Graph Aufzeigen
