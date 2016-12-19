@@ -2,7 +2,12 @@
 \section{Model View Presenter (MVP)}
 Beim Design der Privacy Crash Cam wird schnell deutlich, dass eine strikte Trennung zwischen Datenbank, Applikationslogik und Benutzeroberfläche von Vorteil ist. Neben einer übersichtlichen Unterteilung in einzelne Module unterstützt dieses Vorgehen die Austauschbarkeit der einzelnen Module, deren Wiederverwendbarkeit und Plattformunabhängigkeit. Das Model-View-Presenter-Prinzip realisiert diese Trennung und wird auf auf App und Web interface übertragen.\linebreak\par
 
-\includegraphics[scale=0.5]{./resources/Diagramme/overview_mvp.jpg}
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=1\textwidth]{./resources/Diagramme/overview_mvp.jpg}
+\caption{MVP in der Privacy Crash Cam}
+	\label{fig:overview_mvp}
+\end{figure}
 
 Die Model-Rolle wird vom Web-Dienst erfüllt. Dieser bietet eine REST API, die sowohl vom Web Interface als auch von der App per HTTP-Anfragen angesprochen wird. Falls weitere Software entwickelt wird, mit der auf die Datenbank zugeriffen werden soll, soll diese ebenfalls auf die selbe API zugrifen können.\linebreak
 Darüber hanus besitzt die App ein zusätzliches Model-Modul, das den Speicherzugriff regelt.\linebreak\par

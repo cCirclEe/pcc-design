@@ -1,6 +1,16 @@
 \section{Modulübersicht}
-\input{./subtopicsDesign/App/Modules/Presenter}
-\input{./subtopicsDesign/App/Modules/CameraLogic}
+Die App besteht aus vier Modulen, die sich gemäß MVP einer der Rollen Model, View oder Presenter zuordnen lassen. Dabei unterteilen sich komplexere Module in weitere Unterpakete. Die Presenter-Rolle wird durch das ApplicationLogic Modul~\eqref{module:applicationlogic} realisiert. Das Utils-Modul~\eqref{modules:utils} unterstützt es dabei mit grundlegenden Operationen und Datenstrukturen. Als Model agieren die Module ServerAccess~\eqref{modules:serveraccess} und MemoryAccess~\eqref{modules:memoryaccess}. Schaubild \ref{fig:modules_overview} veranschaulicht die Einteilung:
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=1\textwidth]{./resources/Diagramme/App/modules_overview.jpg}
+\caption{Module der Android App}
+	\label{fig:modules_overview}
+\end{figure}
+\newpage
+\input{./subtopicsDesign/App/Modules/ApplicationLogic}
+\newpage
 \input{./subtopicsDesign/App/Modules/MemoryAccess}
-\input{./subtopicsDesign/App/Modules/ServerAccess}
+\newpage
+\input{./subtopicsDesign/App/Modules/ServerConnection}
+\newpage
 \input{./subtopicsDesign/App/Modules/Utils}
