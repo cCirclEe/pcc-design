@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>7</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>518</x>
-      <y>0</y>
-      <w>70</w>
-      <h>21</h>
+      <x>455</x>
+      <y>70</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Activity</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>63</y>
-      <w>147</w>
-      <h>133</h>
+      <x>310</x>
+      <y>115</y>
+      <w>105</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>AppActivity
 --
@@ -33,10 +33,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>378</x>
-      <y>14</y>
-      <w>189</w>
-      <h>63</h>
+      <x>355</x>
+      <y>80</y>
+      <w>135</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>250.0;10.0;250.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
@@ -44,10 +44,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>14</y>
-      <w>21</w>
-      <h>63</h>
+      <x>475</x>
+      <y>80</y>
+      <w>15</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -55,21 +55,21 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>14</y>
-      <w>448</w>
-      <h>63</h>
+      <x>475</x>
+      <y>80</y>
+      <w>265</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;620.0;40.0;620.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;510.0;40.0;510.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>434</x>
-      <y>224</y>
-      <w>70</w>
-      <h>21</h>
+      <x>395</x>
+      <y>230</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Fragment</panel_attributes>
     <additional_attributes/>
@@ -77,10 +77,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>931</x>
-      <y>63</y>
-      <w>196</w>
-      <h>133</h>
+      <x>660</x>
+      <y>115</y>
+      <w>140</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>CameraActivity
 --
@@ -95,10 +95,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>483</x>
-      <y>63</y>
-      <w>147</w>
-      <h>133</h>
+      <x>430</x>
+      <y>115</y>
+      <w>105</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>VideosActivity
 --
@@ -113,10 +113,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>224</x>
-      <y>371</y>
-      <w>203</w>
-      <h>182</h>
+      <x>245</x>
+      <y>335</y>
+      <w>145</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>SettingsFragement
 --
@@ -140,10 +140,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>371</y>
-      <w>203</w>
-      <h>182</h>
+      <x>405</x>
+      <y>335</y>
+      <w>145</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>LegalFragement
 --
@@ -166,10 +166,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>371</y>
-      <w>203</w>
-      <h>182</h>
+      <x>85</x>
+      <y>335</y>
+      <w>145</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>LogInFragment
 --
@@ -189,10 +189,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>343</x>
-      <y>238</y>
-      <w>140</w>
-      <h>147</h>
+      <x>330</x>
+      <y>240</y>
+      <w>100</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>180.0;10.0;180.0;130.0;10.0;130.0;10.0;190.0</additional_attributes>
@@ -200,10 +200,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>238</y>
-      <w>413</w>
-      <h>147</h>
+      <x>135</x>
+      <y>240</y>
+      <w>295</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>570.0;10.0;570.0;130.0;10.0;130.0;10.0;190.0</additional_attributes>
@@ -211,10 +211,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>462</x>
-      <y>238</y>
-      <w>91</w>
-      <h>147</h>
+      <x>415</x>
+      <y>240</y>
+      <w>65</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0;110.0;130.0;110.0;190.0</additional_attributes>
@@ -222,10 +222,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>672</x>
-      <y>371</y>
-      <w>210</w>
-      <h>182</h>
+      <x>565</x>
+      <y>335</y>
+      <w>150</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>VideosFragment
 --
@@ -246,10 +246,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>462</x>
-      <y>238</y>
-      <w>315</w>
-      <h>147</h>
+      <x>415</x>
+      <y>240</y>
+      <w>225</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0;430.0;130.0;430.0;190.0</additional_attributes>
@@ -257,10 +257,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>35</x>
-      <y>189</y>
-      <w>364</w>
-      <h>196</h>
+      <x>110</x>
+      <y>205</y>
+      <w>260</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;260.0;10.0;150.0;500.0;150.0;500.0;10.0</additional_attributes>
@@ -268,10 +268,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>301</x>
-      <y>189</y>
-      <w>98</w>
-      <h>196</h>
+      <x>300</x>
+      <y>205</y>
+      <w>70</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;260.0;10.0;150.0;120.0;150.0;120.0;10.0</additional_attributes>
@@ -279,10 +279,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>378</x>
-      <y>196</y>
-      <w>217</w>
-      <h>189</h>
+      <x>355</x>
+      <y>210</y>
+      <w>155</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>290.0;250.0;290.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
@@ -290,10 +290,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>553</x>
-      <y>189</y>
-      <w>196</w>
-      <h>196</h>
+      <x>480</x>
+      <y>205</y>
+      <w>140</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>260.0;260.0;260.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
@@ -301,16 +301,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1673</x>
-      <y>63</y>
-      <w>266</w>
-      <h>133</h>
+      <x>1195</x>
+      <y>125</y>
+      <w>190</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>CameraView
 --
 - camera: Camera
 --
-+ CameraView(context: Context, attrs: AttributeSet)
++ &lt;&lt;create&gt;&gt; CameraView(context: Context, attrs: AttributeSet)
 + surfaceCreated(holder: SurfaceHolder, format: int, 
 width: int, height: int)
 + surfaceChanged(holder: SurfaceHolder)
@@ -320,10 +320,10 @@ width: int, height: int)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1799</x>
-      <y>0</y>
-      <w>70</w>
-      <h>21</h>
+      <x>1300</x>
+      <y>70</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>SurfaceView</panel_attributes>
     <additional_attributes/>
@@ -331,21 +331,21 @@ width: int, height: int)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1827</x>
-      <y>14</y>
-      <w>21</w>
-      <h>63</h>
+      <x>1320</x>
+      <y>80</y>
+      <w>15</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1673</x>
-      <y>0</y>
-      <w>119</w>
-      <h>21</h>
+      <x>1205</x>
+      <y>70</y>
+      <w>85</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>SurfaceHolder.Callback</panel_attributes>
     <additional_attributes/>
@@ -353,33 +353,33 @@ width: int, height: int)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1764</x>
-      <y>14</y>
-      <w>21</w>
-      <h>63</h>
+      <x>1245</x>
+      <y>80</y>
+      <w>15</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
-      <y>119</y>
-      <w>567</w>
-      <h>28</h>
+      <x>795</x>
+      <y>155</y>
+      <w>410</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 show &gt;</panel_attributes>
-    <additional_attributes>790.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>800.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>707</x>
-      <y>119</y>
-      <w>126</w>
-      <h>21</h>
+      <x>890</x>
+      <y>115</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Sensor</panel_attributes>
     <additional_attributes/>
@@ -387,67 +387,66 @@ show &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>826</x>
-      <y>112</y>
-      <w>119</w>
-      <h>28</h>
+      <x>795</x>
+      <y>115</y>
+      <w>105</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-&lt; listens</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+listens &gt;</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1127</x>
-      <y>385</y>
-      <w>238</w>
-      <h>84</h>
+      <x>1460</x>
+      <y>605</y>
+      <w>205</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>Persister
+    <panel_attributes>Persistor
 --
 
 --
-+ Persistor (memoryManager: MemoryManager)
-+ persistVideo (video: byte[ ][ ], 
-metadata: Metadata)</panel_attributes>
++ &lt;&lt;create&gt;&gt; Persistor (memoryManager: MemoryManager)
++ persistRawVideo (video: byte[ ][ ], metadata: Metadata)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1239</x>
-      <y>350</y>
-      <w>21</w>
-      <h>49</h>
+      <x>950</x>
+      <y>360</y>
+      <w>520</w>
+      <h>205</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;250.0;880.0;250.0;880.0;390.0;1020.0;390.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1750</x>
-      <y>273</y>
-      <w>182</w>
-      <h>133</h>
+      <x>1465</x>
+      <y>745</y>
+      <w>135</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Encryptor
 --
 
 --
-+ encrypt (inFile: File, publicKey: File, 
-encKey: File, outFile: File)</panel_attributes>
++ encrypt (inFile: File, encKey: File, 
+outFile: File)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1743</x>
-      <y>455</y>
-      <w>147</w>
-      <h>133</h>
+      <x>1460</x>
+      <y>930</y>
+      <w>105</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>RSAEncryptor
 --
@@ -460,12 +459,13 @@ outFile: File): SecretKey</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1911</x>
-      <y>455</y>
-      <w>147</w>
-      <h>133</h>
+      <x>1590</x>
+      <y>820</y>
+      <w>105</w>
+      <h>95</h>
     </coordinates>
-    <panel_attributes>AESEncryptor
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IKeyEncryptor
 --
 
 --
@@ -476,44 +476,44 @@ publicKey: File, encKey: File)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1302</x>
-      <y>280</y>
-      <w>462</w>
-      <h>231</h>
+      <x>1435</x>
+      <y>640</y>
+      <w>40</w>
+      <h>125</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
-    <additional_attributes>10.0;270.0;10.0;310.0;600.0;310.0;600.0;10.0;640.0;10.0</additional_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0;10.0;230.0;60.0;230.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1806</x>
-      <y>399</y>
-      <w>21</w>
-      <h>70</h>
+      <x>1505</x>
+      <y>790</y>
+      <w>15</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1806</x>
-      <y>399</y>
-      <w>196</w>
-      <h>63</h>
+      <x>1505</x>
+      <y>790</y>
+      <w>140</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;260.0;60.0;260.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;260.0;40.0;260.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1064</x>
-      <y>574</y>
-      <w>252</w>
-      <h>196</h>
+      <x>845</x>
+      <y>525</y>
+      <w>230</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>MemoryManager
 --
@@ -521,15 +521,21 @@ _- instance: MemoryManager_
 - context: Context
 --
 _+ GetInstance(context: Context): MemoryManager_
-- MemoryManager(context: Context)
-+ saveVideo(video: byte[ ][ ])
-+ saveMetadata(metadata: Metadata)
+- &lt;&lt;create&gt;&gt; MemoryManager(context: Context)
++ saveTempVideo(video: byte[ ][ ]): File
++ saveTempMetadata(metadata: Metadata): File
++ deleteTempData()
++ saveEncryptedSymmetricKey(videoName: String, key: File)
++ saveEncryptedVideo(videoName: String, kvideo: File)
++ saveEncryptedMetadata(videoName: String, metadata: String)
++ saveMetadata(videoName: String, metadata: Metadata)
 + saveAccountData(account: Account)
 + saveSettings(settings: Settings)
-+ getAllVideos(): File[ ]
-+ getVideoFile(name: String): File
++ getAllVideos(): ArrayList&lt;Video&gt;
++ getEncryptedSymmetricKey(videoName: String): File
++ getEncryptedVideo(name: String): File
++ getEncryptedMetadata(videoName: String): File
 + getMetadata(videoName: String): Metadata
-+ getMetadataFile(videoName: String): File
 + getAccountData(): Account
 + getSettings(): Settings</panel_attributes>
     <additional_attributes/>
@@ -537,33 +543,32 @@ _+ GetInstance(context: Context): MemoryManager_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>490</x>
-      <y>679</y>
-      <w>203</w>
-      <h>133</h>
+      <x>435</x>
+      <y>590</y>
+      <w>190</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>ServerProxy
 --
 _- instance: ServerProxy_
 --
 _+ getInstance (): ServerProxy_
-+ upload (video: File, metadata: File, 
-mail: String, password: String, 
+- &lt;&lt;create&gt;&gt; ServerProxy()
++ videoUpload (video: File, metadata: File, 
+account: Account, callback: IServerResponseCallback)
++ authenticateUser (account: Account, 
 callback: IServerResponseCallback)
 + cancelRequest()
-+ authenticateUser (mail: String, 
-password: String, 
-callback: IServerResponseCallback)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>217</x>
-      <y>686</y>
-      <w>217</w>
-      <h>84</h>
+      <x>240</x>
+      <y>590</y>
+      <w>155</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>WebQueryTask&lt;String, Integer, Boolean&gt;
 --
@@ -577,10 +582,10 @@ onPostExecute(result: Boolean)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>217</x>
-      <y>630</y>
-      <w>217</w>
-      <h>21</h>
+      <x>240</x>
+      <y>550</y>
+      <w>155</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>AsyncTask&lt;String, Integer, Boolean&gt;</panel_attributes>
     <additional_attributes/>
@@ -588,10 +593,10 @@ onPostExecute(result: Boolean)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>644</y>
-      <w>21</w>
-      <h>56</h>
+      <x>310</x>
+      <y>560</y>
+      <w>15</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -599,32 +604,32 @@ onPostExecute(result: Boolean)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>637</x>
-      <y>546</y>
-      <w>140</w>
-      <h>147</h>
+      <x>540</x>
+      <y>460</y>
+      <w>100</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;190.0;10.0;80.0;180.0;80.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;260.0;10.0;80.0;180.0;80.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>546</y>
-      <w>483</w>
-      <h>147</h>
+      <x>135</x>
+      <y>460</y>
+      <w>345</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>670.0;190.0;670.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>670.0;260.0;670.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>735</x>
-      <y>700</y>
-      <w>147</w>
-      <h>91</h>
+      <x>240</x>
+      <y>660</y>
+      <w>155</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;
 IServerResponseCallback
@@ -639,17 +644,17 @@ IServerResponseCallback
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1960</x>
-      <y>35</y>
-      <w>280</w>
-      <h>105</h>
+      <x>1080</x>
+      <y>625</y>
+      <w>200</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Account
 --
 - mail: String
 - password: String
 --
-+ Account(mail: String, passwor: String)
++ &lt;&lt;create&gt;&gt; Account(mail: String, passwor: String)
 + setPassword(password: String)
 + setMail(mail: Stirng)
 + getPassword(): String
@@ -659,28 +664,31 @@ IServerResponseCallback
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1960</x>
-      <y>161</y>
-      <w>280</w>
-      <h>91</h>
+      <x>1080</x>
+      <y>710</y>
+      <w>200</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>Metadata
 --
 - date: long
 - triggerType: String
 --
-+ Metadata(date: long, triggerType: String)
++ &lt;&lt;create&gt;&gt; Metadata(date: long, triggerType: String,
+force: Vector3D)
 + getDate(): long
-+ getTriggerType(): String</panel_attributes>
++ getTriggerType(): String
++ getGForce() : Vector3D
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1960</x>
-      <y>273</y>
-      <w>280</w>
-      <h>147</h>
+      <x>845</x>
+      <y>710</y>
+      <w>230</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>Settings
 --
@@ -688,7 +696,7 @@ IServerResponseCallback
 - bufferSize: int
 - resolution: Vector2D
 --
-+ Settings(fps: int, bufferSize: int, resolution: Vector2D)
++ &lt;&lt;create&gt;&gt; Settings(fps: int, bufferSize: int, resolution: Vector2D)
 + setFps(fps: int)
 + setBufferSize(seconds: int)
 + setResolution(resolution: Vector2D)
@@ -700,68 +708,68 @@ IServerResponseCallback
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>875</x>
-      <y>497</y>
-      <w>203</w>
-      <h>140</h>
+      <x>710</x>
+      <y>425</y>
+      <w>145</w>
+      <h>145</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>270.0;180.0;170.0;180.0;170.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>270.0;270.0;170.0;270.0;170.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>105</x>
-      <y>546</y>
-      <w>973</w>
-      <h>140</h>
+      <x>160</x>
+      <y>460</y>
+      <w>695</w>
+      <h>145</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>1370.0;180.0;1230.0;180.0;1230.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>1370.0;270.0;1230.0;270.0;1230.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>287</x>
-      <y>546</y>
-      <w>791</w>
-      <h>119</h>
+      <x>290</x>
+      <y>460</y>
+      <w>565</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>1110.0;150.0;990.0;150.0;990.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>1110.0;240.0;990.0;240.0;990.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>896</x>
-      <y>147</y>
-      <w>182</w>
-      <h>462</h>
+      <x>725</x>
+      <y>205</y>
+      <w>130</w>
+      <h>345</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 read Settings &gt;</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;10.0;10.0;490.0;160.0;490.0;160.0;640.0;240.0;640.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;430.0;160.0;430.0;160.0;670.0;240.0;670.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>826</x>
-      <y>70</y>
-      <w>119</w>
-      <h>35</h>
+      <x>795</x>
+      <y>140</y>
+      <w>105</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-&lt; listens for
-  double tap</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+ listens for &gt;
+double tap</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>707</x>
-      <y>77</y>
-      <w>126</w>
-      <h>21</h>
+      <x>890</x>
+      <y>140</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>View</panel_attributes>
     <additional_attributes/>
@@ -769,10 +777,10 @@ read Settings &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>427</x>
-      <y>714</y>
-      <w>77</w>
-      <h>21</h>
+      <x>390</x>
+      <y>610</y>
+      <w>55</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
@@ -780,45 +788,45 @@ read Settings &gt;</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1393</x>
-      <y>287</y>
-      <w>266</w>
-      <h>91</h>
+      <x>1080</x>
+      <y>300</y>
+      <w>190</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>CompatCameraHandler
 --
 
 --
-+ CompatCameraHandler(context: Context, 
++ &lt;&lt;create&gt;&gt; CompatCameraHandler(context: Context, 
 preview: SurfaceView)
-+ onPreviewFrame(data: byte[ ], 
-camera: Camera)</panel_attributes>
++ onPreviewFrame(data: byte[ ], camera: Camera)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>959</x>
-      <y>273</y>
-      <w>308</w>
-      <h>84</h>
+      <x>770</x>
+      <y>300</y>
+      <w>235</w>
+      <h>65</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
-CameraHandler
+    <panel_attributes>CameraHandler
 --
--context: Context
+- context: Context
+- metadata: Metadata
 --
-+ CameraHandler(context: Context, preview: SurfaceView)
-- startPersisting()</panel_attributes>
++ &lt;&lt;create&gt;&gt; CameraHandler(context: Context, preview: SurfaceView)
++ setMetadata(metadata: Metadata)
++ persist()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>952</x>
-      <y>385</y>
-      <w>147</w>
-      <h>84</h>
+      <x>1460</x>
+      <y>530</y>
+      <w>105</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Ringbuffer&lt;E&gt;
 --
@@ -834,33 +842,33 @@ CameraHandler
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1015</x>
-      <y>350</y>
-      <w>21</w>
-      <h>49</h>
+      <x>940</x>
+      <y>360</y>
+      <w>530</w>
+      <h>265</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0;880.0;270.0;880.0;510.0;1040.0;510.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1512</x>
-      <y>245</y>
-      <w>21</w>
-      <h>56</h>
+      <x>1165</x>
+      <y>280</y>
+      <w>15</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1456</x>
-      <y>231</y>
-      <w>126</w>
-      <h>21</h>
+      <x>1125</x>
+      <y>270</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Camera.PreviewCallback</panel_attributes>
     <additional_attributes/>
@@ -868,33 +876,33 @@ CameraHandler
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1176</x>
-      <y>462</y>
-      <w>21</w>
-      <h>126</h>
+      <x>940</x>
+      <y>500</y>
+      <w>530</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>1040.0;250.0;860.0;250.0;860.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1260</x>
-      <y>315</y>
-      <w>147</w>
-      <h>21</h>
+      <x>1000</x>
+      <y>330</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1540</x>
-      <y>203</y>
-      <w>126</w>
-      <h>21</h>
+      <x>1185</x>
+      <y>250</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>View.OnClickListener</panel_attributes>
     <additional_attributes/>
@@ -902,10 +910,10 @@ CameraHandler
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1386</x>
-      <y>203</y>
-      <w>126</w>
-      <h>21</h>
+      <x>1075</x>
+      <y>250</y>
+      <w>90</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>SensorEventListener</panel_attributes>
     <additional_attributes/>
@@ -913,34 +921,37 @@ CameraHandler
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1589</x>
-      <y>217</y>
-      <w>21</w>
-      <h>84</h>
+      <x>1220</x>
+      <y>260</y>
+      <w>15</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1428</x>
-      <y>217</y>
-      <w>21</w>
-      <h>84</h>
+      <x>1105</x>
+      <y>260</y>
+      <w>15</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1652</x>
-      <y>189</y>
-      <w>105</w>
-      <h>133</h>
+      <x>1265</x>
+      <y>200</y>
+      <w>80</w>
+      <h>125</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
+
+
+
 Provide
 Camera &gt;
 
@@ -951,18 +962,513 @@ Camera &gt;
 
 
 </panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;170.0;10.0;170.0</additional_attributes>
+    <additional_attributes>70.0;10.0;70.0;230.0;10.0;230.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
-      <y>133</y>
-      <w>287</w>
-      <h>175</h>
+      <x>795</x>
+      <y>165</y>
+      <w>295</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
-    <additional_attributes>10.0;10.0;270.0;10.0;270.0;230.0;390.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;450.0;10.0;450.0;300.0;570.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>525</y>
+      <w>200</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Video
+--
+- encVideoFile: File
+- encMetaFile: File
+- readableMetaData: MetaData
+--
++ &lt;&lt;create&gt;&gt; Video(encVideoFile: File, 
+encMetaFile: File, readableMetaFile: File)
++ getMetaData(password: String)
++ getEncMetaFile(): File
++ getEncVideo(): File</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1685</x>
+      <y>615</y>
+      <w>150</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Save video buffer as mpeg4, metadata 
+and key temporarily.
+Save empty files for metadata, video 
+and key.
+Pass these files to Encryprtor
+as destination files. </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1660</x>
+      <y>630</y>
+      <w>35</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1590</x>
+      <y>930</y>
+      <w>105</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>AESEncryptor
+--
+
+--
+encrypt (key: SecretKey, 
+publicKey: File, encKey: File)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1460</x>
+      <y>820</y>
+      <w>105</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IFileEncryptor
+--
+
+--
++ encrypt (inFile: File, 
+outFile: File): SecretKey</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1640</x>
+      <y>910</y>
+      <w>15</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1505</x>
+      <y>910</y>
+      <w>15</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>75</x>
+      <y>90</y>
+      <w>15</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;760.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>75</x>
+      <y>90</y>
+      <w>1435</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;2850.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1495</x>
+      <y>90</y>
+      <w>15</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;750.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>75</x>
+      <y>460</y>
+      <w>1435</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;20.0;1700.0;20.0;2850.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>95</y>
+      <w>65</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>ApplicationLogic
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>510</y>
+      <w>15</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>510</y>
+      <w>15</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>740</y>
+      <w>435</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>850.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>510</y>
+      <w>435</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>850.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>225</x>
+      <y>515</y>
+      <w>70</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>ServerConnection
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1285</x>
+      <y>235</y>
+      <w>15</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>235</y>
+      <w>15</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>235</y>
+      <w>550</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;1080.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>370</y>
+      <w>550</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;1080.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>755</x>
+      <y>240</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>ApplicationLogic.Camera
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1435</x>
+      <y>485</y>
+      <w>35</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>Utils
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1430</x>
+      <y>480</y>
+      <w>435</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>850.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1430</x>
+      <y>1045</y>
+      <w>435</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>850.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1430</x>
+      <y>480</y>
+      <w>15</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;1140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1850</x>
+      <y>480</y>
+      <w>15</w>
+      <h>580</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;1140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1445</x>
+      <y>505</y>
+      <w>400</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>780.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1445</x>
+      <y>670</y>
+      <w>405</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>790.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1445</x>
+      <y>505</y>
+      <w>15</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;340.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1450</x>
+      <y>510</y>
+      <w>75</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>Utils.DataStructures
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1830</x>
+      <y>505</y>
+      <w>15</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;340.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1445</x>
+      <y>715</y>
+      <w>400</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>780.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1445</x>
+      <y>1030</y>
+      <w>400</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>780.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1445</x>
+      <y>715</y>
+      <w>15</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1830</x>
+      <y>715</y>
+      <w>15</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1450</x>
+      <y>720</y>
+      <w>75</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>Utils.Encryption
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>495</y>
+      <w>465</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>910.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>815</y>
+      <w>465</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>910.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>495</y>
+      <w>15</w>
+      <h>335</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;650.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1280</x>
+      <y>495</y>
+      <w>15</w>
+      <h>335</h>
+    </coordinates>
+    <panel_attributes>fg=red</panel_attributes>
+    <additional_attributes>10.0;650.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>835</x>
+      <y>500</y>
+      <w>60</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>MemoryAccess   
+fg=red</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

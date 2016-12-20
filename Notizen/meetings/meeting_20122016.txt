@@ -1,11 +1,23 @@
 - Permission-Handling in Android 5.0 mit in UML-Diagramme modellieren?
+nicht modellieren
 
 - Private Konstruktoren in Activities?
-
-- Siehe Notiz bei Android UML..
+nicht beachten
 
 - CustomListAdapter modellieren? Wird das als public class möglich sein?
+Nein, außer er macht „fancy“ Dinge…
 
-- „…“ for VarArg OK?
+- „…“ for VarArg OK? 
+so lassen
+
+Packages in UML?
+Ja, per Rahmen
 
 - JSON String vom Server zurückgeben? (z.B. bei Video-Info)
+JSON in Ordnung für POJOs und Rückgabeparameter 
+
+Passwort hashen vor dem Übertragen
+
+TLS?
+
+Queue für WebDienst zum zwischenspeichernd der Anfragen

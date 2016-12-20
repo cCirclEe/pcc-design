@@ -52,7 +52,7 @@ fg=black</panel_attributes>
     <panel_attributes>ApplicationLogic.Camera
 --
 + CameraHandler
-- CompatCameraHandler
++ CompatCameraHandler
 bg=blue
 fg=white</panel_attributes>
     <additional_attributes/>
@@ -96,7 +96,7 @@ fg=black</panel_attributes>
       <w>170</w>
       <h>140</h>
     </coordinates>
-    <panel_attributes>Utils.Ecryption
+    <panel_attributes>Utils.Encryption
 --
 + IEncryptor
 + Encryptor
