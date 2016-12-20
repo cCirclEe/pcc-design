@@ -47,6 +47,7 @@
 +Servlet: ???
 --
 +init()
++logout()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -69,8 +70,8 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>1190</y>
+      <x>70</x>
+      <y>1180</y>
       <w>400</w>
       <h>190</h>
     </coordinates>
@@ -78,14 +79,14 @@ send(String to)
 --
 
 --
-downloadVideo(String mail, String videoId)
-deleteVideo(String mail, String: id)
-getMetaInf(String mail, String id): String
-getVideos(String mail, String id): LinkedList
-createAccount(String mail, String password): String
-verifyAccount(String mail, String password): Boolean 
-changeAccount(String mail, String password)
-deleteAccount(String mail, String password)
++ videoDownload(video_id: int, account: Account)
++ videoInfo(video_id: int, account: Account)
++ videoDelete(video_id: int, account: Account)
++ videoListOfUser(account: Account) :String
++ authenticateUser (account: Account)
++ createAccount(account: Account)
++ changeAccount(accountNew: Account, accountOld: Account)
++ deleteAccount(account: Account)
 
 
 
@@ -97,17 +98,18 @@ deleteAccount(String mail, String password)
     <coordinates>
       <x>30</x>
       <y>800</y>
-      <w>400</w>
+      <w>290</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>VideoDataManager
 --
-
+-videoList: String
 --
-downloadVideo(String mail, String: id)
-deleteVideo(String mail, String: id)
-getMetaInf(String mail, String: id): String
-getVideos(): LinkedList
++downloadVideo(video_id: int)
++getMetaInf(video_id: int): String
++deleteVideo(video_id: int)
++getVideoList(): String
+
 
 
 
@@ -133,7 +135,7 @@ getVideos(): LinkedList
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
 -login(String mail, String password)
 -register(String mail, String password)
--updateContent()
+-update()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -147,12 +149,13 @@ getVideos(): LinkedList
     </coordinates>
     <panel_attributes>AccountDataManager
 --
-
+-account: Account
 --
 +createAccount(String mail, String password)
 +verifiyAccount(String mail, String password): Boolean
-+changeAccount(String mail, String password)
-+deleteAccount(String mail, String password)
++changeAccount(String mailNew, String passwordNew)
++deleteAccount()
++getAccount(): Account
 -sendMail(String mail)
 
 
@@ -179,7 +182,7 @@ getVideos(): LinkedList
 -changeButton: BUtton
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--updateContent()
+-update()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -197,7 +200,7 @@ getVideos(): LinkedList
 -videoTable: Table
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--updateContent()
+-update()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -215,7 +218,7 @@ getVideos(): LinkedList
 -Impressum: Label
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--updateContent()
+-update()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -233,7 +236,7 @@ getVideos(): LinkedList
 -Impressum: Label
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--updateContent()
+-update()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -251,7 +254,7 @@ getVideos(): LinkedList
 -privacy: Label
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--updateContent()
+-update()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -335,24 +338,24 @@ getVideos(): LinkedList
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
+      <x>260</x>
       <y>980</y>
-      <w>260</w>
-      <h>230</h>
+      <w>310</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;210.0;10.0;110.0;240.0;110.0;240.0;10.0</additional_attributes>
+    <additional_attributes>10.0;200.0;10.0;110.0;290.0;110.0;290.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>150</x>
       <y>980</y>
-      <w>250</w>
+      <w>140</w>
       <h>130</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;110.0;230.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;120.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -614,5 +617,45 @@ fg=red</panel_attributes>
     <panel_attributes>Mail Service
 fg=red</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>1180</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+-password: String
+-mail: String
+--
++getPassword(): String
++getMail(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>980</y>
+      <w>30</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>890</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
