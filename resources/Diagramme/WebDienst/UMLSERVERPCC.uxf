@@ -285,14 +285,15 @@ output: File): boolean</panel_attributes>
       <x>1115</x>
       <y>140</y>
       <w>215</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Account
 --
 -email :String
 -passwordHash :String
 --
-&lt;&lt;create&gt;&gt; tempAccount(email :String, passwordHash :String)</panel_attributes>
+&lt;&lt;create&gt;&gt; Account(email :String, password :String)
+- passwordHasher(password :String) :String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -308,11 +309,11 @@ output: File): boolean</panel_attributes>
 - account :Account
 --
 &lt;&lt;create&gt;&gt; AccountManager(account :Account)
-+getVideoList(Account :)  :String
-+upload(email: String, password: String, video: InputStream, metdaData: InputStream): boolean
-+download(videoIndentificator: String): File
-+deleteVideo(): String
-+getMetdaData(): String</panel_attributes>
++getVideoList() :String
++upload(video: InputStream, metdaData: InputStream): String
++download(video_id: int): File
++deleteVideo(video_id :int): String
++getMetdaData(): Stringvideo_id :int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -352,14 +353,14 @@ account :Account
 --
 &lt;&lt;create&gt;&gt; AccountManager()
 +addVideo(): boolean
-+getVideo(videoIndentificator: String): String
++getVideo(video_id: int): String
 +getVideoList(): String[]
-+deleteVideo(videoIndentificator: int): boolean
-+getMetaData(videoIndentificator: int): String
++deleteVideo(video_id: int): boolean
++getMetaData(video_id: int): String
 +setEmail(newMail: String): boolean
 +setPassword(newPasswordHash: String): boolean
 +authenticate(): boolean
-+deleteAcc(): boolean
++deleteAccount(): boolean
 +getAccount(mail :String) :Account
 +register(): boolean
 </panel_attributes>
@@ -378,7 +379,6 @@ account :Account
 
 --
 _+authenticate(account :Account) :AccountVerificationStatus_
-_+passwordHasher(password :String) :String_
 _+isExisting(account :Account) :boolean_
 </panel_attributes>
     <additional_attributes/>
