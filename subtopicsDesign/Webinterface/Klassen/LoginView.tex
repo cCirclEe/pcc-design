@@ -1,0 +1,70 @@
+\newpage
+\subsection{LoginView extends VerticalLayout implements View}
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Die LoginView wird bei jedem Start des Webinterface angezeigt oder nach einem Logout. Nach erfolgreichem Login leitet sie diese Information an eine übergeordnete Komponente weiter.
+
+\begin{itemize}
+\item \subsubsection{Attribute}
+\begin{itemize}
+\item \textbf{viewId String} \hfill\\ 
+Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
+
+\item \textbf{mailField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+Ein einfaches Eingabefeld zur Eingabe der Mail Adresse.
+
+\item \textbf{passwordField TextField (com.vaadin.ui.TextField)} \hfill\\
+Ein einfaches Eingabefeld zur Eingabe des Passworts.
+
+\item \textbf{loginButton Button (com.vaadin.ui.Button)} \hfill\\
+Dieser Button sendet Mail Adresse und Passwort an den AccountManager zum verifizieren.
+
+\item \textbf{registerButton Button (com.vaadin.ui.Button)} \hfill\\
+Dieser Button sendet Mail Adresse und Passwort an den Account Manager zum erzeugen eines neuen Accounts.
+
+\end{itemize}
+
+\item \subsubsection{Methoden}
+\begin{itemize}
+\item \textbf{enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)}\hfill\\
+Type: public
+
+Eingabeparameter: viewChangeEvent
+
+Ausgabeparameter:
+
+Diese Methode wird immer bei eintreten der View aufgerufen.
+
+
+
+\item \textbf{login(String mail, String password) :Boolean} \hfill\\ 
+Type: private
+
+Eingabeparameter: mail, password
+
+Ausgabeparameter: Boolean
+
+Diese Methode wird vom loginButton aufgerufen. Sie sendet mail und password and den AccountManager zur Überprüfung, bei Erfolg wird true zurückgegeben.
+
+
+
+\item \textbf{register(String mail, String password) :Boolean}\hfill\\
+Type: private
+
+Eingabeparameter: mail, password
+
+Ausgabeparameter: Boolean
+
+Diese Methode wird vom registerButton aufgerufen. Sie sendet mail und password and den AccountManager zur Erstellung eines Accounts, bei Erfolg wird true zurückgegeben.
+
+
+
+\item \textbf{update()} \hfill\\ 
+Type: public
+
+Eingabeparameter:
+
+Ausgabeparameter:
+
+Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
+\end{itemize}
+
+\end{itemize}

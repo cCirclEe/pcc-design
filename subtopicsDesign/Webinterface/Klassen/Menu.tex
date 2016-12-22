@@ -1,6 +1,6 @@
 \newpage
 \subsection{UI extends UI(com.vaadin.ui.UI)}
-Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten.
+Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten. Irgendwas zu Servlet sollte hier noch gesagt werden.
 \begin{itemize}
 \item \subsubsection{Attribute}
 \begin{itemize}
@@ -23,9 +23,7 @@ Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu
 
 \item \subsubsection{Methoden}
 \begin{itemize}
-\item \textbf{init(VaadinRequest request)} \hfill\\
-Type: protected
-
+\item \textbf{init(VaadinRequest request)} \hfill\\ 
 Eingabeparameter: request
 
 Ausgabeparameter:
@@ -33,8 +31,6 @@ Ausgabeparameter:
 In dieser Methode wird zuerst die Grundlage für die graphische Oberfläche erzeugt. Dann werden alle graphischen Komponenten, der navigator und das menu erzeugt und initialisiert. Am Schluss wird noch die LoginView angezeigt.
 
 \item \textbf{logout()} \hfill\\ 
-Type: public
-
 Eingabeparameter:
 
 Ausgabeparameter:

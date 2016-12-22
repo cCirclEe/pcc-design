@@ -1,0 +1,51 @@
+\newpage
+\subsection{AccountView extends VerticalLayout implements View}
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zur Anzeige der aktuellen Accountdaten und zum Durchführen von Änderungen an diesen.
+
+\begin{itemize}
+\item \subsubsection{Attribute}
+\begin{itemize}
+\item \textbf{viewId String} \hfill\\ 
+Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
+
+\item \textbf{mailLabel Label (com.vaadin.ui.Label)} \hfill\\ 
+Dieses Label dient zur anzeige der derzeit gültigen Mail Adresse des aktuell eingeloggten Accounts.
+
+\item \textbf{passwordChangeField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+In diesem Eingabe Feld kann bei Wunsch zur Änderung des Passwortes ein neues Passwort eingegeben werden.
+
+\item \textbf{passwordField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+Für alle gewünschten Änderungen muss hier das aktuell aktive Passwort Eingegeben werden.
+
+\item \textbf{mailChangeField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+In diesem Eingabe Feld kann bei Wunsch zur Änderung der Mail Adresse eine neue eingegeben werden
+
+\item \textbf{changeButton Button (com.vaadin.ui.Button)} \hfill\\
+Durch drücken dieses Buttons werden die Änderungsdaten an den AccountManager zur Bearbeitung geschickt.
+
+\end{itemize}
+
+\item \subsubsection{Methoden}
+\begin{itemize}
+\item \textbf{enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)}\hfill\\
+Type: public
+
+Eingabeparameter: viewChangeEvent
+
+Ausgabeparameter:
+
+Diese Methode wird immer bei eintreten der View aufgerufen.
+
+
+
+\item \textbf{update()} \hfill\\ 
+Type: public
+
+Eingabeparameter:
+
+Ausgabeparameter:
+
+Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
+\end{itemize}
+
+\end{itemize}

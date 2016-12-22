@@ -1,0 +1,39 @@
+\newpage
+\subsection{PrivacyView extends VerticalLayout implements View}
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View hat nur die Aufgabe, die Datenschutzinformationen anzuzeigen.
+
+\begin{itemize}
+\item \subsubsection{Attribute}
+\begin{itemize}
+\item \textbf{viewId String} \hfill\\ 
+Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
+
+\item \textbf{impressum Label)} \hfill\\ 
+Dieses Label wird verwendet um die Datenschutzinformationen anzuzeigen.
+
+\end{itemize}
+
+\item \subsubsection{Methoden}
+\begin{itemize}
+\item \textbf{enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)}\hfill\\
+Type: public
+
+Eingabeparameter: viewChangeEvent
+
+Ausgabeparameter:
+
+Diese Methode wird immer bei eintreten der View aufgerufen.
+
+
+
+\item \textbf{update()} \hfill\\ 
+Type: public
+
+Eingabeparameter:
+
+Ausgabeparameter:
+
+Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
+\end{itemize}
+
+\end{itemize}

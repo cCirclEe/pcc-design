@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>4</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>556</y>
-      <w>128</w>
-      <h>76</h>
+      <x>665</x>
+      <y>685</y>
+      <w>160</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>Menu
 --
@@ -23,10 +23,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>504</y>
-      <w>124</w>
-      <h>12</h>
+      <x>665</x>
+      <y>620</y>
+      <w>155</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>Navigator</panel_attributes>
     <additional_attributes/>
@@ -34,17 +34,16 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>884</x>
-      <y>388</y>
-      <w>84</w>
-      <h>76</h>
+      <x>690</x>
+      <y>475</y>
+      <w>105</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>UI
 --
 -background: Layout
 -contentArea: Layout
 -menuArea: Layout
-+Servlet: ???
 --
 +init()
 +logout()
@@ -54,10 +53,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>684</x>
-      <y>568</y>
-      <w>84</w>
-      <h>32</h>
+      <x>440</x>
+      <y>700</y>
+      <w>105</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>MailService
 --
@@ -70,23 +69,23 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>444</y>
-      <w>160</w>
-      <h>76</h>
+      <x>145</x>
+      <y>545</y>
+      <w>200</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>ServerProxy [IN BEARBEITUNG]
 --
 
 --
-+ videoDownload(video_id: int, account: Account)
-+ videoInfo(video_id: int, account: Account)
-+ videoDelete(video_id: int, account: Account)
++ videoDownload(video_id: int, account: Account) :Response
++ videoInfo(video_id: int, account: Account) :String
++ videoDelete(video_id: int, account: Account) :String
 + videoListOfUser(account: Account) :String
-+ authenticateUser (account: Account)
-+ createAccount(account: Account)
-+ changeAccount(accountNew: Account, accountOld: Account)
-+ deleteAccount(account: Account)
++ authenticateUser (account: Account) :String
++ createAccount(account: Account) :String
++ changeAccount(accountNew: Account, accountOld: Account) :String
++ deleteAccount(account: Account) :String
 
 
 
@@ -96,19 +95,19 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>136</y>
-      <w>116</w>
-      <h>76</h>
+      <x>125</x>
+      <y>160</y>
+      <w>145</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>VideoDataManager
 --
--videoList: String
+-videos: String[]
 --
 +downloadVideo(video_id: int)
-+getMetaInf(video_id: int): String
++getMetaInf(video_id: int) :String
 +deleteVideo(video_id: int)
-+getVideoList(): String
++getVideoList(): String[]
 
 
 
@@ -119,10 +118,10 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1096</x>
-      <y>412</y>
-      <w>176</w>
-      <h>76</h>
+      <x>970</x>
+      <y>460</y>
+      <w>220</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>LoginView
 --
@@ -133,27 +132,27 @@ send(String to)
 -registerButton: Button
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--login(String mail, String password)
--register(String mail, String password)
--update()
+-login(String mail, String password) :Boolean
+-register(String mail, String password) :Boolean
++update()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>608</x>
-      <y>160</y>
-      <w>160</w>
-      <h>76</h>
+      <x>310</x>
+      <y>190</y>
+      <w>235</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>AccountDataManager
 --
 -account: Account
 --
-+createAccount(String mail, String password)
-+verifiyAccount(String mail, String password): Boolean
-+changeAccount(String mailNew, String passwordNew)
++createAccount(String mail, String password) :String
++verifiyAccount(String mail, String password) Boolean
++changeAccount(String password, String mailNew, String passwordNew)
 +deleteAccount()
 +getAccount(): Account
 -sendMail(String mail)
@@ -167,10 +166,10 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1096</x>
-      <y>332</y>
-      <w>176</w>
-      <h>76</h>
+      <x>970</x>
+      <y>360</y>
+      <w>220</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>AccountView
 --
@@ -179,38 +178,37 @@ send(String to)
 -passwordChangeField: TextField
 -passwordField: TextField
 -mailChangeField: TextField
--changeButton: BUtton
+-changeButton: Button
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--update()
++update()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1096</x>
-      <y>252</y>
-      <w>176</w>
-      <h>76</h>
+      <x>970</x>
+      <y>260</y>
+      <w>220</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>VideoView
 --
 -viewId: String
--videoTable: Table
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--update()
++update()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1096</x>
-      <y>492</y>
-      <w>176</w>
-      <h>76</h>
+      <x>970</x>
+      <y>560</y>
+      <w>220</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>ImpressumView
 --
@@ -218,35 +216,17 @@ send(String to)
 -Impressum: Label
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--update()
++update()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1096</x>
-      <y>172</y>
-      <w>176</w>
-      <h>76</h>
-    </coordinates>
-    <panel_attributes>ImpressumView
---
--viewId: String
--Impressum: Label
---
-+enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--update()
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1096</x>
-      <y>572</y>
-      <w>176</w>
-      <h>76</h>
+      <x>970</x>
+      <y>660</y>
+      <w>220</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>PrivacyView
 --
@@ -254,17 +234,17 @@ send(String to)
 -privacy: Label
 --
 +enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)
--update()
++update()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1284</x>
-      <y>172</y>
-      <w>108</w>
-      <h>12</h>
+      <x>1205</x>
+      <y>120</y>
+      <w>135</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>View</panel_attributes>
     <additional_attributes/>
@@ -272,10 +252,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1268</x>
-      <y>208</y>
-      <w>80</w>
-      <h>16</h>
+      <x>1185</x>
+      <y>305</y>
+      <w>100</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
@@ -283,10 +263,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1268</x>
-      <y>288</y>
-      <w>80</w>
-      <h>16</h>
+      <x>1185</x>
+      <y>395</y>
+      <w>100</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
@@ -294,10 +274,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1268</x>
-      <y>360</y>
-      <w>80</w>
-      <h>16</h>
+      <x>1185</x>
+      <y>495</y>
+      <w>100</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
@@ -305,10 +285,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1268</x>
-      <y>440</y>
-      <w>80</w>
-      <h>16</h>
+      <x>1185</x>
+      <y>600</y>
+      <w>100</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
@@ -316,32 +296,21 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1268</x>
-      <y>524</y>
-      <w>80</w>
-      <h>16</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1268</x>
-      <y>180</y>
-      <w>80</w>
-      <h>444</h>
+      <x>1185</x>
+      <y>130</y>
+      <w>100</w>
+      <h>595</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>180.0;10.0;180.0;1090.0;10.0;1090.0</additional_attributes>
+    <additional_attributes>180.0;10.0;180.0;1090.0;10.0;1170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>524</x>
-      <y>232</y>
-      <w>124</w>
-      <h>220</h>
+      <x>240</x>
+      <y>280</y>
+      <w>155</w>
+      <h>275</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;530.0;10.0;440.0;290.0;440.0;290.0;10.0</additional_attributes>
@@ -349,10 +318,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>208</y>
-      <w>56</w>
-      <h>208</h>
+      <x>185</x>
+      <y>250</y>
+      <w>70</w>
+      <h>260</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;10.0;500.0;120.0;500.0</additional_attributes>
@@ -360,21 +329,21 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>764</x>
-      <y>188</y>
-      <w>340</w>
-      <h>168</h>
+      <x>540</x>
+      <y>225</y>
+      <w>440</w>
+      <h>165</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0;100.0;400.0;830.0;400.0</additional_attributes>
+    <additional_attributes>10.0;10.0;610.0;10.0;610.0;310.0;860.0;310.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>748</x>
-      <y>232</y>
-      <w>12</w>
-      <h>344</h>
+      <x>520</x>
+      <y>280</y>
+      <w>15</w>
+      <h>430</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;840.0;10.0;10.0</additional_attributes>
@@ -382,43 +351,32 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>144</y>
-      <w>560</w>
-      <h>168</h>
+      <x>265</x>
+      <y>170</y>
+      <w>715</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;690.0;10.0;690.0;400.0;1380.0;400.0</additional_attributes>
+    <additional_attributes>10.0;10.0;1410.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>964</x>
-      <y>424</y>
-      <w>140</w>
-      <h>196</h>
+      <x>790</x>
+      <y>520</y>
+      <w>190</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>330.0;470.0;260.0;470.0;260.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>360.0;380.0;290.0;300.0;290.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1064</x>
-      <y>528</y>
-      <w>40</w>
-      <h>12</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1064</x>
-      <y>452</y>
-      <w>40</w>
-      <h>12</h>
+      <x>930</x>
+      <y>605</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
@@ -426,10 +384,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1064</x>
-      <y>380</y>
-      <w>40</w>
-      <h>12</h>
+      <x>930</x>
+      <y>510</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
@@ -437,10 +395,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1064</x>
-      <y>292</y>
-      <w>40</w>
-      <h>12</h>
+      <x>930</x>
+      <y>420</y>
+      <w>50</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
@@ -448,21 +406,21 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1064</x>
-      <y>212</y>
-      <w>40</w>
-      <h>224</h>
+      <x>930</x>
+      <y>295</y>
+      <w>50</w>
+      <h>365</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0;10.0;540.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0;10.0;710.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
-      <y>504</y>
-      <w>32</w>
-      <h>12</h>
+      <x>815</x>
+      <y>620</y>
+      <w>40</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
@@ -470,10 +428,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>964</x>
-      <y>440</y>
-      <w>52</w>
-      <h>164</h>
+      <x>790</x>
+      <y>540</y>
+      <w>65</w>
+      <h>205</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>70.0;390.0;110.0;390.0;110.0;10.0;10.0;10.0</additional_attributes>
@@ -481,10 +439,10 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>884</x>
-      <y>364</y>
-      <w>84</w>
-      <h>12</h>
+      <x>690</x>
+      <y>445</y>
+      <w>105</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>UI</panel_attributes>
     <additional_attributes/>
@@ -492,10 +450,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>920</x>
-      <y>372</y>
-      <w>12</w>
-      <h>24</h>
+      <x>735</x>
+      <y>455</y>
+      <w>15</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
@@ -503,10 +461,10 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>524</y>
-      <w>124</w>
-      <h>12</h>
+      <x>665</x>
+      <y>645</y>
+      <w>155</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>HorizontalLayout</panel_attributes>
     <additional_attributes/>
@@ -514,10 +472,10 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>924</x>
-      <y>532</y>
-      <w>12</w>
-      <h>32</h>
+      <x>740</x>
+      <y>655</y>
+      <w>15</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -525,28 +483,28 @@ send(String to)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>656</x>
-      <y>444</y>
-      <w>84</w>
-      <h>44</h>
+      <x>405</x>
+      <y>545</y>
+      <w>105</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Account
 --
 -password: String
 -mail: String
 --
-+getPassword(): String
-+getMail(): String
++getPassword() :String
++getMail() :String
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>692</x>
-      <y>232</y>
-      <w>12</w>
-      <h>220</h>
+      <x>450</x>
+      <y>280</y>
+      <w>15</w>
+      <h>275</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;530.0;10.0;10.0</additional_attributes>
@@ -554,21 +512,21 @@ send(String to)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>172</y>
-      <w>72</w>
-      <h>12</h>
+      <x>265</x>
+      <y>205</y>
+      <w>55</w>
+      <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>832</x>
-      <y>144</y>
-      <w>568</w>
-      <h>512</h>
+      <x>635</x>
+      <y>95</y>
+      <w>710</w>
+      <h>720</h>
     </coordinates>
     <panel_attributes>Gui
 fg=red</panel_attributes>
@@ -577,10 +535,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>668</x>
-      <y>544</y>
-      <w>112</w>
-      <h>68</h>
+      <x>420</x>
+      <y>670</y>
+      <w>140</w>
+      <h>85</h>
     </coordinates>
     <panel_attributes>MailService
 fg=red</panel_attributes>
@@ -589,10 +547,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>420</x>
-      <y>108</y>
-      <w>360</w>
-      <h>160</h>
+      <x>110</x>
+      <y>125</y>
+      <w>450</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>ApplicationLogic
 fg=red</panel_attributes>
@@ -601,10 +559,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>852</x>
-      <y>484</y>
-      <w>180</w>
-      <h>156</h>
+      <x>650</x>
+      <y>595</y>
+      <w>225</w>
+      <h>195</h>
     </coordinates>
     <panel_attributes>Gui.Navigation
 fg=red</panel_attributes>
@@ -613,13 +571,56 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>424</x>
-      <y>280</y>
-      <w>364</w>
-      <h>260</h>
+      <x>115</x>
+      <y>340</y>
+      <w>455</w>
+      <h>325</h>
     </coordinates>
     <panel_attributes>ServerConnection
 fg=red</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>375</y>
+      <w>140</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;230.0;260.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>125</y>
+      <w>220</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>VideoTable
+--
+-downloadButtonList :LiinkedList
+-infoButtonList: LinkedList
+-deleteButtonList: LinkedList
+-videos: LinkedList
+--
+-prepareVideos()
+-prepareButtons()
++update()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1070</x>
+      <y>215</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
 </diagram>
