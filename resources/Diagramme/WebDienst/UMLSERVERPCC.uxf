@@ -5,14 +5,14 @@
 // fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
 
 // This is a diagram for the Server in our PCC Design phase</help_text>
-  <zoom_level>5</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>880</y>
-      <w>160</w>
-      <h>95</h>
+      <x>532</x>
+      <y>1253</y>
+      <w>224</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>Anonymizer
 --
@@ -29,10 +29,10 @@ output: File): boolean
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>1000</y>
-      <w>140</w>
-      <h>95</h>
+      <x>532</x>
+      <y>1421</y>
+      <w>196</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IAnalyzer
@@ -45,10 +45,10 @@ IAnalyzer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
-      <y>1000</y>
-      <w>145</w>
-      <h>95</h>
+      <x>742</x>
+      <y>1421</y>
+      <w>203</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IFilter
@@ -61,10 +61,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>435</x>
-      <y>970</y>
-      <w>15</w>
-      <h>40</h>
+      <x>609</x>
+      <y>1379</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -72,10 +72,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>435</x>
-      <y>970</y>
-      <w>150</w>
-      <h>40</h>
+      <x>609</x>
+      <y>1379</y>
+      <w>210</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0;280.0;40.0;280.0;60.0</additional_attributes>
@@ -83,10 +83,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>1120</y>
-      <w>140</w>
-      <h>95</h>
+      <x>532</x>
+      <y>1589</y>
+      <w>196</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>ConcreteAnalyzer
 --
@@ -98,10 +98,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>530</x>
-      <y>1120</y>
-      <w>145</w>
-      <h>95</h>
+      <x>742</x>
+      <y>1589</y>
+      <w>203</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>ConcreteAnonymizer
 --
@@ -113,10 +113,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>1090</y>
-      <w>15</w>
-      <h>40</h>
+      <x>812</x>
+      <y>1547</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -124,10 +124,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>425</x>
-      <y>1090</y>
-      <w>15</w>
-      <h>40</h>
+      <x>595</x>
+      <y>1547</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -135,10 +135,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>205</x>
-      <y>1000</y>
-      <w>170</w>
-      <h>95</h>
+      <x>287</x>
+      <y>1421</y>
+      <w>238</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>RSADecryptor
 --
@@ -150,10 +150,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>850</y>
-      <w>15</w>
-      <h>40</h>
+      <x>343</x>
+      <y>1211</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -161,10 +161,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
-      <y>850</y>
-      <w>140</w>
-      <h>40</h>
+      <x>168</x>
+      <y>1211</y>
+      <w>196</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>260.0;10.0;260.0;40.0;10.0;40.0;10.0;60.0</additional_attributes>
@@ -173,9 +173,9 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>1000</y>
-      <w>195</w>
-      <h>95</h>
+      <y>1421</y>
+      <w>273</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>AESDecryptor
 --
@@ -187,10 +187,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>545</x>
-      <y>760</y>
-      <w>165</w>
-      <h>95</h>
+      <x>763</x>
+      <y>1085</y>
+      <w>231</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>Persistor
 --
@@ -203,10 +203,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>760</y>
-      <w>175</w>
-      <h>95</h>
+      <x>280</x>
+      <y>1085</y>
+      <w>245</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>
 Decryptor
@@ -221,10 +221,10 @@ encMeta: File, decVid: File): boolean</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>760</y>
-      <w>160</w>
-      <h>95</h>
+      <x>532</x>
+      <y>1085</y>
+      <w>224</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 IAnonymizer
@@ -238,10 +238,10 @@ IAnonymizer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>425</x>
-      <y>850</y>
-      <w>15</w>
-      <h>40</h>
+      <x>595</x>
+      <y>1211</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -249,26 +249,27 @@ IAnonymizer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
-      <y>120</y>
-      <w>215</w>
-      <h>110</h>
+      <x>1477</x>
+      <y>189</y>
+      <w>301</w>
+      <h>147</h>
     </coordinates>
     <panel_attributes>Account
 --
 -email :String
 -passwordHash :String
 --
-&lt;&lt;create&gt;&gt; Account(email :String, passwordHash :String)</panel_attributes>
+&lt;&lt;create&gt;&gt; Account(json :String)
+-passwordHasher(password :String) :String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>245</y>
-      <w>310</w>
-      <h>95</h>
+      <x>462</x>
+      <y>364</y>
+      <w>434</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>VideoManager
 --
@@ -276,19 +277,20 @@ IAnonymizer
 --
 &lt;&lt;create&gt;&gt; AccountManager(account :Account)
 +getVideoList() :String
-+upload(video: InputStream, metaData: InputStream, encryptedSymmetricKey :String): String
++upload(video: InputStream, metaData: InputStream,
+encryptedSymmetricKey :String, response :AsyncResponse): String
 +download(videoId: int): File
 +deleteVideo(videoId :int): String
-+getMetdaData(videoId :int): String</panel_attributes>
++getMetadata(videoId :int): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>775</x>
-      <y>120</y>
-      <w>255</w>
-      <h>105</h>
+      <x>1085</x>
+      <y>189</y>
+      <w>357</w>
+      <h>147</h>
     </coordinates>
     <panel_attributes>AccountManager
 --
@@ -297,21 +299,20 @@ IAnonymizer
 &lt;&lt;create&gt;&gt; AccountManager(account :Account)
 +setMail(newMail: String): String
 +setPassword(newPassword: String): String
-+getAccountData(): String
++isAccountExisting(mail: String): boolean
 +registerAccount(): String
 +deleteAccount(): String
-
-
++authenticate() :AccountVerificationStatus
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>775</x>
-      <y>245</y>
-      <w>255</w>
-      <h>150</h>
+      <x>1085</x>
+      <y>364</y>
+      <w>357</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>DatabaseManager
 --
@@ -319,45 +320,26 @@ account :Account
 --
 &lt;&lt;create&gt;&gt; DatabaseManager()
 +saveAnonymizedVideo(File file): boolean
-+getVideo(videoId: int): String
-+getVideoList(): String[]
++getVideo(videoId: int): Video
++getVideoList(): ArrayList&lt;Video&gt;
 +deleteVideo(videoId: int): boolean
-+getMetaData(videoId: int): String
++getMetadata(videoId: int): Metadata
 +setEmail(newMail: String): boolean
 +setPassword(newPasswordHash: String): boolean
 +authenticate(): boolean
 +deleteAccount(): boolean
-+getAccount(mail :String) :Account
++isAccountExisting(mail :String) :boolean
 +register(): boolean
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>775</x>
-      <y>0</y>
-      <w>255</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>AccountVerifyer
---
-
---
-_+authenticate(account :Account) :AccountVerificationStatus_
-_+isExisting(account :Account) :boolean_
-_+passwordHasher(password :String) :String_
-
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>635</x>
-      <y>275</y>
-      <w>150</w>
-      <h>15</h>
+      <x>889</x>
+      <y>406</y>
+      <w>210</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>280.0;10.0;10.0;10.0</additional_attributes>
@@ -365,10 +347,10 @@ _+passwordHasher(password :String) :String_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>540</y>
-      <w>240</w>
-      <h>65</h>
+      <x>462</x>
+      <y>777</y>
+      <w>336</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>VideoProcessingChain
 --
@@ -378,35 +360,24 @@ _+passwordHasher(password :String) :String_
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>695</x>
-      <y>40</y>
-      <w>90</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>365</x>
-      <y>0</y>
-      <w>335</w>
-      <h>135</h>
+      <x>511</x>
+      <y>21</y>
+      <w>469</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>ServerProxy
 --
 - account :Account
 --
 + videoUpload (video: InputStream, metadata: InputStream, 
-encryptedSymmetricKey :String, accountData :String) :String
-+ videoDownload(videoId :int, accountData :String) :File
+encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :String
++ videoDownload(videoId :int, accountData :String) :Response
 + videoInfo(videoId :int, accountData :String) :String
 + videoDelete(videoId :int, accountData :String) :String
 + videoListOfUser(accountData :String) :String
-+ authenticateAccpunt(accountData :String) :String
++ authenticateAccount(accountData :String) :String
 + createAccount(accountData :String) :String
 + changeAccount(accountDataNew :String, accountData :String) :String
 + deleteAccount(accountData :String) :String
@@ -419,10 +390,10 @@ encryptedSymmetricKey :String, accountData :String) :String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>130</y>
-      <w>15</w>
-      <h>125</h>
+      <x>630</x>
+      <y>203</y>
+      <w>21</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
@@ -430,10 +401,10 @@ encryptedSymmetricKey :String, accountData :String) :String
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>130</y>
-      <w>335</w>
-      <h>45</h>
+      <x>630</x>
+      <y>203</y>
+      <w>469</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>650.0;70.0;10.0;70.0;10.0;10.0</additional_attributes>
@@ -441,10 +412,10 @@ encryptedSymmetricKey :String, accountData :String) :String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
-      <y>0</y>
-      <w>155</w>
-      <h>110</h>
+      <x>1554</x>
+      <y>21</y>
+      <w>217</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enumeration&gt;&gt;
 AccountVerificationStatus
@@ -457,10 +428,10 @@ WRONG_MAIL</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>220</y>
-      <w>15</w>
-      <h>35</h>
+      <x>1246</x>
+      <y>329</y>
+      <w>21</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
@@ -468,21 +439,10 @@ WRONG_MAIL</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1025</x>
-      <y>35</y>
-      <w>50</w>
-      <h>255</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;490.0;80.0;490.0;80.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>450</x>
-      <y>335</y>
-      <w>15</w>
-      <h>45</h>
+      <x>630</x>
+      <y>490</y>
+      <w>21</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -490,10 +450,10 @@ WRONG_MAIL</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>370</y>
-      <w>240</w>
-      <h>125</h>
+      <x>462</x>
+      <y>539</y>
+      <w>336</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>VideoProcessingManager
 --
@@ -504,7 +464,7 @@ WRONG_MAIL</panel_attributes>
 --
 + VideoProcessingManager(poolSize: int, queueSize: int)
 + addTask(video: InputSteam, metadata: InputStream, 
-key: InputStream, account: Account): String
+key: InputStream, account: Account, response :AsyncResponse): String
 + shutdown()
 
 - createEditingContext(account: Account): EditingContext
@@ -517,10 +477,10 @@ key: InputStream, context: EditingContext);
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>490</y>
-      <w>15</w>
-      <h>60</h>
+      <x>630</x>
+      <y>707</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
@@ -528,10 +488,10 @@ key: InputStream, context: EditingContext);
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>325</x>
-      <y>655</y>
-      <w>255</w>
-      <h>60</h>
+      <x>455</x>
+      <y>938</y>
+      <w>357</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IStage
@@ -544,10 +504,10 @@ IStage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>370</y>
-      <w>255</w>
-      <h>125</h>
+      <x>56</x>
+      <y>539</y>
+      <w>357</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>EditingContext
 --
@@ -566,10 +526,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>405</y>
-      <w>50</w>
-      <h>15</h>
+      <x>406</x>
+      <y>588</y>
+      <w>70</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
@@ -577,10 +537,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>600</y>
-      <w>15</w>
-      <h>65</h>
+      <x>630</x>
+      <y>861</y>
+      <w>21</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
@@ -588,10 +548,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>710</y>
-      <w>15</w>
-      <h>60</h>
+      <x>630</x>
+      <y>1015</y>
+      <w>21</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -599,10 +559,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>710</y>
-      <w>190</w>
-      <h>60</h>
+      <x>630</x>
+      <y>1015</y>
+      <w>266</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0;360.0;50.0;360.0;100.0</additional_attributes>
@@ -610,10 +570,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>285</x>
-      <y>710</y>
-      <w>180</w>
-      <h>60</h>
+      <x>399</x>
+      <y>1015</y>
+      <w>252</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>340.0;10.0;340.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
@@ -621,10 +581,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>205</x>
-      <y>880</y>
-      <w>165</w>
-      <h>95</h>
+      <x>287</x>
+      <y>1253</y>
+      <w>231</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>IKeyDecryptor
 --
@@ -637,9 +597,9 @@ decVid: File, decMetadata: File, account: Account)
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>880</y>
-      <w>195</w>
-      <h>95</h>
+      <y>1253</y>
+      <w>273</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>IFileDecryptor
 --
@@ -651,10 +611,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
-      <y>970</y>
-      <w>15</w>
-      <h>40</h>
+      <x>168</x>
+      <y>1379</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -662,10 +622,10 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>970</y>
-      <w>15</w>
-      <h>40</h>
+      <x>343</x>
+      <y>1379</y>
+      <w>21</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -673,12 +633,48 @@ decVid: File, decMetadata: File, account: Account)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>705</x>
-      <y>390</y>
-      <w>205</w>
-      <h>415</h>
+      <x>987</x>
+      <y>567</y>
+      <w>287</w>
+      <h>581</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>390.0;10.0;390.0;810.0;10.0;810.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1477</x>
+      <y>364</y>
+      <w>301</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Video
+--
+-videoId :int
+-videoName :String
+--
+&lt;&lt;create&gt;&gt; Video(videoId :int, videoName :String)
++getAsJson(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1330</x>
+      <y>616</y>
+      <w>301</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Metadata
+--
+-date :String
+-triggerType :String
+-gForce: Vector3D
+
+--
+&lt;&lt;create&gt;&gt; Metadata(info1 :String, info2 :String, info3 :String)
++getAsJson(): String</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
