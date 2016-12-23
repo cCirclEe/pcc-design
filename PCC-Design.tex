@@ -70,7 +70,7 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 	\fancyfoot[LE,RO]{\thepage}
 
 
-\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{2}
 \makeglossaries
 \begin{document}
 \include{./subtopicsDesign/Deckblatt}
@@ -83,16 +83,37 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 \include{./subtopicsDesign/Architektur}
 
 % PUT APP CONTENT HERE
-\include{./subtopicsDesign/App/Architektur}
-\include{./subtopicsDesign/App/Datenhaltung}
-\include{./subtopicsDesign/App/Moduluebersicht}
-\include{./subtopicsDesign/App/Klassenuebersicht}
+\label{chap:app}\chapter{App} 
+
+\begin{figure}[ht]
+	\centering
+\includegraphics[width=1\textwidth]{./resources/Diagramme/App/UMLAndroidApp.jpg}
+\caption{Großübersicht Android App}
+	\label{fig:UMLAndoidApp}
+\end{figure}
+
+\input{./subtopicsDesign/App/Architektur}
+\input{./subtopicsDesign/App/Datenhaltung}
+\input{./subtopicsDesign/App/Moduluebersicht}
+\input{./subtopicsDesign/App/Klassenuebersicht}
 
 % PUT WEB SERVICE CONTENT HERE
+\label{chap:app}\chapter{Web-Service}
+
+\input{./subtopicsDesign/Webservice/Architektur}
+\input{./subtopicsDesign/Webservice/Datenhaltung}
+\input{./subtopicsDesign/Webservice/Moduluebersicht}
+\input{./subtopicsDesign/Webservice/Klassenuebersicht}
 
 
 % PUT WEB INTERFACE CONTENT HERE
-\include{./subtopicsDesign/WebInterface/MainWebInterface}
+\label{chap:app}\chapter{Web-Interface}
+
+\input{./subtopicsDesign/Webinterface/Architektur}
+\input{./subtopicsDesign/Webinterface/Moduluebersicht}
+\input{./subtopicsDesign/Webinterface/Klassenuebersicht}
+
+%PUT ATTACHMENTS HERE
 \include{./subtopicsDesign/Anhang}
 
 %end content

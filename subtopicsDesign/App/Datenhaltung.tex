@@ -2,12 +2,7 @@
 Die App muss sich um die verwaltung von Accountdaten, Einstellungen, Videos, Metadated und symmetrischen Schlüsseln kümmern. Für Accountdaten und  Einstllungen bieten sich die von Android bereit gestllten SharedPreferences an, die als Key-Value-Pairs aufgebaut werden. Das Schema ist in Schaubild \ref{fig:sharedpreferences_overview} veranschaulicht. Der Key entspricht den Daten die abgefragt werden sollen, also Einstellungen oder Account. Die gelesenen Werte bestehen jeweils aus einem String im JSON Format. Dadurch erreicht man eine Bündelung aller zusammengehörender Werte unter einem Key und unterstützt die Änderbarkeit und Ergänzbarkeit bestehender Daten.\newline\par
 
 Möchte man in zukunft Beispielsweise das ``fps''-Feld der Einstellungen entfernen, reicht es, den Konstruktor der Einstellungen-Klasse~\eqref{app:class:settings} das fps-Feld nicht mehr lesen zu lassen und den bisherigen JSON String zu überschreiben. So vermeidet man eine Konvention für die Key-Wahl einführen zu müssen, zum Beispiel ``account.name'' oder ``settings.fps''. Eine solche Vorgehensweise kann auch leicht zu verwirrung Führen, da man aus der selben SharedPreferences-Instanz direkt Daten von zwei nicht zusammenhängenden Typen lesen müsste. Für jeden Typ eigene SharedPreferences anzulegen würde die Lesbarkeit nach dem Hinzufügen weiterer Typen ebenfalls erschweren.
-\begin{figure}[ht]
-	\centering
-\includegraphics[width=1\textwidth]{./resources/Diagramme/App/sharedpreferences_overview.jpg}
-\caption{Key-Value-Pairs der SharedPreferences}
-	\label{fig:sharedpreferences_overview}
-\end{figure}
+
 Videos, Metadated und symmetrische Schlüssel können jedoch nicht so einfach in den SharedPreferences abgespeichert werden. Hier gibt es zwei Lösungen: Entweder man speichert sie im internen oder im externen Speicher. Wir werden die erste Variante wählen, wenn auch wir uns die möglichkeit zum Exportieren der Daten in den externen Speicher frei halten werden. Behält man aber eine Referenz auf diese in den den SharedPreferences, hat man keine Chance mehr an die Daten zu kommen, nachdem der Nutzer alle appinterne Daten gelöscht hat.\newline
 Aus diesem Grund muss die Abfrage der Videos, Metadaten und Schlüssel ohne verwendung der SharedPreferences erfolgen. Dazu existieren drei Ordner: Ein Video-, ein Metadata- und ein Keyordner. Jedes Video erhält einen eindeutigen Namen, bestehend aus der exakten Aufnahmezeit. Jede mit diesem Video verwandte Datei, also dessen Metadaten und Schlüssel, besitzen den gleichen Dateinamen.\newline
 
