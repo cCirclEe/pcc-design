@@ -1,36 +1,36 @@
 \newpage
-\subsection{VideoView extends VerticalLayout implements View}
+\subsection{VideoView}
+\textbf{extends}  VerticalLayout \newline
+\textbf{implements} View \newline
 Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zum Anzeigen der Videos, die ein Benutzer mit seiner App hochgeladen hat. Zur Anzeige selbst lädt diese Klasse einen VideoTable.
+\newline
 
+\underline{Attribute}
 \begin{itemize}
-\item \subsubsection{Attribute}
-\begin{itemize}
-\item \textbf{viewId String} \hfill\\ 
+\itemsep0pt
+\item \textbf{viewId: String} \hfill\\ 
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
 \end{itemize}
 
-\item \subsubsection{Methoden}
+\underline{Konstruktoren}
 \begin{itemize}
-\item \textbf{enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)}\hfill\\
-Type: public
+\itemsep0pt
+\item \textbf{VideoView()} \hfill\\
+Standardkonstruktor
+\end{itemize}
 
-Eingabeparameter: viewChangeEvent
-
-Ausgabeparameter:
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
 Diese Methode wird immer bei eintreten der View aufgerufen.
 
-
-
-\item \textbf{update()} \hfill\\ 
-Type: public
-
-Eingabeparameter:
-
-Ausgabeparameter:
+\item \textbf{update (parameter: void): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
 Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
-\end{itemize}
 
 \end{itemize}

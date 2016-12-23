@@ -1,51 +1,52 @@
 \newpage
-\subsection{AccountView extends VerticalLayout implements View}
-Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zur Anzeige der aktuellen Accountdaten und zum Durchführen von Änderungen an diesen.
+\subsection{AccountView}
+\textbf{extends}  VerticalLayout \newline
+\textbf{implements} View \newline
 
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zur Anzeige der aktuellen Accountdaten und zum Durchführen von Änderungen an diesen.
+\newline
+
+\underline{Attribute}
 \begin{itemize}
-\item \subsubsection{Attribute}
-\begin{itemize}
-\item \textbf{viewId String} \hfill\\ 
+\itemsep0pt
+\item \textbf{viewId: String} \hfill\\ 
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
-\item \textbf{mailLabel Label (com.vaadin.ui.Label)} \hfill\\ 
+\item \textbf{mailLabel: Label} \hfill\\ 
 Dieses Label dient zur anzeige der derzeit gültigen Mail Adresse des aktuell eingeloggten Accounts.
 
-\item \textbf{passwordChangeField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+\item \textbf{passwordChangeField: TextField} \hfill\\ 
 In diesem Eingabe Feld kann bei Wunsch zur Änderung des Passwortes ein neues Passwort eingegeben werden.
 
-\item \textbf{passwordField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+\item \textbf{passwordField: TextField} \hfill\\ 
 Für alle gewünschten Änderungen muss hier das aktuell aktive Passwort Eingegeben werden.
 
-\item \textbf{mailChangeField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+\item \textbf{mailChangeField: TextField} \hfill\\ 
 In diesem Eingabe Feld kann bei Wunsch zur Änderung der Mail Adresse eine neue eingegeben werden
 
-\item \textbf{changeButton Button (com.vaadin.ui.Button)} \hfill\\
+\item \textbf{changeButton: Button} \hfill\\
 Durch drücken dieses Buttons werden die Änderungsdaten an den AccountManager zur Bearbeitung geschickt.
-
 \end{itemize}
 
-\item \subsubsection{Methoden}
+\underline{Konstruktoren}
 \begin{itemize}
-\item \textbf{enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)}\hfill\\
-Type: public
+\itemsep0pt
+\item \textbf{AccountView()} \hfill\\
+Standardkonstruktor
+\end{itemize}
 
-Eingabeparameter: viewChangeEvent
 
-Ausgabeparameter:
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
 Diese Methode wird immer bei eintreten der View aufgerufen.
 
-
-
-\item \textbf{update()} \hfill\\ 
-Type: public
-
-Eingabeparameter:
-
-Ausgabeparameter:
+\item \textbf{update (parameter: void): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
 Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
-\end{itemize}
 
 \end{itemize}

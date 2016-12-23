@@ -1,70 +1,59 @@
 \newpage
-\subsection{LoginView extends VerticalLayout implements View}
+\subsection{LoginView}
+\textbf{extends}  VerticalLayout \newline
+\textbf{implements} View \newline
 Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Die LoginView wird bei jedem Start des Webinterface angezeigt oder nach einem Logout. Nach erfolgreichem Login leitet sie diese Information an eine übergeordnete Komponente weiter.
+\newline
 
+\underline{Attribute}
 \begin{itemize}
-\item \subsubsection{Attribute}
-\begin{itemize}
-\item \textbf{viewId String} \hfill\\ 
+\itemsep0pt
+\item \textbf{viewId: String} \hfill\\ 
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
-\item \textbf{mailField TextField (com.vaadin.ui.TextField)} \hfill\\ 
+\item \textbf{mailField: TextField} \hfill\\ 
 Ein einfaches Eingabefeld zur Eingabe der Mail Adresse.
 
-\item \textbf{passwordField TextField (com.vaadin.ui.TextField)} \hfill\\
+\item \textbf{passwordField: TextField} \hfill\\
 Ein einfaches Eingabefeld zur Eingabe des Passworts.
 
-\item \textbf{loginButton Button (com.vaadin.ui.Button)} \hfill\\
+\item \textbf{loginButton: Button} \hfill\\
 Dieser Button sendet Mail Adresse und Passwort an den AccountManager zum verifizieren.
 
-\item \textbf{registerButton Button (com.vaadin.ui.Button)} \hfill\\
+\item \textbf{registerButton: Button} \hfill\\
 Dieser Button sendet Mail Adresse und Passwort an den Account Manager zum erzeugen eines neuen Accounts.
 
 \end{itemize}
 
-\item \subsubsection{Methoden}
+\underline{Konstruktoren}
 \begin{itemize}
-\item \textbf{enter(ViewChangeListener.ViewChangeEvent viewChangeEvent)}\hfill\\
-Type: public
+\itemsep0pt
+\item \textbf{LoginView()} \hfill\\
+Standardkonstruktor
+\end{itemize}
 
-Eingabeparameter: viewChangeEvent
-
-Ausgabeparameter:
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
 Diese Methode wird immer bei eintreten der View aufgerufen.
 
+\item \textbf{update (parameter: void): void}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
 
 
-\item \textbf{login(String mail, String password) :Boolean} \hfill\\ 
-Type: private
-
-Eingabeparameter: mail, password
-
-Ausgabeparameter: Boolean
+\item \textbf{login (mail: String, password: String) :Boolean} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
 Diese Methode wird vom loginButton aufgerufen. Sie sendet mail und password and den AccountManager zur Überprüfung, bei Erfolg wird true zurückgegeben.
 
-
-
-\item \textbf{register(String mail, String password) :Boolean}\hfill\\
-Type: private
-
-Eingabeparameter: mail, password
-
-Ausgabeparameter: Boolean
+\item \textbf{register (mail: String, password: String) :Boolean}\hfill\\
+\textbf{Sichtbarkeit} private
 
 Diese Methode wird vom registerButton aufgerufen. Sie sendet mail und password and den AccountManager zur Erstellung eines Accounts, bei Erfolg wird true zurückgegeben.
-
-
-
-\item \textbf{update()} \hfill\\ 
-Type: public
-
-Eingabeparameter:
-
-Ausgabeparameter:
-
-Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
-\end{itemize}
 
 \end{itemize}

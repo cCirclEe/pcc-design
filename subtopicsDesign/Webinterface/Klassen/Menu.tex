@@ -1,42 +1,41 @@
 \newpage
-\subsection{UI extends UI(com.vaadin.ui.UI)}
-Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten. Irgendwas zu Servlet sollte hier noch gesagt werden.
+\subsection{Menu}
+\textbf{extends}  HorizontalLayout \newline
+
+Das Menu stellt die Buttons bereit, die benötigt werden um den Benutzer zwischen den verschiedenen Ansichten wechseln zu lassen. Dazu kommt noch der Logout Button, über den man zurück zum Login gelangt.
+\newline
+
+\underline{Attribute}
 \begin{itemize}
-\item \subsubsection{Attribute}
-\begin{itemize}
-\item \textbf{background VerticalLayout(com.vaadin.ui.VerticalLayout)} \hfill\\ 
-Der background ist die Grundlage der graphischen Oberfläche des Webinterface. Auf den background werden entweder menuArea und contentArea gelegt, oder beim login die LoginView[VERLINKEN] Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\itemsep0pt
 
-\item \textbf{menuArea VerticalLayout (com.vaadin.ui.VerticalLayout)} \hfill\\ 
-Die menuArea ist die Grundlage für das Menü. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{menuItemLayout: Layout} \hfill\\ 
+In dieses Layout werden neu erstellte Menu Items hinzugefügt.
 
-\item \textbf{contentArea VerticalLayout (com.vaadin.ui.UI)} \hfill\\ 
-Die contentArea ist die Grundlage für die Ansichten. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{userMenu: MenuBar} \hfill\\ 
+Eine Referenz auf das userMenu.
 
-\item \textbf{menu Menu (com.NOCHFESTLEGEN)} \hfill\\ 
-Das menu bildet die Steuereinheit für den Benutzer. Der Navigator[VERLINKEN] wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
-
-\item \textbf{navigator Navigator (com.vaadin.navigator.Navigator)} \hfill\\ 
-Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu laden. Der Navigator wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{ui: UI} \hfill\\ 
+Eine Referenz auf die ui in der das Menu liegt. Wird verwendet um den Navigator aufzurufen und den Logout durchzuführen.
 
 \end{itemize}
 
-\item \subsubsection{Methoden}
+\underline{Methoden}
 \begin{itemize}
-\item \textbf{init(VaadinRequest request)} \hfill\\ 
-Eingabeparameter: request
+\itemsep0pt
+\item \textbf{addMenuItem (caption: String, viewId: String): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
-Ausgabeparameter:
+Diese Methode dient zum Einfügen neuer Menüeinträge, die einen Ansichtswechsel verursachen sollen.
 
-In dieser Methode wird zuerst die Grundlage für die graphische Oberfläche erzeugt. Dann werden alle graphischen Komponenten, der navigator und das menu erzeugt und initialisiert. Am Schluss wird noch die LoginView angezeigt.
+\item \textbf{addUserMenu (name: String): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
-\item \textbf{logout()} \hfill\\ 
-Eingabeparameter:
+Diese Methode dient zum Einfügen eines User Menüs. Es kann immer nur ein User Menü geben.
 
-Ausgabeparameter:
+\item \textbf{addLogoutItem (): void}\hfill\\
+\textbf{Sichtbarkeit} public
 
-Diese Methode löscht die Account Daten aus dem AccountManager und zeigt die LoginView an.
-
-\end{itemize}
+Diese Methode dient zum Einfügen eines Logout Eintrages. Dieser Eintrag ruft dann den Logout der Übergeordneten UI auf.
 
 \end{itemize}
