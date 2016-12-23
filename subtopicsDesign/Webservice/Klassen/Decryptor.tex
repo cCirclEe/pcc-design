@@ -1,36 +1,43 @@
-\subsubsection{Decryptor}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{Decryptor} \label{service:klasse:Decryptor}
+\textbf{implements} \nameref{service:klasse:IStage} \newline
+Der Decryptor ist dafür da, das hybride Verschlüsselungsverfahren der App~\eqref{chap:app} rückgängig zu machen.\newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{fileDecryptor} \hfill \\
+\textbf{Sichtbarkeit} private
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+Decryptor für symmetrisch verschlüsselte Dateien
+
+\item \textbf{keyDecryptor} \hfill \\
+\textbf{Sichtbarkeit} private
+
+Decryptor für aysmmetrisch verschlüsselte SecretKeys
+
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
+\item \textbf{Decryptor()} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{execute (): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt die Methode execute() von IStage. Ruft decrypt(..) auf.
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{decrypt (encVid: File, encKey: File, 
+encMeta: File, decVid: File): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Erzeugt zunächst den symmetrischen und asymmetrischen Decryptor. Gibt daraufhin den verschlüsselten SecretKey an den keyDecryptor und entschlüsselt mit diesem dann im fileDecryptor die Video- und die Metadata-Datei. Gibt zurück, ob das Entschlüsseln erfolgreich war.
 
 \end{itemize}

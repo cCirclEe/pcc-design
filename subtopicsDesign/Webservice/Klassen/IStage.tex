@@ -1,18 +1,12 @@
 \subsubsection{<<Interface>> IStage} \label{service:klasse:IStage}
-\textbf{extends} SuperInterface \newline
-Allgemeiner Text bliblablubb. \newline
+IStage ist eine einheitliche Schnittstelle für alle Videobearbeitungsschritte. Dadurch wird es erlaubt einfach neue Arbeitsschritte einzufügen oder dynamisch die Bearbeitung zu verändern.\newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{execute (context: \nameref{service:klasse:EditingContext}): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Führt einen Bearbeitungsschritt aus. Die dafür benötigten Daten werden durch den context bereitgestellt. Gibt zurück ob die Bearbeitung erfolgreich war.
 
 \end{itemize}

@@ -1,36 +1,22 @@
-\subsubsection{AESDecryptor}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
-
-\underline{Attribute}
-\begin{itemize}
-\itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-\end{itemize}
+\subsubsection{AESDecryptor} \label{service:klasse:AESDecryptor}
+\textbf{implements} \nameref{service:klasse:IFileDecryptor} \newline
+Der AESDecryptor bietet eine konkrete Implementierung eines  Decryptors für symmetrisch verschlüsselte Dateien. Er nutzt dazu das AES Verfahren mit dem gegebenen SecretKey. \newline
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
+\item \textbf{AESDecryptor()} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{decrypt (input: File, key: SecretKey, output: File): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Implementiert die Methode decrypt(..) von IFileDecryptor.
 
 \end{itemize}

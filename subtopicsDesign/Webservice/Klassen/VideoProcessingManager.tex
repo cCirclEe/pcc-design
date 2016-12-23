@@ -1,5 +1,5 @@
 \subsubsection{VideoProcessingManager} \label{service:klasse:VideoProcessingManager}
-Der VideoProcessingManager ist dafür zuständig, die Bearbeitung der hochgeladenen Videos zu koordinieren und auf seine Worker-Threads zu verteilen. Nachdem er vom \nameref{service:klasse:VideoManager} eine Anfrage erhalten hat wird eine \nameref{service:klasse:VideoProcessingChain} erzeugt und in die Warteschlange des Managers eingereiht, aus der die Worker-Threads kontinuierlich Anfragen abarbeiten. Das Ganze passiert asynchron zu der ursprünglichen Anfrage, damit das aufwändige Bearbeiten der Videos nicht die Serveranfragen aufhält. Dafür werden die von der Java API bereitgestellten java.util.concurrent Objekte verwendet.
+Der VideoProcessingManager ist dafür zuständig, die Bearbeitung der hochgeladenen Videos zu koordinieren und auf seine Worker-Threads zu verteilen. Nachdem er vom \nameref{service:klasse:VideoManager} eine Anfrage erhalten hat wird eine \nameref{service:klasse:VideoProcessingChain} erzeugt und in die Warteschlange des Managers eingereiht, aus der die Worker-Threads kontinuierlich Anfragen abarbeiten. Das Ganze passiert asynchron zu der ursprünglichen Anfrage, damit das aufwändige Bearbeiten der Videos nicht die Serveranfragen aufhält. Dafür werden die von der Java API bereitgestellten java.util.concurrent Objekte verwendet. \newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -12,7 +12,6 @@ Größe des Worker-Thread-Pools
 \item \textbf{queueSize: int} \hfill\\ 
 \textbf{Sichtbarkeit} private
 Größe der Warteschlange für die Anfragen
-
 
 \item \textbf{queue: BlockingQueue} \hfill\\
 \textbf{Sichtbarkeit} private 
@@ -36,7 +35,7 @@ Erzeugt einen neuen VideoProcessingManager mit der angegeben Anzahl Worker-Threa
 \begin{itemize}
 \itemsep0pt
 \item \textbf{addTask (video: InputSteam, metadata: InputStream, 
-key: InputStream, account: Account, response :AsyncResponse)}\hfill\\
+key: InputStream, account: \nameref{service:klasse:Account}, response :AsyncResponse)}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Erzeugt aus den gegebenen Parametern eine neue \nameref{service:klasse:VideoProcessingChain} und fügt sie der Warteschlange hinzu. Rückmeldung über Erfolg oder Fehler werden über den response Parameter zurückgegeben. Das Verteilen auf Worker-Threads übernimmt der ExecutorService automatisch.

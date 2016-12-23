@@ -1,36 +1,44 @@
 \subsubsection{EditingContext} \label{service:klasse:EditingContext}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+Der EditingContext ist eine Containerklasse, die alle für die Bearbeitung der Videos benötigten Daten hält. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{encVid: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+Ort der verschlüsselten Videodatei
+
+\item \textbf{encKey: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort der verschlüsselten symmetrischen Schlüssels
+
+\item \textbf{encMetadata: File} \hfill\\
+\textbf{Sichtbarkeit} private
+ 
+Ort der verschlüsselten Metadaten
+
+\item \textbf{decVid: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort der entschlüsselten Videodatei
+
+\item \textbf{decMetadata: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort der entschlüsselten Metadaten
+
+\item \textbf{account: \nameref{service:klasse:Account}} \hfill\\ 
+Dem Video zugehöriger Benutzeraccount
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
-\end{itemize}
-
-\underline{Methoden}
-\begin{itemize}
-\itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{EditingContext(encVid: File, encKey: File, encMetadata: File, 
+decVid: File, decMetadata: File, account: Account)} \hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
-
+Speichert alle angegebenen Parameter
 \end{itemize}

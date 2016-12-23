@@ -1,18 +1,12 @@
-\subsubsection{<<Interface>> IKeyDecrytor}
-\textbf{extends} SuperInterface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{<<Interface>> IKeyDecrytor} \label{service:klasse:IKeyDecryptor}
+IKeyDecryptor bietet eine Schnittstelle für asymmetrische Decryptoren. Es wird verwendet um verschiede Entschlüsselungsverfahren für das Entschlüsseln des SecretKeys bei hybrider Verschlüsselung anzubieten. \newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{decrypt (encKey :File): SecretKey}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Nimmt den privaten Schlüssel des Webservers und entschlüsselt damit den asymmetrisch verschlüsselten SecretKey. Gibt den entschlüsselten SecretKey zurück. Gibt null zurück, falls das Entschlüsseln fehlschlägt.
 
 \end{itemize}

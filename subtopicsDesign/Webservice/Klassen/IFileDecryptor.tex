@@ -1,18 +1,12 @@
-\subsubsection{<<Interface>> IFileDecryptor}
-\textbf{extends} SuperInterface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{<<Interface>> IFileDecryptor} \label{service:klasse:IFileDecryptor}
+IFileDecryptor bietet eine Schnittstelle für Klassen, die mithilfe eines symmetrischen SecretKeys Dateien entschlüsseln. \newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{decrypt (input :File, key: SecretKey, output: File): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Nimmt das input-File und entschlüsselt es mit dem SecretKey. Speichert die entschlüsselte Datei im output-File. Gibt zurück, ob die Entschlüsselung erfolgreich war.
 
 \end{itemize}

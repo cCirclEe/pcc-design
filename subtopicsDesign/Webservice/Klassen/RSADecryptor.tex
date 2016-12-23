@@ -1,36 +1,22 @@
-\subsubsection{RSADecryptor}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
-
-\underline{Attribute}
-\begin{itemize}
-\itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-\end{itemize}
+\subsubsection{RSADecryptor} \label{service:klasse:RSADecryptor}
+\textbf{implements} \nameref{service:klasse:IKeyDecryptor} \newline
+Der RSADecryptor bietet eine konkrete Implementierung eines asymmetrischen Decryptors für symmetrisch verschlüsselte SecretKeys. Er nutzt dazu das RSA Verfahren. \newline
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
+\item \textbf{RSADecryptor()} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{decrypt (encKey: File): SecretKey}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Implementiert die Methode decrypt(..) von IKeyDecryptor.
 
 \end{itemize}

@@ -1,36 +1,37 @@
-\subsubsection{Anonymizer}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{Anonymizer} \label{service:klasse:Anonymizer}
+\textbf{extends} \nameref{service:klasse:AAnonymizer} \newline
+Der Anonymizer bietet eine mögliche konkrete Implementierung eines Video-Anonymizers. Er arbeitet indem er das Video frameweise analysiertn, um dann die für die Anonymisierung relvanten Bildbereiche mit einem Filter unkenntlich zu machen. Genutzt werden hierfür OpenCV Schnittstellen.\newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{analyzer: IAnalyzer} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+Analysierungsalgorithmus zum erkennen der für die Anonymisierung relevanten Bildbereiche.
+
+\item \textbf{filter: IFilter} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Bildfilter zum Anonymisieren von Bildbereichen.
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
+\item \textbf{Anonymizer()} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{anonymize(input: File, 
+output: File): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Implementiert die abstrakte Methode anonymize() von AAnonymizer. Liest das Video frameweise ein und über gibt den Frame zunächst an den analyzer. Die dort erkannten relevanten Bildbereiche werden dann an den filter gegeben. Das Video wird dann wieder Frame für Frame zusammengeführt und gespeichert. Gibt zurück, ob das anonymisieren erfolgreich war.
 
 \end{itemize}
