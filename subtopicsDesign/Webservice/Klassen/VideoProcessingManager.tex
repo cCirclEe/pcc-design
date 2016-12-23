@@ -1,36 +1,49 @@
-\subsubsection{VideoProcessingManager}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{VideoProcessingManager} \label{service:klasse:VideoProcessingManager}
+Der VideoProcessingManager ist dafür zuständig, die Bearbeitung der hochgeladenen Videos zu koordinieren und auf seine Worker-Threads zu verteilen. Nachdem er vom \nameref{service:klasse:VideoManager} eine Anfrage erhalten hat wird eine \nameref{service:klasse:VideoProcessingChain} erzeugt und in die Warteschlange des Managers eingereiht, aus der die Worker-Threads kontinuierlich Anfragen abarbeiten. Das Ganze passiert asynchron zu der ursprünglichen Anfrage, damit das aufwändige Bearbeiten der Videos nicht die Serveranfragen aufhält. Dafür werden die von der Java API bereitgestellten java.util.concurrent Objekte verwendet.
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{poolSize: int} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+Größe des Worker-Thread-Pools
+
+\item \textbf{queueSize: int} \hfill\\ 
+\textbf{Sichtbarkeit} private
+Größe der Warteschlange für die Anfragen
+
+
+\item \textbf{queue: BlockingQueue} \hfill\\
+\textbf{Sichtbarkeit} private 
+
+Warteschlange für die Anfragen
+
+\item \textbf{executor: ExecutorService} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Koordinator für die Verteilung der Aufgaben auf die Worker-Threads
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
+\item \textbf{VideoProcessingManager(poolSize: int, queueSize: int)} \hfill\\
+Erzeugt einen neuen VideoProcessingManager mit der angegeben Anzahl Worker-Threads und Größe der Warteschlange.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{addTask (video: InputSteam, metadata: InputStream, 
+key: InputStream, account: Account, response :AsyncResponse)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Erzeugt aus den gegebenen Parametern eine neue \nameref{service:klasse:VideoProcessingChain} und fügt sie der Warteschlange hinzu. Rückmeldung über Erfolg oder Fehler werden über den response Parameter zurückgegeben. Das Verteilen auf Worker-Threads übernimmt der ExecutorService automatisch.
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{shutdown ()}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Beendet den ExecutorService nachdem alle Worker-Threads ihre Arbeit beendet haben.
 
 \end{itemize}

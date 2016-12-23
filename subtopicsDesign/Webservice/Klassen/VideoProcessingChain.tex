@@ -1,36 +1,65 @@
-\subsubsection{VideoProcessingChain}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{VideoProcessingChain} \label{service:klasse:VideoProcessingChain}
+\textbf{implements} Runnable \newline
+Die VideoProcessingChain ist für die Bearbeitung der Videos zuständig. Zunächst werden alle für die Bearbeitung notwendigen Informationen ermittelt. Dann nimmt die VideoProcessingChain die hochgeladenen Videos entgegen und speichert sie zunächst teporär. Das Video wird entschlüsselt, auf personenbezogene Daten analysiert und diese unkenntlich gemacht. Danach können die Metadaten dem Video hinzugefügt und dieses auf dem Server langfristig hinterlegt werden. Zum Schluss werden die temporären Daten wieder gelöscht.\newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{context: \nameref{service:klasse:EditingContext}} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+Container für die Informationen, die die einzelnen Arbeitsschritte zum arbeiten benötigen
+
+\item \textbf{response: AsyncResponse} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Objekt, das genutzt wird um die Anfrage der App bei Fehler oder Erfolg asynchron zu beantworten
+
+\item \textbf{stages: List<\nameref{service:klasse:IStage}>} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Liste der zur Bearbeitung des Videos auszuführenden Arbeitsschritte
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
+\item \textbf{VideoProcessingChain(video: InputSteam, metadata: InputStream, 
+key: InputStream, account: Account, response :AsyncResponse)} \hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{throws} IOException
+
+Erzeugt eine neue VideoProcessingChain, merkt sich das response Objekt und erzeugt aus den Parametern den EditingContext. Zudem werden alle Dateien temporär gespeichert. Wirft eine IOException falls dies fehlschlägt.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{run ()}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt die Methode run() von Runnable. Zunächst werden die für die Bearbeitung des Videos notwendigen Arbeitsschritte erzeugt. Danach führt die VideoProcessingChain alle Arbeitsschritte aus. Zuletzt werden alle zuvor erzeugten temporären Dateien wieder gelöscht.
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
+\item \textbf{createEditingContext (account: Account): EditingContext}\hfill\\
+\textbf{Sichtbarkeit} private
 
-Methodenbeschreibung
+Erzeugt mithilfe der Accountinformationen alle für die weitere Bearbeitung notwendigen temporären Dateipfade.
+
+\item \textbf{saveTempFiles (video: InputSteam, metadata: InputStream, 
+key: InputStream, context: EditingContext)}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{throws} IOException 
+
+Speichert alle von der App erhaltenen Daten temporär. Wirft eine IOException falls dies fehlschlägt.
+
+\item \textbf{initChain ()}\hfill\\
+\textbf{Sichtbarkeit} private
+
+Erzeugt alle Arbeitsschritte.
+
+\item \textbf{deleteTempFiles (context: EditingContext)}\hfill\\
+\textbf{Sichtbarkeit} private
+
+Löscht alle zurvor erstellten temporären Dateien.
 
 \end{itemize}
