@@ -1,0 +1,22 @@
+#![LogInSequenz]
+ext:External[pe]
+lG:LogInFragment
+sPA:ServerProxy(android)
+sPS:ServerProxy(service)
+/vM:VideoManager
+/aM:AccountManager
+/dM:DatabaseManager
+
+ext:lG.onClick()
+lG:done=sPA.authenticateUser(account, callback)
+sPA:done=sPS.[POST] authenticateAccount(accountData)
+sPS:sPS.setUpForRequest(accountData)
+sPS:vM.new(account)
+sPS:aM.new(account)
+sPS:boolean=aM.isAccountExisting()
+aM:dM.new(account)
+aM:nrAcc=dM.isAccountExisting()
+sPS:verifycationStatus=aM.authenticate()
+aM:dM.authenticate()	
+
+
