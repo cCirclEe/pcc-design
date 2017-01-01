@@ -1,4 +1,5 @@
-Erweiterungsmöglichkeiten aufzeigen, z.B. VideoProcessingChain, Camera2 Api
+Erweiterungsmöglichkeiten aufzeigen, z.B. neue VideoProcessingChain, Camera2 Api
 Modulübersicht
 Alternative Designs und warum wir sie nicht genommen haben
 Schichtenarchitektur + Zyklischer Graph Aufzeigen
+Bei Android App erweiterungsmöglichkeiten Zeigen mit ContainerAct. -> ViewPagerAct.

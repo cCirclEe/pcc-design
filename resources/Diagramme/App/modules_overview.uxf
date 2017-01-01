@@ -4,21 +4,18 @@
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>550</x>
-      <y>150</y>
+      <x>510</x>
+      <y>510</y>
       <w>200</w>
-      <h>170</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>ApplicationLogic
 --
-+ CameraActivity
-+ VideoActivity
-+ AppActivity
-# LogInFragment
-# VideosFragment
-# SettingsFragment
-# LegalFragment
-# CameraView 
++ LogInFragment
++ VideosFragment
++ SettingsFragment
++ LegalFragment
++ CameraView 
 bg=blue
 fg=white</panel_attributes>
     <additional_attributes/>
@@ -26,17 +23,14 @@ fg=white</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>830</x>
-      <y>490</y>
+      <x>790</x>
+      <y>770</y>
       <w>180</w>
-      <h>120</h>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>MemoryAccess
+    <panel_attributes>Data.MemoryAccess
 --
 + MemoryManager
-+ Account
-+ Metadata
-+ Settings
 bg=gray
 fg=black</panel_attributes>
     <additional_attributes/>
@@ -44,13 +38,14 @@ fg=black</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>550</x>
-      <y>350</y>
+      <x>510</x>
+      <y>630</y>
       <w>200</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>ApplicationLogic.Camera
 --
++ IRecordCallback
 + CameraHandler
 + CompatCameraHandler
 bg=blue
@@ -60,10 +55,10 @@ fg=white</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>830</x>
-      <y>150</y>
+      <x>790</x>
+      <y>360</y>
       <w>170</w>
-      <h>60</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Utils
 --
@@ -75,15 +70,15 @@ fg=black</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>830</x>
-      <y>230</y>
+      <x>790</x>
+      <y>490</y>
       <w>170</w>
-      <h>80</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Utils.DataStructures
 --
 + RingBuffer 
-+ Persistor
++ RingItem
 bg=yellow
 fg=black</panel_attributes>
     <additional_attributes/>
@@ -91,10 +86,10 @@ fg=black</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>830</x>
-      <y>320</y>
+      <x>790</x>
+      <y>560</y>
       <w>170</w>
-      <h>140</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Utils.Encryption
 --
@@ -110,16 +105,71 @@ fg=black</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>550</x>
-      <y>500</y>
+      <x>790</x>
+      <y>680</y>
       <w>200</w>
-      <h>100</h>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>ServerConnection
+    <panel_attributes>Data.ServerConnection
 --
 + ServerProxy
 + IServerResponseCallback
 # WebQueryTask
+bg=gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>510</x>
+      <y>360</y>
+      <w>200</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Gui
+--
++ CameraActivity
++ VideoActivity
++ LegalActivity
++ SettingsActivity
++ LogInActivity
+~ MainActivity
+~ ContainerActivity
+bg=#005500
+fg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>790</x>
+      <y>400</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Utils.DataProcessing
+--
++ IPersistCallback 
++ AsyncPersistor
+bg=yellow
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>510</x>
+      <y>720</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Data
+--
++ Account
++ Video
++ Metadata
++ Settings
 bg=gray
 fg=black</panel_attributes>
     <additional_attributes/>
