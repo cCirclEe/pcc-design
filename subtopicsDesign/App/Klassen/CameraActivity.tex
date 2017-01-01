@@ -1,1 +1,49 @@
 \subsubsection{CameraActivity}
+\textbf{extends} MainActivity \newline
+CameraActivity zeigt die CameraView an, instanzert eine CompatCameraHandler Instanz sowie eine IRecordCallback Instanz und manipuliert die graphische Nutzeroberfläche abhängig von den Methoden, die auf der IRecordCallback Instanz aufgerufen werden. Nach dem Start blendet CameraActivity ein Symbol ein, welches die Bereitschaft der App signalisisert. Wenn CompatCameraHandler die Videoaufnahme startet, wird CameraActivity darüber benachrichtigt und blendet ein Symbol ein, welches die Aufnahme signalisiert. Das Symbol, welches zuvor die Bereitschaft der App signalisiert hat, wird ausgeblendet. Beendet CompatCameraHandler die Videoaufnahme, wird CameraActivity ebenfalls benachrichtigt und blendet das zuvor eingeblendete Symbol wieder aus. Das Symbol, welches die Bereitschaft der App signalisiert, wird dann wieder eingeblendet. Somit stellt CameraActivity einen Observer dar, CompatCameraHandler ist das Observerable.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{recordCallback: IRecordCallback} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+Implementiert das IRecordCallback Interface
+
+\item \textbf{cameraHandler: CompatCameraHandler} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+CameraHandler, der die Vorschaubilder der Kamera eigenständig verarbeitet und die Aufnahme auslößt
+
+\item \textbf{cameraView: CameraView} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+CameraView Instanz, welche verwendet wird um die Kameravorschau anzuzeigen
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{Launch (callingActivity: Activity): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Startet ein neues Intent durch welches eine CameraActivity Instanz erzeugt und gestartet wird.
+
+\item \textbf{getLayoutRes (): int}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die getLayoutRes Methode der Superklasse.
+
+\item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die onCreate Methode der Superklasse. Lädt die CameraView Instanz und erstellt die IRecorderCallback und CompatCameraHandler Instanzen.
+
+\item \textbf{onResume (): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die onResume Methode der Superklasse. Ruft die Methode resumeCamera der CameraHandler Instanz auf.
+
+\item \textbf{onPause (): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die onPause Methode der Superklasse. Ruft die Methode pauseCamera der CameraHandler Instanz auf.
+
+\end{itemize}

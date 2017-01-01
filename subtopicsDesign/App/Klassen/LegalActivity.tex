@@ -1,0 +1,30 @@
+\subsubsection{LegalActivity}
+\textbf{extends} ContainerActivity \newline
+LegalActivity zeigt das LegalFragment an.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{legalFragment: LegalFragment} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+Die LegalFragment Instanz
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{Launch (callingActivity: Activity): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Startet ein neues Intent durch welches eine LegalActivity Instanz erzeugt und gestartet wird.
+
+\item \textbf{selectFragment (): Fragment}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die selectFragment Methode der Superklasse.
+
+\end{itemize}

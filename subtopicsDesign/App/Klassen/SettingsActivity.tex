@@ -1,0 +1,30 @@
+\subsubsection{SettingsActivity}
+\textbf{extends} ContainerActivity \newline
+SettingsActivity zeigt das SettingsFragment an.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{settingsFragment: SettingsFragment} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+Die SettingsFragment Instanz
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{Launch (callingActivity: Activity): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Startet ein neues Intent durch welches eine SettingsActivity Instanz erzeugt und gestartet wird.
+
+\item \textbf{selectFragment (): Fragment}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die selectFragment Methode der Superklasse.
+
+\end{itemize}

@@ -1,0 +1,33 @@
+\subsubsection{LogInActivity}
+\textbf{extends} MainActivity\newline
+LogInActivity behandelt den Anmeldeprozess und ist die erste Activity die gestartet wird. Sie prüft zu aller erst ob der Nutzer bereits vorher seine Anmeldedaten eingegeben hat und reagiert dementsprechent in ihrer onCreate Methode.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{logInFragment: LogInFragment} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+Die LogInFragment Instanz
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{Launch (callingActivity: Activity): void}\hfill\\
+\textbf{Sichtbarkeit} public
+Startet ein neues Intent durch welches eine LogInActivity Instanz erzeugt und gestartet wird.
+
+\item \textbf{getLayoutRes (): int}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die getLayoutRes Methode der Superklasse.
+
+\item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die onCreate Methode der Superklasse. Prüft ob der Nutzer angemeldet ist und startet die CameraActivity falls ja. Falls nicht wird das LogInFragment angzeigt.
+
+\end{itemize}

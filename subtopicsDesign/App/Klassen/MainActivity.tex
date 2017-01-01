@@ -1,0 +1,34 @@
+\subsubsection{<<abstract>>MainActivity}
+\textbf{extends} Activity \newline
+MainActivity bildet die Elternklasse aller weiteren Activities und übernimmt als solche die Navigation durch das Menü. Sie Agiert dabei als OnNavigationItemSelectedListener, implementiert also dessen Methoden.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{drawer: NavigationDrawer} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+Die NavigationDrawer Instanz in der das Menü angezeigt wird.
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschribt die onCreate Methode der Superklasse. Ruft die Schablonenmethode getLayoutRes auf und initialisiert daraufhin den NavigationDrawer und die Toolbar und setzt sich selbst als OnNavigationItemSelectedListener.
+
+\label{app:containeractivity:methode:getLayoutRes}\item \textbf{ <<abstract>> getLayoutRes (): int}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Schablonenmethode, welche die Unterklasse das zu ladende Layout bestimmen lässt.
+
+\item \textbf{onNavigationItemSelected(item: MenuItem): boolean}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Implementiert das OnNavigationItemSelectedListener Interface und wechselt immer wenn ein Menüeintrag, also Kamera, Videos, Einstellungen, Impressum oder Datenschutz, angeklickt wurden zu der jeweiligen Ansicht.
+
+\end{itemize}
