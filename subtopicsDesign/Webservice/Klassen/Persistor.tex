@@ -1,36 +1,25 @@
-\subsubsection{Persistor}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
-
-\underline{Attribute}
-\begin{itemize}
-\itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-\end{itemize}
+\subsubsection{Persistor} \label{service:klasse:Persistor}
+\textbf{implements} \nameref{service:klasse:IStage} \newline
+Der Persistor fügt die Metadaten in die Video-Datei ein und legt das Video langfristig auf dem Video ab. Dazu sogt er dafür, dass das Video in die Database aufgenommen wird.\newline
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
+\item \textbf{Persistor()} \hfill\\
 Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{execute (context: Context): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Implementiert die Methode execute(..) von IStage. Ruft die Methode anonymize(..) auf.
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{persist (video: File, metadata: Metadata): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Lädt das video und fügt alle metadata in die Metadaten des Videos ab. Daraufhin wird das Video mithilfe des \nameref{service:klasse:DatabaseManager}s in den permanenten Speicher des Services abgelegt und der Datenbank hinzugefügt.
 
 \end{itemize}

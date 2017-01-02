@@ -1,18 +1,12 @@
-\subsubsection{<<Interface>> IFilter}
-\textbf{extends} SuperInterface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{<<Interface>> IFilter} \label{service:klasse:IFilter}
+Bietet eine Schnittstelle für Klassen die eine Liste von Bildausschnitten entgegen nimmt und diese unkenntlich macht. \newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{applyFilter (frame: Mat, detections: MatOfRect): Mat}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Macht alle Bildausschnitte im Ursprungsbild unkenntlich und gibt das Ergebnis zurück. Im Fehlerfall wird null zurückgegeben.
 
 \end{itemize}

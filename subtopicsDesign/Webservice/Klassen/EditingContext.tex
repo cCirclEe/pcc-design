@@ -29,6 +29,16 @@ Ort der entschlüsselten Videodatei
 
 Ort der entschlüsselten Metadaten
 
+\item \textbf{anonymizedVid: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort des anonymisierten Videos
+
+\item \textbf{vidWithMeta: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort des Videos nachdem die Metadaten hinzugefügt wurden.
+
 \item \textbf{account: \nameref{service:klasse:Account}} \hfill\\ 
 Dem Video zugehöriger Benutzeraccount
 \end{itemize}
@@ -36,9 +46,8 @@ Dem Video zugehöriger Benutzeraccount
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{EditingContext(encVid: File, encKey: File, encMetadata: File, 
-decVid: File, decMetadata: File, account: Account)} \hfill\\
+\item \textbf{EditingContext(account: Account)} \hfill\\
 \textbf{Sichtbarkeit} public
 
-Speichert alle angegebenen Parameter
+Erzeugt aus den Account-Daten des Benutzers alle benötigten temporären Dateipfade.
 \end{itemize}

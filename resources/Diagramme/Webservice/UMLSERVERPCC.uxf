@@ -52,7 +52,7 @@ IFilter
 --
 
 --
-+ applyFilter(detections:MatofRect):Mat</panel_attributes>
++ applyFilter(frame: Mat, detections: MatofRect):Mat</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -85,9 +85,9 @@ IFilter
       <w>112</w>
       <h>76</h>
     </coordinates>
-    <panel_attributes>ConcreteAnalyzer
+    <panel_attributes>ExampleAnalyzer
 --
-
+- classifier: CascadeClassifier
 --
 + analyze(frame:Mat) :MatOfRect</panel_attributes>
     <additional_attributes/>
@@ -100,7 +100,7 @@ IFilter
       <w>116</w>
       <h>76</h>
     </coordinates>
-    <panel_attributes>ConcreteAnonymizer
+    <panel_attributes>ExampleAnonymizer
 --
 
 --
@@ -350,7 +350,6 @@ account :Account
 key: InputStream, account: Account, response :AsyncResponse)
 + run()
 
-- createEditingContext(account: Account): EditingContext
 - saveTempFiles(video: InputSteam, metadata: InputStream, 
 key: InputStream, context: EditingContext)
 - initChain()
@@ -462,13 +461,11 @@ IStage
 - encMetadata: File
 - decVid: File
 - decMetadata: File
+- anonymizedVid: File
+- vidWithMeta: File
 - account: Account
-- video: InputSteam 
-- metadata: InputStream
-- key: InputStream
 --
-+ EditingContext(encVid: File, encKey: File, encMetadata: File, 
-decVid: File, decMetadata: File, account: Account)
++ EditingContext(account: Account)
 </panel_attributes>
     <additional_attributes/>
   </element>

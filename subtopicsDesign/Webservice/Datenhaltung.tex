@@ -1,1 +1,11 @@
 \section{Datenhaltung}
+
+\subsection{Datenbank}
+
+\subsection{temporäre Dateien}
+Die Verwaltung der temporären Dateien für die Bearbeitung der Videos übernimmt das \nameref{service:modul:VideoProcessing} Modul. Dies ist notwendig, da die entstehenden und benötigten Daten ausschließlich abhängig von den Arbeitsschritten der \nameref{service:klasse:VideoProcessingChain} ist und daher nicht von anderen Modulen des Web-Dienstes beeinflusst werden soll. Der Web-Dienst stellt dafür den "'tmp"' Ordner bereit.\newline
+Der \nameref{service:klasse:EditingContext} erzeugt dann alle für die Bearbeitung notwendigen Dateipfade in der Form:\newline
+benutzername\_videoname\_attribut.endung
+
+\subsection{verwendete Resourcen}
+Für die Bearbeitung der Videos verwendete Resourcen (z.B. der private Key des \nameref{service:klasse:RSADecryptor} oder der CascadeClassifier des \nameref{service:klasse:ExampleAnalyzer}) werden im "'resources"' Ordner abgelegt.

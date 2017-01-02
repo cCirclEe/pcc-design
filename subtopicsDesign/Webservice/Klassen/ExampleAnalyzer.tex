@@ -1,36 +1,29 @@
-\subsubsection{ExampleAnalyzer}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{ExampleAnalyzer} \label{service:klasse:ExampleAnalyzer}
+\textbf{implements} \nameref{service:klasse:IAnalyzer} \newline
+Der ExampleAnalyzer bietet eine konkrete Implementierung eines IAnalyzers. Er analysiert einen einzelnen Frame eines Videos mithilfe der in OpenCV bereitgestellten CascadeClassifier und gibt die dort erkannten Gesichter als Liste von Bildausschnitten zurück. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{classifier: CascadeClassifier} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+Liefert den Algorithmus zur Gesichtserkennung.
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
+\item \textbf{ExampleAnalyzer()} \hfill\\
+Lädt den classifier aus einer XML-Datei.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{analyze (frame: Mat): MatOfRect}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Implementiert die Methode analyze(..) von IAnalyzer.
 
 \end{itemize}

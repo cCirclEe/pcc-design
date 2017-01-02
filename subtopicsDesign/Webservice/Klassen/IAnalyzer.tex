@@ -1,18 +1,12 @@
-\subsubsection{<<Interface>> IAnalyzer}
-\textbf{extends} SuperInterface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{<<Interface>> IAnalyzer} \label{service:klasse:IAnalyzer}
+Der IAnalyzer bietet eine Schnittstelle für Klassen, die in einzelnen Frames mithilfe von OpenCV-Algorithmen relevante Bildbereiche erkennen. \newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{analyzer (frame: Mat): MatOfRect}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Analysiert den übergebenen frame und gibt eine Liste der gefundenen relevanten Bildbereiche zurück. Im Fehlerfall wird Null zurückgegeben.
 
 \end{itemize}

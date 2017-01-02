@@ -1,36 +1,20 @@
-\subsubsection{ExampleFilter}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
-
-\underline{Attribute}
-\begin{itemize}
-\itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-\end{itemize}
+\subsubsection{ExampleFilter} \label{service:klasse:ExampleFilter}
+\textbf{implements} \nameref{service:klasse:IFilter} \newline
+Der ExampleAnalyzer bietet eine konkrete Implementierung eines IFilters. Er bearbeitet die erkannten Bildbereiche mithilfe eines OpenCV-Blur-Filters, sodass die Bildbereich unkenntlich gemacht werden. \newline
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
+\item \textbf{ExampleFilter()} \hfill\\
 Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{applyFilter (frame: Mat, detections: MatOfRect): Mat}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
-
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Methodenbeschreibung
+Implementiert die Methode applyFilter(..) von IFilter.
 
 \end{itemize}
