@@ -63,7 +63,7 @@ fg=white</panel_attributes>
     <panel_attributes>Utils
 --
 
-bg=yellow
+bg=blue
 fg=black</panel_attributes>
     <additional_attributes/>
   </element>
@@ -79,8 +79,8 @@ fg=black</panel_attributes>
 --
 + RingBuffer 
 + RingItem
-bg=yellow
-fg=black</panel_attributes>
+bg=blue
+fg=white</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -98,8 +98,8 @@ fg=black</panel_attributes>
 + IKeyEncryptor
 + RSAEncryptor
 + AESEncryptor
-bg=yellow
-fg=black</panel_attributes>
+bg=blue
+fg=white</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -152,8 +152,8 @@ fg=white</panel_attributes>
 --
 + IPersistCallback 
 + AsyncPersistor
-bg=yellow
-fg=black</panel_attributes>
+bg=blue
+fg=white</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
