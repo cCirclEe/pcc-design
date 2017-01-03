@@ -1,0 +1,69 @@
+\subsubsection{SettingsFragment} \label{app:klasse:SettingsFragment}
+\textbf{extends} Fragment \newline
+Das SettingsFragment lädt die einzelnen Layout-Komponenten der Einstellungenansicht, reagiert auf Nutzereingaben und veranlasst das Speichern gemachter Änderungen. Jede antippbare Layout-Komponente bekommt einen anonymen Listener der zu ihr passt und die mit der jeweiligen Komponente verknüpfte Aktion ausführt.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{settings: \nameref{app:klasse:Settings} } \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Die aktuellen Einstellungen, gekapselt in einer Settings Instanz.
+
+\item \textbf{resolutionLow: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text um niedrige Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{resolution}, färbt diese TextView grün und \textit{resolutionMedium} und \textit{resolutionHigh} grau.
+
+\item \textbf{resolutionMedium: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text um mittlere Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{resolution}, färbt diese TextView grün und \textit{resolutionLow} und \textit{resolutionHigh} grau.
+
+\item \textbf{resolutionHigh: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text um hohe Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{resolution}, färbt diese TextView grün und \textit{resolutionLow} und \textit{resolutionMedium} grau.
+
+\item \textbf{fps: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Text zum Anzeigen der aktuell eingestellten Bilder pro Sekunde.
+
+\item \textbf{fpsBar: SeekBar} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Balken zum Tippen und Ziehen um die Einstellung der  Bilder pro Sekunde zu ändern. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{fps} und aktualisiert \textit{fps}.
+
+\item \textbf{bufferSize: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Text zum Anzeigen der aktuell eingestellten Buffergröße.
+
+\item \textbf{incBuffer: Button} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Schaltfläche um die Buffergröße zu erhöhen. Antippen erhöht die in der Settings Instanz gespeicherten Wert \textit{bufferSize} und aktualisiert \textit{bufferSize}.
+
+\item \textbf{decBuffer: Button} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Schaltfläche um die Buffergröße zu verringern. Antippen verringert die in der Settings Instanzgespeicherten Wert \textit{bufferSize} und aktualisiert \textit{bufferSize}.
+
+\item \textbf{logOut: Button} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Schaltfläche um AccountDaten zu löschen und alle Appansichten außer die LogInActivity unzugänglich zu machen. Antippen ruft die Methode \textit{deleteAccountData} des MemoryManagers und die Methode \textit{Launch} der \nameref{app:klasse:LogInActivity} auf.
+
+\item \textbf{memoryManager: MemoryManager} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MemoryManager Instanz um gespeicherte Einstellungen abzufragen und neue Einstellugen zu speichern.
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{onCreateView (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die \textit{onCreateView} Methode der Superklasse. Lädt alle View Instanzen, instanziiert und übergibt jeder View ihren Listener, holt sich eine MemoryManager Instanz und ruft die \textit{getSettings} Methode des MemoryManagers auf. Wenn sie das Settings Objekt von diesem Methodenaufruf erhalten hat weißt sie es der \textit{settings} Variable zu und aktualisiert alle View-Komponenten, so dass sie die in \textit{settings} gespeicherten Daten wiederspiegeln.
+
+\item \textbf{onPause (): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die \textit{onCreateView} Methode der Superklasse. Ruft die \textit{saveSettings} Methode des MemoryManagers auf und übergibt das Settings Objekt.
+
+\end{itemize}

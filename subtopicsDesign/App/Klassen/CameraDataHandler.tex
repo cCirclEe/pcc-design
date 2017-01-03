@@ -1,0 +1,61 @@
+\subsubsection{CameraDataHandler} \label{app:klasse:CameraDataHandler}
+Da Android für die verwendung der Kamera eine alte und eine neue API zur verfügung stellt und dynamisch entschieden werden können soll, welche nun verwendet wird, macht es wenig Sinn, die Kamera direkt in den CameraDataHandler zu integrieren. Ebenfalls das Auslößen der Persistierung sollte nicht hier implementiert werden, da sich diese in Zukunft sehr wahrscheinlich ändern wird. Es liegt nahe, eine Komponente zu erstellen, die grundlegende Funktionen zur verfügung stellt, die in jeder Implementierung der Kamera verfügbar sein sollen: Die Zwischenspeicherung und die Persistierung. Somit hat der CameraDataHandler die Aufgabe, den RingBuffer zu befüllen und die Persistierung seines Inhaltes zu koordinieren, muss sich aber weder um die Anzeige der Vorschaubilder noch um das Auslösen der Aufnahme kümmern. Diese und wietere Funktionen, die über die Datenverarbeitung und -koordinierung hinausgehen, werden durch einen Decorator, aktuell den \nameref{app:klasse:CompatCameraDataHandler}, hinzugefügt. Um eine Kommunikation zwischen aufrufender Komponente, z.B. einem Service oder einer Activity, und dem CameraDataHandler zu ermöglichen, muss diese den IRecordCallback implementieren. Die aufrufende Komponente agiert dann als Beobachter des CameraDataHandler.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{context: Context} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Aktuelle Context Instanz, die verwendet wird, um eine Instanz des MemoryManagers zu erhalten.
+
+\item \textbf{metadata: Metadata} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Die Metadaten, die gespeichert werden sollen und dem AsyncPersistor übergeben werden.
+
+\item \textbf{callback: IRecordCallback} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+IRecordCallback Instanz die als Observer agiert. Auf ihr werden Methoden aufgerufen, sobald die Aufnahme gestartet oder gestoppt wird.
+
+\item \textbf{memoryManager: MemoryManager} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MemoryManager Instanz um Einstellungen abzugrafen. Wird den AsyncPersistor bei dessen Instanziierung übergeben.
+
+\item \textbf{persistCallback: IPersistCallback} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+IPersistCallback Impementierung, die als Observer des AsyncPersistirs agiert und die benachrichtigt wird, sobald die Persistierung gestartet oder gestoppt wird. Wird die Persistierung gestartet, also die Methode \textit{onPersistingStartet} aufgerufen, ruft das IPersistCallback die \textit{onRecordingStopped} Methode des IRecordCallbacks auf und instanziiert Metadata und RingBuffer neu, so dass auf den neuen Instanzen weitergearbeitet wird und die alten Instanzen ohne Kollisionen persistiert werden können. Der Aufruf der \textit{onPersistingStopped} Methode wird ignoriert.
+
+\item \textbf{asyncPersistor: AsyncPersistor} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Asynchroner Task der die Persistierung des RingBuffer-Inhaltes übernimmt.
+
+\item \textbf{ringBuffer: RingBuffer} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+FIFO-artiger Buffer der die einzelnen Frames zwischenspeichert und dem AsyncPersistor übergeben wird.
+
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{CameraHandler(context: Context, recordCallback: IRecordCallback)} \hfill\\
+\textbf{Sichtbarkeit} public\newline
+Konstruktor, der das \textit{context} und das \textit{callback} Feld zuweist, den RingBuffer instanziiert und sich eine MemoryManager Instanz holt.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{addFrame (frame: byte[]): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Erhält ein Frame das von der Kamera stammt. Fügt es durch die Methode \textit{offer} in den RingBuffer ein.
+
+\item \textbf{setMetadata (metadata: Metadata): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Setter, der dem Feld \textit{metadata} eine Metadaten Instanz zuweist.
+
+\item \textbf{scheduleRecording(): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Ruft die \textit{onRecordingStarted()} Methode des IRecordCallbacks auf. Instanziert dann einen neuen AsyncPersistor, übergibt diesem eine Referenz auf den RingBuffer und den MemoryManager und ruft dessen \textit{start()} Methode auf, der sie die Metadaten übergibt.
+
+\end{itemize}

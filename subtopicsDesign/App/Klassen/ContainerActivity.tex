@@ -1,6 +1,6 @@
-\subsubsection{<<abstract>>ContainerActivity}
-\textbf{extends} MainActivity \newline
-ContainerActivity ist die Elternklasse aller Activities, die eine Toolbar und ein Fragment anzeigen. Das Fragment wird dynamisch geladen, je nach dem welche Ansicht der Nutzer sehen möchte. Hierzu wird ein ``switch-less'' Ansatz verwendet: Die ContainerActivity lädt immer das gleiche Layout und zeigt in dessen Container das Fragment an, welches sie über die Schablonenmethode selectFragment abgefragt hat.
+\subsubsection{<<abstract>>ContainerActivity} \label{app:klasse:ContainerActivity}
+\textbf{extends} \nameref{app:klasse:MainActivity} \newline
+Die ContainerActivity ist die Elternklasse aller Activities, die eine Toolbar und ein Fragment anzeigen. Das Fragment wird dynamisch geladen, je nach dem welche Ansicht der Nutzer sehen möchte. Hierzu wird ein ``switch-less'' Ansatz verwendet: Die ContainerActivity lädt immer das gleiche Layout und zeigt in dessen Container das Fragment an, welches sie über die Schablonenmethode selectFragment abgefragt hat.
 \newline
 
 \underline{Attribute}
@@ -21,17 +21,17 @@ Fragment welches aktuell angezeigt werden soll.
 
 \item \textbf{getLayoutRes (): int}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die onResume Methode der Superklasse.
+Überschreibt die \textit{getLayoutRes} Methode der Superklasse.
 
 \item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die onResume Methode der Superklasse. Ruft die Methode selectFragment auf und zeigt das erhaltene Fragment an.
+Überschreibt die \textit{onResume} Methode der Superklasse. Ruft die Methode \textit{selectFragment} auf und zeigt das erhaltene Fragment an.
 
 \item \textbf{onResume (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die onResume Methode der Superklasse. Invalidiert das Fragment.
+Überschreibt die \textit{onResume} Methode der Superklasse. Invalidiert das Fragment.
 
-\label{app:containeractivity:methode:selectfragment} \item \textbf{<<abstract>> selectFragment (): Fragment} \hfill\\
+\item \textbf{<<abstract>> selectFragment (): Fragment} \hfill\\
 \textbf{Sichtbarkeit} public\newline
 Schablonenmethode, welche die Unterklasse das Fragment wählen lässt, das angezeigt werden soll.
 

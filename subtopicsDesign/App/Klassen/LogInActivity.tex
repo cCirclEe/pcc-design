@@ -1,14 +1,19 @@
-\subsubsection{LogInActivity}
-\textbf{extends} MainActivity\newline
-LogInActivity behandelt den Anmeldeprozess und ist die erste Activity die gestartet wird. Sie prüft zu aller erst ob der Nutzer bereits vorher seine Anmeldedaten eingegeben hat und reagiert dementsprechent in ihrer onCreate Methode.
+\subsubsection{LogInActivity} \label{app:klasse:LogInActivity}
+\textbf{extends} \nameref{app:klasse:MainActivity}\newline
+Die LogInActivity behandelt den Anmeldeprozess und ist die erste Activity die gestartet wird. Sie prüft zu aller erst ob der Nutzer bereits vorher seine Anmeldedaten eingegeben hat und reagiert dementsprechent in ihrer onCreate Methode.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{logInFragment: LogInFragment} \hfill\\ 
+\item \textbf{logInFragment: \nameref{app:klasse:LogInFragment}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
-Die LogInFragment Instanz
+Die LogInFragment Instanz die angezeigt wird.
+
+\item \textbf{logInHelper: \nameref{app:klasse:LogInHelper}} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+Die LogInHelper Instanz mit der Accountdaten gespeichert werden oder mit der überprüft wird, ob ein Nutzer angemeldet ist
+
 \end{itemize}
 
 \underline{Konstruktoren}\newline
@@ -24,10 +29,10 @@ Startet ein neues Intent durch welches eine LogInActivity Instanz erzeugt und ge
 
 \item \textbf{getLayoutRes (): int}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die getLayoutRes Methode der Superklasse.
+Überschreibt die \textit{getLayoutRes} Methode der Superklasse.
 
 \item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die onCreate Methode der Superklasse. Prüft ob der Nutzer angemeldet ist und startet die CameraActivity falls ja. Falls nicht wird das LogInFragment angzeigt.
+Überschreibt die \textit{onCreate} Methode der Superklasse. Prüft ob der Nutzer angemeldet ist und startet die \nameref{app:klasse:CameraActivity} falls ja. Falls nicht wird das LogInFragment angzeigt.
 
 \end{itemize}

@@ -1,14 +1,14 @@
-\subsubsection{SettingsActivity}
-\textbf{extends} ContainerActivity \newline
-SettingsActivity zeigt das SettingsFragment an.
+\subsubsection{SettingsActivity} \label{app:klasse:SettingsActivity}
+\textbf{extends} \nameref{app:klasse:ContainerActivity} \newline
+Die SettingsActivity zeigt das SettingsFragment an.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{settingsFragment: SettingsFragment} \hfill\\ 
+\item \textbf{settingsFragment: \nameref{app:klasse:SettingsFragment}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
-Die SettingsFragment Instanz
+Die SettingsFragment Instanz.
 
 \end{itemize}
 
@@ -25,6 +25,6 @@ Startet ein neues Intent durch welches eine SettingsActivity Instanz erzeugt und
 
 \item \textbf{selectFragment (): Fragment}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die selectFragment Methode der Superklasse.
+Überschreibt die \textit{selectFragment} Methode der Superklasse.
 
 \end{itemize}

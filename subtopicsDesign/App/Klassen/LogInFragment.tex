@@ -1,0 +1,61 @@
+\subsubsection{LogInFragment} \label{app:klasse:LogInFragment}
+\textbf{extends} Fragment \newline
+Das LogInFragment lädt die einzelnen Layout-Komponenten der Anmeldeansicht und reagiert auf Nutzereingaben. Es steuert den Kontrollfluss des Anmeldevorgangs und aktualisiert die Bedienobefläche dementsprechend.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{mail: EditText} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Eingabefeld für die Email-Adresse des Nutzers.
+
+\item \textbf{password: EditText} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Eingabefeld für das Passwort des Nutzers.
+
+\item \textbf{logIn: Button} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Schaltfläche um den Anmeldevorgang zu starten.
+
+\item \textbf{register: Button} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Schaltfläche um zur Registrierung zu gelangen.
+
+\item \textbf{status: ProgressBar} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Ladebalken, der während der Überprüfung der Accountdaten angezeigt wird.
+
+\item \textbf{memoryManager: \nameref{app:klasse:MemoryManager}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MemoryManager Instanz um die Accountdaten zu speichern.
+
+\item \textbf{server: \nameref{app:klasse:ServerProxy}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+ServerProxy Instanz um Anfragen an den Server zu stellen.
+
+\item \textbf{serverResponse: \nameref{app:klasse:IServerResponseCallback}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Implementiert das IServerResponseCallback Interface. Beim Aufruf der \textit{onResponse} Methode wird die Antwort des Servers ausgelesen. Bestätigt der Server die eingegebenen Accountdaten ruft das LogInFragment die \textit{Launch} Methode der \nameref{app:klasse:CameraActivity} auf. Andernfalls wird dem Nutzer durch einen Toast eine Fehlermeldung angezeigt. Beim Aufruf der \textit{onError} Methode wird dem Nuter die entsprechende Fehlermeldung ebenfalls per Toast angezeigt. Die \textit{onProgress} Methode wird ignoriert.
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{onCreateView (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die \textit{onCreateView} Methode der Superklasse. Lädt alle View Instanzen und instanziiert und übergibt jeder View ihren Listener. Holt sich eine MemoryManager und eine ServerProxy Instanz und instanziiert den IServerResponseCallback.
+
+\item \textbf{performLogIn (view: View): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Aufgerufen wenn der Nutzer den Anmeldevorgang startet. Bekommt die View die angeklickt wurde übergeben. Ließt die Texte der TextView Instanzen aus, validiert die Eingaben und ruft die \textit{authenticateAccount} Methode auf der ServerProxy Instanz auf. 
+
+\item \textbf{redirectToRegistry (view: View): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Aufgerufen wenn der Nutzer auf die Regristrieren-Schaltfläche tippt. Bekommt die View die angeklickt wurde übergeben. Öffnet die Internetseite zur Registrierung mit dem Standardbrowser des Smartphones.
+
+\end{itemize}

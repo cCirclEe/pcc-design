@@ -1,14 +1,14 @@
-\subsubsection{VideosActivity}
-\textbf{extends} ContainerActivity \newline
-VideosActivity zeigt das VideosFragment an.
+\subsubsection{VideosActivity} \label{app:klasse:VideosActivity}
+\textbf{extends} \nameref{app:klasse:ContainerActivity} \newline
+Die VideosActivity zeigt das VideosFragment an.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{videosFragment: VideosFragment} \hfill\\ 
+\item \textbf{videosFragment: \nameref{app:klasse:VideosFragment}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
-Die VideosFragment Instanz
+Die VideosFragment Instanz.
 
 \end{itemize}
 
@@ -21,10 +21,10 @@ Die VideosFragment Instanz
 
 \item \textbf{Launch (callingActivity: Activity): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Startet ein neues Intent durch welches eine VideosActivity Instanz erzeugt und gestartet wird.
+Bekommt die Activity übergeben, von der aus der Aufruf ausgeht. Startet ein neues Intent durch welches eine VideosActivity Instanz erzeugt und gestartet wird.
 
 \item \textbf{selectFragment (): Fragment}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die selectFragment Methode der Superklasse.
+Überschreibt die \textit{selectFragment} Methode der Superklasse.
 
 \end{itemize}

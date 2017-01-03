@@ -1,0 +1,60 @@
+\subsubsection{CompatCameraHandler} \label{app:klasse:CompatCameraHandler}
+\textbf{extends}\nameref{app:klasse:CameraHandler} \newline
+\textbf{implements} SensorEventListener, View.OnClickListener \newline
+Der CompatCameraDataHandler ist ein CameraDataHandler, der seine Videoaufnahme nach Nutzereingabe oder nachdem die gemessenen Beschleunigungswerte des G-Sensors einen Maximalwert überschreiten auslößt. Er ist zudem für das weiterreichen der Kamera an die CameraView verantwortlich und muss daher die Kamera öffnen und schließen. Von ihr gemachte Vorschaubilder werden an den CameraDataHandler weitergeleitet, den der ComatCameraDataHandler dekoriert.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{camera: Camera} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Die Camera Instanz, von der die Vorschaubilder gelesen werden.
+
+\item \textbf{cameraView: \nameref{app:klasse:CameraView}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Die CameraView Instanz, die zur Ausgabe der Vorschaubilder verwendet werden soll.
+
+\item \textbf{maxGForce: float} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Maximalwert für die gemessene Beschleunuigung. Überschreiten die Messwerte des Sensors diesen Wert wird die Videoaufnahme gestartet.
+
+\item \textbf{accelerometirSensor: Sensor} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Beschleunigungssensor, der überwacht werden soll. CompatCameraDataHandler ist ein Observer dieses Sensors.
+
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{CompatCameraHandler(context: Context, preview: CameraView, recordCallback: IRecordCallback)} \hfill\\
+\textbf{Sichtbarkeit} public\newline
+Konstruktor, der das \textit{cameraView} Feld zuweißt und eine 
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{onPreviewFrame (data: byte[], camera: Camera): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Implementiert die \textit{onPreviewFrame} Methode des Camera.PreviewCallback Interfaces. Ruft die Methode \textit{addFrame} des CameraDataHandlers auf und übergibt ihm das erhaltene Frame.
+
+\item \textbf{onSensorChanged (event: SensorEvent): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Implementiert die \textit{onSensorChanged} Methode des SensorEventListener Interfaces. Überprüft das \textit{values} Feld des erhaltenen SensorEvents und vergleicht die Einträge dieses Arrays mit \textit{maxGForce}. Falls die gemessenen Werte \textit{maxGForce} überschreiten wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{scheduleRecording} des CameraDataHandlers aufgerufen.
+
+\item \textbf{onClick (view: View): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Implementiert die \textit{onClick} Methode des View.OnClickListener Interfaces. Beim Aufruf wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{scheduleRecording} des CameraDataHandlers aufgerufen.
+
+\item \textbf{resumeCamera (): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Aufgerufen, so bald die Kamera verwendet werden soll. Ruft die statische \textit{open} Methode der Camera Klasse auf um eine Camera Instanz zu erhalten und übergibt diese anschließend durch den Aufruf der \textit{setCamera} Methode der CameraView.
+
+\item \textbf{pauseCamera (): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Aufgerufen, so bald die Kamera nicht mehr verwendet werden soll. Ruft die  \textit{release} Methode der Camera Instanz auf um die Camera Instanz frei zu geben und übergibt anschließend der \textit{setCamera} Methode der CameraView den Parameter \textit{null}.
+
+\end{itemize}

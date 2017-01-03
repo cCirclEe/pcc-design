@@ -1,0 +1,33 @@
+\subsubsection{LogInHelper} \label{app:klasse:LogInHelper}
+Der logInHelper ist eine Fassade, der die Überprüfung ob der Nutzer sich bereits zuvor angemeldet hat vereinfacht und die Speicherung dieser Daten zulässt. Durch den LogInHelper ist es nicht notwendig, der Presenter-Ebene der App direkten zugriff auf die Model-Ebene zu geben.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{memoryManager: \nameref{app:klasse:MemoryManager}} \hfill\\ 
+\textbf{Sichtbarkeit} public\newline
+Die MemoryManager Instanz, mit der der LogInHelper Accountdaten abfragt und speichert.
+
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{LogInHelper(context: Context)} \hfill\\
+\textbf{Sichtbarkeit} public\newline
+Konstruktor, der den MemoryManager instanziiert und ihm den erhaltenen Kontext übergibt. 
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{saveAccountData (mail: String, pw: String): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Erhält Mail-Adresse und Passwort, die der Nutzer eingegeben hat. Kapselt diese in ein \nameref{app:klasse:Account} Object und übergibt dieses der \textit{saveAccountData} Methode des Memorymanagers.
+
+\item \textbf{isUserLoggedIn (): boolean}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Ruft die \textit{getAccountData} Methode des MemoryManagers auf. Ist die Rückgabe null, wird \textit{false} zurückgegeben, andernfalls \textit{true}.
+
+\end{itemize}

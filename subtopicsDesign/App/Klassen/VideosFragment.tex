@@ -1,0 +1,33 @@
+\subsubsection{VideosFragment} \label{app:klasse:VideosFragment}
+\textbf{extends} Fragment \newline
+Das VideosFragment lädt die einzelnen Layout-Komponenten der Videosansicht sowie die Liste aller aufgezeichneter und verschlüsselter Videos, reagiert auf Nutzereingaben und zeigt VideoDetails an oder veranlasst das löschen von Videos nach entsprechender Nutzeriengabe. Jede antippbare Layout-Komponente bekommt einen anonymen Listener der zu ihr passt und die mit der jeweiligen Komponente verknüpfte Aktion ausführt.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{videosList: ArrayList<\nameref{app:klasse:Video}> } \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+ArrayList die mit Videodaten aller Videos, die von der App gespeichert wurden und verschlüsselt vorliegen, gefüllt wird. Als Listenelement wird dabei ein Video-Objekt verwendet.
+
+\item \textbf{videos: ListView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+ListView Instanz, welche die Videos die in \textit{videosList} vorliegen anzeigt. Dazu wird ein eigener Adapter verwendet, der von \textit{BaseAdapter} erbt und ein eigenes Layout anzeigt. Die Schaltflächen jedes Listeneintrags zum Anzeigen der Metadaten eines Videos und zum Löschen eines Videos werden zudem mit einem Listener ausgestattet, der die Metadaten einblendet bzw. den MemoryManager verwendet, um das ausgewählte Video zu löschen. Soll das Video gelöscht werden wird zudem das Video von der ListView und der \textit{videosList} entfernt.
+
+\item \textbf{memoryManager: \nameref{app:klasse:MemoryManager}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MemoryManager Instanz um Videodaten vom Speicher zu laden.
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{onCreateView (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die \textit{onCreateView} Methode der Superklasse. Lädt alle View Instanzen, instanziiert und übergibt jeder View ihren Listener, holt sich eine MemoryManager Instanz und ruft die \textit{getAllVideos} Methode des MemoryManagers auf. Weißt die Liste der erhaltenen Video-Objekte der \textit{videosList} ArrayList zu und fügt sie in die \textit{videos} ListView ein.
+
+\end{itemize}

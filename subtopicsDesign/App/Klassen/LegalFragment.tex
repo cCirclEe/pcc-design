@@ -1,0 +1,49 @@
+\subsubsection{LegalFragment} \label{app:klasse:LegalFragment}
+\textbf{extends} Fragment \newline
+Das LegalFragment lädt die einzelnen Layout-Komponenten der Impressumsansicht und reagiert auf Nutzereingaben.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{legal: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text mit Titel ``Impressum''. Zeigt einen Dialog nach Antippen an, in dem eine WebView das Impressum anzeigt.
+
+\item \textbf{privacy: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text mit Titel ``Datenschutz''. Öffnet die Internetseite mit der Datenschutzerklärung nach Antippen mit dem Standardbrowser.
+
+\item \textbf{licenses: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text mit Titel ``Lizenzen''. Zeigt einen Dialog nach Antippen an, in dem eine WebView alle Lizenzen aller Drittanbieter-Bibliotheken anzeigt.
+
+\item \textbf{website: TextView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Anklickbarer Text mit Titel ``Website''. Öffnet die Internetseite der App nach Antippen mit dem Standardbrowser.
+
+\item \textbf{dialogBuilder: DialogBuilder} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Wird verwendet um die Dialoge für Impressum und Lizenzen zu erstellen
+
+\item \textbf{content: WebView} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+WebView die durch die Dialoge angezeigt wird.
+
+\item \textbf{loading: ProgressBar} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Ladebalken, der angezeigt wird, während die Dialoge die WebView Laden.
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\indent Keine, da der Lebenszyklus dieser Klasse von Android gesteuert wird.\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{onCreateView (savedInstanceState: Bundle): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die \textit{onCreateView} Methode der Superklasse. Lädt alle View Instanzen und instanziiert und übergibt jeder View ihren Listener.
+
+\end{itemize}

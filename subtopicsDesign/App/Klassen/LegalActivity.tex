@@ -1,14 +1,14 @@
-\subsubsection{LegalActivity}
-\textbf{extends} ContainerActivity \newline
-LegalActivity zeigt das LegalFragment an.
+\subsubsection{LegalActivity} \label{app:klasse:LegalActivity}
+\textbf{extends} \nameref{app:klasse:ContainerActivity} \newline
+Die LegalActivity zeigt das LegalFragment an.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{legalFragment: LegalFragment} \hfill\\ 
+\item \textbf{legalFragment: \nameref{app:klasse:LegalFragment}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
-Die LegalFragment Instanz
+Die LegalFragment Instanz.
 
 \end{itemize}
 
@@ -25,6 +25,6 @@ Startet ein neues Intent durch welches eine LegalActivity Instanz erzeugt und ge
 
 \item \textbf{selectFragment (): Fragment}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die selectFragment Methode der Superklasse.
+Überschreibt die \textit{selectFragment} Methode der Superklasse.
 
 \end{itemize}
