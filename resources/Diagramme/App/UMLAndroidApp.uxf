@@ -241,6 +241,7 @@ _+ Launch(callingActivity: Activity)_
 - camera: Camera
 --
 + &lt;&lt;create&gt;&gt; CameraView(context: Context, attrs: AttributeSet)
+- setUpCamera(): void
 + setCamera(camera: Camera)
 + surfaceCreated(holder: SurfaceHolder)
 + surfaceChanged(holder: SurfaceHolder, format: int, 

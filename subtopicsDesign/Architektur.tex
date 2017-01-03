@@ -17,7 +17,7 @@ Die Apllikationslogik wird durch die Presenter-Ebene umgesetzt. App und Web Inte
 Die Rolle der View übernimmt schließlich die GUI. In Android wird diese durch entsprechende XML Dokumente implementiert, in Vaadin durch spezielle Java Klassen die von der Vaadin-Internen Klasse ``UI'' erben. Instanzierung, Manipulation und Navigation erfolgen schließlich durch die Presenter-Ebene, die Bindung erfolgt durch Beobachter und ist bereits durch das jewilige Framework festgelegt.
 
 \section{Schichtenmodell}
-Durch den MVP bedingt ergibt sich eine intransparente Drei-Schichten-Archtiektur, die von View über Presenter zu Model reicht. Das MVP wurde konsequent in App, Web Interface und Web Dienst eingehalten, einzelne Module lassen sich einer der drei Rollen des MVP zuordnen und sind in den nachfolgenden Kapiteln zu finden. Das Ergebnis ist eine azyklische Abhängigkeit zwischen den einzelnen Modulen.\newline
+Durch den MVP bedingt ergibt sich eine Drei-Schichten-Archtiektur, die von View über Presenter zu Model reicht. Das MVP wurde konsequent in App, Web Interface und Web Dienst eingehalten, einzelne Module lassen sich einer der drei Rollen des MVP zuordnen und sind in den nachfolgenden Kapiteln zu finden. Das Ergebnis ist eine azyklische Abhängigkeit zwischen den einzelnen Modulen.\newline
 Innerhalb der Module existieren ebenfalls nur azyklische Abhängigkeiten zwischen den Klassen. Das verbessert sowohl die Übersicht als auch die Testbarkeit des Codes.
 
 \section{Entwurfsmuster}
