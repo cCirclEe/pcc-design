@@ -7,9 +7,9 @@ Die CameraView ist eine SurfaceView, der die Vorschaubilder der Kamera Anzeigt. 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{camera: Camera} \hfill\\ 
+\item \textbf{cameraHandler: CameraHandler} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Kamera Instanz, von der die Vorschaubilder angezeigt werden.
+CameraHandler Instanz, deren Methoden \textit{resumeHandler} und \textit{pauseHandler} aufgerufen werden, wenn die \textit{surfaceCreated} oder die \textit{surfaceDestroyed} Methoden der CameraView aufgerufen wurden.
 
 \end{itemize}
 
@@ -25,24 +25,20 @@ Konstruktor, der vonAndroid beim Instanzieren der CameraView verwendet wird. Dur
 \begin{itemize}
 \itemsep0pt
 
-\item \textbf{setUpCamera(): void}\hfill\\
-\textbf{Sichtbarkeit} private\newline
-Ruft die Methode \textit{setPreviewDisplay} auf der Camera Instanz und übergibt ihr den per \textit{gerHolder} abgefragten SurfaceHolder. Anschließend wird die Methode \textit{startPreview} auf der Camera Instanz aufgerufen.
-
-\item \textbf{setCamera (camera: Camera): void}\hfill\\
+\item \textbf{setCameraHandler (cameraHandler: CameraHandler): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Setter, der dem \textit{camera} Feld eine Camera Instanz zuweißt. Falls die CameraView bereits anzegeigt wird, wird die Methode \textit{setUpCamera} aufgerufen.
+Setter, der dem \textit{cameraHandler} Feld eine CameraHandler Instanz zuweißt. Falls die CameraView bereits anzegeigt wird, wird die Methode \textit{resumeHandler} auf dem CameraHandler aufgerufen.
 
 \item \textbf{surfaceCreated(holder: SurfaceHolder): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die Methode \textit{surfaceCreated} des SurfaceHolder.Callback Interfaces. Falls \textit{camera} nicht \textit{null} ist wird die Methode \textit{setUpCamera} aufgerufen.
+Implementiert die Methode \textit{surfaceCreated} des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode \textit{resumeHandler} des Camerahandlers aufgerufen.
 
 \item \textbf{surfaceChanged(holder: SurfaceHolder, format: int, width: int, height: int): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die Methode \textit{surfaceChanged} des SurfaceHolder.Callback Interfaces. Falls \textit{camera} nicht \textit{null} ist wird die Methode \textit{stopPreview} auf der Camera Instanz aufgerufen, das Format auf die erhaltenen Parameter gesetzt und anschließend die Methode \textit{setUpCamera} aufgerufen.
+Implementiert die Methode \textit{surfaceChanged} des SurfaceHolder.Callback Interfaces. Falls \textit{camera} nicht \textit{null} ist wird die Methode \textit{pauseHandler} auf dem CameraHandler aufgerufen und anschließend die Methode \textit{resumeHandler} aufgerufen.
 
 \item \textbf{surfaceDestroyed(holder: SurfaceHolder): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die Methode \textit{surfaceDestroyed} des SurfaceHolder.Callback Interfaces. Aufrufe dieser Methode werden ignoriert.
+Implementiert die Methode \textit{surfaceDestroyed} des SurfaceHolder.Callback Interfaces. Falls \textit{camera} nicht \textit{null} ist wird die Methode \textit{pauseHandler} auf dem CameraHandler aufgerufen.
 
 \end{itemize}

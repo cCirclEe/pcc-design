@@ -1,60 +1,127 @@
 \subsubsection{CompatCameraHandler} \label{app:klasse:CompatCameraHandler}
-\textbf{extends}\nameref{app:klasse:CameraHandler} \newline
-\textbf{implements} SensorEventListener, View.OnClickListener \newline
-Der CompatCameraDataHandler ist ein CameraDataHandler, der seine Videoaufnahme nach Nutzereingabe oder nachdem die gemessenen Beschleunigungswerte des G-Sensors einen Maximalwert überschreiten auslößt. Er ist zudem für das weiterreichen der Kamera an die CameraView verantwortlich und muss daher die Kamera öffnen und schließen. Von ihr gemachte Vorschaubilder werden an den CameraDataHandler weitergeleitet, den der ComatCameraDataHandler dekoriert.
+\textbf{implements} MediaRecorder.OnInfoListener, \nameref{app:klasse:CameraHandler} \newline
+Ziel einer CameraHandler Implementierung ist es, eine Komponente darzustellen, die grundlegende Funktionen für die Bedienung der Kamera zur verfügung zu stellen. Neben der Verwaltung der Kamera gehören Zwischenspeicherung und Persistierung ebenfalls zu diesen Grundfunktionen. Der CompatCameraHandler verwendet dabei die mit älteren Androidversionen kompatible Camera API zum Bedienen der Kamera, Anzeigen der Vorschau und Aufnahme von Videos und kümmert sich darum, den RingBuffer zu befüllen und die Persistierung seines Inhaltes zu koordinieren. Beschrieben wird der Ringbuffer mit kurzen Videostückchen. Eben diese Videostücke muss der CompatCameraHandler aufzeichnen.
+Das Auslösen der Aufnahme gehört nich zu seinen Aufgaben, dies wird durch seine Unterklassen oder durch die ihn instanziierenden Komponenten realisiert. Um eine Kommunikation zwischen aufrufender Komponente, z.B. einem Service oder einer Activity, und dem CameraDataHandler zu ermöglichen, muss diese den \nameref{IRecordCallback} implementieren. Die aufrufende Komponente agiert dann als Beobachter des CameraDataHandler.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-
 \item \textbf{camera: Camera} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Die Camera Instanz, von der die Vorschaubilder gelesen werden.
+Die Camera Instanz, deren Vorschaubilder angezeigt werden und die zur Aufnahme verwendet wird.
 
-\item \textbf{cameraView: \nameref{app:klasse:CameraView}} \hfill\\ 
+\item \textbf{cameraParameters: Camera.Parameters} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Die CameraView Instanz, die zur Ausgabe der Vorschaubilder verwendet werden soll.
+Die CameraParameter Instanz, die verwendet wird, um Höhe und Breite der Vorschau einzustellen.
 
-\item \textbf{maxGForce: float} \hfill\\ 
+\item \textbf{camcorderProfile: CamcorderProfile} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Maximalwert für die gemessene Beschleunuigung. Überschreiten die Messwerte des Sensors diesen Wert wird die Videoaufnahme gestartet.
+Die CamcorderProfile Instanz, die verwendet wird, um Höhe, Breite und Qualität des Videos  und der Vorschau einzustellen.
 
-\item \textbf{accelerometirSensor: Sensor} \hfill\\ 
+\item \textbf{preview:SurfaceView} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Beschleunigungssensor, der überwacht werden soll. CompatCameraDataHandler ist ein Observer dieses Sensors.
+Die SurfaceView Instanz, die zur Ausgabe der Vorschaubilder verwendet werden soll.
+
+\item \textbf{context: Context} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Aktuelle Context Instanz, die verwendet wird, um eine Instanz des MemoryManagers zu erhalten.
+
+\item \textbf{mediaRecorder: MediaRecorder} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MediaRecorder Instanz, die zur Aufnahme der Videstückchen verwendet wird.
+
+\item \textbf{settings: Settings} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Von MemoryManager abgefragte Settings Instanz mit den Einstellungen des Nuters.
+
+\item \textbf{metadata: Metadata} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Die Metadaten, die gespeichert werden sollen und dem AsyncPersistor übergeben werden.
+
+\item \textbf{callback: IRecordCallback} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+IRecordCallback Instanz die als Observer agiert. Auf ihr werden Methoden aufgerufen, sobald die Aufnahme gestartet oder gestoppt wird.
+
+\item \textbf{currentOutputFile: File} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Aktuell verwendete Datei in die das momentan aufgezeichnete Videostückchen geschrieben wird. Diese Datei wird in den RingBuffer eingefügt, wenn die aufnahme des Videstückchens abgeschlossen ist.
+
+\item \textbf{<<final>> videoChunkLength: int} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Länge in Sekunden eines Videostückchens.
+
+\item \textbf{memoryManager: MemoryManager} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MemoryManager Instanz um Einstellungen und Speicherort für die Videostückchen abzufragen. Wird dem AsyncPersistor bei dessen Instanziierung übergeben.
+
+\item \textbf{persistCallback: IPersistCallback} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+IPersistCallback Impementierung, die als Observer des AsyncPersistirs agiert und die benachrichtigt wird, sobald die Persistierung gestartet oder gestoppt wird. Wird die Persistierung gestartet, also die Methode \textit{onPersistingStartet} aufgerufen, ruft die IPersistCallback Implementierung die \textit{onRecordingStopped} Methode des IRecordCallbacks auf und instanziiert Metadata und RingBuffer neu, so dass auf den neuen Instanzen weitergearbeitet wird und die alten Instanzen ohne Kollisionen persistiert werden können. Der Aufruf der \textit{onPersistingStopped} Methode wird ignoriert.
+
+\item \textbf{asyncPersistor: AsyncPersistor} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Asynchroner Task der die Persistierung des RingBuffer-Inhaltes übernimmt.
+
+\item \textbf{ringBuffer: RingBuffer} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+FIFO-artiger Buffer der die einzelnen Videostückchen zwischenspeichert und dem AsyncPersistor übergeben wird.
 
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{CompatCameraHandler(context: Context, preview: CameraView, recordCallback: IRecordCallback)} \hfill\\
+\item \textbf{CameraHandler(context: Context, recordCallback: IRecordCallback)} \hfill\\
 \textbf{Sichtbarkeit} public\newline
-Konstruktor, der das \textit{cameraView} Feld zuweißt und eine 
+Konstruktor, der das \textit{context}, \textit{preview} und das \textit{callback} Feld zuweis, sich eine MemoryManager Instanz holt, die vom MemoryManager abfegragte Settings Instanz \textit{settings} zuweißt, den RingBuffer instanziiert und \textit{cameraProfile} inistialisiert.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{onPreviewFrame (data: byte[], camera: Camera): void}\hfill\\
+\item \textbf{onInfo(mr: MediaRecorder, what: int, extra: int): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die \textit{onPreviewFrame} Methode des Camera.PreviewCallback Interfaces. Ruft die Methode \textit{addFrame} des CameraDataHandlers auf und übergibt ihm das erhaltene Frame.
+Implementiert die \textit{onInfo} Methode des MediaRecorder.OnInfoListener Interface. Aufgerufen, sobald ein Videostückchen die Länge \textit{videoChunkLength} erreicht. Diese Intention wird durch Vergleichen des Parameters \textit{what} überprüft. Fügt \textit{currentOutputFile} in den RingPuffer ein, ruft die Methode \textit{stopRecordingChunk} und anschließend die Methoden \textit{prepareMediaRecorder} und \textit{startRecordingChunk} auf.
 
-\item \textbf{onSensorChanged (event: SensorEvent): void}\hfill\\
+\item \textbf{setMetadata (metadata: Metadata): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die \textit{onSensorChanged} Methode des SensorEventListener Interfaces. Überprüft das \textit{values} Feld des erhaltenen SensorEvents und vergleicht die Einträge dieses Arrays mit \textit{maxGForce}. Falls die gemessenen Werte \textit{maxGForce} überschreiten wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{scheduleRecording} des CameraDataHandlers aufgerufen.
+Implementiert die \textit{setMetadata} Methode des CamerHolder Interface. Setter, der dem Feld \textit{metadata} eine Metadaten Instanz zuweist.
 
-\item \textbf{onClick (view: View): void}\hfill\\
+\item \textbf{schedulePersisting(): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die \textit{onClick} Methode des View.OnClickListener Interfaces. Beim Aufruf wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{scheduleRecording} des CameraDataHandlers aufgerufen.
+Implementiert die \textit{schedulePersisting} Methode des CamerHolder Interface. Ruft die \textit{onRecordingStarted()} Methode des IRecordCallbacks auf. Instanziert dann einen neuen AsyncPersistor, übergibt diesem eine Referenz auf den RingBuffer und den MemoryManager und ruft dessen \textit{start} Methode auf, der sie die Metadaten übergibt.
 
-\item \textbf{resumeCamera (): void}\hfill\\
+\item \textbf{resumeHolder(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Aufgerufen, so bald die Kamera verwendet werden soll. Ruft die statische \textit{open} Methode der Camera Klasse auf um eine Camera Instanz zu erhalten und übergibt diese anschließend durch den Aufruf der \textit{setCamera} Methode der CameraView.
+Implementiert die \textit{resumeHolder} Methode des CamerHolder Interface. Ruft die Methoden \textit{prepareCamera} und \textit{prepareMediaRecorder}, \textit{startRecordingChunk} auf. Gibt \textit{true} zurück falls keiner dieser Aufrufe fehlschlägt.
 
-\item \textbf{pauseCamera (): void}\hfill\\
+\item \textbf{pauseHolder(): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Aufgerufen, so bald die Kamera nicht mehr verwendet werden soll. Ruft die  \textit{release} Methode der Camera Instanz auf um die Camera Instanz frei zu geben und übergibt anschließend der \textit{setCamera} Methode der CameraView den Parameter \textit{null}.
+Implementiert die \textit{pauseHolder} Methode des CamerHolder Interface. Fügt \textit{currentOutputFile} in den RingBuffer ein und ruft die Methoden \textit{stopRecordingChunk}, \textit{releaseMedaRecorder} und \textit{releaseCamera} auf.
+
+\item \textbf{prepareCamera(): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+Öffnet die Kamera, weißt sie dem \textit{camera} Feld zu, holt sich von ihr die Camera.Parameters, modifiziert diese mit der Vorschaugröße und weißt der Kamera schließlich die modifizierten Camera.Parameters sowie den SurfaceHolder der SurfaceView Instanz zu.  Beahndelt Exceptions. Gibt \textit{true} zurück falls keine Exceptions auftreten.
+
+\item \textbf{prepareMediaRecorder(): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+Instanziiert einen MediaRecorder, ruft die Methode \textit{unlock} der Kamera auf, weißt die Kamera dem MediaRecorder zu, übergibt ihm eine VideoSource, das CamcorderProfile, das gewünschte MPEG 4 Ausgabeformat, die gewünschte Framerate, die Zieldatei in die das Video geschrieben werden soll, die Videoänge die in videoChunkLength gespeichert ist und den Holder und setzt den CompatCameraHandler schließlich als OnInfoListener.  Beahndelt Exceptions. Gibt \textit{true} zurück falls keine Exceptions auftreten.
+
+\item \textbf{startRecordingChunk(): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+Ruft die \textit{start} Methode des MediaRecorders auf und beahndelt Exceptions. Gibt \textit{true} zurück falls keine Exceptions auftreten.
+
+\item \textbf{stopRecordingChunk(): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+Ruft die \textit{stop} Methode des MediaRecorders auf und beahndelt Exceptions.
+
+\item \textbf{releaseMediaRecorder(): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+Ruft die \textit{release} Methode des MediaRecorders auf und beahndelt Exceptions.
+
+\item \textbf{releaseCamera(): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+Ruft die \textit{release} Methode der Camera auf und beahndelt Exceptions.
 
 \end{itemize}

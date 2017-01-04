@@ -1,0 +1,21 @@
+\subsubsection{<<Interface>> IRecordCallback} \label{app:klasse:IRecordCallback}
+Der IRecordCallback dient zum Beobachten der \nameref{app:klasse:CameraHandler} Implementierung und wird über beginn und Ende einer Aufnahme benachrichtigt. Beispielsweise können Benutzeroberflächen ihr Aussehen nach Aufruf einer der Methoden ändern.
+\newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{schedulePersisting(): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Kann aufgerufen werden um die Persistierung auszulösen. Die CameraHandler implementierung entscheidet selbst, wann und wie genau die Persistierung abläuft.
+
+\item \textbf{onRecordingStarted(): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Aufgerufen sobald die Aufnahme beginnt. Die Speicherung muss zu diesem Zeitpunkt noch nicht begonnen haben.
+
+\item \textbf{onRecordingStopped(): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Aufgerufen sobald die Aufnahme endet. Die Speicherung muss zu diesem Zeitpunkt noch nicht abgeschlossen sein.
+
+\end{itemize}

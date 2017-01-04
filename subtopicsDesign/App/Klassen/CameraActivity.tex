@@ -6,6 +6,11 @@ Die CameraActivity zeigt die CameraView an, instanzert eine CompatCameraHandler 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
+
+\item \textbf{statusSymbol: ImageView} \hfill\\ 
+\textbf{Sichtbarkeit} private\newline
+ImageView die verwendet wird, um das Symbol einzublenden, welches die Bereitschaft bzw. die Aufnahme der App signalisiert.
+
 \item \textbf{recordCallback: \nameref{app:klasse:IRecordCallback}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
 Implementiert das IRecordCallback Interface. 
@@ -14,7 +19,7 @@ Der Aufruf der Methode \textit{onRecordStopped} benachrichtigt die CameraActivit
 
 \item \textbf{cameraHandler: \nameref{app:klasse:CompatCameraDataHandler}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
-CameraHandler Instanz, die die Vorschaubilder der Kamera eigenständig verarbeitet und die Aufnahme auslößt.
+CameraHandler Instanz, die die Vorschaubilder der Kamera eigenständig verarbeitet und die Aufnahme auslößt. Diesem Feld wird eine TriggeringCompatCameraHandler Instanz zugewiesen.
 
 \item \textbf{cameraView: \nameref{app:klasse:CameraView}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
@@ -43,10 +48,10 @@ Startet ein neues Intent durch welches eine CameraActivity Instanz erzeugt und g
 
 \item \textbf{onResume (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onResume} Methode der Superklasse. Ruft die Methode \textit{resumeCamera} der CameraHandler Instanz auf.
+Überschreibt die \textit{onResume} Methode der Superklasse. Ruft die Methode \textit{setVisibility} der CameraView Instanz auf und übergibt den Parameter \textit{View.VISIBLE}.
 
 \item \textbf{onPause (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onPause} Methode der Superklasse. Ruft die Methode \textit{pauseCamera} der CameraHandler Instanz auf.
+Überschreibt die \textit{onPause} Methode der Superklasse. Ruft die Methode \textit{setVisibility} der CameraView Instanz auf und übergibt den Parameter \textit{View.VISIBLE}.
 
 \end{itemize}
