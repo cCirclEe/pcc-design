@@ -5,9 +5,9 @@
 # will be executed
 
 #!>>
-#! In this example we will change the email of an account, 
-#! because within every action, the method authenticateAccount 
-#! will be executed.
+#! In this example we will create a REST call for every possibility.
+#! The main part of this sequence diagram is to authenticate the user
+#! in every rest call.
 #!<<
 
 #![Authentication on Webservice ]
