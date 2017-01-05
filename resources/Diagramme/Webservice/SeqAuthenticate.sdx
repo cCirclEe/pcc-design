@@ -7,10 +7,10 @@
 #!>>
 #! In this example we will create a REST call for every possibility.
 #! The main part of this sequence diagram is to authenticate the user
-#! in every rest call.
+#! in every rest call, which is done by the method setUpForRequest.
 #!<<
 
-#![Authentication on Webservice ]
+#![Authentication on Web-Service]
 ext:External[pe]
 sP:ServerProxy
 /aM:AccountManager
@@ -20,7 +20,7 @@ sP:ServerProxy
 /account:Account
 
 ext:sP.REST
-sP:String=sP.setUpForRequest(acountData)
+sP:accountStatus=sP.setUpForRequest(acountData)
 sP:account.new(accountData)
 sP:aM.new(accountData)
 aM:dbM1.new(account)

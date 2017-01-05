@@ -6,13 +6,15 @@ ext:External[pe]
 lG:LogInFragment
 sPC:IServerResponseCallback
 sPA:ServerProxy(android)
+/aT:AuthenticateTask
 sPS:ServerProxy(service)
 
 lG:sPA.authenticateUser(account, callback)
-sPA:response=sPS.[POST] authenticateAccount(accountData)
-sPS:sPS.setUpForRequest()
-sPA:sPC.onResponse(responseString) '
-sPC:lG.responseString
+sPA:aT.new(account, callback)
+aT:accountStatus=sPS.[POST] authenticateAccount(accountData)
+sPS:accountStatus=sPS.setUpForRequest()
+aT:sPC.onResponse(accountStatus)
+sPC:lG.accountStatus
 
 
 

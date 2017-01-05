@@ -7,35 +7,27 @@
 #! downloading a video on the webserver.
 #!<<
 
-#![Accountregistration on Webservice ]
+#![Video Download on Web-Service]
 ext:External[pe]
-vP:VideoProxy
-/account:Account
-/aM:AccountManager
-/vM:VideoManager
-/dbM1:DatabaseManager
-/dbM2:DatabaseManager
+sP:ServerProxy
+/response:Response
+vM:VideoManager
+/videoToDownload:File
+dbM:DatabaseManager
+/vInfo:VideoInfo
+lC:LocationConfig[r] "LocationConfig"
 
-ext:vP.videoDownload(videoId, accountData)
-vP:String=vP.setUpForRequest(acountData)
-vP:account.new(accountData)
-vP:aM.new(accountData)
-aM:dbM1.new(account)
-vP:int=aM.getAccountId(mail)
-aM:int=dbM1.getAccountId(mail)
-vP:account.setAccountId(id)
-vP:boolean=aM.authenticate()
-aM:boolean=dbM1.authenticate()
-vP:boolean=aM.isVerified()
-aM:boolean=dbM1.isVerified()
-vP:vM.new(accountData)
-vM:dbM2.new(account)
-
-vP[0]:File=vM.download(videoId)
-vM:VideoInfo=dbM2.getVideoInfo(videoId)
-vM:MetaData=dbM2.getMetaData(videoId)
-
-vP[1]:ext.Response
+ext:sP.videoDownload(videoId, accountData)
+sP:accountStatus=sP.setUpForRequest(accountData)
+sP[1]:videoToDownload=vM.download(videoId)
+vM:vInfo=dbM.getVideoInfo(videoId)
+dbM:vInfo.new(videoId, videoName)
+vM:videoName=vInfo.getVideoName()
+vM:lC.String directory = anonymVideoDirectory
+vM:videoToDownload.new(directory + "/" + videoName)
+sP:response.new(Response.ok((Object) videoToDownload))
+sP:response.header("Content-Disposition", "attachment; filename=\videoToDownload\ )
+sP:ext.response.build
 ]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>

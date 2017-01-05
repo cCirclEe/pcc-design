@@ -6,13 +6,18 @@ vF:VideoFragment
 videosList:ArrayList<Video>
 video:Video
 mM:MemoryManager
+videos:ListView
+listAdapter:ListAdapter
 
 ext:vF.onClick()
 vF:vF.delete(index)
 vF:video=videosList.get(index)
 vF:videoName=video.getName()
 vF:mM.deleteEncryptedVideo(videoName)
-vF:videosList.remove(index)]]></source>
+vF:videosList.remove(index)
+vF:listAdapter=videos.getAdapter()
+vF:listAdapter.notifyDataSetChanged()
+]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>
