@@ -1,15 +1,19 @@
 \section{Datenhaltung}
-Die App muss sich um die Verwaltung von Accountdaten, Einstellungen, Videos, Metadaten und symmetrischen Schlüsseln kümmern. Für Accountdaten und  Einstllungen bieten sich die von Android bereitgestellten SharedPreferences an, die als Key-Value-Pairs aufgebaut werden. Das Schema ist in Schaubild \ref{fig:sharedpreferences_overview} veranschaulicht. Der Key entspricht den Daten die abgefragt werden sollen, also Einstellungen oder Account. Die gelesenen Werte bestehen jeweils aus einem String im JSON Format. Dadurch erreicht man eine Bündelung aller zusammengehörender Werte unter einem Key, unterstützt die Änderbarkeit und Ergänzbarkeit bestehender Daten und vereinfacht die Instanzierung von Account- und Einstellungen-Objekten durch einen Konstruktor, der einen JSON String entgegennimmt.\newline\par
+Die App muss sich um die Verwaltung von Accountdaten, Einstellungen, Videos, Metadaten und symmetrischen Schlüsseln kümmern. 
+
+\subsection{Nutzerdaten}
+Für Accountdaten und  Einstllungen bieten sich die von Android bereitgestellten SharedPreferences an, die als Key-Value-Pairs aufgebaut werden. Das Schema ist in Schaubild \ref{fig:sharedpreferences_overview} veranschaulicht. Der Key entspricht den Daten die abgefragt werden sollen, also Einstellungen oder Account. Die gelesenen Werte bestehen jeweils aus einem String im JSON Format. Dadurch erreicht man eine Bündelung aller zusammengehörender Werte unter einem Key, unterstützt die Änderbarkeit und Ergänzbarkeit bestehender Daten und vereinfacht die Instanzierung von Account- und Einstellungen-Objekten durch einen Konstruktor, der einen JSON String entgegennimmt.\newline\par
 
 %Möchte man in zukunft Beispielsweise das ``fps''-Feld der Einstellungen entfernen, reicht es, den Konstruktor der Einstellungen-Klasse~\eqref{app:class:settings} das fps-Feld nicht mehr lesen zu lassen und den bisherigen JSON String zu überschreiben. So vermeidet man eine Konvention für die Key-Wahl einführen zu müssen, zum Beispiel ``account.name'' oder ``settings.fps''. Eine solche Vorgehensweise kann auch leicht zu verwirrung Führen, da man aus der selben SharedPreferences-Instanz direkt Daten von zwei nicht zusammenhängenden Typen lesen müsste. Für jeden Typ eigene SharedPreferences anzulegen würde die Lesbarkeit nach dem Hinzufügen weiterer Typen ebenfalls erschweren.
 
 \begin{figure}[ht]
 	\centering
-\includegraphics[width=1\textwidth]{./resources/Diagramme/App/sharedpreferences_overview.jpg}
+\includegraphics[width=0.5\textwidth]{./resources/Diagramme/App/sharedpreferences_overview.jpg}
 \caption{Key-Value-Pairs der SharedPreferences}
 	\label{fig:sharedpreferences_overview}
 \end{figure}
 
+\subsection{Dateien}
 Für die Speicherung von Videos, Metadaten und symmetrischen Schlüsseln erweisen sich die SharedPreferences jedoch als ungeeignet. Hier gibt es zwei Lösungen: Entweder man speichert sie im internen oder im externen Speicher. Wir werden die erste Variante wählen, werden uns aber die Möglichkeit zum Exportieren der Daten in den externen Speicher frei halten. Der nive Ansatz merkt sich in den oben beschriebenen SharedPreferences die Namen aller gespeicherten Dateien und referenziert sie dadurch. Dabei ergibt sich aber folgendes Problem: Nachdem der Nutzer alle appinternen Daten gelöscht hat, hat man keine Chance mehr an extern gespeicherte Daten zu kommen. \newline\par
 Wir verwenden einen generischeren Ansatz, der gänzlich auf die verwendung der SharedPreferences verzichtet: Es existieren drei Ordner: Ein Video-, ein Metadata- und ein Keyordner. Jedes Video erhält einen eindeutigen Namen, bestehend aus der exakten Aufnahmezeit. Jede mit diesem Video verwandte Datei, also dessen Metadaten und Schlüssel, besitzen den gleichen Dateinamen.\newline\par
 

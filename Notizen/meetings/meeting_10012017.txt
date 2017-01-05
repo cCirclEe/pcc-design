@@ -1,0 +1,6 @@
+- In sequenzdiagrammen bei async task doInBackground aufruf druch Android mitmodellieren?
+
+- RingBuffer -> Files speichern lassen?
+
+- Wie Ringbuffer alle Dateien auslesen lassen? Queue implementieren oder ArrayQueue implementieren?
+
