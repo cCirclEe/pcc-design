@@ -9,29 +9,29 @@
 
 #![Video Deletion on Webservice]
 ext:External[pe]
-vP:VideoProxy
+sP:ServerProxy
 /account:Account
 /aM:AccountManager
 /vM:VideoManager
 /dbM1:DatabaseManager
 /dbM2:DatabaseManager
 
-ext:vP.videoDelete(videoId, accountData)
-vP:String=vP.setUpForRequest(acountData)
-vP:account.new(accountData)
-vP:aM.new(accountData)
+ext:sP.videoDelete(videoId, accountData)
+sP:String=sP.setUpForRequest(acountData)
+sP:account.new(accountData)
+sP:aM.new(accountData)
 aM:dbM1.new(account)
-vP:int=aM.getAccountId(mail)
+sP:int=aM.getAccountId(mail)
 aM:int=dbM1.getAccountId(mail)
-vP:account.setAccountId(id)
-vP:boolean=aM.authenticate()
+sP:account.setAccountId(id)
+sP:boolean=aM.authenticate()
 aM:boolean=dbM1.authenticate()
-vP:boolean=aM.isVerified()
+sP:boolean=aM.isVerified()
 aM:boolean=dbM1.isVerified()
-vP:vM.new(accountData)
+sP:vM.new(accountData)
 vM:dbM2.new(account)
 
-vP[2]:String=vM.deleteVideo(videoId)
+sP[2]:String=vM.deleteVideo(videoId)
 vM:boolean=dbM2.deleteVideo(videoId)
 ]]></source>
 <configuration>

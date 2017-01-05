@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
-<source><![CDATA[#![DeleteVideoSequenz]
+<source><![CDATA[#![DeletionSequenz]
 ext:External[pe]
-vF:VideosFragment
-videoList:ArrayList<Video>
+vF:VideoFragment
+videosList:ArrayList<Video>
 video:Video
 mM:MemoryManager
 
-
 ext:vF.onClick()
 vF:vF.delete(index)
-vF:video=videoList.getIndex(index)
-vF:video.getName()
-vF:mM.GetInstance(context)
+vF:video=videosList.get(index)
+vF:videoName=video.getName()
 vF:mM.deleteEncryptedVideo(videoName)
-vF:videoList.remove(index)]]></source>
+vF:videosList.remove(index)]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>

@@ -5,14 +5,14 @@
 // fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
 
 // This is a diagram for the Server in our PCC Design phase</help_text>
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>1490</y>
-      <w>320</w>
-      <h>190</h>
+      <x>640</x>
+      <y>1280</y>
+      <w>256</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>Anonymizer
 --
@@ -26,10 +26,10 @@ output: File): boolean</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>1730</y>
-      <w>280</w>
-      <h>190</h>
+      <x>640</x>
+      <y>1472</y>
+      <w>224</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IAnalyzer
@@ -42,10 +42,10 @@ IAnalyzer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>1730</y>
-      <w>290</w>
-      <h>190</h>
+      <x>880</x>
+      <y>1472</y>
+      <w>232</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IFilter
@@ -58,10 +58,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>1670</y>
-      <w>30</w>
-      <h>80</h>
+      <x>728</x>
+      <y>1424</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -69,10 +69,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>1670</y>
-      <w>300</w>
-      <h>80</h>
+      <x>728</x>
+      <y>1424</y>
+      <w>240</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0;280.0;40.0;280.0;60.0</additional_attributes>
@@ -80,10 +80,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>1970</y>
-      <w>280</w>
-      <h>190</h>
+      <x>640</x>
+      <y>1664</y>
+      <w>224</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>ExampleAnalyzer
 --
@@ -95,10 +95,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1100</x>
-      <y>1970</y>
-      <w>290</w>
-      <h>190</h>
+      <x>880</x>
+      <y>1664</y>
+      <w>232</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>ExampleAnonymizer
 --
@@ -110,10 +110,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1200</x>
-      <y>1910</y>
-      <w>30</w>
-      <h>80</h>
+      <x>960</x>
+      <y>1616</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -121,10 +121,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>1910</y>
-      <w>30</w>
-      <h>80</h>
+      <x>712</x>
+      <y>1616</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -132,10 +132,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>1730</y>
-      <w>340</w>
-      <h>190</h>
+      <x>360</x>
+      <y>1472</y>
+      <w>272</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>RSADecryptor
 --
@@ -147,10 +147,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>1430</y>
-      <w>30</w>
-      <h>80</h>
+      <x>424</x>
+      <y>1232</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -158,10 +158,10 @@ IFilter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>1430</y>
-      <w>280</w>
-      <h>80</h>
+      <x>224</x>
+      <y>1232</y>
+      <w>224</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>260.0;10.0;260.0;40.0;10.0;40.0;10.0;60.0</additional_attributes>
@@ -169,10 +169,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>1730</y>
-      <w>390</w>
-      <h>190</h>
+      <x>32</x>
+      <y>1472</y>
+      <w>312</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>AESDecryptor
 --
@@ -184,10 +184,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1130</x>
-      <y>1250</y>
-      <w>330</w>
-      <h>190</h>
+      <x>904</x>
+      <y>1088</y>
+      <w>264</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>Persistor
 --
@@ -200,10 +200,10 @@ IFilter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>1250</y>
-      <w>350</w>
-      <h>190</h>
+      <x>352</x>
+      <y>1088</y>
+      <w>280</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>
 Decryptor
@@ -219,10 +219,10 @@ encMeta: File, decVid: File): boolean</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>800</x>
-      <y>1250</y>
-      <w>320</w>
-      <h>190</h>
+      <x>640</x>
+      <y>1088</y>
+      <w>256</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 AAnonymizer
@@ -236,10 +236,10 @@ AAnonymizer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>1430</y>
-      <w>30</w>
-      <h>80</h>
+      <x>712</x>
+      <y>1232</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -247,10 +247,10 @@ AAnonymizer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2120</x>
-      <y>1200</y>
-      <w>380</w>
-      <h>110</h>
+      <x>1696</x>
+      <y>1048</y>
+      <w>304</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Account
 --
@@ -265,10 +265,10 @@ AAnonymizer
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1570</x>
-      <y>500</y>
-      <w>460</w>
-      <h>200</h>
+      <x>1256</x>
+      <y>488</y>
+      <w>368</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>VideoManager
 --
@@ -286,10 +286,10 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2050</x>
-      <y>500</y>
-      <w>460</w>
-      <h>200</h>
+      <x>1640</x>
+      <y>488</y>
+      <w>368</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>AccountManager
 --
@@ -309,10 +309,10 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1590</x>
-      <y>940</y>
-      <w>510</w>
-      <h>370</h>
+      <x>1272</x>
+      <y>840</y>
+      <w>408</w>
+      <h>304</h>
     </coordinates>
     <panel_attributes>DatabaseManager
 --
@@ -336,10 +336,10 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
-      <y>760</y>
-      <w>480</w>
-      <h>240</h>
+      <x>552</x>
+      <y>696</y>
+      <w>384</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>VideoProcessingChain
 --
@@ -360,10 +360,10 @@ key: InputStream, context: EditingContext)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1590</x>
-      <y>40</y>
-      <w>670</w>
-      <h>270</h>
+      <x>1272</x>
+      <y>120</y>
+      <w>536</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>ServerProxy
 --
@@ -385,10 +385,10 @@ encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :St
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1800</x>
-      <y>690</y>
-      <w>30</w>
-      <h>270</h>
+      <x>1440</x>
+      <y>640</y>
+      <w>24</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
@@ -396,10 +396,10 @@ encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :St
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>470</y>
-      <w>480</w>
-      <h>250</h>
+      <x>560</x>
+      <y>464</y>
+      <w>384</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>VideoProcessingManager
 --
@@ -420,10 +420,10 @@ key: InputStream, account: Account, response :AsyncResponse)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>710</y>
-      <w>30</w>
-      <h>70</h>
+      <x>752</x>
+      <y>656</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
@@ -431,10 +431,10 @@ key: InputStream, account: Account, response :AsyncResponse)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
-      <y>1040</y>
-      <w>510</w>
-      <h>120</h>
+      <x>552</x>
+      <y>920</y>
+      <w>408</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
 IStage
@@ -447,10 +447,10 @@ IStage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>760</y>
-      <w>510</w>
-      <h>250</h>
+      <x>96</x>
+      <y>696</y>
+      <w>408</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>EditingContext
 --
@@ -470,10 +470,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>840</y>
-      <w>90</w>
-      <h>30</h>
+      <x>496</x>
+      <y>760</y>
+      <w>72</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -481,10 +481,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>990</y>
-      <w>30</w>
-      <h>70</h>
+      <x>752</x>
+      <y>880</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
@@ -492,10 +492,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>1150</y>
-      <w>30</w>
-      <h>120</h>
+      <x>752</x>
+      <y>1008</y>
+      <w>24</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
@@ -503,10 +503,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>940</x>
-      <y>1150</y>
-      <w>380</w>
-      <h>120</h>
+      <x>752</x>
+      <y>1008</y>
+      <w>304</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0;360.0;50.0;360.0;100.0</additional_attributes>
@@ -514,10 +514,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>1150</y>
-      <w>360</w>
-      <h>120</h>
+      <x>488</x>
+      <y>1008</y>
+      <w>288</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>340.0;10.0;340.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
@@ -525,10 +525,10 @@ IStage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>1490</y>
-      <w>330</w>
-      <h>190</h>
+      <x>360</x>
+      <y>1280</y>
+      <w>264</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>IKeyDecryptor
 --
@@ -540,10 +540,10 @@ IStage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>1490</y>
-      <w>390</w>
-      <h>190</h>
+      <x>32</x>
+      <y>1280</y>
+      <w>312</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>IFileDecryptor
 --
@@ -555,10 +555,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>1670</y>
-      <w>30</w>
-      <h>80</h>
+      <x>224</x>
+      <y>1424</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -566,10 +566,10 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>1670</y>
-      <w>30</w>
-      <h>80</h>
+      <x>424</x>
+      <y>1424</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -577,21 +577,21 @@ IStage
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1450</x>
-      <y>1300</y>
-      <w>380</w>
-      <h>110</h>
+      <x>1160</x>
+      <y>1136</y>
+      <w>304</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>360.0;10.0;360.0;90.0;10.0;90.0</additional_attributes>
+    <additional_attributes>360.0;10.0;360.0;80.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2120</x>
-      <y>1080</y>
-      <w>380</w>
-      <h>110</h>
+      <x>1696</x>
+      <y>952</y>
+      <w>304</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>VideoInfo
 --
@@ -605,10 +605,10 @@ IStage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2120</x>
-      <y>940</y>
-      <w>380</w>
-      <h>130</h>
+      <x>1696</x>
+      <y>840</y>
+      <w>304</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>Metadata
 --
@@ -625,9 +625,9 @@ triggerType :String, gForce :Vector3D)
     <id>UMLPackage</id>
     <coordinates>
       <x>0</x>
-      <y>420</y>
-      <w>1490</w>
-      <h>1790</h>
+      <y>424</y>
+      <w>1192</w>
+      <h>1432</h>
     </coordinates>
     <panel_attributes>Video
 fg=red</panel_attributes>
@@ -636,10 +636,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1560</x>
-      <y>0</y>
-      <w>730</w>
-      <h>340</h>
+      <x>1248</x>
+      <y>88</y>
+      <w>584</w>
+      <h>272</h>
     </coordinates>
     <panel_attributes>ServiceConnection
 fg=red</panel_attributes>
@@ -648,10 +648,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1550</x>
-      <y>450</y>
-      <w>990</w>
-      <h>270</h>
+      <x>1240</x>
+      <y>448</y>
+      <w>792</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>Manager
 fg=red</panel_attributes>
@@ -660,10 +660,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1570</x>
-      <y>900</y>
-      <w>1350</w>
-      <h>430</h>
+      <x>1256</x>
+      <y>808</y>
+      <w>1080</w>
+      <h>352</h>
     </coordinates>
     <panel_attributes>Data
 fg=red</panel_attributes>
@@ -672,10 +672,10 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1800</x>
-      <y>690</y>
-      <w>500</w>
-      <h>270</h>
+      <x>1440</x>
+      <y>640</y>
+      <w>400</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;250.0;10.0;130.0;480.0;130.0;480.0;10.0</additional_attributes>
@@ -683,10 +683,10 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1800</x>
-      <y>300</y>
-      <w>30</w>
-      <h>220</h>
+      <x>1440</x>
+      <y>328</y>
+      <w>24</w>
+      <h>176</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
@@ -694,10 +694,10 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1800</x>
-      <y>390</y>
-      <w>500</w>
-      <h>130</h>
+      <x>1440</x>
+      <y>400</y>
+      <w>400</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>480.0;110.0;480.0;10.0;10.0;10.0</additional_attributes>
@@ -705,10 +705,10 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1170</x>
-      <y>530</y>
-      <w>420</w>
-      <h>30</h>
+      <x>936</x>
+      <y>512</y>
+      <w>336</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;400.0;10.0</additional_attributes>
@@ -716,10 +716,10 @@ fg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2520</x>
-      <y>940</y>
-      <w>380</w>
-      <h>130</h>
+      <x>2016</x>
+      <y>840</y>
+      <w>304</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>LocationConfig
 --
