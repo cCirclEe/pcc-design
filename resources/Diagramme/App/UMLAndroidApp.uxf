@@ -1387,7 +1387,7 @@ bg=#9999</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>603</x>
-      <y>126</y>
+      <y>135</y>
       <w>225</w>
       <h>63</h>
     </coordinates>
@@ -1402,7 +1402,7 @@ bg=#9999</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>549</x>
-      <y>135</y>
+      <y>144</y>
       <w>72</w>
       <h>36</h>
     </coordinates>
@@ -1434,16 +1434,13 @@ bg=#9999</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1026</x>
-      <y>126</y>
-      <w>234</w>
-      <h>81</h>
+      <x>1053</x>
+      <y>135</y>
+      <w>207</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>Update visiblity of CameraView 
-in onResume() and onPause() and
-call CameraHandler.resumeCamera()
-and CameraHandler.pauseCamera()
-in those methods.
+in onResume() and onPause()
 bg=#9999</panel_attributes>
     <additional_attributes/>
   </element>
@@ -1451,12 +1448,12 @@ bg=#9999</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1188</x>
-      <y>198</y>
+      <y>189</y>
       <w>27</w>
-      <h>81</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
