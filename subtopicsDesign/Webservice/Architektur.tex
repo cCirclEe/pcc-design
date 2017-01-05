@@ -2,7 +2,7 @@
 
 \begin{figure}[ht]
 	\centering
-\includegraphics[width=1\textwidth]{./resources/Diagramme/WebService/UMLSERVERPCC.jpg}
+\includegraphics[width=1\textwidth]{./resources/Diagramme/Webservice/UMLSERVERPCC.jpg}
 \caption{UML Diagram des Web-Dienst}
 	\label{service:fig:modules_overview}
 \end{figure}
@@ -14,7 +14,7 @@ Da die Bearbeitung der Videos jedoch sehr zeitaufwändig ist, lagern wie die Bea
 \subsection{Entwurfsmuster} \label{service:pattern}
 Der Web-Service benutzt verschiedene Entwurfsmuster um vor allem zwei Ziele zu erreichen: 1. Eine schnelle und zeitlich unabhängige Bearbeitung von Anfragen und 2. Eine hohe Modularität und Austauschbarkeit.
 
-\subsection{Proxy} \label{service:pattern:proxy}
+\subsubsection{Proxy} \label{service:pattern:proxy}
 Die Webanbindung des Services wird in dem \nameref{service:klasse:ServerProxy} gekapselt. Der Proxy bearbeitet bzw. verschickt lediglich die Http-Anfragen und leitet alle weitere Arbeit weiter. Dies sorgt für eine höhere Austauschbarkeit, da so die Webanbindung unabhängig von der eigentlichen Bearbeitung der Anfragen ausgetauscht werden kann und umgekehrt.
 
 \subsubsection{Master-Worker} \label{service:pattern:masterworker}
@@ -30,3 +30,4 @@ Durch die Kapselung der Arbeitsschritte in einzelne Klassen ist es zudem möglic
 \subsubsection{Strategie} \label{service:pattern:strategie}
 Da es für das, von uns bereitgestellte Bearbeitungschema für Videos, viele verschiedene Algorithmen für die einzelnen Schritte gibt, wird das Strategie-Muster verwendet:\newline
 Für die Schritte, die man eventuell austauschen möchte (z.B den Filter mit dem Bildbereiche unkenntlich gemacht werden) existiert eine Schnittstelle (z.B \nameref{service:klasse:IFilter}). Dann können nach belieben konkrete Implementierungen (hier z.B. \nameref{service:klasse:ExampleFilter}) ausgetauscht werden, indem man bei der aufrufenden Klasse (hier: \nameref{service:klasse:AAnonymizer}). Theoretisch ist dies sogar zur Laufzeit möglich.
+\newpage
