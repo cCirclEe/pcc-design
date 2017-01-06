@@ -6,29 +6,66 @@ Allgemeiner Text bliblablubb. \newline
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
+\item \textbf{account: Account} \hfill\\ 
+\textbf{Sichtbarkeit} private
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
+\item \textbf{DatabaseManager(account: Account)} \hfill\\
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{saveAnonymizedVideo(fileName: String): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Methodenbeschreibung
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{getVideoInfo(videoId: int): VideoInfo}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{getVideoInfoList(): ArrayList<VideoInfo>}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{deleteVideo(videoId: int): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{getMetadata(videoId: int): Metadata}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{setEmail(newMail: String): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{setPassword(newPasswordHash: String): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{authenticate(): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{deleteAccount(): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{getAccountId(mail :String) :int}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{register(): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+\item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Methodenbeschreibung

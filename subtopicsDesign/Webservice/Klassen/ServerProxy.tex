@@ -1,35 +1,66 @@
 \subsubsection{ServerProxy} \label{service:klasse:ServerProxy}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
 Allgemeiner Text bliblablubb. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
+\item \textbf{account: Account} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Beschreibung
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
-\end{itemize}
-
-\underline{Konstruktoren}
-\begin{itemize}
-\itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{videoUpload (video: InputStream, metadata: InputStrem, encryptedSymmetricKey: String, accountData: String, response: AsyncResponse): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Methodenbeschreibung
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{videoDownload(videoId: int, accountData: String): Response}\hfill\\
 \textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+i\item \textbf{videoInfo(videoId: int, accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{videoDelete(videoId: int, accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{videoListOfUser(accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public  
+
+Methodenbeschreibung
+
+\item \textbf{authenticateAccount(accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{createAccount(accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{changeAccount(accountDataNew: String, accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{deleteAccount(accountData: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{setUpForRequest(accountData: String)}\hfill\\
+\textbf{Sichtbarkeit} private
 
 Methodenbeschreibung
 

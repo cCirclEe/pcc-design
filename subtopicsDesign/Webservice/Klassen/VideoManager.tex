@@ -1,34 +1,47 @@
 \subsubsection{VideoManager} \label{service:klasse:VideoManager}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
 Allgemeiner Text bliblablubb. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
+\item \textbf{account: Account} \hfill\\ 
+\textbf{Sichtbarkeit} private 
 Beschreibung
 
-\item \textbf{name: Typ} \hfill\\ 
-Beschreibung
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-Standardkonstruktor
+\item \textbf{VideoManager(account :Account)} \hfill\\
+\textbf{Sichtbarkeit} public
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{getVideoInfoList(): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Methodenbeschreibung
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{upload(video: InputStream, metaData: InputStream,
+encryptedSymmetricKey: String, response: AsyncResponse): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{download(videoId: int): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{deleteVideo(videoId :int): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Methodenbeschreibung
+
+\item \textbf{getMetadata(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Methodenbeschreibung
