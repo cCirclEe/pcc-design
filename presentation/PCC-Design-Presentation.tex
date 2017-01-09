@@ -1,0 +1,261 @@
+%% LaTeX-Beamer template for KIT design
+%% by Erik Burger, Christian Hammer
+%% title picture by Klaus Krogmann
+%%
+%% version 2.1
+%%
+%% mostly compatible to KIT corporate design v2.0
+%% http://intranet.kit.edu/gestaltungsrichtlinien.php
+%%
+%% Problems, bugs and comments to
+%% burger@kit.edu
+
+\documentclass[19pt]{beamer}
+
+%% SLIDE FORMAT
+
+% use 'beamerthemekit' for standard 4:3 ratio
+% for widescreen slides (16:9), use 'beamerthemekitwide'
+
+\usepackage{templates/beamerthemekit}
+\usepackage{wrapfig}
+% \usepackage{templates/beamerthemekitwide}
+
+%% TITLE PICTURE
+
+% if a custom picture is to be used on the title page, copy it into the 'logos'
+% directory, in the line below, replace 'mypicture' with the 
+% filename (without extension) and uncomment the following line
+% (picture proportions: 63 : 20 for standard, 169 : 40 for wide
+% *.eps format if you use latex+dvips+ps2pdf, 
+% *.jpg/*.png/*.pdf if you use pdflatex)
+\titleimage{Gruppenarbeit_klein}
+
+%% TITLE LOGO
+
+% for a custom logo on the front page, copy your file into the 'logos'
+% directory, insert the filename in the line below and uncomment it
+
+\titlelogo{Logo_IOSB}
+
+% (*.eps format if you use latex+dvips+ps2pdf,
+% *.jpg/*.png/*.pdf if you use pdflatex)
+
+%% TikZ INTEGRATION
+
+% use these packages for PCM symbols and UML classes
+% \usepackage{templates/tikzkit}
+% \usepackage{templates/tikzuml}
+
+% the presentation starts here
+
+\title[PCC]{Privacy Crash Cam:\\ Entwurf}
+\subtitle{App, Web-Interface und Web-Dienst}
+\author{Giorgio G., Christoph H., David L.,  Josh R.,  Fabian W.}
+
+\institute{Karlsruher Institut f\"ur Technologie, Fraunhofer Institut f\"ur Optronik, Systemtechnik und Bildauswertung}
+
+% Bibliography
+
+\usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
+\addbibresource{templates/example.bib}
+\bibhang1em
+
+\begin{document}
+
+% change the following line to "ngerman" for German style date and logos
+\selectlanguage{english}
+
+%title page
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\section{Aufgabenstellung}
+\subsection{Szenario}
+\begin{frame}{Szenario}
+	\begin{center}
+		%\includegraphics[scale=0.55]{logos/UnfallSzenario} 
+		%\includegraphics[scale=0.25]{logos/UnfallSzenario2} 
+		%\includegraphics[scale=0.25]{logos/UnfallSzenario3} 
+	\end{center}
+\end{frame}
+
+\subsection{Aufgabenstellung}
+\begin{frame}{Aufgabenstellung}
+	\begin{itemize}
+		\item Verschl\"usselnde Crashcam-App
+		\pause
+		\item Web-Interface zur Videoverwaltung
+		\pause
+		\item Web-Dienst f\"ur Entschl\"usselung, Bildauswertung und Anonymisierung
+	\end{itemize}
+\end{frame}
+
+\section{App}
+\begin{frame}{App}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Ansichten
+			\begin{itemize}
+				\item Kamera
+				\item Videos
+				\item Einstellungen
+				\pause
+			\end{itemize}
+			\item 2 Kamera-Modi
+			\begin{itemize}
+				\item Beobachtungsmodus
+				\begin{itemize}
+					\item Ringpuffer (1 min)
+				\end{itemize}
+				\item Aufnahmemodus
+				\begin{itemize}
+					\item persistieren
+					\item verschl\"usseln
+				\end{itemize}
+				\pause
+			\end{itemize}
+			\item Verschl\"usselung
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		%\includegraphics[scale=0.075]{../subtopicsFuncspec/Res/Mockups/Portrait_camera_view_menu_phone}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\section{Web-Interface}
+\begin{frame}{Web-Interface}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Ansicht anonymisierter Videos
+    			\begin{itemize}
+					\item Herunterladen
+					\item Info
+					\item L\"oschen
+				\end{itemize}
+				\pause
+    			\item Accountverwaltung
+    			\begin{itemize}
+					\item Erstellen
+					\item \"Andern
+					\item L\"oschen
+				\end{itemize}
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		%\includegraphics[scale=0.5]{../subtopicsFuncspec/Res/Mockups/Webinterface_small_pres}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Web-Dienst}
+\begin{frame}{Web-Dienst}
+	\begin{itemize}
+		\item Bearbeitet Anfragen der App und des Web-Interface
+		\pause
+		\item Videoverarbeitung
+			\begin{itemize}
+				\item entschl\"usseln
+				\item analysieren
+				\item anonymisieren
+			\end{itemize}
+		\pause
+		\item Datenverwaltung
+			\begin{itemize}
+				\item Accountdaten
+				\item Videodaten
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{Organisation}
+
+\subsection{Aufgabenverteilung}
+\begin{frame}{Aufgabenverteilung}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Christoph H.
+			\begin{itemize}
+				\item Anforderungen
+				\item Globale Testf\"alle
+				\item Web-Interface Demo
+			\end{itemize}
+		\item David L.
+			\begin{itemize}
+				\item Einrichtung JIRA, Github				
+				\item Globale Testf\"alle
+				\item Web-Interface Demo
+				\item Produktumgebung
+			\end{itemize}
+		\item Fabian W.
+			\begin{itemize}
+				\item Systemmodelle
+				\item Entwicklungsumgebung
+				\item Glossar
+				\item Pr\"asentation
+			\end{itemize}
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+		\item Giorgio G.
+			\begin{itemize}
+				\item Zielbestimmung
+				\item Anforderungen
+				\item App-Demo
+				\item Produkteinsatz
+				\item Produktdaten
+			\end{itemize}
+		\item Josh R.
+			\begin{itemize}
+				\item Anforderungen
+				\item Entwicklungsumgebung
+				\item Stilkorrektur
+				\item Glossar
+			\end{itemize}
+	\end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{JIRA}
+\begin{frame}[allowframebreaks]{JIRA}
+	\begin{figure}
+		\begin{center}
+			%\includegraphics[scale=0.18]{logos/JIRA01} 
+		\end{center}
+		\framebreak
+		\begin{center}
+			%\includegraphics[scale=0.18]{logos/JIRA02} 
+		\end{center}
+	\end{figure}				
+\end{frame}
+
+\subsection{Github}
+\begin{frame}[allowframebreaks]{Github}
+	\begin{figure}
+		\begin{center}
+			%\includegraphics[scale=0.20]{logos/Github} 
+		\end{center}
+		\framebreak
+		\begin{center}
+			%\includegraphics[scale=0.23]{logos/GithubStats} 
+		\end{center}
+	\end{figure}				
+\end{frame}
+
+\section{Gruppenarbeit}
+\begin{frame}{Gruppenarbeit}
+	\begin{figure}
+		\begin{center}
+			%\includegraphics[scale=0.16]{logos/Gruppenarbeit} 
+		\end{center}
+	\end{figure}	
+\end{frame}
+\end{document}
