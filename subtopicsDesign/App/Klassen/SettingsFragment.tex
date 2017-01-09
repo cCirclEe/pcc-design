@@ -1,6 +1,6 @@
 \subsubsection{SettingsFragment} \label{app:klasse:SettingsFragment}
 \textbf{extends} Fragment \newline
-Das SettingsFragment lädt die einzelnen Layout-Komponenten der Einstellungenansicht, reagiert auf Nutzereingaben und veranlasst das Speichern gemachter Änderungen. Jede antippbare Layout-Komponente bekommt einen anonymen Listener der zu ihr passt und die mit der jeweiligen Komponente verknüpfte Aktion ausführt.
+Das SettingsFragment lädt die einzelnen Layout-Komponenten der Einstellungenansicht, reagiert auf Nutzereingaben und veranlasst das Speichern gemachter Änderungen. Jede antippbare Layout-Komponente bekommt einen anonymen OnClickListener der die mit der jeweiligen Komponente verknüpfte Aktion ausführt.
 \newline
 
 \underline{Attribute}
@@ -10,17 +10,17 @@ Das SettingsFragment lädt die einzelnen Layout-Komponenten der Einstellungenans
 \textbf{Sichtbarkeit} private \newline
 Die aktuellen Einstellungen, gekapselt in einer Settings Instanz.
 
-\item \textbf{resolutionLow: TextView} \hfill\\ 
+\item \textbf{qualityLow: TextView} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Anklickbarer Text um niedrige Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{resolution}, färbt diese TextView grün und \textit{resolutionMedium} und \textit{resolutionHigh} grau.
+Anklickbarer Text um niedrige Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{quality}, färbt diese TextView grün und \textit{qualityMedium} und \textit{qualityHigh} grau.
 
-\item \textbf{resolutionMedium: TextView} \hfill\\ 
+\item \textbf{qualityMedium: TextView} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Anklickbarer Text um mittlere Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{resolution}, färbt diese TextView grün und \textit{resolutionLow} und \textit{resolutionHigh} grau.
+Anklickbarer Text um mittlere Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{quality}, färbt diese TextView grün und \textit{qualityLow} und \textit{qualityHigh} grau.
 
-\item \textbf{resolutionHigh: TextView} \hfill\\ 
+\item \textbf{qualityHigh: TextView} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Anklickbarer Text um hohe Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{resolution}, färbt diese TextView grün und \textit{resolutionLow} und \textit{resolutionMedium} grau.
+Anklickbarer Text um hohe Auflösung festzulegen. Antippen ändert den in der Settings Instanz gespeicherten Wert \textit{quality}, färbt diese TextView grün und \textit{qualityLow} und \textit{qualityMedium} grau.
 
 \item \textbf{fps: TextView} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
@@ -36,11 +36,11 @@ Text zum Anzeigen der aktuell eingestellten Buffergröße.
 
 \item \textbf{incBuffer: Button} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Schaltfläche um die Buffergröße zu erhöhen. Antippen erhöht die in der Settings Instanz gespeicherten Wert \textit{bufferSize} und aktualisiert \textit{bufferSize}.
+Schaltfläche um die Buffergröße zu erhöhen. Antippen erhöht die in der Settings Instanz gespeicherten Wert \textit{bufferSize} und aktualisiert die TextView \textit{bufferSize}.
 
 \item \textbf{decBuffer: Button} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Schaltfläche um die Buffergröße zu verringern. Antippen verringert die in der Settings Instanzgespeicherten Wert \textit{bufferSize} und aktualisiert \textit{bufferSize}.
+Schaltfläche um die Buffergröße zu verringern. Antippen verringert die in der Settings Instanzgespeicherten Wert \textit{bufferSize} und aktualisiert die TextView \textit{bufferSize}.
 
 \item \textbf{logOut: Button} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline

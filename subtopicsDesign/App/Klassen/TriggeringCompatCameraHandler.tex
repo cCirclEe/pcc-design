@@ -1,5 +1,5 @@
 \subsubsection{TriggeringCompatCameraHandler} \label{app:klasse:TriggeringCompatCameraHandler}
-\textbf{extends}\nameref{app:klasse:CompatCameraHandler} \newline
+\textbf{extends} \nameref{app:klasse:CompatCameraHandler} \newline
 \textbf{implements} SensorEventListener, View.OnClickListener \newline
 Der TriggeringCompatCameraHandler ist ein CompatCameraHandler, der seine Videoaufnahme nach Nutzereingabe oder nachdem die gemessenen Beschleunigungswerte des G-Sensors einen Maximalwert überschreiten auslößt.
 \newline
@@ -17,7 +17,7 @@ Beschleunigungssensor, der überwacht werden soll. CompatCameraDataHandler ist e
 
 \item \textbf{sensormanager: SensorManager} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-SensorManager, der verwendet wird um den \textit{accelerometerSensor} zuzuweißen und den TriggeringCompatCameraHandler als SensorEventListener zu registrieren.
+SensorManager, der verwendet wird, um den \textit{accelerometerSensor} zuzuweißen und den TriggeringCompatCameraHandler als SensorEventListener zu registrieren.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -34,10 +34,10 @@ Konstruktor, der \textit{super} aufruft und der Elternklasse die erhaltenen Para
 
 \item \textbf{onSensorChanged (event: SensorEvent): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die \textit{onSensorChanged} Methode des SensorEventListener Interfaces. Überprüft das \textit{values} Feld des erhaltenen SensorEvents und vergleicht die Einträge dieses Arrays mit \textit{maxGForce}. Falls die gemessenen Werte \textit{maxGForce} überschreiten wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{schedulePersisting} aufgerufen, die in seiner Elternklasse implementiert sind.
+Implementiert die \textit{onSensorChanged} Methode des SensorEventListener Interfaces. Überprüft das \textit{values} Feld des erhaltenen SensorEvents und vergleicht die Einträge dieses Arrays mit \textit{maxGForce}. Falls die gemessenen Werte \textit{maxGForce} überschreiten wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{schedulePersisting} aufgerufen, die in der Elternklasse implementiert sind.
 
 \item \textbf{onClick (view: View): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die \textit{onClick} Methode des View.OnClickListener Interfaces. Beim Aufruf wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{schedulePersisting} aufgerufen, die in seiner Elternklasse implementiert sind.
+Implementiert die \textit{onClick} Methode des View.OnClickListener Interfaces. Beim Aufruf wird eine Metadata Instanz erstellt und die Methoden \textit{setMetadata} und \textit{schedulePersisting} aufgerufen, die in der Elternklasse implementiert sind.
 
 \end{itemize}
