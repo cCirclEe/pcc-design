@@ -1,22 +1,22 @@
 \subsubsection{Account} \label{service:klasse:Account}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+Die Klasse Account repräsentiert den Account eines Benutzers. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{email: String} \hfill\\ 
 \textbf{Sichtbarkeit} private 
-Beschreibung
+Jedem Account wird eine E-Mail-Adresse zugewiesen.
 
 \item \textbf{passwordHash: String} \hfill\\ 
 \textbf{Sichtbarkeit} private 
-Beschreibung
+Jedem Account wird ein passwordHash zugewiesen.
 
 \item \textbf{id: int} \hfill\\ 
 \textbf{Sichtbarkeit} private  
+
 Die ``id'' ist identisch der ``id'' in der Tabelle User der Datenbank.
+
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -24,14 +24,17 @@ Die ``id'' ist identisch der ``id'' in der Tabelle User der Datenbank.
 \itemsep0pt
 \item \textbf{Account(json: String)} \hfill\\
 \textbf{Sichtbarkeit} public
+
+Der Konstruktor nimmt ein JSON-Objekt entgegen, wertet die Informationen aus und leitet diese an die Klassenattribute weiter. Die Information ``password'' wird mit der Methode ``passwordHasher(password: String)'' gehasht und dann weitergeleitet.
+
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{passwordHasher(password: String): String}\hfill\\
-\textbf{Sichtbarkeit} public
+\textbf{Sichtbarkeit} private
 
-Methodenbeschreibung
+Die Methode nimmt das im Klartext vorhandene Passwort und hasht dieses. Die Methode wird im Konstruktor aufgerufen, um das Passwort zu hashen und an das Klassenattribut weiterzuleiten.
 
 \end{itemize}

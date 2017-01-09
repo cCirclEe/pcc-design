@@ -1,5 +1,5 @@
 \subsubsection{Metadata}
-Allgemeiner Text bliblablubb. \newline
+Die Klasse Metadata beinhaltet alle wichigen Informationen zu den Metadaten eines Videos. \newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -7,17 +7,17 @@ Allgemeiner Text bliblablubb. \newline
 \item \textbf{date: String} \hfill\\ 
 \textbf{Sichtbarkeit} private 
 
-Beschreibung
+Das Attribut beinhaltet das Datum, an dem das Video aufgenommen wurde.
 
 \item \textbf{triggerType: String} \hfill\\ 
 \textbf{Sichtbarkeit} private 
 
-Beschreibung
+Das Attribut beinhaltet die Art, wie das Video ausgelöst wurde (G-Sensor, manuelle Auslösung). 
 
 \item \textbf{gForce: Vector3D} \hfill\\ 
 \textbf{Sichtbarkeit} private 
 
-Beschreibung
+Das Attribut beschreibt, von wo der Richtwert beim G-Sensor überschritten wurde.
 
 \end{itemize}
 
@@ -27,6 +27,8 @@ Beschreibung
 \item \textbf{Metadata(metaName :String, date :String, triggerType :String, gForce :Vector3D)} \hfill\\
 \textbf{Sichtbarkeit} public 
 
+Der Konstruktor erstellt ein ``Metadata''-Objekt, welches die Parameterübergaben den zugehörigen Klassenattributen zuweist.
+
 \end{itemize}
 
 \underline{Methoden}
@@ -35,6 +37,6 @@ Beschreibung
 \item \textbf{getAsJson(): String}\hfill\\
 \textbf{Sichtbarkeit} public 
 
-Methodenbeschreibung
+Die Methode gibt ein JSON-String zurück, welcher aus den Informationen aller Klassenattributen zusammengesetzt wird.
 
 \end{itemize}

@@ -1,22 +1,28 @@
 \subsubsection{VideoInfo}
-Allgemeiner Text bliblablubb. \newline
+Die Klasse VideoInfo beinhaltet alle Informationen zum Video. In den Klassenattributen werden ``videoId'' und ``videoName'' gesichert. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{videoId: int} \hfill\\ 
-\textbf{Sichtbarkeit} private \hfill\\ 
-Beschreibung 
+\textbf{Sichtbarkeit} private \hfill\\  
+
+Die ``videoId'' ist die ``videoId'' des zugehörigen Datenbankeintrags.
 
 \item \textbf{videoName: String} \hfill\\ 
 \textbf{Sichtbarkeit} private \hfill\\ 
-Beschreibung
+
+Der ``videoName'' ist der Name des Videos im zugehörigen Datenbankeintrag.
+
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{Video(videoId: int, videoName: String)} \hfill\\
+
+Der Konstruktor erstellt ein ``videoInfo''-Objekt und weist die Parameterübergabe den zugehörigen Klassenattributen zu.
+
 \end{itemize}
 
 \underline{Methoden}
@@ -25,6 +31,6 @@ Beschreibung
 \item \textbf{getAsJson(): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Die Methode gibt ein JSON-String zurück, welcher aus den Informationen aller Klassenattributen zusammengesetzt wird.
 
 \end{itemize}
