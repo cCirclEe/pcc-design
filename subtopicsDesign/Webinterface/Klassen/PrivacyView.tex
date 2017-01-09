@@ -1,5 +1,5 @@
 \newpage
-\subsection{PrivacyView}
+\subsection{PrivacyView}\label{PrivacyView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
 Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View hat nur die Aufgabe, die Datenschutzinformationen anzuzeigen.
@@ -11,7 +11,7 @@ Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verw
 \item \textbf{viewId: String} \hfill\\ 
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
-\item \textbf{privacy: Label)} \hfill\\ 
+\item \textbf{privacy: Label} \hfill\\ 
 Dieses Label wird verwendet um die Datenschutzinformationen anzuzeigen.
 
 \end{itemize}
@@ -31,7 +31,7 @@ Standardkonstruktor
 
 Diese Methode wird immer bei eintreten der View aufgerufen.
 
-\item \textbf{update (parameter: void): void}\hfill\\
+\item \textbf{update (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.

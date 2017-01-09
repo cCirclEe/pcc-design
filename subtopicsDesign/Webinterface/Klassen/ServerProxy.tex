@@ -1,0 +1,55 @@
+\newpage
+\subsection{ServerProxy}\label{ServerProxy}
+
+Die Klasse übernimmt die Kommunikation mit dem Server.
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{videoDownload (videoId: int, account: Account~\eqref{Account}): Response}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode sendet die Informationen zum Download eines Videos an den Web-Dienst.
+
+\item \textbf{videoInfo (videoId: int, account: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode holt die Meta Informationen vom Web-Dienst.
+
+\item \textbf{videoDelete (videoId: int, account: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode sendet die Informationen zum Löschen eines Videos an den Web-Dienst.
+
+\item \textbf{getVideosByAccount (account: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode holt die Videos des Accounts~\eqref{Account} vom Web-Dienst.
+
+\item \textbf{authenticteUser (account: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode prüft ob die Eingegebenen Benutzerdaten gültig sind, durch abfrage beim Web-Dienst.
+
+\item \textbf{createAccount (account: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode sendet die Informationen zum Erzeugen eines Accounts~\eqref{Account} an den Web-Dienst.
+
+\item \textbf{changeAccount (accountNew: Account~\eqref{Account}, accountOld: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode sendet die Informationen zum Ändern eines Accounts~\eqref{Account} an den Web-Dienst.
+
+\item \textbf{deleteAccount (account: Account~\eqref{Account}): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode sendet die Informationen zum Löschen eines Accounts an den Web-Dienst.
+
+\item \textbf{verifyAccount (account: Account~\eqref{Account}, checkString: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Die Methode sendet die Informationen zum Verifizieren eines Accounts~\eqref{Account} an den Web-Dienst.
+
+\end{itemize}

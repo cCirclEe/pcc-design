@@ -1,8 +1,8 @@
 \newpage
-\subsection{VideoView}
+\subsection{VideoView}\label{VideoView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
-Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zum Anzeigen der Videos, die ein Benutzer mit seiner App hochgeladen hat. Zur Anzeige selbst lädt diese Klasse einen VideoTable.
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zum Anzeigen der Videos, die ein Benutzer mit seiner App hochgeladen hat. Zur Anzeige selbst lädt diese Klasse einen VideoTable~\eqref{VideoTable}.
 \newline
 
 \underline{Attribute}
@@ -23,14 +23,14 @@ Standardkonstruktor
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent): void}\hfill\\
+\item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent) :void}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Diese Methode wird immer bei eintreten der View aufgerufen.
 
-\item \textbf{update (parameter: void): void}\hfill\\
+\item \textbf{update () :void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
+Diese Methode wird verwendet zum aktualisieren der View.
 
 \end{itemize}

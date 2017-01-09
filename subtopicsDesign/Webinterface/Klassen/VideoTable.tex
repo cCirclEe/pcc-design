@@ -1,41 +1,53 @@
 \newpage
-\subsection{UI}
+\subsection{VideoTable}\label{VideoTable}
 \textbf{extends}  Table \newline
 
-Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten.
+Jede Zeile des VideoTables beinhaltet ein Video mit den zugehörigen Buttons zum Downloaden, Löschen und anzeigen der Infos.
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 
-\item \textbf{background VerticalLayout(com.vaadin.ui.VerticalLayout)} \hfill\\ 
-Der background ist die Grundlage der graphischen Oberfläche des Webinterface. Auf den background werden entweder menuArea und contentArea gelegt, oder beim login die LoginView[VERLINKEN] Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{downLoadButtonList: LinkedList} \hfill\\ 
+Eine Liste an Buttons, zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
-\item \textbf{menuArea VerticalLayout (com.vaadin.ui.VerticalLayout)} \hfill\\ 
-Die menuArea ist die Grundlage für das Menü. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{infoButtonList: LinkedList} \hfill\\ 
+Eine Liste an Buttons, zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
-\item \textbf{contentArea VerticalLayout (com.vaadin.ui.UI)} \hfill\\ 
-Die contentArea ist die Grundlage für die Ansichten. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{delteButtonList: LinkedList} \hfill\\ 
+Eine Liste an Buttons, zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
-\item \textbf{menu Menu (com.NOCHFESTLEGEN)} \hfill\\ 
-Das menu bildet die Steuereinheit für den Benutzer. Der Navigator[VERLINKEN] wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{videos: LinkedList} \hfill\\ 
+Die Liste der Videos, diese wird bei erzeugen oder update vom VideoDataManager~\eqref{VideoDataManager} geholt.
+\end{itemize}
 
-\item \textbf{navigator Navigator (com.vaadin.navigator.Navigator)} \hfill\\ 
-Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu laden. Der Navigator wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{VideoTable()} \hfill\\ 
+Im Konstruktor werden die Videos über den VideoDataManager~\eqref{VideoDataManager} geholt und die Buttons vorbereitet und dann der Table entsprechend gefüllt.
 
 \end{itemize}
+
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{init (request: VaadinRequest): void}\hfill\\
-\textbf{Sichtbarkeit} protected
 
-In dieser Methode wird zuerst die Grundlage für die graphische Oberfläche erzeugt. Dann werden alle graphischen Komponenten, der navigator und das menu erzeugt und initialisiert. Am Schluss wird noch die LoginView angezeigt.
+\item \textbf{prepareVideos (): void}\hfill\\
+\textbf{Sichtbarkeit} private
 
-\item \textbf{logout (parameter: void): void}\hfill\\
+Die Videos werden zur Anzeige vorbereitet, also trennen von Name und Id.
+
+\item \textbf{prepareButtons (): void}\hfill\\
+\textbf{Sichtbarkeit} private
+
+Die Buttons werden zur Anzeige vorbereitet, also setzten von Name und Listener.
+
+\item \textbf{update (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode löscht die Account Daten aus dem AccountManager und zeigt die LoginView an.
+Dies Methode wird verwendet um den Table zu aktualisieren.
 
 \end{itemize}

@@ -1,9 +1,8 @@
 \newpage
-\subsection{UI}
+\subsection{UI}\label{UI}
 \textbf{extends}  UI \newline
-\textbf{implements} Interface \newline
 
-Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten.
+Die UI Klasse bildet das Herzstück des Webinterface. Die init Methode dieser Klasse wird beim öffnen des Webinterface aufgerufen. Diese Klasse hat die Aufgabe alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten.
 \newline
 
 \underline{Attribute}
@@ -11,19 +10,19 @@ Die UI Klasse bildet das Herzstück des Webinterface. Die init[VERLINKEN] Method
 \itemsep0pt
 
 \item \textbf{background: VerticalLayout} \hfill\\ 
-Der background ist die Grundlage der graphischen Oberfläche des Webinterface. Auf den background werden entweder menuArea und contentArea gelegt, oder beim login die LoginView[VERLINKEN] Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+Der background ist die Grundlage der graphischen Oberfläche des Webinterface. Auf den background werden entweder menuArea und contentArea gelegt, oder beim login die LoginView~\eqref{LoginView} Dieses Attribut wird in der init Methode erzeugt und initialisiert.
 
 \item \textbf{menuArea: VerticalLayout} \hfill\\ 
-Die menuArea ist die Grundlage für das Menü. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+Die menuArea ist die Grundlage für das Menü~\eqref{Menu}. Dieses Attribut wird in der init Methode erzeugt und initialisiert.
 
 \item \textbf{contentArea: VerticalLayout} \hfill\\ 
-Die contentArea ist die Grundlage für die Ansichten. Dieses Attribut wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+Die contentArea ist die Grundlage für die Ansichten. Dieses Attribut wird in der init Methode erzeugt und initialisiert.
 
-\item \textbf{menu: Menu} \hfill\\ 
-Das menu bildet die Steuereinheit für den Benutzer. Der Navigator[VERLINKEN] wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+\item \textbf{menu: Menu~\eqref{Menu}} \hfill\\ 
+Das Menu~\eqref{Menu} bildet die Steuereinheit für den Benutzer. Der Navigator wird in der init Methode erzeugt und initialisiert.
 
 \item \textbf{navigator: Navigator} \hfill\\ 
-Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu laden. Der Navigator wird in der init[VERLINKEN] Methode erzeugt und initialisiert.
+Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu laden. Der Navigator wird in der init Methode erzeugt und initialisiert.
 
 \end{itemize}
 
@@ -33,11 +32,11 @@ Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu
 \item \textbf{init (request: VaadinRequest): void}\hfill\\
 \textbf{Sichtbarkeit} protected
 
-In dieser Methode wird zuerst die Grundlage für die graphische Oberfläche erzeugt. Dann werden alle graphischen Komponenten, der navigator und das menu erzeugt und initialisiert. Am Schluss wird noch die LoginView angezeigt.
+In dieser Methode wird zuerst die Grundlage für die graphische Oberfläche erzeugt. Dann werden alle graphischen Komponenten, der navigator und das Menu~\eqref{Menu} erzeugt und initialisiert. Am Schluss wird noch die LoginView~\eqref{LoginView} angezeigt.
 
-\item \textbf{logout (parameter: void): void}\hfill\\
+\item \textbf{logout (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode löscht die Account Daten aus dem AccountManager und zeigt die LoginView an.
+Diese Methode löscht die Account Daten aus dem AccountDataManager~\eqref{AccountDataManager} und zeigt die LoginView~\eqref{LoginView} an.
 
 \end{itemize}

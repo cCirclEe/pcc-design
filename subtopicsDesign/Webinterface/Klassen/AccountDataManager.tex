@@ -1,23 +1,15 @@
 \newpage
-\subsection{AccountDataManager}
-
-Die Klasse dient zur Accountdatenverwaltung und Kommunikation mit dem Server Proxy. Dazu bereitet er Daten in beide Richtungen auf.
+\subsection{AccountDataManager}\label{AccountDataManager}
+Die Klasse dient zur Accountdatenverwaltung und Kommunikation mit dem ServerProxy~\eqref{ServerProxy}. Dazu bereitet sie Daten in beide Richtungen auf.
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 
-\item \textbf{account: Account} \hfill\\ 
+\item \textbf{account: Account~\eqref{Account}} \hfill\\ 
 Eine Referenz auf den Account der in dieser Session eingeloggt wurde.
 
 \end{itemize}
-
-+createAccount(String mail, String password) :String
-+verifiyAccount(String mail, String password) Boolean
-+changeAccount(String password, String mailNew, String passwordNew)
-+deleteAccount()
-+getAccount(): Account
--sendMail(String mail)
 
 \underline{Methoden}
 \begin{itemize}
@@ -25,26 +17,26 @@ Eine Referenz auf den Account der in dieser Session eingeloggt wurde.
 \item \textbf{createAccount (mail: String, password: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Eine Methode die Eingaben der LoginView bekommt und diese dann an den ServerProxy in der jeweiligen Methode weitergibt.
+Eine Methode die Eingaben der LoginView~\eqref{LoginView} bekommt und diese dann an den ServerProxy~\eqref{ServerProxy} in der jeweiligen Methode weitergibt.
 
 \item \textbf{verifiyAccount (mail: String, password: String): Boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Eine Methode die Eingaben der LoginView bekommt und diese dann an den ServerProxy in der jeweiligen Methode weitergibt.
+Eine Methode die Eingaben der LoginView~\eqref{LoginView} bekommt und diese dann an den ServerProxy~\eqref{ServerProxy} in der jeweiligen Methode weitergibt.
 
-\item \textbf{changeAccount (mail: String, password: String)}\hfill\\
+\item \textbf{changeAccount (mail: String, password: String): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Eine Methode die Eingaben der LoginView bekommt. Anschließend wird das Passwort mit dem derzeitigen Passwort verglichen, bei Erfolg werden die Änderungen an den ServerProxy übergeben.
+Eine Methode die Eingaben der LoginView~\eqref{LoginView} bekommt. Anschließend wird das Passwort mit dem derzeitigen Passwort verglichen, bei Erfolg werden die Änderungen an den ServerProxy~\eqref{ServerProxy} übergeben.
 
-\item \textbf{delteAccount ()}\hfill\\
+\item \textbf{delteAccount (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bei delete Account werden die derzeitigen Accountdaten an den ServerProxy in einem delete Befehl übergeben. Anschließend werden die lokalen Accountdaten gelöscht und die Seite wird neu geladen. 
-(Der Account wurde damit aus der Datenbank gelöscht)
+Bei deleteAccount werden die derzeitigen Accountdaten an den ServerProxy~\eqref{ServerProxy} in einem delete Befehl übergeben. Anschließend werden die lokalen Accountdaten gelöscht und die Seite wird neu geladen. 
+(Der Account~\eqref{Account} wurde damit aus der Datenbank gelöscht)
 
 \item \textbf{sendMail (mail: String)}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Diese Funktion wird benutzt um Nutzern eine Mail zur Bestätigung nach erstellen und löschen eines Accounts zu senden.
+Diese Funktion wird benutzt um Nutzern eine Mail zur Bestätigung nach erstellen und löschen eines Accounts~\eqref{Account} zu senden.
 \end{itemize}

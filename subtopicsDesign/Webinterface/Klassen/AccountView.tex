@@ -1,5 +1,5 @@
 \newpage
-\subsection{AccountView}
+\subsection{AccountView}\label{AccountView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
 
@@ -13,7 +13,7 @@ Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verw
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
 \item \textbf{mailLabel: Label} \hfill\\ 
-Dieses Label dient zur anzeige der derzeit gültigen Mail Adresse des aktuell eingeloggten Accounts.
+Dieses Label dient zur anzeige der derzeit gültigen Mail Adresse des aktuell eingeloggten Accounts~\eqref{Account}.
 
 \item \textbf{passwordChangeField: TextField} \hfill\\ 
 In diesem Eingabe Feld kann bei Wunsch zur Änderung des Passwortes ein neues Passwort eingegeben werden.
@@ -25,7 +25,7 @@ Für alle gewünschten Änderungen muss hier das aktuell aktive Passwort Eingege
 In diesem Eingabe Feld kann bei Wunsch zur Änderung der Mail Adresse eine neue eingegeben werden
 
 \item \textbf{changeButton: Button} \hfill\\
-Durch drücken dieses Buttons werden die Änderungsdaten an den AccountManager zur Bearbeitung geschickt.
+Durch drücken dieses Buttons werden die Änderungsdaten an den AccountDataManager~\eqref{AccountDataManager} zur Bearbeitung geschickt.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -44,7 +44,7 @@ Standardkonstruktor
 
 Diese Methode wird immer bei eintreten der View aufgerufen.
 
-\item \textbf{update (parameter: void): void}\hfill\\
+\item \textbf{update (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese View zu aktualisieren.
