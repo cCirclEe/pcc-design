@@ -1,5 +1,5 @@
 \subsubsection{ServerProxy} \label{service:klasse:ServerProxy}
-Allgemeiner Text bliblablubb. \newline
+Der ServerProxy ist die Schnittstelle zwischen Web-Service und Web-Interface/App. Die Anfragen an den ServerProxy werden mittels der REST-API übermittelt. Die Anfragen werden in Teilanfragen aufgespalten und mithilfe der Manager Klassen weiter bearbeitet. \newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -7,8 +7,14 @@ Allgemeiner Text bliblablubb. \newline
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Instanz des Accounts, der die Anfrage geschickt hat. Wird in der Methode setUpForRequest() initialisiert.
+\end{itemize}
 
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{ServerProxy()} \hfill\\
+Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
@@ -17,51 +23,51 @@ Beschreibung
 \item \textbf{videoUpload (video: InputStream, metadata: InputStrem, encryptedSymmetricKey: String, accountData: String, response: AsyncResponse): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine VideoUpload Anfrage der App. Übergibt die videobezogenen Parameter (video, metadata und encryptedSymmetricKey) und die AsyncResponse an die upload()-Methode im VideoManager. Die Rückgabe als Json-String gibt an, ob die Dateien vollständig angekommen sind. 
 
 \item \textbf{videoDownload(videoId: int, accountData: String): Response}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Leitet einen Download-Anfrage ein. Gibt die VideoId an die download()-Methode des VideoManagers weiter. Mithilfe der Id wird dann das gesuchte Video gefunden. Die Response-Rückgabe ermöglicht den bekannten Download-Dialog auf dem Interface.
 
-i\item \textbf{videoInfo(videoId: int, accountData: String): String}\hfill\\
+\item \textbf{videoInfo(videoId: int, accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zur Informationsausgabe eines Videos des Web-Interfaces. Dabei werden die Metadaten des zugehörigen Videos über den VideoManager mithilfe der VideoId gefunden. Die String Rückgabe beinhaltet die relevanten Video Informationen.
 
 \item \textbf{videoDelete(videoId: int, accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zum Löschen eines Videos des Web-Interfaces. Diese wird über die deleteVideo()-Methode des VideoManagers weiter bearbeitet. Die String Rückgabe gibt Meldung über das Ergebnis der Anfrage.
 
-\item \textbf{videoListOfUser(accountData: String): String}\hfill\\
+\item \textbf{getVideosByAccount(accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public  
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zur Videolistenrückgabe des Web-Interface für einen bestimmten Nutzer. Dabei wird im VideoManager die getVideoListMethode aufgerufen. Diese bearbeitet die Anfrage und gibt einen Json-String mit den Videoinformationen zurück. Dieser Json-String wird aus dem ArrayList<VideoInfo> erstellt. Diese werden dann auch an das Web-Interface zurückgegeben. 
 
 \item \textbf{authenticateAccount(accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zur Authentifizierungs des Web-Interfaces oder App. Dabei wird auf die Rückgabe von setUpForRequest() gewartet und der String dann an die anfragende Instanz weitergeleitet.
 
 \item \textbf{createAccount(accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zur Accounterstellungs des Web-Interfaces. Dabei wird im AccountManager die Methode registerAccount() aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
 
 \item \textbf{changeAccount(accountDataNew: String, accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zur Passwort/Mailänderung des Web-Interfaces. Dabei werden im AccountManager die Methoden setMail() und setPassword()  aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
 
 \item \textbf{deleteAccount(accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage zur Löschung eines Accounts des Web-Interfaces. Hierbei müssen zunächst alle Videos und deren Metadaten des Accounts gelöscht werden, bevor der Account gelöscht wird. Dafür muss über den VideoManager getVideoInfoList() aufgerufen werden und für jeden Eintrag in der Liste deleteVideo() ausgeführt werden. Danach wird im AccountManager die Methode deleteAccount() aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
 
 \item \textbf{setUpForRequest(accountData: String)}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Methodenbeschreibung
+Bei jeder Anfrage wird zu Beginn die private Methode setUpForRequest() aufgerufen, um die die Manager Klassen zu initialisieren und Authentifizierung des Accounts zu gewährleisten. Die Rückgabe gibt Meldung über das Ergebnis der Authentifizierung des Accounts. Die Authentifizierung ruft im AccountManager die Methoden getAccountId(), authenticate() und isVerified() auf.
 
 \end{itemize}

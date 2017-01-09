@@ -1,11 +1,13 @@
 \subsubsection{AccountManager}
-Allgemeiner Text bliblablubb. \newline
+verbindet zwischen dem ServiceConnector-Modul und dem Data-Modul. Er bearbeitet die Anfragen des ServerProxys und gibt die gefragten Ergebnisse zurück. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} public
+
+Account-Instanz, welche zur Bearbeitung der verschiedenen Anfragen benötigt wird.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -13,6 +15,8 @@ Allgemeiner Text bliblablubb. \newline
 \itemsep0pt
 \item \textbf{AccountManager(account: Account)} \hfill\\
 \textbf{Sichtbarkeit} public
+
+Erstellt eine Instanz eines VideoManagers mit dem dazugehörigen Account. Dieser wird vom ServerProxy über die Parameter übergeben und dann gesetzt.
 \end{itemize}
 
 \underline{Methoden}
@@ -21,31 +25,35 @@ Allgemeiner Text bliblablubb. \newline
 \item \textbf{setMail(newMail: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung einer Mail eines Accounts. Die übergebene Mail wird dann im DatabaseManager mit der Methode setMail() gesetzt.
 
-\item \textbf{setPassword(newPassword: String): String}\hfill\\
+\item \textbf{setPassword(newPasswordHash: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung eines Passwort eines Accounts. Das übergebene Passwort wird dann im DatabaseManager mit der Methode setPassword() gesetzt.
 
-\item \textbf{getAccountId(mail: String): int}\hfill\\
+\item \textbf{getAccountId(): int}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Mail-Adresse. Die Anfrage wird zum DatabaseManager weitegeleitet und somit die Methode getAccountId() aufgerufen. Von dort aus wird sie bis zum Server Proxy zurückgegeben.  
+
 \item \textbf{registerAccount(): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Dabei wird beim DatabaseManager die Methode register() aufgerufen und die Accountdaten im zugehörigen Accountattribut gesetzt. 
+
 \item \textbf{deleteAccount(): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zur Löschung eines Accounts. Dabei wird im DatabaseManager die Methode deleteAccount() aufgerufen.
+
 \item \textbf{authenticate(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zur Authentifizierung des Accounts. Die Methode authenticate() vom DatabaseManager wird hierbei aufgerufen.
+ 
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zum Verifizierungsstatus eines Accounts. Die Anfrage wird zum DatabaseManager weitergeleitet und die Methode isVerified() aufgerufen. Von dort wird der Vierfizierungsstatus bis zum ServerProxy zurückgegeben.
 \end{itemize}

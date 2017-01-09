@@ -1,40 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
-<source><![CDATA[# Sequence diagram for register on Webservice
+<source><![CDATA[#![LogInSequenz]
 
-#!>>
-#! In this example we will create a REST call for 
-#! deleting a video on the webserver.
-#!<<
-
-#![Video Deletion on Web-Service]
 ext:External[pe]
-sP:ServerProxy
-vM:VideoManager
-/videoToDelete:File[x]
-/metadataToDelete:File[x]
-dbM:DatabaseManager
-/vInfo:VideoInfo
-/mInfo:Metadata
-lC:LocationConfig[r] "LocationConfig"
+lG:LogInFragment
+sPC:IServerResponseCallback
+sPA:ServerProxy(android)
+/aT:AuthenticateTask
+sPS:ServerProxy(service)
 
-ext:sP.videoDelete(videoId, accountData)
-sP:accountStatus=sP.setUpForRequest(accountData)
-sP[1]:String=vM.deleteVideo(videoId)
-vM:vInfo=dbM.getVideoInfo()
-dbM:vInfo.new(videoId, videoName)
-vM:vInfo=dbM.getMetadata()
-dbM:mInfo.new(metaName, date, triggerType, gForce)
-vM:videoName=vInfo.getVideoName()
-vM:metaName=mInfo.getMetaName()
-vM:lC.String videoDirectory = anonymVideoDirectory
-vM:lC.String metaDirectory = metaDataDirectory
-vM:videoToDelete.new(directory + "/" + videoName)
-vM:videoToDelete.delete()
-vM:metadataToDelete.new(directory + "/" + metaName)
-vM:metadataToDelete.delete()
-vM:boolean=dbM.deleteVideoAndMeta(videoId)
-sP:ext.String
+lG:sPA.authenticateUser(account, callback)
+sPA:aT.new(account, callback)
+aT:accountStatus=sPS.[POST] authenticateAccount(accountData)
+sPS:accountStatus=sPS.setUpForRequest()
+aT:sPC.onResponse(accountStatus)
+sPC:lG.accountStatus
+
+
+
+
+
 ]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>

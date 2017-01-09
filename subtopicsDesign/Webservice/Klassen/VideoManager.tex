@@ -1,12 +1,13 @@
-\subsubsection{VideoManager} \label{service:klasse:VideoManager}
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{VideoManager}
+Der VideoManager verbindet zwischen dem ServiceConnector-Modul und dem Data- bzw. VideoProcessing-Modul. Er bearbeitet die Anfragen des ServerProxys und gibt die gefragten Ergebnisse zurück.\newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} private 
-Beschreibung
+
+Account-Instanz, welche zur Bearbeitung der verschiedenen Anfragen benötigt wird.
 
 \end{itemize}
 
@@ -15,35 +16,37 @@ Beschreibung
 \itemsep0pt
 \item \textbf{VideoManager(account :Account)} \hfill\\
 \textbf{Sichtbarkeit} public
+
+Erstellt eine Instanz eines VideoManagers mit dem dazugehörigen Account. Dieser wird vom ServerProxy über die Parameter übergeben und dann gesetzt.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{getVideoInfoList(): String}\hfill\\
+\item \textbf{getVideoInfoList(): ArrayList<VideoInfo>}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitete eine Anfrage vom ServerProxy zur Videolistenrückgabe. Dabei wird im DatabaseManager die Methode getVideoInfoList() aufgerufen. Die ArrayList Der VideoInfo-Objekte wird dann an den ServerProxy zurückgegeben.    
 
 \item \textbf{upload(video: InputStream, metaData: InputStream,
 encryptedSymmetricKey: String, response: AsyncResponse): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zum Uploaden. Da der Upload komplett vom VideoProcessing-Modul übernommen wird, werden hier alle übergebenen Parameter und der Account beim Aufruf der Methode addTask() vom VideoProcessingManager übergeben.
 
 \item \textbf{download(videoId: int): File}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom ServerProxy zum Download eines Videos. Dabei wird vom DatabaseManager die Methode getVideoInfo() aufgerufen um mittels der VideoId den Videonamen über das VideoInfo Objekt zu bekommen. Somit kann dann das gewünschte File gefunden und zurückgegeben werden.
 
 \item \textbf{deleteVideo(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet eine Anfrage vom SererProxy zum Löschen eines Videos. Zunächst wird die Methode getVideoInfo() und getMetadata() des DatabaseManagers aufgerufen. Somit bekommen wir über das VideoInfo-Objekt und Metadata-Objekt den Videonamen und Metadatanamen und können diese Files löschen. Daraufhin wird die Methode deleteVideoAndMetaPath() des DatabaseMangers aufgerufen, welche die beiden Einträge aus der Datenbank löscht.
 
 \item \textbf{getMetadata(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Bearbeitet die Anfrage vom ServerProxy zum Ausgeben der Metadata eines Videos. Es wird im DatabaseManager die Methode getMetadata() aufgerufen, welche ein Metadata-Objekt zurückgibt. Die relevanten Attribute werden in ein Json-String umgewandelt und dann an den ServerProxy zurückgeben.
 
 \end{itemize}

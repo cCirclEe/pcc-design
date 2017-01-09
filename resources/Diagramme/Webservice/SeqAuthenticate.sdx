@@ -22,11 +22,13 @@ sP:ServerProxy
 ext:sP.REST
 sP:accountStatus=sP.setUpForRequest(acountData)
 sP:account.new(accountData)
-sP:aM.new(accountData)
+sP:vM.new(account)
+vM:dbM2.new(account)
+sP:aM.new(account)
 aM:dbM1.new(account)
-sP:mail=account.getMail()
-sP:int=aM.getAccountId(mail)
-aM:int=dbM1.getAccountId(mail)
+
+sP:int=aM.getAccountId()
+aM:int=dbM1.getAccountId()
 sP:account.setAccountId(id)
 sP:boolean=aM.authenticate()
 aM:boolean=dbM1.authenticate()
@@ -36,8 +38,7 @@ sP:boolean=aM.isVerified()
 aM:boolean=dbM1.isVerified()
 dbM1:mail=account.getMail()
 dbM1:passwordHash=account.getPasswordHash()
-sP:vM.new(account)
-vM:dbM2.new(account)]]></source>
+]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>
 <property name="actorWidth" value="25"/>
