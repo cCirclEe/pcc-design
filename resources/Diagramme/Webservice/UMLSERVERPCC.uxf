@@ -275,7 +275,7 @@ AAnonymizer
 - account :Account
 --
 &lt;&lt;create&gt;&gt; AccountManager(account :Account)
-+getVideoInfoList(): String
++getVideoInfoList(): ArrayList&lt;VideoInfo&gt;
 +upload(video: InputStream, metaData: InputStream,
 encryptedSymmetricKey: String, response: AsyncResponse): String
 +download(videoId: int): File
