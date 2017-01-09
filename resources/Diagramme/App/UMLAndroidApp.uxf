@@ -1014,10 +1014,10 @@ IRecordCallback
 - encryptor: Encryptor
 - callback: IPersistCallback
 --
-+ &lt;&lt;create&gt;&gt; AsyncRecorder&lt;Metadata, Void, Boolean&gt;(
++ &lt;&lt;create&gt;&gt; AsyncPersistor&lt;Metadata, Void, Boolean&gt;(
 memoryManager: MemoryManager, ringbufer: Ringbuffer, 
 callback: IPersistCallback)
-+ onPreexecute()
++ onProgressUpdate()
 + doInBackground(metadata: Metadata...): Boolean
 + onPostExecute(result: Boolean)</panel_attributes>
     <additional_attributes/>
@@ -1093,7 +1093,7 @@ IPersistCallback
 --
 --
 + onPersistingStarted()
-+ odPersistingStopped()
++ onPersistingStopped()
 </panel_attributes>
     <additional_attributes/>
   </element>
