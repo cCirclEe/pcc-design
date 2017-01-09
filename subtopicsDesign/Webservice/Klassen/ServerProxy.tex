@@ -1,5 +1,5 @@
 \subsubsection{ServerProxy} \label{service:klasse:ServerProxy}
-Der ServerProxy ist die Schnittstelle zwischen Web-Service und Web-Interface/App. Die Anfragen an den ServerProxy werden mittels der REST-API übermittelt. Die Anfragen werden in Teilanfragen aufgespalten und mithilfe der Manager Klassen weiter bearbeitet. \newline
+Der ServerProxy ist die Schnittstelle zwischen Web-Service und Web-Interface/App. Die Anfragen an den ServerProxy werden mittels der REST-API übermittelt. Die Anfragen werden in Teilanfragen aufgespalten und mithilfe des Manager-Moduls weiter bearbeitet. \newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -68,6 +68,5 @@ Bearbeitet eine Anfrage zur Löschung eines Accounts des Web-Interfaces. Hierbei
 \item \textbf{setUpForRequest(accountData: String)}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Bei jeder Anfrage wird zu Beginn die private Methode setUpForRequest() aufgerufen, um die die Manager Klassen zu initialisieren und Authentifizierung des Accounts zu gewährleisten. Die Rückgabe gibt Meldung über das Ergebnis der Authentifizierung des Accounts. Die Authentifizierung ruft im AccountManager die Methoden getAccountId(), authenticate() und isVerified() auf.
-
+Bei jeder Anfrage wird zu Beginn die private Methode setUpForRequest() aufgerufen, um die Klassen des Manager-Moduls zu initialisieren und die Authentifizierung des Accounts zu gewährleisten. Die Rückgabe gibt Meldung über das Ergebnis der Authentifizierung des Accounts. Die Authentifizierung ruft im AccountManager die Methoden getAccountId(), authenticate() und isVerified() auf.
 \end{itemize}

@@ -35,7 +35,7 @@ Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung eines Passwort eines Accou
 \item \textbf{getAccountId(): int}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Mail-Adresse. Die Anfrage wird zum DatabaseManager weitegeleitet und somit die Methode getAccountId() aufgerufen. Von dort aus wird sie bis zum Server Proxy zurückgegeben.  
+Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Mail-Adresse. Die Anfrage wird zum DatabaseManager weitegeleitet und somit die Methode getAccountId() aufgerufen. Von dort aus wird sie bis zum ServerProxy zurückgegeben.  
 
 \item \textbf{registerAccount(): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -55,5 +55,5 @@ Bearbeitet eine Anfrage vom ServerProxy zur Authentifizierung des Accounts. Die 
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zum Verifizierungsstatus eines Accounts. Die Anfrage wird zum DatabaseManager weitergeleitet und die Methode isVerified() aufgerufen. Von dort wird der Vierfizierungsstatus bis zum ServerProxy zurückgegeben.
+Bearbeitet eine Anfrage vom ServerProxy zum Verifizierungsstatus eines Accounts. Die Anfrage wird zum DatabaseManager weitergeleitet und die Methode isVerified() aufgerufen. Von dort wird der boolean bis zum ServerProxy zurückgegeben.
 \end{itemize}
