@@ -41,7 +41,7 @@ bg=blue
     <panel_attributes>Data
 --
 bg=green
-+DataBaseManager
++DatabaseManager
 +Account
 +Metadata
 +VideoInfo
@@ -56,25 +56,26 @@ bg=green
       <w>280</w>
       <h>350</h>
     </coordinates>
-    <panel_attributes>Video
+    <panel_attributes>VideoProcessing
 --
 bg=yellow
 +VideoProcessingManager
 +VideoProcessingChain
 +EditingContext
 +IStage
-+Persistor
-+AAnonymizer
-+Anonymizer
-+IAnalyzer
-+IFilter
-+ExampleAnalyzer
-+ExampleAnonymizer
-+Decryptor
-+IKeyDecryptor
-+IFileDecryptor
-+AESDecryptor
-+RSADecryptor
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </panel_attributes>
     <additional_attributes/>
@@ -122,5 +123,31 @@ bg=yellow
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>200</x>
+      <y>280</y>
+      <w>240</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>VideoProcessing.Chain
+--
+bg=red
++Decryptor
++IKeyDecryptor
++IFileDecryptor
++AESDecryptor
++RSADecryptor
++AAnonymizer
++Anonymizer
++IAnalyzer
++IFilter
++ExampleAnalyzer
++ExampleAnonymizer
++Persistor
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

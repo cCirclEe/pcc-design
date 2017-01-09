@@ -11,6 +11,7 @@ Größe des Worker-Thread-Pools
 
 \item \textbf{queueSize: int} \hfill\\ 
 \textbf{Sichtbarkeit} private
+
 Größe der Warteschlange für die Anfragen
 
 \item \textbf{queue: BlockingQueue} \hfill\\
@@ -40,7 +41,7 @@ key: InputStream, account: \nameref{service:klasse:Account}, response :AsyncResp
 
 Erzeugt aus den gegebenen Parametern eine neue \nameref{service:klasse:VideoProcessingChain} und fügt sie der Warteschlange hinzu. Rückmeldung über Erfolg oder Fehler werden über den response Parameter zurückgegeben. Das Verteilen auf Worker-Threads übernimmt der ExecutorService automatisch.
 
-\item \textbf{shutdown ()}\hfill\\
+\item \textbf{shutdown (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Beendet den ExecutorService nachdem alle Worker-Threads ihre Arbeit beendet haben.
