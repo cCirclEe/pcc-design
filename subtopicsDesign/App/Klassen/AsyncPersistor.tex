@@ -1,0 +1,51 @@
+\subsubsection{AsyncPersistor} \label{app:klasse:AsyncPersistor}
+\textbf{extends} AsyncTask <Metadata, Void, Boolean> \newline
+Der AsyncPersistor ist dafür verantwortlich, den Inhalt des Ringbuffers und die Metadaten in Dateien zu schreiben und deren Verschlüsselung zu koordinieren. Dies passiert asynchron zum UI Thread.
+\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{memoryManager: \nameref{app:klasse:MemoryManager}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+MemoryManager, von dem der Speicherort der Dateien abgefragt wird.
+
+\item \textbf{ringbuffer: \nameref{app:klasse:MemoryManager}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+RingBuffer, der die Videostückchen hält, die persistiert werden sollen.
+
+\item \textbf{encryptor: \nameref{app:klasse:Encryptor}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+Encryptor, der die Dateien verschlüsslelt.
+
+\item \textbf{callback: \nameref{app:klasse:IPersistCallback}} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+IPersistCallback Instanz um mit der Klasse zu Kommunizieren, die den AsyncPersistor instanziiert.
+
+\end{itemize}
+
+\underline{Konstruktoren}\newline
+\begin{itemize}
+\itemsep0pt
+\item \textbf{AsyncPersistor(memoryManager: MemoryManager, ringbuffer: Ringbuffer)} \hfill\\
+\textbf{Sichtbarkeit} public\newline
+Konstruktor, der \textit{memoryManager} und \textit{ringbuffer} zuweißt.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{onProgressUpdate (): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die Methode \textit{onProgressUpdate} des AsyncTask. Wird von Android während der Ausführung des AsyncTasks aufgerufen. Ruft die \textit{onPersistingStarted} Methode des IPersistCallbacks auf.
+
+\item \textbf{doInBackground (metadata: Metadata...): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die Methode \textit{doInBackground} des AsyncTask. Wird von Android aufgerufen und im Hintergrund ausgeführt. Bekommt ein Array von Metadaten übergeben, in dem der erste Eintrag der Metadaten Instanz entspricht, die der \textit{start} Methode übergeben wurde. Fügt die Videostückchen des RingBuffers zu einem Video zusammen, schreibt die Metadaten in eine Datei und Verschlüsselt Vieo- und Metadaten-Datei. Zum erhalten der Dateien, in die die Daten geschrieben werden, wird der MemoryManager verwendet. Zum Verschlüsseln der Dateien wird der Encryptor verwendet. Gibt \textit{true} zurück, falls kein Fehler auftritt.
+
+\item \textbf{onPostExecute (result: boolean): void}\hfill\\
+\textbf{Sichtbarkeit} public\newline
+Überschreibt die Methode \textit{onPostExecute} des AsyncTask. Wird von Android aufgerufen nachdem der Hintergrundthread zu Ende gelaufen ist. Ruft die Methode \textit{onPersistingStopped} des IPersistCallbacks auf.
+
+\end{itemize}
