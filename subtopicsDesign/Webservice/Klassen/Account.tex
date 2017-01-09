@@ -25,14 +25,14 @@ Die ``id'' ist identisch der ``id'' in der Tabelle User der Datenbank.
 \item \textbf{Account(json: String)} \hfill\\
 \textbf{Sichtbarkeit} public
 
-Der Konstruktor nimmt ein JSON-Objekt entgegen, wertet die Informationen aus und leitet diese an die Klassenattribute weiter. Die Information ``password'' wird mit der Methode ``passwordHasher(password: String)'' gehasht und dann weitergeleitet.
+Der Konstruktor nimmt ein JSON-Objekt entgegen, wertet die Informationen aus und leitet diese an die Klassenattribute weiter. Die Information ``password'' wird mit der Methode ``hashPassword(password: String)'' gehasht und dann weitergeleitet.
 
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{passwordHasher(password: String): String}\hfill\\
+\item \textbf{hashPassword(password: String): String}\hfill\\
 \textbf{Sichtbarkeit} private
 
 Die Methode nimmt das im Klartext vorhandene Passwort und hasht dieses. Die Methode wird im Konstruktor aufgerufen, um das Passwort zu hashen und an das Klassenattribut weiterzuleiten.

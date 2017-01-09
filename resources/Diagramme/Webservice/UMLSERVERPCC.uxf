@@ -259,7 +259,7 @@ AAnonymizer
 -id :int
 --
 &lt;&lt;create&gt;&gt; Account(json :String)
--passwordHasher(password :String) :String</panel_attributes>
+-hashPassword(password :String) :String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
