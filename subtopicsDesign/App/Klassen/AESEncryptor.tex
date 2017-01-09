@@ -1,0 +1,27 @@
+\subsubsection{AESEncryptor} \label{app:klasse:AESEncryptor}
+\textbf{implements} \nameref{app:klasse:IFileEncryptor} \newline
+Der AESDecryptor bietet eine konkrete Implementierung eines  Encryptors für symmetrische Verschlüsselung. Er verwendet hierfür das AES-Verfahren.\newline
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{AESEncryptor()} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Standardkonstruktor
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{encrypt (input :File, key: SecretKey, output: File): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Implementiert encrypt(..) von IFileEncryptor.
+
+\item \textbf{generateKey (): SecretKey}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Implementiert generateKey() von IFileEncryptor.
+
+\end{itemize}

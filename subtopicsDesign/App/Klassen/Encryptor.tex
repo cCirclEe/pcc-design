@@ -1,0 +1,35 @@
+\subsubsection{Encryptor} \label{app:klasse:Encryptor}
+Der Encryptor verschlüsselt Daten mithilfe eines hybdriden Verschlüsselungsverfahren. Zunächst wird eine Datei symmetrisch verschlüsselt, danach wird der Schlüssel der dafür verwendet wurde, selbst asymmetrisch verschlüsselt. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{symmetricKey: SecretKey} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Symmetrischer Schlüssel zum verschlüsseln von Dateien.
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Encryptor()} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Generiert einen symmetrischen Schlüssel zur späteren Verschlüsselung von Dateien.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{encrypt (inFile: File, outFile: File): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Verschlüsselt eine Datei mithilfe des symmetrischen Schlüssels. Gibt zurück, ob das Verschlüsseln erfolgreich war.
+
+\item \textbf{saveKey (encKey: File): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Verschlüsselt den symmetrischen Key mithilfe eines asymmetrischen öffentlichen Schlüssels und legt diesen in einer Datei ab.
+
+\end{itemize}

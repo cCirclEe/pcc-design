@@ -1,0 +1,17 @@
+\subsubsection{<<Interface>> IFileEncryptor} \label{app:klasse:IFileEncryptor}
+IFileEncryptor bietet eine Schnittstelle für Klassen, die mithilfe eines symmetrischen SecretKeys Dateien verschlüsseln. \newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{encrypt (input :File, key: SecretKey, output: File): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Nimmt das input-File und entschlüsselt es mit dem key. Speichert die entschlüsselte Datei im output-File. Gibt zurück, ob die Entschlüsselung erfolgreich war.
+
+\item \textbf{generateKey (): SecretKey}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Generiert einen neuen symmetrischen Schlüssel.
+
+\end{itemize}

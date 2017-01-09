@@ -1,0 +1,40 @@
+\subsubsection{Ringbuffer<E>} \label{app:klasse:Ringbuffer}
+Der Ringbuffer ist eine nach Ankunftszeit geordnete Datenstruktur, die wenn sie Daten annimmt immer das älteste Element löscht, falls ihre Kapazität überschritten wird. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{length: int} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Kapazität des Puffers
+
+\item \textbf{data: Queue<E>} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Interne Datenstruktur des Puffers
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Ringbuffer(length: int)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Erstellt einen neuen leeren Ringpuffer mit der Angegebenen Kapazität.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{offer (element: E): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Fügt das neue Element am Ende der Datenstruktur hinzu. Falls dadurch die Kapazität überschritten wird, wird am Anfang der Datenstruktur ein Element entfernt. Gibt zurück, ob das Einfügen erfolgreich war.
+
+\item \textbf{getData (): Queue<E>}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt die Daten des Ringpuffers zurück.
+
+\end{itemize}

@@ -1,0 +1,12 @@
+\subsubsection{<<Interface>> IKeyEncryptor} \label{app:klasse:IKeyEncryptor}
+IKeyEncryptor bietet eine Schnittstelle für Klassen die SecretKeys mithilfe eines öffentlichen asymmetrischen Schlüssels verschlüsseln. \newline
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{encrypt (key :SecretKey, encKey: File): boolean}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Nimmt den öffentlichen Schlüssel des Webservers und verschlüsselt damit den den key. Legt den Verschlüsselten key als Datei ab. Gibt zurück, ob das Verschlüsseln erfolgreich war.
+
+\end{itemize}

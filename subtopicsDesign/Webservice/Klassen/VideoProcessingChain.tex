@@ -35,24 +35,24 @@ Erzeugt eine neue VideoProcessingChain, merkt sich das response Objekt und erzeu
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{run ()}\hfill\\
+\item \textbf{run (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Überschreibt die Methode run() von Runnable. Zunächst werden die für die Bearbeitung des Videos notwendigen Arbeitsschritte erzeugt. Danach führt die VideoProcessingChain alle Arbeitsschritte aus. Zuletzt werden alle zuvor erzeugten temporären Dateien wieder gelöscht.
 
 \item \textbf{saveTempFiles (video: InputSteam, metadata: InputStream, 
-key: InputStream, context: EditingContext)}\hfill\\
+key: InputStream, context: EditingContext): void}\hfill\\
 \textbf{Sichtbarkeit} private \newline
 \textbf{throws} IOException 
 
 Speichert alle von der App erhaltenen Daten temporär. Wirft eine IOException falls dies fehlschlägt.
 
-\item \textbf{initChain ()}\hfill\\
+\item \textbf{initChain (): void}\hfill\\
 \textbf{Sichtbarkeit} private
 
 Erzeugt alle Arbeitsschritte.
 
-\item \textbf{deleteTempFiles (context: EditingContext)}\hfill\\
+\item \textbf{deleteTempFiles (context: EditingContext): void}\hfill\\
 \textbf{Sichtbarkeit} private
 
 Löscht alle zurvor erstellten temporären Dateien.
