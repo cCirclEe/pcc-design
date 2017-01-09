@@ -4,3 +4,7 @@
 
 - Wie Ringbuffer alle Dateien auslesen lassen? Queue implementieren oder ArrayQueue implementieren?
 
+- Glossar notwendig?
+
+- Sequenzdiagramme in Anhang oder eigenes Kapitel?
+

@@ -1922,21 +1922,6 @@ stop()</panel_attributes>
     <additional_attributes>740.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>618</x>
-      <y>1908</y>
-      <w>84</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Should we 
-refenrece 
-this methods 
-differently??
-bg=blue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>2334</x>
@@ -2628,17 +2613,6 @@ new()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1998</x>
-      <y>498</y>
-      <w>18</w>
-      <h>366</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;590.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1998</x>
       <y>480</y>
       <w>18</w>
       <h>24</h>
@@ -2702,17 +2676,6 @@ tempVideoFile</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>1998</x>
-      <y>852</y>
-      <w>12</w>
-      <h>12</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
@@ -2936,36 +2899,12 @@ encKeyFile</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1998</x>
-      <y>858</y>
+      <y>498</y>
       <w>18</w>
-      <h>174</h>
+      <h>534</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;270.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1674</x>
-      <y>840</y>
-      <w>336</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-generateKey()</panel_attributes>
-    <additional_attributes>540.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1674</x>
-      <y>852</y>
-      <w>336</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-key</panel_attributes>
-    <additional_attributes>540.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;870.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -3011,19 +2950,8 @@ symKeyFile</panel_attributes>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-encrypt(tmpVideoFile, symKeyFile, encVideoFile)</panel_attributes>
+encrypt(tmpVideoFile, encVideoFile)</panel_attributes>
     <additional_attributes>540.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1998</x>
-      <y>1032</y>
-      <w>18</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -3050,47 +2978,13 @@ encrypt(tmpVideoFile, symKeyFile, encVideoFile)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1674</x>
-      <y>1056</y>
-      <w>336</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>540.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1674</x>
-      <y>1038</y>
-      <w>336</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-encrypt(readableMetaFile, symKeyFile, encmetaFile)</panel_attributes>
-    <additional_attributes>540.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>1998</x>
-      <y>1056</y>
+      <y>1032</y>
       <w>18</w>
-      <h>30</h>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>1998</x>
-      <y>1050</y>
-      <w>12</w>
-      <h>12</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -3112,19 +3006,8 @@ encrypt(readableMetaFile, symKeyFile, encmetaFile)</panel_attributes>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-encrypt(symKeyFile, symKeyFile, encKeyFile)</panel_attributes>
+saveKey(symKeyFile)</panel_attributes>
     <additional_attributes>540.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1998</x>
-      <y>1080</y>
-      <w>18</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -3140,47 +3023,13 @@ encrypt(symKeyFile, symKeyFile, encKeyFile)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1674</x>
-      <y>1104</y>
-      <w>336</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;</panel_attributes>
-    <additional_attributes>540.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1674</x>
-      <y>1086</y>
-      <w>336</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-encrypt(tmpVideoFile, symKeyFile, encVideoFile)</panel_attributes>
-    <additional_attributes>540.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>1998</x>
-      <y>1104</y>
+      <y>1080</y>
       <w>18</w>
-      <h>54</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>1998</x>
-      <y>1098</y>
-      <w>12</w>
-      <h>12</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -3218,37 +3067,6 @@ encKeyFile</panel_attributes>
     <additional_attributes>840.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>1584</x>
-      <y>900</y>
-      <w>96</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Should we model
-the provess of saving
-the RingBuffer to a 
-single mp4 file? 
-(in that case also remember to show how we 
-retrieve the temp directory form the context)
-context.getCacheDir()
-bg=blue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>1608</x>
-      <y>1020</y>
-      <w>96</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Should we model the
-encryption process?
-bg=blue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>1998</x>
@@ -3270,20 +3088,6 @@ bg=blue</panel_attributes>
     <panel_attributes>opt
 --
 [sensorEvent.values &gt; maximumGValues]</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>1212</x>
-      <y>330</y>
-      <w>84</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Is it ok to write 
-sensorEvent.values 
-here?
-bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -3589,21 +3393,6 @@ getSurface()</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>1308</x>
-      <y>1830</y>
-      <w>84</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>Remember to edit
-this call to match 
-the changes made to
-the RingBuffer class.
-bg=red</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>

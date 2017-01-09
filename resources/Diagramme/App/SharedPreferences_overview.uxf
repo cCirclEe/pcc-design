@@ -7,7 +7,7 @@
       <x>190</x>
       <y>110</y>
       <w>360</w>
-      <h>230</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>// Class Element
 
@@ -15,9 +15,8 @@ APP_DATA
 --
 _key-value-pairs:_
 settings: "{
-    "resolution_x":&lt;int&gt;,
-    "resolution_y":&lt;int&gt;,
-    "bufferSize":&lt;int&gt;,
+    "quality":&lt;int&gt;,
+    "bufferSizeSec":&lt;int&gt;,
     "fps":&lt;int&gt;
 }"
 account: "{
