@@ -1,6 +1,7 @@
 \subsubsection{VideoProcessingChain} \label{service:klasse:VideoProcessingChain}
 \textbf{implements} Runnable \newline
 Die VideoProcessingChain ist für die Bearbeitung der Videos zuständig. Zunächst werden alle für die Bearbeitung notwendigen Informationen ermittelt. Dann nimmt die VideoProcessingChain die hochgeladenen Videos entgegen und speichert sie zunächst teporär. Das Video wird entschlüsselt, auf personenbezogene Daten analysiert und diese unkenntlich gemacht. Danach können die Metadaten dem Video hinzugefügt und dieses auf dem Server langfristig hinterlegt werden. Zum Schluss werden die temporären Daten wieder gelöscht.\newline
+Siehe auch: \nameref{fig:ServiceProcess}
 
 \underline{Attribute}
 \begin{itemize}

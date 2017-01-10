@@ -1,6 +1,6 @@
 \subsubsection{CameraActivity} \label{app:klasse:CameraActivity}
 \textbf{extends} \nameref{app:klasse:MainActivity} \newline
-Die CameraActivity zeigt die \nameref{app:klasse:CameraView} an, instanziiert eine \nameref{app:klasse:CompatCameraHandler} Instanz sowie eine \nameref{IRecordCallback} Instanz und manipuliert die graphische Nutzeroberfläche abhängig von den Methoden, die auf der IRecordCallback Instanz aufgerufen werden. Nach dem Start blendet die CameraActivity ein Symbol ein, welches die Bereitschaft der App signalisisert. Die CameraActivity stellt einen Observer des CompatCameraHandler dar.
+Die CameraActivity zeigt die \nameref{app:klasse:CameraView} an, instanziiert eine \nameref{app:klasse:CompatCameraHandler} Instanz sowie eine \nameref{app:klasse:IRecordCallback} Instanz und manipuliert die graphische Nutzeroberfläche abhängig von den Methoden, die auf der IRecordCallback Instanz aufgerufen werden. Nach dem Start blendet die CameraActivity ein Symbol ein, welches die Bereitschaft der App signalisisert. Die CameraActivity stellt einen Observer des CompatCameraHandler dar.
 \newline
 
 \underline{Attribute}
@@ -17,7 +17,7 @@ Implementiert das IRecordCallback Interface.
 Der Aufruf der Mehtode \textit{onRecordStarted} benachrichtigt die CameraActivity Instanz über den Start der Videoaufnahme. Sie blendet das Symbol ein, welches die Aufnahme signalisiert. Das Symbol, welches zuvor die Bereitschaft der App signalisiert hat, wird ausgeblendet.
 Der Aufruf der Methode \textit{onRecordStopped} benachrichtigt die CameraActivity Instanz über das Ende der Videoaufnahme. Sie blendet das Symbol ein, welches die Bereitschaft signalisiert. Das Symbol, welches zuvor die Aufnahme der App signalisiert hat, wird ausgeblendet.
 
-\item \textbf{cameraHandler: \nameref{app:klasse:CompatCamera}} \hfill\\ 
+\item \textbf{cameraHandler: \nameref{app:klasse:CompatCameraHandler}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
 CameraHandler Instanz, die die Eingabedaten der Kamera eigenständig verarbeitet und die Aufnahme auslößt. Diesem Feld wird eine TriggeringCompatCameraHandler Instanz zugewiesen.
 

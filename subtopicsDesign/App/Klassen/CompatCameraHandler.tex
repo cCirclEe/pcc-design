@@ -3,6 +3,7 @@
 Ziel einer CameraHandler Implementierung ist es, eine Komponente darzustellen, die grundlegende Funktionen für die Bedienung der Kamera zur Verfügung zu stellen. Neben der Verwaltung der Kamera gehören Zwischenspeicherung und Persistierung ebenfalls zu diesen Grundfunktionen. Der CompatCameraHandler verwendet dabei die mit älteren Androidversionen kompatible Camera API zum Bedienen der Kamera, Anzeigen der Vorschau und Aufnahme von Videos und kümmert sich darum, den RingBuffer zu befüllen und die Persistierung seines Inhaltes zu koordinieren. Beschrieben wird der Ringbuffer mit kurzen Videostückchen. Eben diese Videostücke muss der CompatCameraHandler aufzeichnen.
 Das Auslösen der Aufnahme gehört nich zu seinen Aufgaben, dies wird durch seine Unterklassen oder durch die ihn instanziierenden Komponenten realisiert. Um eine Kommunikation zwischen aufrufender Komponente, z.B. einem Service oder einer Activity, und dem CameraDataHandler zu ermöglichen, muss diese den \nameref{app:klasse:IRecordCallback} implementieren. Die aufrufende Komponente agiert dann als Beobachter des CameraDataHandler.
 \newline
+Siehe auch: \nameref{fig:AppVideo}
 
 \underline{Attribute}
 \begin{itemize}
