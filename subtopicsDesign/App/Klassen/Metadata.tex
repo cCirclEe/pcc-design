@@ -1,0 +1,45 @@
+\subsubsection{Metadata} \label{app:klasse:Metadata}
+Datencontainer für Videometadaten. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{date: long} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Aufnahmedatum des Videos
+
+\item \textbf{triggerType: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Auslöser der Videoaufnahme
+
+\item \textbf{force: float[ ]} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+G-Sensorwerte zum Auslösezeitpunkt
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Metadata(date: long, triggerType: String, force: float[ ])} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Weist die Parameter den Attributen zu.
+
+\item \textbf{Metadata(json: String)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Liest die Parameter aus dem json String und weist sie den Attributen zu.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{getAsJSON(): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Verpackt die Attribute als json String und gibt diesen zurück.
+
+\end{itemize}

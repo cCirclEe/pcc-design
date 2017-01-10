@@ -1,0 +1,51 @@
+\subsubsection{Settings} \label{app:klasse:Settings}
+Datencontainer für Appeinstellungen. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{fps: int} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Bildwiederholrate
+
+\item \textbf{bufferSizeSec: Typ} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Länge des aufgenommenen Videos bei Persistierung.
+
+\item \textbf{quality: int} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Bildqualität der Aufnahme
+
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Settings(fps: int, bufferSizeSec: Typ, quality: int)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Weist die Parameter den Attributen zu.
+
+\item \textbf{Settings(json: String)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Liest die Parameter aus dem json String und weist sie den Attributen zu.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{setResolution (resulution: Vector2D): Rückgabetyp}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Ändert die Bildqualität
+
+\item \textbf{getAsJSON (): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Verpackt die Attribute als json String und gibt diesen zurück.
+
+\end{itemize}

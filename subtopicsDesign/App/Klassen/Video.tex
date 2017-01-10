@@ -1,0 +1,36 @@
+\subsubsection{Video} \label{app:klasse:Video}
+Datencontainer für Videoinformationen. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{name: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Videoname
+
+\item \textbf{encVideoFile: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort der verschlüsselten Videodatei
+
+\item \textbf{encMetaFile: File} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Ort der verschlüsselten Metadaten
+
+\item \textbf{readableMetadata: \nameref{app:klasse:Metadata}} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Metadaten des Videos
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Video(name: String, encVideoFile: File, encMetaFile: File, readableMetadata: Metadata)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Weist die Parameter den Attributen zu.
+
+\end{itemize}
