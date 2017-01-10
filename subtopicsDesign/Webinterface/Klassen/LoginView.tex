@@ -2,7 +2,7 @@
 \subsection{LoginView}\label{LoginView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
-Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Die LoginView wird bei jedem Start des Webinterface angezeigt oder nach einem Logout. Nach erfolgreichem Login leitet sie diese Information an eine übergeordnete Komponente weiter.
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Die \nameref{LoginView} wird bei jedem Start des Webinterface angezeigt oder nach einem Logout. Nach erfolgreichem Login leitet sie diese Information an eine übergeordnete Komponente weiter.
 \newline
 
 \underline{Attribute}
@@ -21,15 +21,15 @@ Ein einfaches Eingabefeld zur Eingabe des Passworts.
 Dieser Button sendet Mail Adresse und Passwort an den AccountManager zum verifizieren.
 
 \item \textbf{registerButton: Button} \hfill\\
-Dieser Button sendet Mail Adresse und Passwort an den AccountDataManager~\eqref{AccountDataManager} zum erzeugen eines neuen Accounts~\eqref{Account}.
+Dieser Button sendet Mail Adresse und Passwort an den \nameref{AccountDataManager} zum erzeugen eines neuen \nameref{Account}s.
 
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{LoginView()} \hfill\\
-Standardkonstruktor
+\item \textbf{LoginView(UI ui)} \hfill\\
+Durch die Referenz auf die UI wird nach erfolgreichem Login das \nameref{Menu} und die \nameref{VideoView} geladen.
 \end{itemize}
 
 \underline{Methoden}
@@ -49,11 +49,11 @@ Diese Methode wird verwendet, dass andere Klassen die Möglichkeit haben, diese 
 \item \textbf{login (mail: String, password: String): Boolean} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Diese Methode wird vom loginButton aufgerufen. Sie sendet mail und password and den AccountDataManager~\eqref{AccountDataManager} zur Überprüfung, bei Erfolg wird true zurückgegeben.
+Diese Methode wird vom loginButton aufgerufen. Sie sendet mail und password and den AccountDataManager zur Überprüfung, bei Erfolg wird true zurückgegeben.
 
 \item \textbf{register (mail: String, password: String): Boolean}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Diese Methode wird vom registerButton aufgerufen. Sie sendet mail und password and den AccountDataManager~\eqref{AccountDataManager} zur Erstellung eines Accounts~\eqref{Account}, bei Erfolg wird true zurückgegeben.
+Diese Methode wird vom registerButton aufgerufen. Sie sendet mail und password and den AccountDataManager zur Erstellung eines Accounts, bei Erfolg wird true zurückgegeben.
 
 \end{itemize}

@@ -2,7 +2,6 @@
 \subsection{AccountView}\label{AccountView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
-
 Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zur Anzeige der aktuellen Accountdaten und zum Durchführen von Änderungen an diesen.
 \newline
 
@@ -13,7 +12,7 @@ Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verw
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
 \item \textbf{mailLabel: Label} \hfill\\ 
-Dieses Label dient zur anzeige der derzeit gültigen Mail Adresse des aktuell eingeloggten Accounts~\eqref{Account}.
+Dieses Label dient zur anzeige der derzeit gültigen Mail Adresse des aktuell eingeloggten \nameref{Account}s.
 
 \item \textbf{passwordChangeField: TextField} \hfill\\ 
 In diesem Eingabe Feld kann bei Wunsch zur Änderung des Passwortes ein neues Passwort eingegeben werden.
@@ -25,7 +24,7 @@ Für alle gewünschten Änderungen muss hier das aktuell aktive Passwort Eingege
 In diesem Eingabe Feld kann bei Wunsch zur Änderung der Mail Adresse eine neue eingegeben werden
 
 \item \textbf{changeButton: Button} \hfill\\
-Durch drücken dieses Buttons werden die Änderungsdaten an den AccountDataManager~\eqref{AccountDataManager} zur Bearbeitung geschickt.
+Durch drücken dieses Buttons werden die Änderungsdaten an den \nameref{AccountDataManager} zur Bearbeitung geschickt.
 \end{itemize}
 
 \underline{Konstruktoren}
