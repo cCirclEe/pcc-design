@@ -1,6 +1,7 @@
 \subsubsection{AuthenticateTask} \label{app:klasse:AuthenticateTask}
 \textbf{implements} AsyncTask<String, Integer, String> \newline
-Allgemeiner Text bliblablubb. \newline
+Der VideoUploadTask authentifiziert einen Nutzer über den Web-Dienst. Er ist als asynchroner Task implementiert damit die App nicht auf die Antwort des Dienstes warten muss.\newline
+Siehe auch: \nameref{fig:AppAuth} \newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -8,12 +9,12 @@ Allgemeiner Text bliblablubb. \newline
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Benutzeraccount des anmeldenden Nutzers
 
 \item \textbf{callback: IServerResponseCallback} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Callback, das aufgerufen wird, wenn der Dienst die Authentifizierung ausgeführt hat.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -22,7 +23,7 @@ Beschreibung
 \item \textbf{AuthenticateTask(account:Account, callback: IServerResponseCallback)} \hfill\\
 \textbf{Sichtbarkeit} public
 
-Standardkonstruktor
+Weist die Parameter den Attributen zu.
 \end{itemize}
 
 \underline{Methoden}
@@ -31,15 +32,15 @@ Standardkonstruktor
 \item \textbf{doInBackground(urls: String...): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt doInBackground(..) von AsyncTask.
 
 \item \textbf{onProgressUpdate(progress: Integer...)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt doProgressUpdate(..) von AsyncTask.
 
 \item \textbf{onPostExecute(result: String)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt onPostExecute(..) von AsyncTask.
 \end{itemize}

@@ -1,6 +1,6 @@
 \subsubsection{VideoUploadTask} \label{app:klasse:VideoUploadTask}
 \textbf{implements} AsyncTask<String, Integer, String> \newline
-Allgemeiner Text bliblablubb. \newline
+Der VideoUploadTask lädt ein Video auf den Web-Dienst hoch. Er ist als asynchroner Task implementiert damit das aufwendige Hochladen des Videos die App nicht aufhält.\newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -8,27 +8,27 @@ Allgemeiner Text bliblablubb. \newline
 \item \textbf{video: File} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Ort des hochzuladenen Videos.
 
 \item \textbf{metadata: File} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Ort der hochzuladenen Metadaten
 
 \item \textbf{symKey: File} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Ort des verschlüsselten symmetrischen Schlüssels.
 
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Benutzeraccount des aktiven Nutzers
 
 \item \textbf{callback: IServerResponseCallback} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Beschreibung
+Callback, das aufgerufen wird, wenn der Dienst das Video empfangen hat.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -37,7 +37,7 @@ Beschreibung
 \item \textbf{VideoUploadTask(video: File, metadata: File, symKey: File, account: Account, callback: IServerResponseCallback)} \hfill\\
 \textbf{Sichtbarkeit} public
 
-Standardkonstruktor
+Weist die Parameter den Attributen zu.
 \end{itemize}
 
 \underline{Methoden}
@@ -46,15 +46,15 @@ Standardkonstruktor
 \item \textbf{doInBackground(urls: String...): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt doInBackground(..) von AsyncTask.
 
-\item \textbf{onProgressUpdate(progress Integer...)}\hfill\\
+\item \textbf{onProgressUpdate(progress: Integer...)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt doProgressUpdate(..) von AsyncTask.
 
 \item \textbf{onPostExecute(result: String)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Überschreibt onPostExecute(..) von AsyncTask.
 \end{itemize}
