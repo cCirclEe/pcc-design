@@ -5,7 +5,7 @@ ext:External[pe]
 vF:VideoFragment
 videosList:ArrayList<Video>
 video:Video
-mM:MemoryManager
+memoryManager:MemoryManager
 videos:ListView
 listAdapter:ListAdapter
 
@@ -13,7 +13,8 @@ ext:vF.onClick()
 vF:vF.delete(index)
 vF:video=videosList.get(index)
 vF:videoName=video.getName()
-vF:mM.deleteEncryptedVideo(videoName)
+vF:memoryManager=memoryManager.GetInstance()
+vF:memoryManager.deleteEncryptedVideo(videoName)
 vF:videosList.remove(index)
 vF:listAdapter=videos.getAdapter()
 vF:listAdapter.notifyDataSetChanged()

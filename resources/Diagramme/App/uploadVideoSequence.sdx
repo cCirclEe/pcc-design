@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram>
-<source><![CDATA[#![LogInSequenz]
-
+<source><![CDATA[#![Upload on App]
 ext:External[pe]
-lG:LogInFragment
+vF:VideoFragment
+videosList:ArrayList<Video>
+video:Video
 mM:MemoryManager
 sPC:IServerResponseCallback
-sPA:ServerProxy(android)
-/aT:AuthenticateTask
+sP:ServerProxy
+/vUT:VideoUploadTask
 sPS:ServerProxy(service)
 
-ext:lG.onClick()
-lG:mM=mM.GetInstance()
-lG:account=mM.getAccountData()
-lG:sPA=sPA.getInstance()
-lG:sPA.authenticateUser(account, callback)
-sPA:aT.new(account, callback)
-aT:accountStatus=sPS.[POST] authenticateAccount(accountData)
-sPS:accountStatus=sPS.setUpForRequest()
-aT:sPC.onResponse(accountStatus)
-sPC:lG.accountStatus
+ext:vF.onClick()
+vF:vF.upload(index)
+vF:video=videosList.get(index)
+vF:videoName=video.getName()
 
-
-
-
-
+vF:mM=mM.GetInstance()
+vF:File=mM.getEncryptedVideo(name)
+vF:File=mM.getEncryptedMetadata(videoName)
+vF:File=mM.getEncryptedSymmetricKey(videoName)
+vF:account=mM.getAccountData()
+vF:sP.getInstance()
+vF:sP.videoUpload(video, metadata, symKey, account, callback)
+sP:vUT.new(video, metadata, symKey, account, callback)
+vUT:sPS.[POST]videoUpload(video, metadata, symKey, account, callback)
+vUT:sPC.onResponse(String)
+sPC:vF.String
 ]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>

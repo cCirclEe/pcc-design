@@ -250,7 +250,7 @@ AAnonymizer
       <x>1272</x>
       <y>720</y>
       <w>228</w>
-      <h>66</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Account
 --
@@ -300,7 +300,7 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
 +setPassword(newPasswordHash: String): String
 +getAccountId(): int
 +registerAccount(uuid :String): String
-+deleteAccount(): String
++deleteAccount(vM: VideoManager): String
 +authenticate(): boolean
 +verifyAccount(uuid :String) :String
 +isVerfied(): boolean
@@ -313,7 +313,7 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
       <x>912</x>
       <y>564</y>
       <w>348</w>
-      <h>222</h>
+      <h>228</h>
     </coordinates>
     <panel_attributes>DatabaseManager
 --
@@ -382,7 +382,7 @@ encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :St
 + changeAccount(accountDataNew :String, accountData :String) :String
 + deleteAccount(accountData :String) :String
 + verifyAccount(accountData :String, uuid :String) :String
-- setUpForRequest(accountData :String)</panel_attributes>
+- setUpForRequest(accountData :String): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -581,12 +581,12 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>870</x>
-      <y>780</y>
+      <y>786</y>
       <w>228</w>
-      <h>66</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>360.0;10.0;360.0;90.0;10.0;90.0</additional_attributes>
+    <additional_attributes>360.0;10.0;360.0;80.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -667,7 +667,7 @@ fg=red</panel_attributes>
       <x>906</x>
       <y>540</y>
       <w>846</w>
-      <h>258</h>
+      <h>264</h>
     </coordinates>
     <panel_attributes>Data
 fg=red</panel_attributes>
@@ -723,7 +723,7 @@ fg=red</panel_attributes>
       <x>1512</x>
       <y>564</y>
       <w>228</w>
-      <h>78</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>LocationConfig
 --
@@ -732,7 +732,8 @@ _decTempVideoDirectory: String_
 _anonymVideoDirectory: String_
 _encTempMtadataDirectory: String_
 _metadataDirectory: String_
-_keyLocation: String_</panel_attributes>
+_keyLocation: String_
+_projektDirectory: String_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

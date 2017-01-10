@@ -1,5 +1,5 @@
 \subsubsection{ServerProxy}
-Allgemeiner Text bliblablubb. \newline
+Der ServerProxy ist ein Singelton, das bedeutet das nur eine Instanz der  Klasse existieren darf. Über diese Instanz können andere Klassen Methoden des ServerProxys aufrufen. Der ServerProxy ist die Verbindungsstelle zwischen App und Web-Service. Er kümmert sich um die Authentifizierungs- und Hochladeanfragen der App.\newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -7,7 +7,7 @@ Allgemeiner Text bliblablubb. \newline
 \item \textbf{instance: ServerProxy} \hfill\\ 
 \textbf{Sichtbarkeit} public
 
-Beschreibung
+Das Attribut wird an andere Klasse weiterzugeben um öffentliche Methoden dieser Klasse aufzurufen. Dies garantiert die Einzigartigkeit der Instanz der Klasse. 
 
 \end{itemize}
 
@@ -17,7 +17,7 @@ Beschreibung
 \item \textbf{ServerProxy()} \hfill\\
 \textbf{Sichtbarkeit} private
 
-Standardkonstruktor
+Privater Konstruktor der bei der ersten Instanzierung der Klasse eine Instanz bildet. Die Instanz initialisiert dann das instance-Attribut. 
 \end{itemize}
 
 \underline{Methoden}
@@ -27,21 +27,21 @@ Standardkonstruktor
 \item \textbf{getInstance (): ServerProxy}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Ruft den privaten Konstruktor auf wenn Klasse zum ersten Mal initialisiert wurde. Gibt dann das instance-Attribut der Klasse zurück.
 
 \item \textbf{videoUpload (video: File, metadata: File, symKey: File, account: Account, callback: IServerResponseCallback)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Erstellt eine Anfrage zum Hochladen der App. Dabei wird eine VideoUploadTask Instanz erstellt und die Parameter weiter zur  Task übergeben.
 
 \item \textbf{authenticateAccount (account: Account, callback: IServerResponseCallback)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Erstellt eine Anfrage zum Authentifizieren der App. Hierbei wird eine AuthenticateTask Instanz gebildet und der Account und der Callback übergeben.
 
 \item \textbf{cancelRequest()}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Beendet eine Anfrage an den ServerProxy.
 
 \end{itemize}
