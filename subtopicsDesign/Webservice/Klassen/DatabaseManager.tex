@@ -6,15 +6,15 @@ Die Klasse DatabaseManager bietet eine Schnittstelle für alle Datenbankanfragen
 \itemsep0pt
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} private
-\end{itemize}
 
-Das Objekt ``account'' vom Typ Account wird im Konstruktor mit übergeben und dem Klassenattribut zugewiesen. Es beinhaltet alle benötigten Informationen über den Benutzer. 
+Benutzeraccount des aktiven Nutzers
+\end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{DatabaseManager(account: Account)} \hfill\\
-Der Konstruktor hat als Übergabeparameter den Account, damit das Account-Objekt auch in dieser Klasse verfügbar ist.
+Setzt den aktiven Nutzer.
 \end{itemize}
 
 \underline{Methoden}
@@ -23,32 +23,32 @@ Der Konstruktor hat als Übergabeparameter den Account, damit das Account-Objekt
 \item \textbf{saveProcessedVideoAndMeta(videoName: String, metaName: String): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode bekommt den Videofile-Namen als String, sowie die Metadaten als String übergeben und schreibt einen Datenbank-Eintrag in die Video-Tabelle der Datenbank. Die ``id'' wird generiert, die ``user\_id'' ist das Attribut ``id'' des Account-Objektes, der ``video\_name'' ist der Übergabeparamter ``videoName'' (String ist der Name und dieser wird als Pfad zum File mit dem Attribut ``anonymVideoDirectory'' aus LocationConfig konkateniert) und ``meta\_name'' ist der Übergabeparamter ``metaName'' (String ist der Name und dieser wird als Pfad zum File mit dem Attribut ``metadataDirectory'' aus LocationConfig konkateniert). 
+Bekommt den Videofile-Namen, sowie die Metadaten als übergeben und schreibt einen Datenbank-Eintrag in die Video-Tabelle der Datenbank. Die ``id'' wird generiert, die ``user\_id'' ist das Attribut ``id'' des Account-Objektes, der ``video\_name'' ist der Übergabeparamter ``videoName'' und ``meta\_name'' ist der Übergabeparamter ``metaName''.
 
 \item \textbf{getVideoInfo(videoId: int): VideoInfo}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode bekommt die videoId als Integer übergeben und gibt Videoinformationen als VideoInfo-Objekt zurück. Die Methode erstellt ein Objekt von ``VideoInfo'' mit der ``video\_id'' der Parameterübergabe und dem ``video\_name'', welches aus der Datenbank mithilfe des Accounts geholt wird und gibt dieses als Rückgabeparameter zurück.
+Bbekommt die videoId übergeben und gibt Videoinformationen als VideoInfo-Objekt zurück. Die Daten werden mithilfe der videoId und den Accountdaten des Nutzers aus der Datenbank geladen.
 
 \item \textbf{getVideoInfoList(): ArrayList<VideoInfo>}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode gibt alle Videos eines Benutzers in Form einer ArrayList aus ``VideoInfo''-Objekten zurück. Diese bekommt es durch Datenbankabfragen, die des mithilfe des Accounts einsehen kann.
+Gibt alle Videos eines Benutzers in Form einer Liste von ``VideoInfo''-Objekten zurück. Diese wird durch eine Datenbankabfrage mithilfe der Accountdaten ermittelt.
 
 \item \textbf{deleteVideoAndMeta(videoId: int): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode löscht ein Video eines Benutzers. Das Löschen geschieht durch eine Datenbankabfrage, indem die ``videoId'' als Übergabeparameter und der Account genutzt werden, um das gewünschte Video und zudem auch die Metadaten löschen zu können. Die Methode gibt ``true'' zurück, wenn der Datensatz erfolgreich gelöscht wurde.  
+Löscht ein Video eines Benutzers. Das Löschen geschieht durch eine Datenbankabfrage mithilfe der videoId und den Accountdaten des aktiven Benutzers. Die Methode gibt zurück, ob das Löschen erfolgreich war.
 
 \item \textbf{getMetadata(videoId: int): Metadata}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode gibt die Metadaten des Videos mit der ``id''= ``videoId'' als ``Metadata''-Objekt zurück. Es wird also eine Datenbankabfrage gemacht, in der die Metadaten mithilfe der ``videoId'' und dem Accounts ermittelt werden. Mit dem gewonnenen Pfad werden die Informationen aus dem File gelesen und in ein ``Metadata''-Objekt gepackt, welches zurückgegeben wird. 
+Ermittelt die Metadaten eines Videos durch eine Datenbankabfrage. Dafür wird die videoId und die Benutzerdaten genutzt.
 
 \item \textbf{setMail(newMail: String): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode ändert die E-Mail-Adresse des Benutzers. Die E-Mail-Adresse wird als String ``newMail'' übergeben und mithilfe des Accounts kann auf das Element in der Datenbank zugegriffen werden. Mit dem entsprechenden Datenbankbefehl wird die neue E-Mail gesetzt. Ein ``boolean'' wird zurückgegeben, je nachdem, ob die Operation erfolgreich war oder nicht.
+Die Methode ändert die E-Mail-Adresse des Benutzers. Die E-Mail-Adresse wird als ``newMail'' übergeben und mithilfe des Accounts kann auf das Element in der Datenbank zugegriffen werden. Mit dem entsprechenden Datenbankbefehl wird die neue E-Mail gesetzt. Es wird zurückgegeben, ob das aktualisieren erfolgreich war, oder nicht.
 
 \item \textbf{setPassword(newPassword: String): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -58,22 +58,22 @@ Die Methode ändert das Passwort des Benutzers. Der neue Passwort-Hash wird als 
 \item \textbf{authenticate(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode authentifiziert den Benutzer. Duch das ``acccount :Account''-Objekt stehen alle benötigten Informationen zur Verfügung. Durch eine Datenbankabfrage, ob E-Mail und Passwort-Hash übereinstimmen, wird ein ``boolean'' zurück gegeben, welcher das Ergebnis der Anfrage darstellt.
+Die Methode authentifiziert den Benutzer. Durch das den Account stehen alle benötigten Informationen zur Verfügung. Durch eine Datenbankabfrage wird überprüft, ob E-Mail und Passwort-Hash übereinstimmen. Es wird zurückgegeben, ob das aktualisieren erfolgreich war, oder nicht.
 
 \item \textbf{deleteAccount(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode löscht einen Account. Durch den Account stehen alle Informationen zur Verfügung. Es werden erst alle Video-Datenbankeinträge in der Tabelle ``Video''eines Benutzers gelöscht, erst dann wird der Account in der Tabelle ``User'' gelöscht.
+Die Methode löscht einen Account. Durch den Account stehen alle Informationen zur Verfügung. Zunächst werden alle Videos und Metadaten des Nutzers gelöscht. Danach werden die Video-Datenbankeinträge in der Tabelle ``Video'' und dann der Account in der Tabelle ``User'' gelöscht.
 
 \item \textbf{getAccountId() :int}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode gibt die ``id'' des Accounts zurück... Die Datenbankabfrage nimmt die E-Mail-Adresse des Accounts und gibt die ``id'' des Accounts als ``Integer'' zurück. Falls der Account nicht existiert, wird ``-1'' zurückgegeben.
+Die Methode gibt die ``id'' des Accounts zurück. Diese ermittelt sie durch eine Datenbankabfrage mit der Adresse des Accounts. Falls der Account nicht existiert, wird ``-1'' zurückgegeben.
 
 \item \textbf{register(uuid :String) :boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode legt einen neuen Benutzer an. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Die benötigten Informationen liegen im Account vor. Daraus werden E-Mail und Passwort genommen und mit einer Datenbankabfrage wird in der Tabelle ``User'' ein neuer Eintrag hinzugefügt. 
+Die Methode legt einen neuen Benutzer an. Die Die Übergabe ``uuid'' ist ein eindeutiger Wert, der zur Accountverifizierung dient. Die zur Erstellung des Account benötigten Informationen liegen in dem Attribut account vor. Daraus werden E-Mail und Passwort genommen und mit einer Datenbankabfrage wird in der Tabelle ``User'' ein neuer Eintrag hinzugefügt. 
 
 \item \textbf{verifyAccount(accountData :String, uuid: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -83,6 +83,6 @@ Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Überga
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode gibt ein ``boolean'' zurück, welcher mittles eines Datenbankeintrags des Benutzers aus dem Account auf das Element ``verified'' der Tabelle ``User'' abgefragt wird, ermittelt wird.
+Die Methode überprüft, ob ein Nutzer verifiziert ist.
 
 \end{itemize}
