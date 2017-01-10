@@ -1,15 +1,13 @@
 \newpage
 \subsection{VideoDataManager}\label{VideoDataManager}
-\textbf{extends}  Table \newline
-
-Der VideoDataManager verwaltet die VideoDaten und vereinfacht den Zugriff auf den ServerProxy~\eqref{ServerProxy} für Klassen die VideoDaten benötigen.
+Der VideoDataManager verwaltet die VideoDaten und vereinfacht den Zugriff auf den \nameref{ServerProxy} für Klassen die VideoDaten benötigen.
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 
 \item \textbf{videos: String[]}\hfill\\
-Ein Array in dem der VideoDataManager die Videos hält die er vom ServerProxy~\eqref{ServerProxy} bekommt.
+Ein Array in dem der VideoDataManager die Videos hält die er vom ServerProxy bekommt.
 \end{itemize}
 
 \underline{Methoden}
@@ -20,21 +18,21 @@ Ein Array in dem der VideoDataManager die Videos hält die er vom ServerProxy~\e
 \item \textbf{downloadVideo (videoId: int): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode fügt die Account~\eqref{Account} Daten hinzu und ruft danach die Methode zum downloaden am ServerProxy~\eqref{ServerProxy} auf.
+Die Methode fügt die \nameref{Account} Daten hinzu und ruft danach die Methode zum downloaden am ServerProxy auf.
 
 \item \textbf{getMetaInf (videoId: int): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode fügt die Account~\eqref{Account} Daten hinzu und ruft am ServerProxy~\eqref{ServerProxy} die Methode zum holen der Meta Informationen. Diese werden dann als String zurückgegeben.
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode zum holen der Meta Informationen. Diese werden dann als String zurückgegeben.
 
 \item \textbf{deleteVideo (videoId: int): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode fügt die Account~\eqref{Account} Daten hinzu und ruft am ServerProxy~\eqref{ServerProxy} die Methode zum löschen eines Videos auf.
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode zum löschen eines Videos auf.
 
 \item \textbf{udateVideos (): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode fügt die Account~\eqref{Account} Daten hinzu und ruft am ServerProxy~\eqref{ServerProxy} die Methode zum holen der Videos.
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode zum holen der Videos.
 
 \end{itemize}
