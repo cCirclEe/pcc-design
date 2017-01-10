@@ -10,7 +10,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>480</x>
-      <y>894</y>
+      <y>1098</y>
       <w>192</w>
       <h>114</h>
     </coordinates>
@@ -27,7 +27,7 @@ output: File): boolean</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>480</x>
-      <y>1038</y>
+      <y>1242</y>
       <w>168</w>
       <h>114</h>
     </coordinates>
@@ -43,7 +43,7 @@ IAnalyzer
     <id>UMLClass</id>
     <coordinates>
       <x>660</x>
-      <y>1038</y>
+      <y>1242</y>
       <w>174</w>
       <h>114</h>
     </coordinates>
@@ -59,7 +59,7 @@ IFilter
     <id>Relation</id>
     <coordinates>
       <x>546</x>
-      <y>1002</y>
+      <y>1206</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -70,7 +70,7 @@ IFilter
     <id>Relation</id>
     <coordinates>
       <x>546</x>
-      <y>1002</y>
+      <y>1206</y>
       <w>180</w>
       <h>48</h>
     </coordinates>
@@ -81,7 +81,7 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>480</x>
-      <y>1182</y>
+      <y>1386</y>
       <w>168</w>
       <h>114</h>
     </coordinates>
@@ -96,11 +96,11 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>660</x>
-      <y>1182</y>
+      <y>1386</y>
       <w>174</w>
       <h>114</h>
     </coordinates>
-    <panel_attributes>ExampleAnonymizer
+    <panel_attributes>ExampleFilter
 --
 
 --
@@ -111,7 +111,7 @@ IFilter
     <id>Relation</id>
     <coordinates>
       <x>720</x>
-      <y>1146</y>
+      <y>1350</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -122,7 +122,7 @@ IFilter
     <id>Relation</id>
     <coordinates>
       <x>534</x>
-      <y>1146</y>
+      <y>1350</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -133,7 +133,7 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>270</x>
-      <y>1038</y>
+      <y>1242</y>
       <w>204</w>
       <h>114</h>
     </coordinates>
@@ -148,7 +148,7 @@ IFilter
     <id>Relation</id>
     <coordinates>
       <x>318</x>
-      <y>858</y>
+      <y>1062</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -159,7 +159,7 @@ IFilter
     <id>Relation</id>
     <coordinates>
       <x>168</x>
-      <y>858</y>
+      <y>1062</y>
       <w>168</w>
       <h>48</h>
     </coordinates>
@@ -170,7 +170,7 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>24</x>
-      <y>1038</y>
+      <y>1242</y>
       <w>234</w>
       <h>114</h>
     </coordinates>
@@ -185,7 +185,7 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>678</x>
-      <y>750</y>
+      <y>954</y>
       <w>198</w>
       <h>114</h>
     </coordinates>
@@ -201,7 +201,7 @@ IFilter
     <id>UMLClass</id>
     <coordinates>
       <x>264</x>
-      <y>750</y>
+      <y>954</y>
       <w>210</w>
       <h>114</h>
     </coordinates>
@@ -220,7 +220,7 @@ encMeta: File, decVid: File): boolean</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>480</x>
-      <y>750</y>
+      <y>954</y>
       <w>192</w>
       <h>114</h>
     </coordinates>
@@ -237,7 +237,7 @@ AAnonymizer
     <id>Relation</id>
     <coordinates>
       <x>534</x>
-      <y>858</y>
+      <y>1062</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -248,7 +248,7 @@ AAnonymizer
     <id>UMLClass</id>
     <coordinates>
       <x>1272</x>
-      <y>720</y>
+      <y>924</y>
       <w>228</w>
       <h>66</h>
     </coordinates>
@@ -266,7 +266,7 @@ AAnonymizer
     <id>UMLClass</id>
     <coordinates>
       <x>942</x>
-      <y>300</y>
+      <y>504</y>
       <w>276</w>
       <h>120</h>
     </coordinates>
@@ -287,7 +287,7 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
     <id>UMLClass</id>
     <coordinates>
       <x>1230</x>
-      <y>300</y>
+      <y>504</y>
       <w>276</w>
       <h>120</h>
     </coordinates>
@@ -310,7 +310,7 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
     <id>UMLClass</id>
     <coordinates>
       <x>912</x>
-      <y>564</y>
+      <y>768</y>
       <w>348</w>
       <h>222</h>
     </coordinates>
@@ -337,7 +337,7 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
     <id>UMLClass</id>
     <coordinates>
       <x>414</x>
-      <y>456</y>
+      <y>660</y>
       <w>288</w>
       <h>144</h>
     </coordinates>
@@ -361,7 +361,7 @@ key: InputStream, context: EditingContext)
     <id>UMLClass</id>
     <coordinates>
       <x>954</x>
-      <y>24</y>
+      <y>228</y>
       <w>402</w>
       <h>162</h>
     </coordinates>
@@ -386,7 +386,7 @@ encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :St
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>414</y>
+      <y>618</y>
       <w>18</w>
       <h>162</h>
     </coordinates>
@@ -397,7 +397,7 @@ encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :St
     <id>UMLClass</id>
     <coordinates>
       <x>420</x>
-      <y>282</y>
+      <y>486</y>
       <w>288</w>
       <h>150</h>
     </coordinates>
@@ -421,7 +421,7 @@ key: InputStream, account: Account, response :AsyncResponse)
     <id>Relation</id>
     <coordinates>
       <x>564</x>
-      <y>426</y>
+      <y>630</y>
       <w>18</w>
       <h>42</h>
     </coordinates>
@@ -432,7 +432,7 @@ key: InputStream, account: Account, response :AsyncResponse)
     <id>UMLClass</id>
     <coordinates>
       <x>414</x>
-      <y>624</y>
+      <y>828</y>
       <w>306</w>
       <h>72</h>
     </coordinates>
@@ -448,7 +448,7 @@ IStage
     <id>UMLClass</id>
     <coordinates>
       <x>72</x>
-      <y>456</y>
+      <y>660</y>
       <w>306</w>
       <h>150</h>
     </coordinates>
@@ -471,7 +471,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>372</x>
-      <y>504</y>
+      <y>708</y>
       <w>54</w>
       <h>18</h>
     </coordinates>
@@ -482,7 +482,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>564</x>
-      <y>594</y>
+      <y>798</y>
       <w>18</w>
       <h>42</h>
     </coordinates>
@@ -493,7 +493,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>564</x>
-      <y>690</y>
+      <y>894</y>
       <w>18</w>
       <h>72</h>
     </coordinates>
@@ -504,7 +504,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>564</x>
-      <y>690</y>
+      <y>894</y>
       <w>228</w>
       <h>72</h>
     </coordinates>
@@ -515,7 +515,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>366</x>
-      <y>690</y>
+      <y>894</y>
       <w>216</w>
       <h>72</h>
     </coordinates>
@@ -526,7 +526,7 @@ IStage
     <id>UMLClass</id>
     <coordinates>
       <x>270</x>
-      <y>894</y>
+      <y>1098</y>
       <w>198</w>
       <h>114</h>
     </coordinates>
@@ -541,7 +541,7 @@ IStage
     <id>UMLClass</id>
     <coordinates>
       <x>24</x>
-      <y>894</y>
+      <y>1098</y>
       <w>234</w>
       <h>114</h>
     </coordinates>
@@ -556,7 +556,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>168</x>
-      <y>1002</y>
+      <y>1206</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -567,7 +567,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>318</x>
-      <y>1002</y>
+      <y>1206</y>
       <w>18</w>
       <h>48</h>
     </coordinates>
@@ -578,7 +578,7 @@ IStage
     <id>Relation</id>
     <coordinates>
       <x>870</x>
-      <y>780</y>
+      <y>984</y>
       <w>228</w>
       <h>66</h>
     </coordinates>
@@ -589,7 +589,7 @@ IStage
     <id>UMLClass</id>
     <coordinates>
       <x>1272</x>
-      <y>648</y>
+      <y>852</y>
       <w>228</w>
       <h>66</h>
     </coordinates>
@@ -606,7 +606,7 @@ IStage
     <id>UMLClass</id>
     <coordinates>
       <x>1272</x>
-      <y>564</y>
+      <y>768</y>
       <w>228</w>
       <h>78</h>
     </coordinates>
@@ -626,7 +626,7 @@ triggerType :String, gForce :Vector3D)
     <id>UMLPackage</id>
     <coordinates>
       <x>0</x>
-      <y>252</y>
+      <y>456</y>
       <w>894</w>
       <h>1074</h>
     </coordinates>
@@ -638,7 +638,7 @@ fg=red</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>936</x>
-      <y>0</y>
+      <y>204</y>
       <w>438</w>
       <h>204</h>
     </coordinates>
@@ -650,7 +650,7 @@ fg=red</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>930</x>
-      <y>270</y>
+      <y>474</y>
       <w>594</w>
       <h>162</h>
     </coordinates>
@@ -662,7 +662,7 @@ fg=red</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>906</x>
-      <y>540</y>
+      <y>744</y>
       <w>846</w>
       <h>258</h>
     </coordinates>
@@ -674,7 +674,7 @@ fg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>414</y>
+      <y>618</y>
       <w>300</w>
       <h>162</h>
     </coordinates>
@@ -685,7 +685,7 @@ fg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>180</y>
+      <y>384</y>
       <w>18</w>
       <h>132</h>
     </coordinates>
@@ -696,7 +696,7 @@ fg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>234</y>
+      <y>438</y>
       <w>300</w>
       <h>78</h>
     </coordinates>
@@ -707,7 +707,7 @@ fg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>702</x>
-      <y>318</y>
+      <y>522</y>
       <w>252</w>
       <h>18</h>
     </coordinates>
@@ -718,7 +718,7 @@ fg=red</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1512</x>
-      <y>564</y>
+      <y>768</y>
       <w>228</w>
       <h>78</h>
     </coordinates>
@@ -736,7 +736,7 @@ _keyLocation: String_</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>12</x>
-      <y>696</y>
+      <y>900</y>
       <w>870</w>
       <h>618</h>
     </coordinates>
