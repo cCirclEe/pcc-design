@@ -1,0 +1,41 @@
+\subsubsection{Account} \label{app:klasse:Account}
+Datencontainer für Accountinformationen eines Benutzers. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{mail: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+E-Mail des Benutzers.
+
+\item \textbf{password: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Passwort des Benutzers.
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Account(mail: String, password: String)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Weist die Parameter den Attributen zu.
+
+\item \textbf{Account(json: String)} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Liest die Parameter aus dem json String und weist sie den Attributen zu.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{getAsJSON (): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Verpackt die Attribute als json String und gibt diesen zurück.
+
+\end{itemize}
