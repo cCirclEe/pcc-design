@@ -70,10 +70,15 @@ Die Methode löscht einen Account. Durch den Account stehen alle Informationen z
 
 Die Methode gibt die ``id'' des Accounts zurück... Die Datenbankabfrage nimmt die E-Mail-Adresse des Accounts und gibt die ``id'' des Accounts als ``Integer'' zurück. Falls der Account nicht existiert, wird ``-1'' zurückgegeben.
 
-\item \textbf{register(): boolean}\hfill\\
+\item \textbf{register(uuid :String) :boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode legt einen neuen Benutzer an. Die benötigten Informationen liegen im Account vor. Daraus werden E-Mail und Passwort genommen und mit einer Datenbankabfrage wird in der Tabelle ``User'' ein neuer Eintrag hinzugefügt. 
+Die Methode legt einen neuen Benutzer an. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Die benötigten Informationen liegen im Account vor. Daraus werden E-Mail und Passwort genommen und mit einer Datenbankabfrage wird in der Tabelle ``User'' ein neuer Eintrag hinzugefügt. 
+
+\item \textbf{verifyAccount(accountData :String, uuid: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück.
 
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public

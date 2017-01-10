@@ -13,28 +13,15 @@
 ext:External[pe]
 vP:VideoProxy
 /account:Account
-/aM:AccountManager
+aM:AccountManager
 /vM:VideoManager
-/dbM1:DatabaseManager
-/dbM2:DatabaseManager
+dbM1:DatabaseManager
 
-ext:vP.createAccount(accountData)
+ext:vP.createAccount(accountData, uuid)
 vP:String=vP.setUpForRequest(acountData)
-vP:account.new(accountData)
-vP:aM.new(accountData)
-aM:dbM1.new(account)
-vP:int=aM.getAccountId(mail)
-aM:int=dbM1.getAccountId(mail)
-vP:account.setAccountId(id)
-vP:boolean=aM.authenticate()
-aM:boolean=dbM1.authenticate()
-vP:boolean=aM.isVerified()
-aM:boolean=dbM1.isVerified()
-vP:vM.new(accountData)
-vM:dbM2.new(account)
 
-vP[2]:String=aM.registerAccount()
-aM:boolean=dbM1.register()
+vP[2]:String=aM.registerAccount(uuid)
+aM:boolean=dbM1.register(uuid)
 ]]></source>
 <configuration>
 <property name="activationBarBorderThickness" value="1"/>

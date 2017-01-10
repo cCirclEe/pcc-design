@@ -50,10 +50,10 @@ Bearbeitet eine Anfrage zur Videolistenrückgabe des Web-Interface für einen be
 
 Bearbeitet eine Anfrage zur Authentifizierungs des Web-Interfaces oder App. Dabei wird auf die Rückgabe von setUpForRequest() gewartet und der String dann an die anfragende Instanz weitergeleitet.
 
-\item \textbf{createAccount(accountData: String): String}\hfill\\
+\item \textbf{createAccount(accountData: String uuid :String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage zur Accounterstellungs des Web-Interfaces. Dabei wird im AccountManager die Methode registerAccount() aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
+Bearbeitet eine Anfrage zur Accounterstellungs des Web-Interfaces. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird im AccountManager die Methode registerAccount(uuid :String) aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
 
 \item \textbf{changeAccount(accountDataNew: String, accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -64,6 +64,11 @@ Bearbeitet eine Anfrage zur Passwort/Mailänderung des Web-Interfaces. Dabei wer
 \textbf{Sichtbarkeit} public
 
 Bearbeitet eine Anfrage zur Löschung eines Accounts des Web-Interfaces. Hierbei müssen zunächst alle Videos und deren Metadaten des Accounts gelöscht werden, bevor der Account gelöscht wird. Dafür muss über den VideoManager getVideoInfoList() aufgerufen werden und für jeden Eintrag in der Liste deleteVideo() ausgeführt werden. Danach wird im AccountManager die Methode deleteAccount() aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
+
+\item \textbf{verifyAccount(accountData :String, uuid: String): String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück.
 
 \item \textbf{setUpForRequest(accountData: String)}\hfill\\
 \textbf{Sichtbarkeit} private

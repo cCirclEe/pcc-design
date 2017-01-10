@@ -37,10 +37,10 @@ Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung eines Passwort eines Accou
 
 Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Mail-Adresse. Die Anfrage wird zum DatabaseManager weitegeleitet und somit die Methode getAccountId() aufgerufen. Von dort aus wird sie bis zum ServerProxy zurückgegeben.  
 
-\item \textbf{registerAccount(): String}\hfill\\
+\item \textbf{registerAccount(uuid :String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Dabei wird beim DatabaseManager die Methode register() aufgerufen und die Accountdaten im zugehörigen Accountattribut gesetzt. 
+Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird beim DatabaseManager die Methode register() aufgerufen und die Accountdaten im zugehörigen Accountattribut gesetzt. 
 
 \item \textbf{deleteAccount(): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -51,6 +51,11 @@ Bearbeitet eine Anfrage vom ServerProxy zur Löschung eines Accounts. Dabei wird
 \textbf{Sichtbarkeit} public
 
 Bearbeitet eine Anfrage vom ServerProxy zur Authentifizierung des Accounts. Die Methode authenticate() vom DatabaseManager wird hierbei aufgerufen.
+ 
+\item \textbf{verifyAccount(accountData :String, uuid: String) :String}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück. 
  
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
