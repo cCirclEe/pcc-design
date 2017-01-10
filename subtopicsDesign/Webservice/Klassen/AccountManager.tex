@@ -42,10 +42,10 @@ Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Ma
 
 Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird beim DatabaseManager die Methode register() aufgerufen und die Accountdaten im zugehörigen Accountattribut gesetzt. 
 
-\item \textbf{deleteAccount(): String}\hfill\\
+\item \textbf{deleteAccount(vm :VideoManager): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zur Löschung eines Accounts. Dabei wird im DatabaseManager die Methode deleteAccount() aufgerufen.
+Bearbeitet die Löschung eines Accounts. Zunächst werden alle Videos des Accounts ermittelt und es wird mit dem Übergabeparameter ``vM'' auf den VideoManager zugegriffen, der alle Videos und Metadaten löscht. Nun wird im DatabaseManager ``deleteAccount()'' aufgerufen und der Account wird in der Datenbank gelöscht.
 
 \item \textbf{authenticate(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
