@@ -1,18 +1,18 @@
 \section{Modulübersicht} \label{interface:modul}
-Das Modul Webinterface, bietet dem Benutzer eine Schnittstelle zu unserem Web-Dienst, über die er Videos herunterladen und seinen Account verwalten kann. 
+Das Modul Webinterface bietet dem Benutzer eine Schnittstelle zu unserem Webservice, über die er Videos herunterladen und seinen Account verwalten kann. 
 
 \subsection{Gui}
-Die Graphische Anzeige besteht aus Verschiedenen Views. Wobei bei Start immer die LoginView Angezeigt wird.
+Die graphische Anzeige besteht aus verschiedenen Views, wobei beim Start immer die LoginView angezeigt wird.
 
 \subsection{Gui.Navigation}
 Die Navigation besteht aus dem Menü und dem Navigator. Das Menü bietet die Möglichkeit für den Benutzer zwischen Views zu wechseln. Den eigentlichen Wechsel übernimmt dann der Navigator.
 
 \subsection{ApplicationLogic}
-Die beiden Data Manager bereiten Daten auf und regeln den zugriff auf den ServerProxy.
+Die beiden Manager (VideoDataManager, AccountDataManager) bereiten Daten auf und regeln den Zugriff auf den ServerProxy.
 
 \subsection{ServerConnection}
-Der ServerProxy übernimmt alle zugriffe auf den Web-Dienst.
+Der ServerProxy übernimmt alle Zugriffe auf den Webservice.
 
 \subsection{MailService}
-Eine Klasse die, die Aufgabe hat die Verifizierungsmail zu senden.
+Eine Klasse, welche die Aufgabe hat, die Verifizierungsmail zu senden.
 \newpage

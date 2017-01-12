@@ -1,7 +1,7 @@
 \newpage
 \subsection{Menu}\label{Menu}
 \textbf{extends}  HorizontalLayout \newline
-Das \nameref{Menu} stellt die Buttons bereit, die benötigt werden um den Benutzer zwischen den verschiedenen Ansichten wechseln zu lassen. Dazu kommt noch der Logout Button, über den man zurück zum Login gelangt.
+Das \nameref{Menu} stellt die Buttons bereit, die benötigt werden, um den Benutzer zwischen den verschiedenen Ansichten wechseln zu lassen. Dazu kommt noch der Logout Button, über den man zurück zum Login gelangt.
 \newline
 
 \underline{Attribute}
@@ -9,13 +9,13 @@ Das \nameref{Menu} stellt die Buttons bereit, die benötigt werden um den Benutz
 \itemsep0pt
 
 \item \textbf{menuItemLayout: Layout} \hfill\\ 
-In dieses Layout werden neu erstellte Menu Items hinzugefügt.
+In dieses Layout werden neu erstellte Menu-Items hinzugefügt.
 
 \item \textbf{userMenu: MenuBar} \hfill\\ 
 Eine Referenz auf das userMenu.
 
 \item \textbf{ui: UI} \hfill\\ 
-Eine Referenz auf die ui in der das Menu liegt. Wird verwendet um den Navigator aufzurufen und den Logout durchzuführen.
+Eine Referenz auf die ui in der das Menu liegt. Dies wird verwendet um den Navigator aufzurufen und den Logout durchzuführen.
 
 \end{itemize}
 
@@ -25,16 +25,16 @@ Eine Referenz auf die ui in der das Menu liegt. Wird verwendet um den Navigator 
 \item \textbf{addMenuItem (caption: String, viewId: String): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode dient zum Einfügen neuer Menüeinträge, die einen Ansichtswechsel verursachen sollen.
+Diese Methode dient zum Einfügen neuer Menüeinträge, die einen Ansichtswechsel auslösen sollen.
 
 \item \textbf{addUserMenu (name: String): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode dient zum Einfügen eines User Menüs. Es kann immer nur ein User Menü geben.
+Diese Methode dient zum Einfügen eines User-Menüs. Es kann immer nur ein User-Menü geben.
 
 \item \textbf{addLogoutItem (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode dient zum Einfügen eines Logout Eintrages. Dieser Eintrag ruft dann den Logout der Übergeordneten \nameref{UI} auf.
+Diese Methode dient zum Einfügen eines Logout-Eintrages. Dieser Eintrag ruft dann den Logout der Übergeordneten \nameref{UI} auf.
 
 \end{itemize}

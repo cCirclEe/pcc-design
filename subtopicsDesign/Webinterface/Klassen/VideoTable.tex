@@ -8,16 +8,16 @@ Jede Zeile des VideoTables beinhaltet ein Video mit den zugehörigen Buttons zum
 \itemsep0pt
 
 \item \textbf{downLoadButtonList: LinkedList} \hfill\\ 
-Eine Liste an Buttons, zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
+Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
 \item \textbf{infoButtonList: LinkedList} \hfill\\ 
-Eine Liste an Buttons, zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
+Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
 \item \textbf{delteButtonList: LinkedList} \hfill\\ 
-Eine Liste an Buttons, zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
+Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
 \item \textbf{videos: LinkedList} \hfill\\ 
-Die Liste der Videos, diese wird bei erzeugen oder update vom \nameref{VideoDataManager} geholt.
+Das Attribut ist eine Liste der Videos. Diese wird bei Erzeugen oder Updaten vom \nameref{VideoDataManager} geholt.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -25,7 +25,7 @@ Die Liste der Videos, diese wird bei erzeugen oder update vom \nameref{VideoData
 \itemsep0pt
 
 \item \textbf{VideoTable()} \hfill\\ 
-Im Konstruktor werden die Videos über den VideoDataManager geholt und die Buttons vorbereitet und dann der Table entsprechend gefüllt.
+Im Konstruktor werden die Videos über den VideoDataManager geholt. Zuden werden die Buttons vorbereitet und der Table angehängt.
 
 \end{itemize}
 
@@ -37,12 +37,12 @@ Im Konstruktor werden die Videos über den VideoDataManager geholt und die Butto
 \item \textbf{prepareVideos (): void}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Die Videos werden zur Anzeige vorbereitet, also trennen von Name und Id.
+Die Videos werden zur Anzeige vorbereitet, d.h. es wird Name und Id getrennt.
 
 \item \textbf{prepareButtons (): void}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Die Buttons werden zur Anzeige vorbereitet, also setzten von Name und Listener.
+Die Buttons werden zur Anzeige vorbereitet, d.h. es werden Name und Listener gesetzt.
 
 \item \textbf{update (): void}\hfill\\
 \textbf{Sichtbarkeit} public

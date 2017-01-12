@@ -2,14 +2,14 @@
 \subsection{VideoView}\label{VideoView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
-Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zum Anzeigen der Videos, die ein Benutzer mit seiner App hochgeladen hat. Zur Anzeige selbst lädt diese Klasse einen \nameref{VideoTable}.
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View dient zum Anzeigen der Videos, die ein Benutzer mit seiner App hochgeladen hat. Zur Anzeige selbst lädt diese Klasse eine \nameref{VideoTable}.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{viewId: String} \hfill\\ 
-Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
+Die viewId gibt der View eine einzigartige ID, mit welcher der Navigator die View identifizieren kann.
 
 \end{itemize}
 
@@ -25,12 +25,11 @@ Standardkonstruktor
 \itemsep0pt
 \item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent) :void}\hfill\\
 \textbf{Sichtbarkeit} public
-
-Diese Methode wird immer bei eintreten der View aufgerufen.
+Diese Methode wird immer bei Eintreten der View aufgerufen.
 
 \item \textbf{update () :void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode wird verwendet zum aktualisieren der View.
+Diese Methode wird zum Aktualisieren der View verwendet.
 
 \end{itemize}

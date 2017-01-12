@@ -1,7 +1,7 @@
 \newpage
 \subsection{ServerProxy}\label{ServerProxy}
 
-Die Klasse übernimmt die Kommunikation mit dem Server.
+Diese Klasse dient zur Kommunikation mit dem Webservice. Sie ist die einzige Klasse, welche von ``Außen'' erreichbar ist, bzw. Aktionen mit dem Webservice tätigt.
 
 \underline{Methoden}
 \begin{itemize}
@@ -10,46 +10,46 @@ Die Klasse übernimmt die Kommunikation mit dem Server.
 \item \textbf{videoDownload (videoId: int, account: \nameref{Account}): Response}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode sendet die Informationen zum Download eines Videos an den Web-Dienst.
+Die Methode sendet die Anfrage zum Download eines Videos an den Webservice.
 
 \item \textbf{videoInfo (videoId: int, account: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode holt die Meta Informationen vom Web-Dienst.
+Die Methode holt die Metadaten eines Videos vom Webservice.
 
 \item \textbf{videoDelete (videoId: int, account: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode sendet die Informationen zum Löschen eines Videos an den Web-Dienst.
+Die Methode sendet die Anfrage zum Löschen eines Videos an den Webservice.
 
 \item \textbf{getVideosByAccount (account: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode holt die Videos des Accounts vom Web-Dienst.
+Die Methode sendet eine Anfrage an den Webservice, um alle Videos des Accounts zu bekommen.
 
 \item \textbf{authenticteUser (account: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode prüft ob die Eingegebenen Benutzerdaten gültig sind, durch abfrage beim Web-Dienst.
+Die Methode sendet an den Webservice eine Anfrage, die als Antwort liefert, ob die eingegebenen Benutzerdaten gültig sind.
 
 \item \textbf{createAccount (account: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode sendet die Informationen zum Erzeugen eines Accounts~\eqref{Account} an den Web-Dienst.
+Die Methode sendet die Anfrage zum Erzeugen eines Accounts~\eqref{Account} an den Webservice.
 
 \item \textbf{changeAccount (accountNew: Account, accountOld: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode sendet die Informationen zum Ändern eines Accounts an den Web-Dienst.
+Die Methode sendet die Anfrage zum Ändern eines Accounts an den Webservice.
 
 \item \textbf{deleteAccount (account: Account): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode sendet die Informationen zum Löschen eines Accounts an den Web-Dienst.
+Die Methode sendet die Anfrage zum Löschen eines Accounts an den Webservice.
 
 \item \textbf{verifyAccount (account: Account, checkString: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Die Methode sendet die Informationen zum Verifizieren eines Accounts an den Web-Dienst.
+Die Methode sendet die Anfrage zum Verifizieren eines Accounts an den Webservice.
 
 \end{itemize}

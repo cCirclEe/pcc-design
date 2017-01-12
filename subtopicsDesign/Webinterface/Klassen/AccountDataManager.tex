@@ -7,7 +7,7 @@ Die Klasse dient zur Accountdatenverwaltung und Kommunikation mit dem \nameref{S
 \itemsep0pt
 
 \item \textbf{account: \nameref{Account}} \hfill\\ 
-Eine Referenz auf den Account der in dieser Session eingeloggt wurde.
+Eine Referenz auf den Account, welcher in dieser Sitzung eingeloggt wurde.
 
 \end{itemize}
 
@@ -17,7 +17,7 @@ Eine Referenz auf den Account der in dieser Session eingeloggt wurde.
 \item \textbf{createAccount (mail: String, password: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Eine Methode die Eingaben der \nameref{LoginView} bekommt und diese dann an den ServerProxy in der jeweiligen Methode weitergibt.
+Eine Methode, die Eingaben der \nameref{LoginView} bekommt und diese dann an den ServerProxy in der jeweiligen Methode weitergibt.
 
 \item \textbf{verifiyAccount (mail: String, password: String): Boolean}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -27,16 +27,15 @@ Eine Methode die Eingaben der LoginView bekommt und diese dann an den ServerProx
 \item \textbf{changeAccount (mail: String, password: String): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Eine Methode die Eingaben der LoginView bekommt. Anschließend wird das Passwort mit dem derzeitigen Passwort verglichen, bei Erfolg werden die Änderungen an den ServerProxy übergeben.
+Eine Methode die Eingaben der LoginView bekommt. Anschließend wird das Passwort mit dem derzeitigen Passwort verglichen. Bei Erfolg werden die Änderungen an den ServerProxy übergeben.
 
 \item \textbf{delteAccount (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bei deleteAccount werden die derzeitigen Accountdaten an den ServerProxy in einem delete Befehl übergeben. Anschließend werden die lokalen Accountdaten gelöscht und die Seite wird neu geladen. 
-(Der Account wurde damit aus der Datenbank gelöscht)
+Bei deleteAccount werden die derzeitigen Accountdaten an den ServerProxy in einem delete-Befehl übergeben. Anschließend werden die lokalen Accountdaten gelöscht und die Seite wird neu geladen.
 
 \item \textbf{sendMail (mail: String)}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Diese Funktion wird benutzt um Nutzern eine Mail zur Bestätigung nach erstellen und löschen eines Accounts zu senden.
+Diese Funktion wird benutzt um Nutzern eine Mail zur Bestätigung nach Erstellen und Löschen eines Accounts zu senden.
 \end{itemize}
