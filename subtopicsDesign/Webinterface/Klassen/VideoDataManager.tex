@@ -42,16 +42,22 @@ Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode au
 
 Die Methode schickt eine Anfrage an den ServerProxy zum Holen der Videos.
 
+\item \textbf{createVideoList (videos: String): LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Diese Methode parst die Videos in Name und Id. Anschließend erstellt sie eine Liste aus Video Objekten.
+
+\item \textbf{addInfoToVideoList (videos: LinkedList): LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Diese Methode fügt jedem Listeneintrag die Meta-Informationen hinzu.
+
 \item \textbf{getMetaInfFromServer (videoId: int): String}\hfill\\
 \textbf{Sichtbarkeit} private \newline
 \textbf{Statisch}
 
 Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, die die Metadaten als String zurückgibt.
-
-\item \textbf{createVideoList (videos: String, info: String): LinkedList}\hfill\\
-\textbf{Sichtbarkeit} private \newline
-\textbf{Statisch}
-
-TODO!!!!
 
 \end{itemize}
