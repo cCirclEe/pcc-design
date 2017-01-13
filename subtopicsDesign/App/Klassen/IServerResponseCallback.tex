@@ -1,22 +1,23 @@
-\subsubsection{<<Interface>> IServerResponseCallback<E>} \label{app:klasse:IServerResponseCallback}
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{<<Interface>> IServerResponseCallback} \label{app:klasse:IServerResponseCallback}
+Das IServerResponseCallback dient zum Beobachten der Serveranfragen. Es wird benachrichtigt, sobald ein Fehler auftritt, ein Fortschritt erzielt wurde oder die Anfrage abgeschlossen ist.
+\newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{onResponse(result: E)}\hfill\\
+\item \textbf{onResponse(result: String)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Aufgerufen, wenn die Netzwerkabfrage eine Antwort geliefert hat. Der Parameter \textit{result} kann auch einen Fehlercode enthalten.
 
 \item \textbf{onProgress(percent: int)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Aufgerufen, wenn der Hintergrundprozess Fortschritt gemacht hat. Bekommt die Prozentzahl des Fortschritts übergeben.
 
 \item \textbf{onError(error: String)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Aufgerufen, wenn beim Ausführen der Anfrage ein Fehler aufgetreten ist. Dieser Fehler bezieht sich nur auf Fehler, die auf dem Gerät selbst aufgetreten sind. Fehler, die der Web-Service meldet, werden hier nicht beachtet.
 
 \end{itemize}

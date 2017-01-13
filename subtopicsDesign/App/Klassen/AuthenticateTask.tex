@@ -1,6 +1,6 @@
 \subsubsection{AuthenticateTask} \label{app:klasse:AuthenticateTask}
 \textbf{implements} AsyncTask<String, Integer, String> \newline
-Der VideoUploadTask authentifiziert einen Nutzer über den Web-Dienst. Er ist als asynchroner Task implementiert damit die App nicht auf die Antwort des Dienstes warten muss.\newline
+Der AuthenticateTask authentifiziert einen Nutzer über den Web-Dienst. Er ist als asynchroner Task implementiert damit die App nicht auf die Antwort des Dienstes warten muss.\newline
 Siehe auch: \nameref{fig:AppAuth} \newline
 
 \underline{Attribute}
@@ -14,7 +14,7 @@ Benutzeraccount des anmeldenden Nutzers
 \item \textbf{callback: IServerResponseCallback} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Callback, das aufgerufen wird, wenn der Dienst die Authentifizierung ausgeführt hat.
+Callback, dessen Methoden aufgerufen werden, um Ergebnisse der Netzwerkabfrage zur UI durchzureichen.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -32,15 +32,15 @@ Weist die Parameter den Attributen zu.
 \item \textbf{doInBackground(urls: String...): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Überschreibt doInBackground(..) von AsyncTask.
+Überschreibt doInBackground(..) von AsyncTask. Stellt die Netzwerkverbindung zum Server her, ruft dessen authenticateAccount(..) Methode auf und sendet die im Konstruktor spezifizierten Daten.
 
 \item \textbf{onProgressUpdate(progress: Integer...)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Überschreibt doProgressUpdate(..) von AsyncTask.
+Überschreibt doProgressUpdate(..) von AsyncTask. Wird ignoriert.
 
 \item \textbf{onPostExecute(result: String)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Überschreibt onPostExecute(..) von AsyncTask.
+Überschreibt onPostExecute(..) von AsyncTask. Ruft die onResponse(..) Methode des IServerCallbacks auf, falls die Netzwerkabfrage erfolgreich war. Ruft die onError(..) Methode des IServerCallbacks auf, falls ein Fehler auftrat.
 \end{itemize}

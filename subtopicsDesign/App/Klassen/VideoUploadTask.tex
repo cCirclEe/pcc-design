@@ -8,12 +8,12 @@ Der VideoUploadTask lädt ein Video auf den Web-Dienst hoch. Er ist als asynchro
 \item \textbf{video: File} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Ort des hochzuladenen Videos.
+Ort des hochzuladenden Videos.
 
 \item \textbf{metadata: File} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Ort der hochzuladenen Metadaten
+Ort der hochzuladenden Metadaten
 
 \item \textbf{symKey: File} \hfill\\ 
 \textbf{Sichtbarkeit} private
@@ -28,7 +28,7 @@ Benutzeraccount des aktiven Nutzers
 \item \textbf{callback: IServerResponseCallback} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Callback, das aufgerufen wird, wenn der Dienst das Video empfangen hat.
+Callback, dessen Methoden aufgerufen werden, um Ergebnisse der Netzwerkabfrage zur UI durchzureichen.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -46,15 +46,15 @@ Weist die Parameter den Attributen zu.
 \item \textbf{doInBackground(urls: String...): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Überschreibt doInBackground(..) von AsyncTask.
+Überschreibt doInBackground(..) von AsyncTask. Stellt die Netzwerkverbindung zum Server her, ruft dessen videoUpload(..) Methode auf und sendet die im Konstruktor spezifizierten Dateien.
 
 \item \textbf{onProgressUpdate(progress: Integer...)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Überschreibt doProgressUpdate(..) von AsyncTask.
+Überschreibt onProgressUpdate(..) von AsyncTask. Ruft die onProgress(..) Methode des IServerResponseCallback auf.
 
 \item \textbf{onPostExecute(result: String)}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Überschreibt onPostExecute(..) von AsyncTask.
+Überschreibt onPostExecute(..) von AsyncTask. Ruft die onResponse(..) Methode des IServerCallbacks auf, falls die Netzwerkabfrage erfolgreich war. Ruft die onError(..) Methode des IServerCallbacks auf, falls ein Fehler auftrat.
 \end{itemize}
