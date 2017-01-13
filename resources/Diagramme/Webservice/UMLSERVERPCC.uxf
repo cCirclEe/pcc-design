@@ -406,12 +406,13 @@ encryptedSymmetricKey :String, accountData :String, response :AsyncResponse) :St
     </coordinates>
     <panel_attributes>VideoProcessingManager
 --
-- poolSize: int
-- queueSize: int
+- POOL_SIZE: int
+- QUEUE_SIZE: int
+_- instance: VideoProcessingManager_
 - queue: BlockingQueue&lt;Runnable&gt;
 - executor: ExecutorService
 --
-&lt;&lt;create&gt;&gt; VideoProcessingManager(poolSize: int, queueSize: int)
+_+ getInstance(): VideoProcessingManager_
 + addTask(video: InputSteam, metadata: InputStream, 
 key: InputStream, account: Account, response :AsyncResponse)
 + shutdown()

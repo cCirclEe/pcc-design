@@ -4,15 +4,23 @@ Der VideoProcessingManager ist dafür zuständig, die Bearbeitung der hochgelade
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{poolSize: int} \hfill\\ 
-\textbf{Sichtbarkeit} private
+\item \textbf{POOL\_SIZE: int} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
 
 Größe des Worker-Thread-Pools
 
-\item \textbf{queueSize: int} \hfill\\ 
-\textbf{Sichtbarkeit} private
+\item \textbf{QUEUE\_SIZE: int} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
 
 Größe der Warteschlange für die Anfragen
+
+\item \textbf{instance: VideoProcessingManager} \hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
+Einzelstück des VideoProcessingManagers.
 
 \item \textbf{queue: BlockingQueue} \hfill\\
 \textbf{Sichtbarkeit} private 
@@ -29,12 +37,20 @@ Koordinator für die Verteilung der Aufgaben auf die Worker-Threads
 \begin{itemize}
 \itemsep0pt
 \item \textbf{VideoProcessingManager(poolSize: int, queueSize: int)} \hfill\\
-Erzeugt einen neuen VideoProcessingManager mit der angegeben Anzahl Worker-Threads und Größe der Warteschlange.
+\textbf{Sichtbarkeit} private
+
+Erzeugt einen neuen VideoProcessingManager mit der angegeben Anzahl Worker-Threads und Größe der Warteschlange. Kann nicht von außen zugegriffen werden, damit sichergestellt ist, dass der VideoProcessingManager ein Einzelstück ist.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
+\item \textbf{getInstance (): VideoProcessingManager}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch}
+
+Erzeugt einen neuen VideoProcessingManager, falls nötig und gibt das Einzelstück zurück.
+
 \item \textbf{addTask (video: InputSteam, metadata: InputStream, 
 key: InputStream, account: \nameref{service:klasse:Account}, response :AsyncResponse)}\hfill\\
 \textbf{Sichtbarkeit} public

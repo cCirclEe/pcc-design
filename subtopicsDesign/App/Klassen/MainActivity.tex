@@ -1,6 +1,6 @@
-\subsubsection{<<Abstract>>MainActivity} \label{app:klasse:MainActivity}
+\subsubsection{<<Abstract>> MainActivity} \label{app:klasse:MainActivity}
 \textbf{extends} Activity \newline
-Die MainActivity bildet die Elternklasse aller weiteren Activities und übernimmt als solche die Navigation durch das Menü. Sie Agiert dabei als OnNavigationItemSelectedListener, implementiert also dessen Methoden.
+Die MainActivity bildet die Elternklasse aller weiteren Activities und übernimmt als solche die Navigation durch das Menü. Sie agiert dabei als OnNavigationItemSelectedListener, implementiert also dessen Methoden.
 \newline
 
 \underline{Attribute}
@@ -8,7 +8,7 @@ Die MainActivity bildet die Elternklasse aller weiteren Activities und übernimm
 \itemsep0pt
 \item \textbf{drawer: NavigationDrawer} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
-Die NavigationDrawer Instanz in der das Menü angezeigt wird.
+Die NavigationDrawer-Instanz, in der das Menü angezeigt wird.
 
 \end{itemize}
 
@@ -21,11 +21,11 @@ Die NavigationDrawer Instanz in der das Menü angezeigt wird.
 
 \item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die onCreate Methode der Superklasse. Ruft die Schablonenmethode \textit{getLayoutRes} auf und initialisiert daraufhin den NavigationDrawer und die Toolbar und setzt sich selbst als OnNavigationItemSelectedListener.
+Überschreibt die onCreate Methode von Activity. Ruft die Schablonenmethode getLayoutRes() auf und initialisiert daraufhin den NavigationDrawer und die Toolbar und setzt sich selbst als OnNavigationItemSelectedListener.
 
 \item \textbf{ <<abstract>> getLayoutRes (): int}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Schablonenmethode, welche die Unterklasse das zu ladende Layout bestimmen lässt.
+Schablonenmethode,in der die Unterklasse das zu ladende Layout bestimmt.
 
 \item \textbf{onNavigationItemSelected(item: MenuItem): boolean}\hfill\\
 \textbf{Sichtbarkeit} public\newline

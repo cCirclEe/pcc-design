@@ -1,6 +1,6 @@
 \subsubsection{CameraActivity} \label{app:klasse:CameraActivity}
 \textbf{extends} \nameref{app:klasse:MainActivity} \newline
-Die CameraActivity zeigt die \nameref{app:klasse:CameraView} an, instanziiert eine \nameref{app:klasse:CompatCameraHandler} Instanz sowie eine \nameref{app:klasse:IRecordCallback} Instanz und manipuliert die graphische Nutzeroberfläche abhängig von den Methoden, die auf der IRecordCallback Instanz aufgerufen werden. Nach dem Start blendet die CameraActivity ein Symbol ein, welches die Bereitschaft der App signalisisert. Die CameraActivity stellt einen Observer des CompatCameraHandler dar.
+Die CameraActivity zeigt die \nameref{app:klasse:CameraView} an, instanziiert eine \nameref{app:klasse:CompatCameraHandler} Instanz, sowie eine \nameref{app:klasse:IRecordCallback} Instanz und manipuliert die graphische Nutzeroberfläche abhängig von den Methoden, die auf der IRecordCallback Instanz aufgerufen werden. Nach dem Start blendet die CameraActivity ein Symbol ein, welches die Bereitschaft der App signalisisert. Die CameraActivity stellt einen Observer des CompatCameraHandler dar.
 \newline
 
 \underline{Attribute}
@@ -14,8 +14,8 @@ ImageView die verwendet wird, um das Symbol einzublenden, welches die Bereitscha
 \item \textbf{recordCallback: \nameref{app:klasse:IRecordCallback}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
 Implementiert das IRecordCallback Interface. 
-Der Aufruf der Mehtode \textit{onRecordStarted} benachrichtigt die CameraActivity Instanz über den Start der Videoaufnahme. Sie blendet das Symbol ein, welches die Aufnahme signalisiert. Das Symbol, welches zuvor die Bereitschaft der App signalisiert hat, wird ausgeblendet.
-Der Aufruf der Methode \textit{onRecordStopped} benachrichtigt die CameraActivity Instanz über das Ende der Videoaufnahme. Sie blendet das Symbol ein, welches die Bereitschaft signalisiert. Das Symbol, welches zuvor die Aufnahme der App signalisiert hat, wird ausgeblendet.
+Der Aufruf der Mehtode onRecordStarted() benachrichtigt die CameraActivity Instanz über den Start der Videoaufnahme. Sie blendet das Symbol ein, welches die Aufnahme signalisiert. Das Symbol, das zuvor die Bereitschaft der App signalisiert hat, wird ausgeblendet.
+Der Aufruf der Methode onRecordStopped() benachrichtigt die CameraActivity Instanz über das Ende der Videoaufnahme. Sie blendet das Symbol ein, das die Bereitschaft signalisiert. Das Symbol, welches das die Aufnahme der App signalisiert hat, wird ausgeblendet.
 
 \item \textbf{cameraHandler: \nameref{app:klasse:CompatCameraHandler}} \hfill\\ 
 \textbf{Sichtbarkeit} private\newline
@@ -42,18 +42,18 @@ Startet ein neues Intent durch welches eine CameraActivity Instanz erzeugt und g
 
 \item \textbf{getLayoutRes (): int}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{getLayoutRes} Methode der Superklasse.
+Überschreibt die getLayoutRes() Methode der Superklasse.
 
 \item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onCreate} Methode der Superklasse. Lädt die CameraView Instanz und erstellt die IRecorderCallback und CompatCameraHandler Instanzen.
+Überschreibt die onCreate() Methode der Superklasse. Lädt die CameraView Instanz und erstellt die IRecorderCallback und CompatCameraHandler Instanzen.
 
 \item \textbf{onResume (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onResume} Methode der Superklasse. Ruft die Methode \textit{setVisibility} der CameraView Instanz auf und übergibt den Parameter \textit{View.VISIBLE}.
+Überschreibt die onResume() Methode der Superklasse. Ruft die Methode setVisibility(..) der CameraView Instanz auf und übergibt den Parameter \textit{View.VISIBLE}.
 
 \item \textbf{onPause (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onPause} Methode der Superklasse. Ruft die Methode \textit{setVisibility} der CameraView Instanz auf und übergibt den Parameter \textit{View.GONE}.
+Überschreibt die onPause() Methode der Superklasse. Ruft die Methode setVisibility(..) der CameraView Instanz auf und übergibt den Parameter \textit{View.GONE}.
 
 \end{itemize}

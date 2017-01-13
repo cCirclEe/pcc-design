@@ -1,7 +1,7 @@
-\subsubsection{<<Abstract>>ContainerActivity} \label{app:klasse:ContainerActivity}
+\subsubsection{<<Abstract>> ContainerActivity} \label{app:klasse:ContainerActivity}
 \textbf{extends} \nameref{app:klasse:MainActivity} \newline
 Die ContainerActivity ist die Elternklasse aller Activities, die eine Toolbar und ein Fragment anzeigen. Das Fragment wird dynamisch geladen, je nach dem welche Ansicht der Nutzer sehen möchte. 
-Die ContainerActivity lädt immer das gleiche Layout und zeigt in dessen Container das Fragment an, welches sie über die Schablonenmethode \textit{selectFragment} abgefragt hat.
+Die ContainerActivity lädt immer das gleiche Layout und zeigt in dessen Container das Fragment an, welches sie über die Schablonenmethode selectFragment() abgefragt hat.
 \newline
 
 \underline{Attribute}
@@ -22,11 +22,11 @@ Fragment welches aktuell angezeigt werden soll.
 
 \item \textbf{getLayoutRes (): int}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{getLayoutRes} Methode der Superklasse.
+Überschreibt die getLayoutRes() Methode der Superklasse.
 
 \item \textbf{onCreate (savedInstanceState: Bundle): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onCreate} Methode der Superklasse. Ruft die Methode \textit{selectFragment} auf und zeigt das erhaltene Fragment an.
+Überschreibt die onCreate() Methode der Superklasse. Ruft die Methode selectFragment() auf und zeigt das erhaltene Fragment an.
 
 \item \textbf{onResume (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline

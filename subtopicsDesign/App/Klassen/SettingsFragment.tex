@@ -1,6 +1,6 @@
 \subsubsection{SettingsFragment} \label{app:klasse:SettingsFragment}
 \textbf{extends} Fragment \newline
-Das SettingsFragment lädt die einzelnen Layout-Komponenten der Einstellungenansicht, reagiert auf Nutzereingaben und veranlasst das Speichern gemachter Änderungen. Jede antippbare Layout-Komponente bekommt einen anonymen OnClickListener der die mit der jeweiligen Komponente verknüpfte Aktion ausführt.
+Das SettingsFragment lädt die einzelnen Layout-Komponenten der Einstellungenansicht, reagiert auf Nutzereingaben und veranlasst das Speichern gemachter Änderungen. Jede antippbare Layout-Komponente bekommt einen anonymen OnClickListener, der die mit der jeweiligen Komponente verknüpfte Aktion ausführt.
 \newline
 
 \underline{Attribute}
@@ -44,11 +44,11 @@ Schaltfläche um die Buffergröße zu verringern. Antippen verringert die in der
 
 \item \textbf{logOut: Button} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-Schaltfläche um AccountDaten zu löschen und alle Appansichten außer die LogInActivity unzugänglich zu machen. Antippen ruft die Methode \textit{deleteAccountData} des MemoryManagers und die Methode \textit{Launch} der \nameref{app:klasse:LogInActivity} auf.
+Schaltfläche um AccountDaten zu löschen und alle Appansichten außer die LogInActivity unzugänglich zu machen. Antippen ruft die Methode deleteAccountData() des MemoryManagers und die Methode Launch() der \nameref{app:klasse:LogInActivity} auf.
 
 \item \textbf{memoryManager: MemoryManager} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-MemoryManager Instanz um gespeicherte Einstellungen abzufragen und neue Einstellugen zu speichern.
+MemoryManager Instanz um gespeicherte Einstellungen abzufragen und neue Einstellungen zu speichern.
 
 \end{itemize}
 
@@ -60,10 +60,10 @@ MemoryManager Instanz um gespeicherte Einstellungen abzufragen und neue Einstell
 \itemsep0pt
 \item \textbf{onCreateView (savedInstanceState: Bundle): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onCreateView} Methode der Superklasse. Lädt alle View Instanzen, instanziiert und übergibt jeder View ihren Listener, holt sich eine MemoryManager Instanz und ruft die \textit{getSettings} Methode des MemoryManagers auf. Wenn sie das Settings Objekt von diesem Methodenaufruf erhalten hat weißt sie es der \textit{settings} Variable zu und aktualisiert alle View-Komponenten, so dass sie die in \textit{settings} gespeicherten Daten wiederspiegeln.
+Überschreibt die \textit{onCreateView} Methode der Superklasse. Lädt alle View Instanzen, instanziiert und übergibt jeder View ihren Listener, holt sich eine MemoryManager Instanz und ruft die getSettings() Methode des MemoryManagers auf. Wenn sie das Settings Objekt von diesem Methodenaufruf erhalten hat, weißt sie es der \textit{settings} Variable zu und aktualisiert alle View-Komponenten, sodass sie die in \textit{settings} gespeicherten Daten widerspiegeln.
 
 \item \textbf{onPause (): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Überschreibt die \textit{onCreateView} Methode der Superklasse. Ruft die \textit{saveSettings} Methode des MemoryManagers auf und übergibt das Settings Objekt.
+Überschreibt die onCreateView() Methode der Superklasse. Ruft die saveSettings(..) Methode des MemoryManagers auf und übergibt das Settings Objekt.
 
 \end{itemize}
