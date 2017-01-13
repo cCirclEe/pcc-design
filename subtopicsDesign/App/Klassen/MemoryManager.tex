@@ -1,42 +1,140 @@
-\subsubsection{TODO!!!: MemoryManager} \label{app:klasse:MemoryManager}
-\textbf{extends} Superklasse \newline
-\textbf{implements} Interface \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{TMemoryManager} \label{app:klasse:MemoryManager}
+Die MemoryManager-Klasse verwaltet die Daten auf der App. Er bietet die Funktionalität bestimmte Daten anzufordern, zu sichern oder zu löschen. Die Klasse ist ein Singelton, somit existiert nur eine Instanz mit der man die folgenden Methoden aufrufen kann.\newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: Typ} \hfill\\ 
-\textbf{Sichtbarkeit} public
+\item \textbf{instance: MemoryManager} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-Beschreibung
+Repräsentiert die Singleton Instanz.
 
-\item \textbf{name: Typ} \hfill\\ 
-\textbf{Sichtbarkeit} public
+\item \textbf{context: Context} \hfill\\ 
+\textbf{Sichtbarkeit} private
 
-Beschreibung
+Kontext der App. Beinhaltet die benötigten Speicherdirektorien um Daten in den richtigen Speicherplätzen abzulegen bzw. wiederzufinden.
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{Klasse()} \hfill\\
-\textbf{Sichtbarkeit} public
+\item \textbf{MemoryManager(context: Context)} \hfill\\
+\textbf{Sichtbarkeit} private
 
-Standardkonstruktor
+Privater Konstruktor der Klasse, der nur aufgerufen wird wenn das instance-Attribut der Klasse noch nicht gesetzt wurde.
 \end{itemize}
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+
+\item \textbf{GetInstance(context: Context): MemoryManager}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Statische Methode um sicherzustellen, dass es nur eine Instanz der Klasse gibt. Wenn Instanz noch nicht erzeugt wurde, ruft die Methode den Konstruktor auf. Das instance-Attribut wird dann auf die erzeugte Instanz gesetzt und zurückgegeben. Wenn instance bereits erzeugt wurde, wird dieses direkt zurückgegeben.
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{getTempVideoFile(): File}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Gibt die temporäre Videodatei in Form eines Files zurück.
 
+\item \textbf{getTempSymmetricKeyFile(): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt die temporäre symmetrische Schlüsseldatei in Form eines Files zurück.
+
+\item \textbf{deleteTempData()}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Löscht alle temporären Daten.
+
+\item \textbf{saveAccountData(account: Account)}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Sichert die Accountdaten die per Parameterübergabe mitgegeben werden.
+
+\item \textbf{getAccountData(): Account}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt eine Instanz der Klasse Account, in der sich die Accountdaten befinden.
+
+\item \textbf{deleteAccountData()}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Löscht die Accountdaten des Benutzers.
+
+\item \textbf{saveSettings(settings: Settings)}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Sichert die Einstellungen die über Parameterübergabe mitgegeben werden.
+
+\item \textbf{getSettings(): Settings}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt eine Instanz der Klasse Settings zurück, welche die Einstellungen repräsentieren.
+
+\item \textbf{saveEncryptedSymmetricKey(videoName: String, key: String): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Sichert den verschlüsselten symmetrischen Schlüssel eines Videos und gibt als Rückgabe den Schlüssel als File zurück. 
+
+\item \textbf{saveEncryptedVideo(videoName: String, byte[]): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Sichert das verschlüsselte Video und gibt als Rückgabe das Video als File zurück.
+
+\item \textbf{saveEncryptedMetadata(videoName: String, metadata: Metadata): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Sichert die verschlüsselten Metadaten eines Videos und gibt als Rückgabe die Daten als File zurück.
+
+\item \textbf{saveReadableMetadata(videoName: String, metadata: Metadata): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Sichert die lesbaren Metadaten eines Videos gibt als Rückgabe die Daten als File zurück.
+
+\item \textbf{deleteEncryptedSymmetricKey(videoName: String)}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Löscht den verschlüsselten symmetrischen Schlüssel.
+
+\item \textbf{deleteEncryptedVideo(videoName: String)}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Löscht das verschlüsselte Video.
+
+\item \textbf{deleteEncryptedMetadata(videoName: String)}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Löscht die verschlüsselten Metadaten.
+
+\item \textbf{deleteReadableMetadata(videoName: String)}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Löscht die lesbaren Metadaten.
+
+\item \textbf{getAllVideos(): ArrayList<Video>}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt alle Videos in Form einer ArrayList zurück.
+
+\item \textbf{getEncryptedSymmetricKey(videoName: String): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt den verschlüsselten symmetrischen Schlüssel zu einem Video als File zurück.
+
+\item \textbf{getEncryptedVideo(name: String): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt die verschlüsselte Videodatei als File zurück.
+
+\item \textbf{getEncryptedMetadata(videoName: String): File}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt die verschlüsselten Metadaten zu einem Video als File zurück.
+
+\item \textbf{getReadableMetadata(videoName: String): Metadata}\hfill\\
+\textbf{Sichtbarkeit} public
+
+Gibt die lesbaren Metadaten zu einem Video als File zurück.
 \end{itemize}
