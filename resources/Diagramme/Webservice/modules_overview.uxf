@@ -24,9 +24,10 @@ bg=red
       <w>140</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>ServiceConnection
+    <panel_attributes>Server
 --
 bg=blue
++Main
 +ServerProxy</panel_attributes>
     <additional_attributes/>
   </element>

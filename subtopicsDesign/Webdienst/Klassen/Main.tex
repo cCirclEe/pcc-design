@@ -1,0 +1,68 @@
+\subsubsection{Main} \label{service:klasse:Main}
+Die Klasse Main ist der Haupteinstiegspunkt des Web-Dienstes. Sie sorgt dafür bei Serverstart alles korrekt zu starten und ist dafür zuständig den Server zu stoppen und neuzustarten.\newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{server: Server} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+\textbf{static}
+
+Server des Web-Dienstes.
+
+\item \textbf{LOGGER: Logger} \hfill\\ 
+\textbf{Sichtbarkeit} public \newline
+\textbf{static}
+
+Globaler Logger des Web-Dienstes.
+
+\item \textbf{PORT: Server} \hfill\\ 
+\textbf{Sichtbarkeit} private \newline
+\textbf{static}
+
+Port des Servers.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{main (args: String[ ]): void}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch}
+
+Haupteinstiegspunkt des Web-Dienstes. Startet den Logger, erstellt alle Ordner falls nötig und löscht die temporären Dateien.
+
+\item \textbf{stopServer (): void}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch}
+
+Stoppt den Server.
+
+
+\item \textbf{restartServer (): void}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch}
+
+Stoppt den Server setzt ihn neu auf und startet ihn wieder.
+
+\item \textbf{setupLogger (): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
+Konfiguriert den globalen Logger und startet ihn.
+
+
+\item \textbf{setupDirectories (): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
+Erstellt alle benötigten Ordner, falls diese noch nicht vorhanden sind und löscht alle temporären Dateien.
+
+
+\item \textbf{startServer (): void}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
+Konfiguriert und startet den Server.
+
+\end{itemize}

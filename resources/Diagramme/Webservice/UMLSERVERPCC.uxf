@@ -288,7 +288,7 @@ encryptedSymmetricKey: String, response: AsyncResponse): String
     <coordinates>
       <x>1230</x>
       <y>300</y>
-      <w>276</w>
+      <w>282</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>AccountManager
@@ -364,8 +364,8 @@ key: InputStream, context: EditingContext)
     <coordinates>
       <x>954</x>
       <y>24</y>
-      <w>402</w>
-      <h>162</h>
+      <w>348</w>
+      <h>156</h>
     </coordinates>
     <panel_attributes>ServerProxy
 --
@@ -642,10 +642,10 @@ fg=red</panel_attributes>
     <coordinates>
       <x>936</x>
       <y>0</y>
-      <w>438</w>
-      <h>204</h>
+      <w>588</w>
+      <h>192</h>
     </coordinates>
-    <panel_attributes>ServiceConnection
+    <panel_attributes>Server
 fg=red</panel_attributes>
     <additional_attributes/>
   </element>
@@ -688,12 +688,12 @@ fg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1080</x>
-      <y>180</y>
+      <y>174</y>
       <w>18</w>
-      <h>132</h>
+      <h>138</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -727,13 +727,10 @@ fg=red</panel_attributes>
     </coordinates>
     <panel_attributes>LocationConfig
 --
-_encTempVideoDirectory: String_
-_decTempVideoDirectory: String_
-_anonymVideoDirectory: String_
-_encTempMtadataDirectory: String_
-_metadataDirectory: String_
-_keyLocation: String_
-_projektDirectory: String_</panel_attributes>
+_+ anonymVideoDirectory: String_
+_+ metadataDirectory: String_
+_+ tempDirectory: String_
+_+ projektDirectory: String_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -747,5 +744,38 @@ _projektDirectory: String_</panel_attributes>
     <panel_attributes>VideoProcessing.Chain
 fg=red</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>24</y>
+      <w>192</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+_- server: Server_
+_+ LOGGER: Logger_
+_- PORT: int_
+--
+_+ main(args: String[])_
+_+ stopServer()_
+_+ restartServer()_
+_- setupLogger(): boolean_
+_- setupDirectories(): boolean_
+_- startServer(): boolean_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>42</y>
+      <w>36</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
   </element>
 </diagram>
