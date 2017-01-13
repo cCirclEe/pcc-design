@@ -6,7 +6,10 @@ Die Klasse dient zur Accountdatenverwaltung und Kommunikation mit dem \nameref{S
 \itemsep0pt
 
 \item \textbf{account: \nameref{Account}} \hfill\\ 
-Eine Referenz auf den Account, welcher in dieser Sitzung eingeloggt wurde.
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
+Eine Referenz auf den Account, der in dieser Sitzung eingeloggt wurde.
 
 \end{itemize}
 
@@ -23,31 +26,31 @@ Eine Methode, die Eingaben der \nameref{LoginView} bekommt und diese dann an den
 \textbf{Sichtbarkeit} private \newline
 \textbf{Statisch}
 
-Diese Methode wird nach dem Registrieren aufgerufen, sie erzeugt eine UUID und sendet diese einmal in einem Link per Mail an den Benutzer und dann noch an den ServerProxy.
+Diese Methode wird nach dem Registrieren aufgerufen. Sie erzeugt eine UUID und sendet diese einmal in einem Link per Mail an den Benutzer und dann noch an den ServerProxy.
 
 \item \textbf{authenticteAccount (account: Account): boolean}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
-Diese Methode wird beim Login benutzt, sie gibt an ob Passwort und Mail-Adresse korrekt sind.
+Diese Methode wird beim Login benutzt. Sie gibt an ob Passwort und Mail-Adresse korrekt sind.
 
 \item \textbf{checkVerification (account: Account): boolean}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
-Diese Methode wird beim Login benutzt, sie gibt an ob ein Account verifiziert ist.
+Diese Methode wird beim Login benutzt. Sie gibt an ob ein Account verifiziert ist.
 
 \item \textbf{changeAccount (mail: String, password: String): void}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
-Eine Methode die Eingaben von der AccountView\nameref{AccountView} bekommt. Anschließend wird das Passwort mit dem derzeitigen Passwort verglichen. Bei Erfolg werden die Änderungen an den ServerProxy übergeben.
+Eine Methode die Eingaben von der \nameref{AccountView} bekommt. Anschließend wird das Passwort mit dem derzeitigen Passwort verglichen. Bei Erfolg werden die Änderungen an den ServerProxy übergeben.
 
-\item \textbf{delteAccount (): void}\hfill\\
+\item \textbf{deleteAccount (): void}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
-Bei deleteAccount werden die derzeitigen Account Daten an den ServerProxy in einem delete-Befehl übergeben. Anschließend werden die lokalen Account Daten gelöscht und die Seite wird neu geladen.
+Bei deleteAccount werden die derzeitigen Account-Daten an den ServerProxy in einem delete-Befehl übergeben. Anschließend werden die lokalen Account Daten gelöscht und die Seite neu geladen.
 
 \item \textbf{sendMail (mail: String): void}\hfill\\
 \textbf{Sichtbarkeit} private \newline

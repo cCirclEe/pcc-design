@@ -9,18 +9,26 @@ Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verw
 \begin{itemize}
 \itemsep0pt
 \item \textbf{viewId: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
 \item \textbf{mailField: TextField} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Ein einfaches Eingabefeld zur Eingabe der Mail-Adresse.
 
 \item \textbf{passwordField: TextField} \hfill\\
+\textbf{Sichtbarkeit} private
+
 Ein einfaches Eingabefeld zur Eingabe des Passwortes.
 
 \item \textbf{loginButton: Button} \hfill\\
 Dieser Button sendet Mail-Adresse und Passwort an den AccountDataManager zum verifizieren.
 
 \item \textbf{registerButton: Button} \hfill\\
+\textbf{Sichtbarkeit} private
+
 Dieser Button sendet Mail-Adresse und Passwort an den \nameref{AccountDataManager} zum erzeugen eines neuen \nameref{Account}s.
 
 \end{itemize}
@@ -28,7 +36,9 @@ Dieser Button sendet Mail-Adresse und Passwort an den \nameref{AccountDataManage
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{LoginView(UI ui)} \hfill\\
+\item \textbf{LoginView(ui: \nameref{MyUI})} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Durch die Referenz auf die UI wird nach erfolgreichem Login das \nameref{Menu} und die \nameref{VideoView} geladen.
 \end{itemize}
 

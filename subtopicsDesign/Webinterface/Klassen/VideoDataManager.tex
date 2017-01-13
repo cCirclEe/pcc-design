@@ -7,6 +7,9 @@ Der VideoDataManager verwaltet die Videodaten und vereinfacht den Zugriff auf de
 \itemsep0pt
 
 \item \textbf{videos: LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
 Eine Liste in dem der VideoDataManager die \nameref{Video}s hält die er vom ServerProxy bekommt.
 \end{itemize}
 
@@ -19,15 +22,15 @@ Eine Liste in dem der VideoDataManager die \nameref{Video}s hält die er vom Ser
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
-Die Methode fügt die \nameref{Account} Daten hinzu und ruft danach die Methode zum downloaden am ServerProxy auf.
+Die Methode fügt die \nameref{Account}-Daten hinzu und ruft danach die Methode zum downloaden am ServerProxy auf.
 
 \item \textbf{deleteVideo (videoId: int): void}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
-Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode zum Löschen eines Videos auf.
+Die Methode fügt die Account-Daten hinzu und ruft am ServerProxy die Methode zum Löschen eines Videos auf.
 
-\item \textbf{udateVideosAndInfo (): String}\hfill\\
+\item \textbf{updateVideosAndInfo (): String}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{Statisch}
 
@@ -37,18 +40,18 @@ Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode au
 \textbf{Sichtbarkeit} private \newline
 \textbf{Statisch}
 
-Die Methode schickt eine Anfrage an den ServerProxy zum holen der Videos.
+Die Methode schickt eine Anfrage an den ServerProxy zum Holen der Videos.
 
 \item \textbf{getMetaInfFromServer (videoId: int): String}\hfill\\
 \textbf{Sichtbarkeit} private \newline
 \textbf{Statisch}
 
-Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, welche die Metadaten als String zurückgibt.
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, die die Metadaten als String zurückgibt.
 
 \item \textbf{createVideoList (videos: String, info: String): LinkedList}\hfill\\
 \textbf{Sichtbarkeit} private \newline
 \textbf{Statisch}
 
-Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, welche die Metadaten als String zurückgibt.
+TODO!!!!
 
 \end{itemize}

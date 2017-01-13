@@ -8,22 +8,34 @@ Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verw
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{viewId: String} \hfill\\ 
+\item \textbf{viewId: String} \hfill\\
+\textbf{Sichtbarkeit} private
+ 
 Die viewId gibt der View eine einzigartige ID, über die der Navigator die View identifizieren kann.
 
 \item \textbf{mailLabel: Label} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Dieses Label dient zur Anzeige der derzeit gültigen Mail-Adresse des aktuell eingeloggten \nameref{Account}s.
 
 \item \textbf{passwordChangeField: TextField} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 In diesem Eingabefeld kann bei Wunsch zur Änderung des Passwortes ein neues Passwort eingegeben werden.
 
 \item \textbf{passwordField: TextField} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Für alle gewünschten Änderungen muss hier das aktuell aktive Passwort eingegeben werden.
 
 \item \textbf{mailChangeField: TextField} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 In diesem Eingabefeld kann bei Wunsch zur Änderung der Mail-Adresse eine neue eingegeben werden
 
 \item \textbf{changeButton: Button} \hfill\\
+\textbf{Sichtbarkeit} private
+
 Durch Drücken dieses Buttons werden die Änderungsdaten an den \nameref{AccountDataManager} zur Bearbeitung geschickt.
 \end{itemize}
 
@@ -31,9 +43,10 @@ Durch Drücken dieses Buttons werden die Änderungsdaten an den \nameref{Account
 \begin{itemize}
 \itemsep0pt
 \item \textbf{AccountView()} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Standardkonstruktor
 \end{itemize}
-
 
 \underline{Methoden}
 \begin{itemize}

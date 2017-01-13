@@ -1,22 +1,29 @@
-\newpage
 \subsubsection{VideoTable}\label{VideoTable}
 \textbf{extends}  Table \newline
-Jede Zeile des VideoTables beinhaltet ein \nameref{Video} mit den zugehörigen Buttons zum Downloaden, Löschen und anzeigen der Infos. \newline
+Jede Zeile des VideoTables beinhaltet ein \nameref{Video} mit den zugehörigen Buttons zum Downloaden, Löschen und Anzeigen der Infos. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 
-\item \textbf{downLoadButtonList: LinkedList} \hfill\\ 
+\item \textbf{downloadButtonList: LinkedList} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
 \item \textbf{infoButtonList: LinkedList} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
-\item \textbf{delteButtonList: LinkedList} \hfill\\ 
+\item \textbf{deleteButtonList: LinkedList} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
-\item \textbf{videos: LinkedList} \hfill\\ 
+\item \textbf{videos: LinkedList} \hfill\\
+\textbf{Sichtbarkeit} private
+ 
 Das Attribut ist eine Liste der Videos. Die Videos werden bei Erzeugen oder Updaten des Tables vom \nameref{VideoDataManager} geholt und dann verarbeitet.
 \end{itemize}
 
@@ -25,6 +32,8 @@ Das Attribut ist eine Liste der Videos. Die Videos werden bei Erzeugen oder Upda
 \itemsep0pt
 
 \item \textbf{VideoTable()} \hfill\\ 
+\textbf{Sichtbarkeit} public
+
 Im Konstruktor werden die Videos über den VideoDataManager geholt. Zudem werden dann für jedes Video die Buttons vorbereitet.
 
 \end{itemize}

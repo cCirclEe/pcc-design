@@ -1,5 +1,5 @@
-\subsubsection{UI}\label{UI}
-\textbf{extends}  UI \newline
+\subsubsection{MyUI}\label{MyUI}
+\textbf{extends} UI \newline
 Die UI Klasse bildet das Herzstück des Webinterface. Die init Methode dieser Klasse wird beim Öffnen des Web-Interface aufgerufen. Diese Klasse hat die Aufgabe, alle Komponenten zu initialisieren und bildet dazu die Grundlage für alle graphischen Einheiten.
 \newline
 
@@ -8,19 +8,29 @@ Die UI Klasse bildet das Herzstück des Webinterface. Die init Methode dieser Kl
 \itemsep0pt
 
 \item \textbf{background: VerticalLayout} \hfill\\ 
-Der Background ist die Grundlage der graphischen Oberfläche des Web-Interface. Auf dem Background werden entweder menuArea und contentArea gelegt, oder beim Login die \nameref{LoginView}. Dieses Attribut wird in der init Methode erzeugt und initialisiert.
+\textbf{Sichtbarkeit} private
+
+Der Background ist die Grundlage der graphischen Oberfläche des Web-Interface. Auf dem Background werden entweder menuArea und contentArea gelegt, oder beim Login die \nameref{LoginView}. Dieses Attribut wird in der init() Methode erzeugt und initialisiert.
 
 \item \textbf{menuArea: VerticalLayout} \hfill\\ 
-Die menuArea ist die Grundlage für das \nameref{Menu}. Dieses Attribut wird in der init Methode erzeugt und initialisiert.
+\textbf{Sichtbarkeit} private
+
+Die menuArea ist die Grundlage für das \nameref{Menu}. Dieses Attribut wird in der init() Methode erzeugt und initialisiert.
 
 \item \textbf{contentArea: VerticalLayout} \hfill\\ 
-Die contentArea ist die Grundlage für die Ansichten. Dieses Attribut wird in der init Methode erzeugt und initialisiert.
+\textbf{Sichtbarkeit} private
 
-\item \textbf{menu: Menu} \hfill\\ 
-Das Menu bildet die Steuereinheit für den Benutzer. Der Navigator wird in der init Methode erzeugt und initialisiert.
+Die contentArea ist die Grundlage für die Ansichten. Dieses Attribut wird in der init() Methode erzeugt und initialisiert.
+
+\item \textbf{menu: Menu} \hfill\\
+\textbf{Sichtbarkeit} private
+ 
+Das Menu bildet die Steuereinheit für den Benutzer. Der Navigator wird in der init() Methode erzeugt und initialisiert.
 
 \item \textbf{navigator: Navigator} \hfill\\ 
-Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu laden. Der Navigator wird in der init Methode erzeugt und initialisiert.
+\textbf{Sichtbarkeit} private
+
+Der Navigator hat die Aufgabe, die verschiedenen Ansichten in die contentArea zu laden. Der Navigator wird in der init() Methode erzeugt und initialisiert.
 
 \end{itemize}
 

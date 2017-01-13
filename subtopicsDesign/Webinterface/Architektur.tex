@@ -7,10 +7,10 @@
 \end{figure}
 
 \subsection{Entwurfsmuster}
-Im Web-Interface wurden Entwurfsmuster verwendet um austauschbare Klassen zu erhalten. Zudem helfen sie dabei das hinzufügen neuer Funktionalität möglichst einfach zu gestalten, was bei der Umsetzung von Wunschkriterien durchaus von Bedeutung sein wird.
+Im Web-Interface wurden Entwurfsmuster verwendet um austauschbare Klassen zu erhalten. Zudem helfen sie dabei das Hinzufügen neuer Funktionalität möglichst einfach zu gestalten, was bei der Umsetzung von Wunschkriterien durchaus von Bedeutung sein wird.
 
 \subsubsection{Proxy}
-Da die Datenmanager Daten vom Web-Dienst holen müssen, wurde hier ein Proxy, der ServerProxy, zwischengeschalten um den Zugriff zu regeln. Des Weiteren werden so die Klassen des DataManagement Moduls vom Web-Dienst Entkoppelt.
+Da die Datenmanager Daten vom Web-Dienst holen müssen, wurde hier ein Proxy, der ServerProxy, zwischengeschalten um den Zugriff zu regeln. Des Weiteren werden so die Klassen des DataManagement Moduls vom Web-Dienst entkoppelt.
 
 \subsubsection{Zustandsmuster}
 Der Navigator verwendet ein Zustandsmuster um die Views anzuzeigen. Die verschiedenen Views entsprechen dabei den States.
