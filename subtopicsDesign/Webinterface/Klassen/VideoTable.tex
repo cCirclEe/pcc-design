@@ -17,7 +17,7 @@ Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste g
 Eine Liste an Buttons. Zu jedem Video wird ein Button erzeugt und an die Liste gehängt.
 
 \item \textbf{videos: LinkedList} \hfill\\ 
-Das Attribut ist eine Liste der Videos. Diese wird bei Erzeugen oder Updaten vom \nameref{VideoDataManager} geholt.
+Das Attribut ist eine Liste der Videos. Die Videos werden bei Erzeugen oder Updaten des Tables vom \nameref{VideoDataManager} geholt und dann verarbeitet.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -25,7 +25,7 @@ Das Attribut ist eine Liste der Videos. Diese wird bei Erzeugen oder Updaten vom
 \itemsep0pt
 
 \item \textbf{VideoTable()} \hfill\\ 
-Im Konstruktor werden die Videos über den VideoDataManager geholt. Zuden werden die Buttons vorbereitet und der Table angehängt.
+Im Konstruktor werden die Videos über den VideoDataManager geholt. Zudem werden dann für jedes Video die Buttons vorbereitet.
 
 \end{itemize}
 
@@ -37,7 +37,7 @@ Im Konstruktor werden die Videos über den VideoDataManager geholt. Zuden werden
 \item \textbf{prepareVideos (): void}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Die Videos werden zur Anzeige vorbereitet, d.h. es wird Name und Id getrennt.
+Die Videos werden zur Anzeige vorbereitet.
 
 \item \textbf{prepareButtons (): void}\hfill\\
 \textbf{Sichtbarkeit} private

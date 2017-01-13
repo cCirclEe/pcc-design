@@ -1,11 +1,11 @@
 \section{Architektur}
-Die Architektur wurde nach der Art ``Model-View-Presenter'' entworfen.Das ``Model'' wird hier durch den ServerProxy realisiert, der dann Zugriffe auf den Web-Dienst tätigt, welcher die Daten hält. Die ``View'' wird durch die Gui und der ``Presenter'' durch die ApplicationLogic umgesetzt.
+Die Architektur wurde nach dem Prinzip ``Model-View-Presenter'' entworfen. Das ``Model'' wird hier durch den ServerProxy realisiert, der dann Zugriffe auf den Web-Dienst tätigt, welcher die Daten hält. Die ``View'' wird durch die Gui und der ``Presenter'' durch die ApplicationLogic umgesetzt.
 
 \subsection{Entwurfsmuster}
-Im Webinterface wurden Entwurfsmuster verwendet um unabhängige Klassen zu erhalten.
+Im Webinterface wurden Entwurfsmuster verwendet um austauschbare Klassen zu erhalten. Zudem helfen sie dabei das hinzufügen neuer Funktionalität möglichst einfach zu gestalten, was bei der Umsetzung von Wunschkriterien durchaus von Bedeutung sein wird.
 
-\subsubsection{Facade}
-Das Entwurfsmuster Facade ist in der ApplicationLogic zu finden. Die beiden DataManager bieten den Views eine Facade zum Zugriff auf den ServerProxy.
+\subsubsection{Fassade}
+Das Entwurfsmuster Fassade ist in der ApplicationLogic zu finden. Die beiden DataManager bieten den Views eine Fassade zum Zugriff auf den ServerProxy.
 
-\subsubsection{State}
-Der Navigator verwendet ein State Entwurfsmuster um die Views anzuzeigen. Die verschiedenen Views entsprechen dabei den States.
+\subsubsection{Zustandsmuster}
+Der Navigator verwendet ein Zustandsmuster um die Views anzuzeigen. Die verschiedenen Views entsprechen dabei den States.

@@ -1,13 +1,13 @@
 \newpage
 \subsection{VideoDataManager}\label{VideoDataManager}
-Der VideoDataManager verwaltet die VideoDaten und vereinfacht den Zugriff auf den \nameref{ServerProxy} für Klassen, die VideoDaten benötigen.
+Der VideoDataManager verwaltet die Video Daten und vereinfacht den Zugriff auf den \nameref{ServerProxy} für Klassen, die Video Daten benötigen.
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 
-\item \textbf{videos: String[]}\hfill\\
-Ein Array in dem der VideoDataManager die Videos hält die er vom ServerProxy bekommt.
+\item \textbf{videos: LinkedList}\hfill\\
+Eine Liste in dem der VideoDataManager die Videos hält die er vom ServerProxy bekommt.
 \end{itemize}
 
 \underline{Methoden}
@@ -16,23 +16,39 @@ Ein Array in dem der VideoDataManager die Videos hält die er vom ServerProxy be
 
 
 \item \textbf{downloadVideo (videoId: int): void}\hfill\\
-\textbf{Sichtbarkeit} public
+\textbf{Sichtbarkeit} public \newline
+\textbf{Statisch}
 
 Die Methode fügt die \nameref{Account} Daten hinzu und ruft danach die Methode zum downloaden am ServerProxy auf.
 
-\item \textbf{getMetaInf (videoId: int): String}\hfill\\
-\textbf{Sichtbarkeit} public
-
-Die Methode fügt die Accountdaten hinzu und ruft am ServerProxy die Methode auf, welche die Metadaten als String zurückgibt.
-
 \item \textbf{deleteVideo (videoId: int): void}\hfill\\
-\textbf{Sichtbarkeit} public
+\textbf{Sichtbarkeit} public \newline
+\textbf{Statisch}
 
-Die Methode fügt die Accountdaten hinzu und ruft am ServerProxy die Methode zum Löschen eines Videos auf.
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode zum Löschen eines Videos auf.
 
-\item \textbf{udateVideos (): String}\hfill\\
-\textbf{Sichtbarkeit} public
+\item \textbf{udateVideosAndInfo (): String}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{Statisch}
 
-Die Methode fügt die Accountdaten hinzu und ruft am ServerProxy die Methode auf, welcher die Videos zurückgibt.
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, welcher die Videos zurückgibt. Anschließend wird parseVideos aufgerufen und die Videos als Attribut gespeichert.
+
+\item \textbf{getVideosFromServer (): String}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Die Methode schickt eine Anfrage an den ServerProxy zum holen der Videos.
+
+\item \textbf{getMetaInfFromServer (videoId: int): String}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, welche die Metadaten als String zurückgibt.
+
+\item \textbf{createVideoList (videos: String, info: String): LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, welche die Metadaten als String zurückgibt.
 
 \end{itemize}
