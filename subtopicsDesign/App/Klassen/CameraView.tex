@@ -1,15 +1,15 @@
 \subsubsection{CameraView} \label{app:klasse:CameraView}
 \textbf{extends} CameraView\newline
 \textbf{implements} SurfaceHolder.Callback\newline
-Die CameraView ist eine SurfaceView, die die Vorschaubilder der Kamera Anzeigt. Da sie das SurfaceHolder.Callback Implementiert wird sie über erstellung, änderung und zerstörung ihres Inhaltes durch Android benachrichtigt.
+Die CameraView ist eine SurfaceView, die die Vorschaubilder der Kamera anzeigt. Da sie das SurfaceHolder.Callback implementiert wird sie über Erstellung, Änderung und Zerstörung ihres Inhaltes durch Android benachrichtigt.
 \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{cameraHandler: CameraHandler} \hfill\\ 
+\item \textbf{cameraHandler: \nameref{app:klasse:CameraHandler}} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
-CameraHandler Instanz, deren Methoden \textit{resumeHandler} und \textit{pauseHandler} aufgerufen werden, wenn die \textit{surfaceCreated} oder die \textit{surfaceDestroyed} Methoden der CameraView aufgerufen wurden.
+CameraHandler Instanz, deren Methoden resumeHandler() und pauseHandler() aufgerufen werden, wenn die surfaceCreated() oder die surfaceDestroyed() Methoden der CameraView aufgerufen wurden.
 
 \end{itemize}
 
@@ -18,7 +18,7 @@ CameraHandler Instanz, deren Methoden \textit{resumeHandler} und \textit{pauseHa
 \itemsep0pt
 \item \textbf{CameraView(context: Context, attrs: AttributeSet)} \hfill\\
 \textbf{Sichtbarkeit} public\newline
-Konstruktor, der von Android beim Instanziieren der CameraView verwendet wird. Durch verwendung dieses Konstruktors kann die CameraView direkt in ein XML-Layout eingebunden werden und muss nicht von der \nameref{app:klasse:CameraActivity} instanziiert werden. 
+Konstruktor, der von Android beim Instanziieren der CameraView verwendet wird. Durch Verwendung dieses Konstruktors kann die CameraView direkt in ein XML-Layout eingebunden werden und muss nicht von der \nameref{app:klasse:CameraActivity} instanziiert werden. 
 \end{itemize}
 
 \underline{Methoden}
@@ -27,18 +27,18 @@ Konstruktor, der von Android beim Instanziieren der CameraView verwendet wird. D
 
 \item \textbf{setCameraHandler (cameraHandler: CameraHandler): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Setter, der dem \textit{cameraHandler} Feld eine CameraHandler Instanz zuweißt. Falls die CameraView bereits anzegeigt wird, wird die Methode \textit{resumeHandler} auf dem CameraHandler aufgerufen.
+Setter, der dem \textit{cameraHandler} Feld eine CameraHandler Instanz zuweist. Falls die CameraView bereits angezeigt wird, wird die Methode resumeHandler() auf dem CameraHandler aufgerufen.
 
 \item \textbf{surfaceCreated(holder: SurfaceHolder): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die Methode \textit{surfaceCreated} des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode \textit{resumeHandler} des CameraHandlers aufgerufen.
+Implementiert die Methode \textit{surfaceCreated} des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode resumeHandler() des CameraHandlers aufgerufen.
 
 \item \textbf{surfaceChanged(holder: SurfaceHolder, format: int, width: int, height: int): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die Methode \textit{surfaceChanged} des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode \textit{pauseHandler} auf dem CameraHandler aufgerufen und anschließend die Methode \textit{resumeHandler} aufgerufen.
+Implementiert die Methode surfaceChanged() des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode pauseHandler() auf dem CameraHandler aufgerufen und anschließend die Methode resumeHandler() aufgerufen.
 
 \item \textbf{surfaceDestroyed(holder: SurfaceHolder): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Implementiert die Methode \textit{surfaceDestroyed} des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode \textit{pauseHandler} auf dem CameraHandler aufgerufen.
+Implementiert die Methode surfaceDestroyed() des SurfaceHolder.Callback Interfaces. Falls \textit{cameraHandler} nicht \textit{null} ist wird die Methode pauseHandler() auf dem CameraHandler aufgerufen.
 
 \end{itemize}

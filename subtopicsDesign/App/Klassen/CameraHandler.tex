@@ -1,5 +1,5 @@
 \subsubsection{<<Interface>> CameraHandler} \label{app:klasse:CameraHandler}
-Der CameraHandler sorgt dafür, dass alle Komponenten, die die Kamerafunktionen der App nutzen möchten, eine einheitliche Schnittstelle zur Verfügung gestellt bekommen. Dadurch kann die Beobachtung sowie die Aufnahme gestartet und gestoppt werden, ohne dass die aufrufende Komponente Details über den Speicher oder die Kamera wissen muss. Demzufolge kann z.B. die in \nameref{app:klasse:CompatCameraHandler} verwendete Camera API leicht gegen die Camera2 API ausgetauscht oder die Art der Speicherung verändert werden. Da die Kamerfunktionen so leicht zugänglich und kontrollierbar werden erleichtert der CameraHandler ebenfalls den Zugriff auf die Kamera durch z.B. einen Service oder ähnlichem. Der CameraHandler setzt folglich das Strategy Muster um, wobei Klienten nur von ihm anstatt von seiner Implementierung abhängen.
+Der CameraHandler sorgt dafür, dass alle Komponenten, die die Kamerafunktionen der App nutzen möchten, eine einheitliche Schnittstelle zur Verfügung gestellt bekommen. Dadurch kann die Beobachtung, sowie die Aufnahme gestartet und gestoppt werden, ohne dass die aufrufende Komponente Details über den Speicher oder die Kamera wissen muss. Demzufolge kann z.B. die in \nameref{app:klasse:CompatCameraHandler} verwendete Camera API leicht gegen die Camera2 API ausgetauscht oder die Art der Speicherung verändert werden. Da die Kamerafunktionen so leicht zugänglich und kontrollierbar werden, erleichtert der CameraHandler ebenfalls den Zugriff auf die Kamera durch z.B. einen Service oder ähnlichem. Der CameraHandler setzt folglich das Strategy Muster um, wobei Klienten nur von ihm anstatt von seiner Implementierung abhängen.
 \newline
 
 \underline{Methoden}
@@ -8,17 +8,17 @@ Der CameraHandler sorgt dafür, dass alle Komponenten, die die Kamerafunktionen 
 
 \item \textbf{schedulePersisting(): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Kann aufgerufen werden um die Persistierung auszulösen. Die CameraHandler implementierung entscheidet selbst, wann und wie genau die Persistierung abläuft.
+Kann aufgerufen werden um die Persistierung auszulösen. Die CameraHandler-Implementierung entscheidet selbst, wann und wie genau die Persistierung abläuft.
 
-\item \textbf{setMetadata (metadata: Metadata): void}\hfill\\
+\item \textbf{setMetadata (metadata: \nameref{app:klasse:Metadata}): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
-Schnittstelle, um der CameraHandler Implementierung von außen Metadaten übergeben zu können.
+Schnittstelle, um der CameraHandler-Implementierung von außen Metadaten übergeben zu können.
 
 \item \textbf{resumeHandler(): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
 Kann aufgerufen werden, um die Beobachtung zu starten bzw. sie fortzusetzen, falls sie zuvor unterbrochen wurde.
 
-\item \textbf{resumeHandler(): void}\hfill\\
+\item \textbf{pauseHandler(): void}\hfill\\
 \textbf{Sichtbarkeit} public\newline
 Kann aufgerufen werden, um die Beobachtung zu unterbrechen.
 
