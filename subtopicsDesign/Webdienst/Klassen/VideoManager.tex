@@ -1,11 +1,11 @@
 \subsubsection{VideoManager} \label{service:klasse:VideoManager}
-Der VideoManager verbindet zwischen dem ServiceConnector-Modul und dem Data- bzw. VideoProcessing-Modul. Er bearbeitet die Anfragen des ServerProxys und gibt die gefragten Ergebnisse zurück.\newline
+Der VideoManager verbindet zwischen dem \nameref{service:modul:Server}-Modul und dem \nameref{service:modul:Data}- bzw. \nameref{service:modul:VideoProcessing}-Modul. Er bearbeitet die Anfragen des \nameref{service:klasse:ServerProxy}s und gibt die gefragten Ergebnisse zurück.\newline
 Siehe auch: \nameref{fig:ServiceDownl}, \nameref{fig:ServiceDel}, \nameref{fig:ServiceUpload} \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{account: Account} \hfill\\ 
+\item \textbf{account: \nameref{service:klasse:Account}} \hfill\\ 
 \textbf{Sichtbarkeit} private 
 
 Account-Instanz, welche zur Bearbeitung der verschiedenen Anfragen benötigt wird.
@@ -18,7 +18,7 @@ Account-Instanz, welche zur Bearbeitung der verschiedenen Anfragen benötigt wir
 \item \textbf{VideoManager(account :Account)} \hfill\\
 \textbf{Sichtbarkeit} public
 
-Erstellt eine Instanz eines VideoManagers mit dem dazugehörigen Account. Dieser wird vom ServerProxy über die Parameter übergeben und dann gesetzt.
+Erstellt eine Instanz eines \nameref{service:klasse:VideoManager}s mit dem dazugehörigen Account. Dieser wird vom ServerProxy über die Parameter übergeben und dann gesetzt.
 \end{itemize}
 
 \underline{Methoden}
@@ -27,7 +27,7 @@ Erstellt eine Instanz eines VideoManagers mit dem dazugehörigen Account. Dieser
 \item \textbf{getVideoInfoList(): ArrayList<VideoInfo>}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitete eine Anfrage vom ServerProxy zur Videolistenrückgabe eines Accounts. Dabei wird im DatabaseManager die Methode getVideoInfoList() aufgerufen. Die ArrayList Der VideoInfo-Objekte wird dann an den ServerProxy zurückgegeben.    
+Bearbeitete eine Anfrage vom ServerProxy zur Videolistenrückgabe eines Accounts. Dabei wird im DatabaseManager die Methode getVideoInfoList() aufgerufen. Die ArrayList Der \nameref{service:klasse:VideoInfo}-Objekte wird dann an den ServerProxy zurückgegeben.    
 
 \item \textbf{upload(video: InputStream, metaData: InputStream,
 encryptedSymmetricKey: String, response: AsyncResponse): String}\hfill\\
@@ -43,7 +43,7 @@ Bearbeitet eine Anfrage vom ServerProxy zum Herunterladen eines Videos. Dabei wi
 \item \textbf{deleteVideo(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom SererProxy zum Löschen eines Videos. Zunächst wird die Methode getVideoInfo() und getMetadata() des DatabaseManagers aufgerufen. Somit bekommen wir über das VideoInfo-Objekt und Metadata-Objekt den Videonamen und Metadatanamen und können diese Files löschen. Daraufhin wird die Methode deleteVideoAndMeta() des DatabaseMangers aufgerufen, welche die beiden Einträge aus der Datenbank löscht.
+Bearbeitet eine Anfrage vom SererProxy zum Löschen eines Videos. Zunächst wird die Methode getVideoInfo() und getMetadata() des DatabaseManagers aufgerufen. Somit bekommen wir über das VideoInfo-Objekt und \nameref{service:klasse:Metadata}-Objekt den Videonamen und Metadatanamen und können diese Files löschen. Daraufhin wird die Methode deleteVideoAndMeta() des DatabaseMangers aufgerufen, welche die beiden Einträge aus der Datenbank löscht.
 
 \item \textbf{getMetadata(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public

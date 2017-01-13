@@ -1,5 +1,5 @@
 \subsubsection{DatabaseManager} \label{service:klasse:DatabaseManager}
-Die Klasse DatabaseManager bietet eine Schnittstelle für alle Datenbankanfragen, die vom AccountManager und VideoManager benötigt wird. \hfill\\
+Die Klasse DatabaseManager bietet eine Schnittstelle für alle Datenbankanfragen, die vom \nameref{service:klasse:AccountManager} und \nameref{service:klasse:VideoManager} benötigt wird. \hfill\\
 
 \underline{Attribute}
 \begin{itemize}
@@ -7,13 +7,13 @@ Die Klasse DatabaseManager bietet eine Schnittstelle für alle Datenbankanfragen
 \item \textbf{account: Account} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Benutzeraccount des aktiven Nutzers
+Benutzeraccount des aktiven Nutzers.
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{DatabaseManager(account: Account)} \hfill\\
+\item \textbf{DatabaseManager(account: \nameref{service:klasse:Account})} \hfill\\
 Setzt den aktiven Nutzer.
 \end{itemize}
 
@@ -25,10 +25,10 @@ Setzt den aktiven Nutzer.
 
 Bekommt den Videofile-Namen, sowie die Metadaten als übergeben und schreibt einen Datenbank-Eintrag in die Video-Tabelle der Datenbank. Die ``id'' wird generiert, die ``user\_id'' ist das Attribut ``id'' des Account-Objektes, der ``video\_name'' ist der Übergabeparamter ``videoName'' und ``meta\_name'' ist der Übergabeparamter ``metaName''.
 
-\item \textbf{getVideoInfo(videoId: int): VideoInfo}\hfill\\
+\item \textbf{getVideoInfo(videoId: int): \nameref{service:klasse:VideoInfo}}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bbekommt die videoId übergeben und gibt Videoinformationen als VideoInfo-Objekt zurück. Die Daten werden mithilfe der videoId und den Accountdaten des Nutzers aus der Datenbank geladen.
+Bekommt die videoId übergeben und gibt Videoinformationen als \nameref{service:klasse:VideoInfo}-Objekt zurück. Die Daten werden mithilfe der videoId und den Accountdaten des Nutzers aus der Datenbank geladen.
 
 \item \textbf{getVideoInfoList(): ArrayList<VideoInfo>}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -40,7 +40,7 @@ Gibt alle Videos eines Benutzers in Form einer Liste von ``VideoInfo''-Objekten 
 
 Löscht ein Video eines Benutzers. Das Löschen geschieht durch eine Datenbankabfrage mithilfe der videoId und den Accountdaten des aktiven Benutzers. Die Methode gibt zurück, ob das Löschen erfolgreich war.
 
-\item \textbf{getMetadata(videoId: int): Metadata}\hfill\\
+\item \textbf{getMetadata(videoId: int): \nameref{service:klasse:Metadata}}\hfill\\
 \textbf{Sichtbarkeit} public
 
 Ermittelt die Metadaten eines Videos durch eine Datenbankabfrage. Dafür wird die videoId und die Benutzerdaten genutzt.

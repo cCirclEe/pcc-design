@@ -1,11 +1,11 @@
 \subsubsection{ServerProxy} \label{service:klasse:ServerProxy}
-Der ServerProxy ist die Schnittstelle zwischen Web-Service und Web-Interface/App. Die Anfragen an den ServerProxy werden mittels der REST-API übermittelt. Die Anfragen werden in Teilanfragen aufgespalten und mithilfe des Manager-Moduls weiter bearbeitet. \newline
+Der ServerProxy ist die Schnittstelle zwischen \nameref{chap:service} und \nameref{chap:interface}/\nameref{chap:app}. Die Anfragen an den ServerProxy werden mittels der REST-API übermittelt. Die Anfragen werden in Teilanfragen aufgespalten und mithilfe des \nameref{service:modul:Manager}-Moduls weiter bearbeitet. \newline
 Siehe auch: \nameref{fig:ServiceAuth}, \nameref{fig:ServiceUpload}, \nameref{fig:ServiceDownl}, \nameref{fig:ServiceDel}
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{account: Account} \hfill\\ 
+\item \textbf{account: \nameref{service:klasse:Account}} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
 Instanz des Accounts, der die Anfrage geschickt hat. Wird in der Methode setUpForRequest() initialisiert.
@@ -24,7 +24,7 @@ Standardkonstruktor
 \item \textbf{videoUpload (video: InputStream, metadata: InputStrem, encryptedSymmetricKey: String, accountData: String, response: AsyncResponse): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine VideoUpload Anfrage der App. Übergibt die videobezogenen Parameter (video, metadata und encryptedSymmetricKey) und die AsyncResponse an die upload()-Methode im VideoManager. Die Rückgabe als Json-String gibt an, ob die Dateien vollständig angekommen sind. 
+Bearbeitet eine VideoUpload Anfrage der App. Übergibt die videobezogenen Parameter (video, metadata und encryptedSymmetricKey) und die AsyncResponse an die upload()-Methode im \nameref{service:klasse:VideoManager}. Die Rückgabe als Json-String gibt an, ob die Dateien vollständig angekommen sind. 
 
 \item \textbf{videoDownload(videoId: int, accountData: String): Response}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -54,7 +54,7 @@ Bearbeitet eine Anfrage zur Authentifizierungs des Web-Interfaces oder App. Dabe
 \item \textbf{createAccount(accountData: String uuid :String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage zur Accounterstellungs des Web-Interfaces. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird im AccountManager die Methode registerAccount(uuid :String) aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
+Bearbeitet eine Anfrage zur Accounterstellungs des Web-Interfaces. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird im \nameref{service:klasse:AccountManager} die Methode registerAccount(uuid :String) aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
 
 \item \textbf{changeAccount(accountDataNew: String, accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public

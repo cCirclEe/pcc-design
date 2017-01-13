@@ -1,10 +1,10 @@
 \subsubsection{AccountManager} \label{service:klasse:AccountManager}
-Verbindet zwischen dem ServiceConnector-Modul und dem Data-Modul. Er bearbeitet die Anfragen des ServerProxys und gibt die gefragten Ergebnisse zurück. \newline
+Verbindet zwischen dem \nameref{service:modul:Data}-Modul und dem \nameref{service:modul:Server}-Modul. Er bearbeitet die Anfragen des \nameref{service:klasse:ServerProxy}s und gibt die gefragten Ergebnisse zurück. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{account: Account} \hfill\\ 
+\item \textbf{account: \nameref{service:klasse:Account}} \hfill\\ 
 \textbf{Sichtbarkeit} public
 
 Account-Instanz, welche zur Bearbeitung der verschiedenen Anfragen benötigt wird.
@@ -25,7 +25,7 @@ Erstellt eine Instanz eines AccountManagers mit dem dazugehörigen Account. Dies
 \item \textbf{setMail(newMail: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung einer Mail eines Accounts. Die übergebene Mail wird dann im DatabaseManager mit der Methode setMail() gesetzt.
+Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung einer Mail eines Accounts. Die übergebene Mail wird dann im \nameref{service:klasse:DatabaseManager} mit der Methode setMail() gesetzt.
 
 \item \textbf{setPassword(newPasswordHash: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -45,7 +45,7 @@ Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Die Die Überg
 \item \textbf{deleteAccount(vm :VideoManager): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet die Löschung eines Accounts. Zunächst werden alle Videos des Accounts ermittelt und es wird mit dem Übergabeparameter ``vM'' auf den VideoManager zugegriffen, der alle Videos und Metadaten löscht. Nun wird im DatabaseManager ``deleteAccount()'' aufgerufen und der Account wird in der Datenbank gelöscht.
+Bearbeitet die Löschung eines Accounts. Zunächst werden alle Videos des Accounts ermittelt und es wird mit dem Übergabeparameter ``vM'' auf den \nameref{service:klasse:VideoManager} zugegriffen, der alle Videos und Metadaten löscht. Nun wird im DatabaseManager ``deleteAccount()'' aufgerufen und der Account wird in der Datenbank gelöscht.
 
 \item \textbf{authenticate(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -55,7 +55,7 @@ Bearbeitet eine Anfrage vom ServerProxy zur Authentifizierung des Accounts. Die 
 \item \textbf{verifyAccount(accountData :String, uuid: String) :String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück. 
+Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine eindeutige Id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück. 
  
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
