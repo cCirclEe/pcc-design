@@ -5,7 +5,8 @@ Der ServerProxy ist ein Singelton, das bedeutet das nur eine Instanz der  Klasse
 \begin{itemize}
 \itemsep0pt
 \item \textbf{instance: ServerProxy} \hfill\\ 
-\textbf{Sichtbarkeit} public
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch} 
 
 Das Attribut wird an andere Klasse weiterzugeben um öffentliche Methoden dieser Klasse aufzurufen. Dies garantiert die Einzigartigkeit der Instanz der Klasse. 
 
@@ -24,8 +25,9 @@ Privater Konstruktor der bei der ersten Instanzierung der Klasse eine Instanz bi
 \begin{itemize}
 \itemsep0pt
 
-\item \textbf{getInstance (): ServerProxy}\hfill\\
-\textbf{Sichtbarkeit} public
+\item \textbf{GetInstance (): ServerProxy}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch} 
 
 Ruft den privaten Konstruktor auf wenn Klasse zum ersten Mal initialisiert wurde. Gibt dann das instance-Attribut der Klasse zurück.
 

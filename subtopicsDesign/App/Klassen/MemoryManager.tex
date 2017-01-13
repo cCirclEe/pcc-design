@@ -5,7 +5,8 @@ Die MemoryManager-Klasse verwaltet die Daten auf der App. Er bietet die Funktion
 \begin{itemize}
 \itemsep0pt
 \item \textbf{instance: MemoryManager} \hfill\\ 
-\textbf{Sichtbarkeit} private
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch} 
 
 Repräsentiert die Singleton Instanz.
 
@@ -29,7 +30,8 @@ Privater Konstruktor der Klasse, der nur aufgerufen wird wenn das instance-Attri
 \itemsep0pt
 
 \item \textbf{GetInstance(context: Context): MemoryManager}\hfill\\
-\textbf{Sichtbarkeit} public
+\textbf{Sichtbarkeit} public \newline
+\textbf{statisch} 
 
 Statische Methode um sicherzustellen, dass es nur eine Instanz der Klasse gibt. Wenn Instanz noch nicht erzeugt wurde, ruft die Methode den Konstruktor auf. Das instance-Attribut wird dann auf die erzeugte Instanz gesetzt und zurückgegeben. Wenn instance bereits erzeugt wurde, wird dieses direkt zurückgegeben.
 
