@@ -12,7 +12,7 @@ Um Anfragen vieler Nutzer unabhängig gleichzeitig zu bearbeiten, nimmt sich der
 Da die Bearbeitung der Videos jedoch sehr zeitaufwändig ist, lagern wie die Bearbeitung auf einen eigenen Worker ThreadPool um~\eqref{service:pattern:masterworker}, damit der Anfrage-Thread möglichst schnell seine Arbeit beenden kann und bereit für neue Anfragen ist. 
 
 \subsection{Entwurfsmuster} \label{service:pattern}
-Der Web-Service benutzt verschiedene Entwurfsmuster um vor allem zwei Ziele zu erreichen: 1. Eine schnelle und zeitlich unabhängige Bearbeitung von Anfragen und 2. Eine hohe Modularität und Austauschbarkeit.
+Der Webdienst benutzt verschiedene Entwurfsmuster um vor allem zwei Ziele zu erreichen: 1. Eine schnelle und zeitlich unabhängige Bearbeitung von Anfragen und 2. Eine hohe Modularität und Austauschbarkeit.
 
 \subsubsection{Proxy} \label{service:pattern:proxy}
 Die Webanbindung des Services wird in dem \nameref{service:klasse:ServerProxy} gekapselt. Der Proxy bearbeitet bzw. verschickt lediglich die Http-Anfragen und leitet alle weitere Arbeit weiter. Dies sorgt für eine höhere Austauschbarkeit, da so die Webanbindung unabhängig von der eigentlichen Bearbeitung der Anfragen ausgetauscht werden kann und umgekehrt.
