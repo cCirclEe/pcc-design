@@ -1,24 +1,31 @@
 \newpage
-\subsection{ImpressumView}\label{ImpressumView}
+\subsubsection{PrivacyView}\label{PrivacyView}
 \textbf{extends}  VerticalLayout \newline
 \textbf{implements} View \newline
-Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View hat nur die Aufgabe, das Impressum anzuzeigen.
+Diese Klasse erbt von einem Layout, da sie selbst als graphische Komponente verwendet wird. Diese View hat nur die Aufgabe, die Datenschutzinformationen anzuzeigen.
+\newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
 \item \textbf{viewId: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Die viewId gibt der View eine einzigartige ID über die der Navigator die View identifizieren kann.
 
-\item \textbf{impressum: Label)} \hfill\\ 
-Dieses Label wird verwendet um das Impressum anzuzeigen.
+\item \textbf{privacy: Label} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
+Dieses Label wird verwendet, um die Datenschutzinformationen anzuzeigen.
 
 \end{itemize}
 
 \underline{Konstruktoren}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{ImpressumView()} \hfill\\
+\item \textbf{PrivacyView()} \hfill\\
+\textbf{Sichtbarkeit} public
+
 Standardkonstruktor
 \end{itemize}
 
@@ -28,7 +35,7 @@ Standardkonstruktor
 \item \textbf{enter (viewChangeEvent: ViewChangeListener.ViewChangeEvent): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode wird immer bei Eintreten der View aufgerufen.
+Diese Methode wird immer beim Eintreten der View aufgerufen.
 
 \item \textbf{update (): void}\hfill\\
 \textbf{Sichtbarkeit} public

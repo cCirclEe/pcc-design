@@ -1,17 +1,23 @@
 \newpage
-\subsection{Video}\label{Video}
+\subsubsection{Video}\label{Video}
 In dieser Klasse werden Name, Id und die Meta-Informationen zu einem Video zusammgefasst. \newline
 
 \underline{Attribute}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name: String} \hfill\\ 
+\item \textbf{name: String} \hfill\\
+\textbf{Sichtbarkeit} private
+
 Ein String zum Speichern des Namens.
 
 \item \textbf{id: int} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Ein Integer zum Speichern der Id.
 
 \item \textbf{info: String} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Ein String zum Speichern der Meta-Informationen.
 
 \end{itemize}
@@ -20,5 +26,7 @@ Ein String zum Speichern der Meta-Informationen.
 \begin{itemize}
 \itemsep0pt
 \item \textbf{Account(String: name, int: id, String: info)} \hfill\\
-Setzen der Attribute.
+\textbf{Sichtbarkeit} public
+
+Nimmt die Parameter und setzt damit die Attribute.
 \end{itemize}

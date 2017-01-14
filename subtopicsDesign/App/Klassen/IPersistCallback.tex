@@ -1,18 +1,18 @@
-\subsubsection{TODO!!: <<Interface>> IPersistCallback} \label{app:klasse:IPersistCallback}
-\textbf{extends} Superklasse \newline
-Allgemeiner Text bliblablubb. \newline
+\subsubsection{<<Interface>> IPersistCallback} \label{app:klasse:IPersistCallback}
+Das IPersistCallback dient zum Beobachten des Speichervorgangs des Videos. Es wird über Beginn und Ende des Speichervorgangs benachrichtigt.
+\newline
 
 \underline{Methoden}
 \begin{itemize}
 \itemsep0pt
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{onPersistingStarted (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Wird aufgerufen, sobald die Persistierung beginnt.
 
-\item \textbf{name (parameter: Typ): Rückgabetyp}\hfill\\
+\item \textbf{onPersistingStopped (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Methodenbeschreibung
+Wird aufgerufen, sobald die Persistierung endet.
 
 \end{itemize}

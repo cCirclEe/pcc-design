@@ -84,11 +84,11 @@
 \subsection{Aufgabenstellung}
 \begin{frame}{Aufgabenstellung}
 	\begin{itemize}
-		\item Verschl\"usselnde Crashcam-App
+		\item Funktionsfähiger Entwurf nach Vorgaben des Pflichtenhefts
 		\pause
-		\item Web-Interface zur Videoverwaltung
+		\item Aussagekäftige Klassendiagramme
 		\pause
-		\item Web-Dienst f\"ur Entschl\"usselung, Bildauswertung und Anonymisierung
+		\item Beschreibung der Klassen
 	\end{itemize}
 \end{frame}
 
@@ -96,32 +96,19 @@
 \begin{frame}{App}
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
-    		\begin{itemize}
-    			\item Ansichten
+		\begin{itemize}
+    		\item Grundlegendes
 			\begin{itemize}
-				\item Kamera
-				\item Videos
-				\item Einstellungen
-				\pause
+				\item Vertraut machen mit Android API und Designprinzipien
+				\item Grundlegender Entwurf durch Anwenden von Entwurfsmustern
+				\item Feinschliff durch bessere Strukturierung und Namensgebung
 			\end{itemize}
-			\item 2 Kamera-Modi
+			\item Besondere Probleme
 			\begin{itemize}
-				\item Beobachtungsmodus
-				\begin{itemize}
-					\item Ringpuffer (1 min)
-				\end{itemize}
-				\item Aufnahmemodus
-				\begin{itemize}
-					\item persistieren
-					\item verschl\"usseln
-				\end{itemize}
-				\pause
+				\item Ringpuffer
+				\item Asynchrone Vorgänge in Android
 			\end{itemize}
-			\item Verschl\"usselung
-    		\end{itemize}
-    \end{column}
-    \begin{column}{.5\textwidth}
-    		%\includegraphics[scale=0.075]{../subtopicsFuncspec/Res/Mockups/Portrait_camera_view_menu_phone}
+		\end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
@@ -132,18 +119,16 @@
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
     		\begin{itemize}
-    			\item Ansicht anonymisierter Videos
+    			\item Grundlegendes
     			\begin{itemize}
-					\item Herunterladen
-					\item Info
-					\item L\"oschen
+					\item Vertraut machen mit Vaadin
+					\item Entwerfen Grundlegender Struktur einer Gui
+					\item Anzeige und Logik Funktionalität sinnvoll trennen
 				\end{itemize}
-				\pause
-    			\item Accountverwaltung
+    			\item Besondere Probleme
     			\begin{itemize}
-					\item Erstellen
-					\item \"Andern
-					\item L\"oschen
+					\item Kommunikation mit dem Web-Dienst
+					\item Entkoppeln von Logik und Anzeige
 				\end{itemize}
     		\end{itemize}
     \end{column}
@@ -156,19 +141,17 @@
 \section{Web-Dienst}
 \begin{frame}{Web-Dienst}
 	\begin{itemize}
-		\item Bearbeitet Anfragen der App und des Web-Interface
-		\pause
-		\item Videoverarbeitung
+		\item Grundlegendes
 			\begin{itemize}
-				\item entschl\"usseln
-				\item analysieren
-				\item anonymisieren
+				\item Vertraut machen mit Jetty and Jersey
+				\item Rest Anfragen und JSON Objekte
+				\item Erstellen eines Grundlegenden Entwurfs
 			\end{itemize}
 		\pause
-		\item Datenverwaltung
+		\item Besondere Probleme
 			\begin{itemize}
-				\item Accountdaten
-				\item Videodaten
+				\item Videoverarbeitung mit per Pipeline
+				\item Großer Umfang an Funktionalität
 			\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -180,48 +163,47 @@
   \begin{columns}[T]
     \begin{column}{.5\textwidth}
     		\begin{itemize}
-    			\item Christoph H.
+    	\item Christoph H.
 			\begin{itemize}
-				\item Anforderungen
-				\item Globale Testf\"alle
-				\item Web-Interface Demo
+				\item Web-Interface
+				\item Präsentation
 			\end{itemize}
 		\item David L.
 			\begin{itemize}
-				\item Einrichtung JIRA, Github				
-				\item Globale Testf\"alle
-				\item Web-Interface Demo
-				\item Produktumgebung
+				\item Web-Dienst
 			\end{itemize}
 		\item Fabian W.
 			\begin{itemize}
-				\item Systemmodelle
-				\item Entwicklungsumgebung
-				\item Glossar
-				\item Pr\"asentation
+				\item Web-Dienst
 			\end{itemize}
     		\end{itemize}
     \end{column}
     \begin{column}{.5\textwidth}
-    		\begin{itemize}
+    \begin{itemize}
 		\item Giorgio G.
 			\begin{itemize}
-				\item Zielbestimmung
-				\item Anforderungen
-				\item App-Demo
-				\item Produkteinsatz
-				\item Produktdaten
+				\item App
+				\item Präsentation
 			\end{itemize}
 		\item Josh R.
 			\begin{itemize}
-				\item Anforderungen
-				\item Entwicklungsumgebung
-				\item Stilkorrektur
-				\item Glossar
+				\item App
+				\item Web-Dienst
 			\end{itemize}
 	\end{itemize}
     \end{column}
   \end{columns}
+\end{frame}
+
+\subsection{Fazit}
+\begin{frame}{Fazit}
+   \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    		\item SCHEIS SCHWER DAS MAL ZU MACHEN
+    		\end{itemize}
+    \end{column}
+   \end{columns}
 \end{frame}
 
 \subsection{JIRA}

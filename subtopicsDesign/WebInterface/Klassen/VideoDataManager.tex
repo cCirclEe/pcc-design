@@ -1,0 +1,63 @@
+\newpage
+\subsubsection{VideoDataManager}\label{VideoDataManager}
+Der VideoDataManager verwaltet die Videodaten und vereinfacht den Zugriff auf den \nameref{ServerProxy} für Klassen, die Videodaten benötigen. \newline
+
+\underline{Attribute}
+\begin{itemize}
+\itemsep0pt
+
+\item \textbf{videos: LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{statisch}
+
+Eine Liste in dem der VideoDataManager die \nameref{Video}s hält die er vom ServerProxy bekommt.
+\end{itemize}
+
+\underline{Methoden}
+\begin{itemize}
+\itemsep0pt
+
+
+\item \textbf{downloadVideo (videoId: int): void}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{Statisch}
+
+Die Methode fügt die \nameref{Account}-Daten hinzu und ruft danach die Methode zum downloaden am ServerProxy auf.
+
+\item \textbf{deleteVideo (videoId: int): void}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{Statisch}
+
+Die Methode fügt die Account-Daten hinzu und ruft am ServerProxy die Methode zum Löschen eines Videos auf.
+
+\item \textbf{updateVideosAndInfo (): String}\hfill\\
+\textbf{Sichtbarkeit} public \newline
+\textbf{Statisch}
+
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, welcher die Videos zurückgibt. Anschließend wird parseVideos aufgerufen und die Videos als Attribut gespeichert.
+
+\item \textbf{getVideosFromServer (): String}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Die Methode schickt eine Anfrage an den ServerProxy zum Holen der Videos.
+
+\item \textbf{createVideoList (videos: String): LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Diese Methode parst die Videos in Name und Id. Anschließend erstellt sie eine Liste aus Video Objekten.
+
+\item \textbf{addInfoToVideoList (videos: LinkedList): LinkedList}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Diese Methode fügt jedem Listeneintrag die Meta-Informationen hinzu.
+
+\item \textbf{getMetaInfFromServer (videoId: int): String}\hfill\\
+\textbf{Sichtbarkeit} private \newline
+\textbf{Statisch}
+
+Die Methode fügt die Account Daten hinzu und ruft am ServerProxy die Methode auf, die die Metadaten als String zurückgibt.
+
+\end{itemize}

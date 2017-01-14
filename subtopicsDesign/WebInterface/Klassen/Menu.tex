@@ -1,7 +1,6 @@
-\newpage
-\subsection{Menu}\label{Menu}
+\subsubsection{Menu}\label{Menu}
 \textbf{extends}  HorizontalLayout \newline
-Das \nameref{Menu} stellt die Buttons bereit, die benötigt werden, um den Benutzer zwischen den verschiedenen Ansichten wechseln zu lassen. Dazu kommt noch der Logout Button, über den man zurück zum Login gelangt.
+Das Menu stellt die Buttons bereit, die benötigt werden, um den Benutzer zwischen den verschiedenen Ansichten wechseln zu lassen. Dazu kommt noch der Logout Button, über den man zurück zum Login gelangt.
 \newline
 
 \underline{Attribute}
@@ -9,14 +8,29 @@ Das \nameref{Menu} stellt die Buttons bereit, die benötigt werden, um den Benut
 \itemsep0pt
 
 \item \textbf{menuItemLayout: Layout} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 In dieses Layout werden neu erstellte Menu-Items hinzugefügt.
 
 \item \textbf{userMenu: MenuBar} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Eine Referenz auf das userMenu.
 
-\item \textbf{ui: UI} \hfill\\ 
+\item \textbf{ui: \nameref{MyUI}} \hfill\\ 
+\textbf{Sichtbarkeit} private
+
 Eine Referenz auf die ui in der das Menu liegt. Dies wird verwendet um den Navigator aufzurufen und den Logout durchzuführen.
 
+\end{itemize}
+
+\underline{Konstruktoren}
+\begin{itemize}
+\itemsep0pt
+\item \textbf{Menu()} \hfill\\
+\textbf{Sichtbarkeit} public
+
+Standardkonstruktor
 \end{itemize}
 
 \underline{Methoden}
@@ -35,6 +49,6 @@ Diese Methode dient zum Einfügen eines User-Menüs. Es kann immer nur ein User-
 \item \textbf{addLogoutItem (): void}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Diese Methode dient zum Einfügen eines Logout-Eintrages. Dieser Eintrag ruft dann den Logout der Übergeordneten \nameref{UI} auf.
+Diese Methode dient zum Einfügen eines Logout-Eintrages. Dieser Eintrag ruft dann den Logout der übergeordneten \nameref{MyUI} auf.
 
 \end{itemize}
