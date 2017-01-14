@@ -23,7 +23,7 @@ Setzt den aktiven Nutzer.
 \item \textbf{saveProcessedVideoAndMeta(videoName: String, metaName: String): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bekommt den Videofile-Namen, sowie die Metadaten als übergeben und schreibt einen Datenbank-Eintrag in die Video-Tabelle der Datenbank. Die ``id'' wird generiert, die ``user\_id'' ist das Attribut ``id'' des Account-Objektes, der ``video\_name'' ist der Übergabeparamter ``videoName'' und ``meta\_name'' ist der Übergabeparamter ``metaName''.
+Bekommt den Videofile-Namen, sowie die Metadaten als übergeben und schreibt einen Datenbank-Eintrag in die Video-Tabelle der Datenbank. Die ``id'' wird generiert, die ``user\_id'' ist das Attribut ``id'' des Account-Objektes, der ``video\_name'' ist der Übergabeparameter ``videoName'' und ``meta\_name'' ist der Übergabeparameter ``metaName''.
 
 \item \textbf{getVideoInfo(videoId: int): \nameref{service:klasse:VideoInfo}}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -78,7 +78,7 @@ Die Methode legt einen neuen Benutzer an. Die Die Übergabe ``uuid'' ist ein ein
 \item \textbf{verifyAccount(accountData :String, uuid: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück.
+Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine eindeutige Id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück.
 
 \item \textbf{isVerfied(): boolean}\hfill\\
 \textbf{Sichtbarkeit} public

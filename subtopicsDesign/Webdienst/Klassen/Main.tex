@@ -1,5 +1,5 @@
 \subsubsection{Main} \label{service:klasse:Main}
-Die Klasse Main ist der Haupteinstiegspunkt des Web-Dienstes. Sie sorgt dafür bei Serverstart alles korrekt zu starten und ist dafür zuständig den Server zu stoppen und neuzustarten.\newline
+Die Klasse Main ist der Haupteinstiegspunkt des Web-Dienstes. Sie sorgt dafür bei Serverstart alles korrekt zu starten und ist dafür zuständig den Server zu stoppen und neu zu starten.\newline
 
 \underline{Attribute}
 \begin{itemize}
@@ -38,7 +38,6 @@ Haupteinstiegspunkt des Web-Dienstes. Startet den Logger, erstellt alle Ordner f
 
 Stoppt den Server.
 
-
 \item \textbf{restartServer (): void}\hfill\\
 \textbf{Sichtbarkeit} public \newline
 \textbf{statisch}
@@ -51,18 +50,15 @@ Stoppt den Server setzt ihn neu auf und startet ihn wieder.
 
 Konfiguriert den globalen Logger und startet ihn.
 
-
 \item \textbf{setupDirectories (): void}\hfill\\
 \textbf{Sichtbarkeit} private \newline
 \textbf{statisch}
 
 Erstellt alle benötigten Ordner, falls diese noch nicht vorhanden sind und löscht alle temporären Dateien.
 
-
 \item \textbf{startServer (): void}\hfill\\
 \textbf{Sichtbarkeit} private \newline
 \textbf{statisch}
 
 Konfiguriert und startet den Server.
-
 \end{itemize}

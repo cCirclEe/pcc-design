@@ -1,6 +1,6 @@
 \subsubsection{VideoProcessingChain} \label{service:klasse:VideoProcessingChain}
 \textbf{implements} Runnable \newline
-Die VideoProcessingChain ist für die Bearbeitung der Videos zuständig. Zunächst werden alle für die Bearbeitung notwendigen Informationen ermittelt. Dann nimmt die VideoProcessingChain die hochgeladenen Videos entgegen und speichert sie zunächst teporär. Das Video wird entschlüsselt, auf personenbezogene Daten analysiert und diese unkenntlich gemacht. Danach können die Metadaten dem Video hinzugefügt und dieses auf dem Server langfristig hinterlegt werden. Zum Schluss werden die temporären Daten wieder gelöscht.\newline
+Die VideoProcessingChain ist für die Bearbeitung der Videos zuständig. Zunächst werden alle für die Bearbeitung notwendigen Informationen ermittelt. Dann nimmt die VideoProcessingChain die hochgeladenen Videos entgegen und speichert sie zunächst temporär. Das Video wird entschlüsselt, auf personenbezogene Daten analysiert und diese unkenntlich gemacht. Danach können die Metadaten dem Video hinzugefügt und dieses auf dem Server langfristig hinterlegt werden. Zum Schluss werden die temporären Daten wieder gelöscht.\newline
 Siehe auch: \nameref{fig:ServiceProcess}
 
 \underline{Attribute}
@@ -9,17 +9,17 @@ Siehe auch: \nameref{fig:ServiceProcess}
 \item \textbf{context: \nameref{service:klasse:EditingContext}} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Container für die Informationen, die die einzelnen Arbeitsschritte zum arbeiten benötigen
+Container für die Informationen, die die einzelnen Arbeitsschritte zum Arbeiten benötigen.
 
 \item \textbf{response: AsyncResponse} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Objekt, das genutzt wird um die Anfrage der App bei Fehler oder Erfolg asynchron zu beantworten
+Objekt, das genutzt wird um die Anfrage der App bei Fehler oder Erfolg asynchron zu beantworten.
 
 \item \textbf{stages: List<\nameref{service:klasse:IStage}>} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Liste der zur Bearbeitung des Videos auszuführenden Arbeitsschritte
+Liste der zur Bearbeitung des Videos auszuführenden Arbeitsschritte.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -56,6 +56,6 @@ Erzeugt alle Arbeitsschritte.
 \item \textbf{deleteTempFiles (context: EditingContext): void}\hfill\\
 \textbf{Sichtbarkeit} private
 
-Löscht alle zurvor erstellten temporären Dateien.
+Löscht alle zuvor erstellten temporären Dateien.
 
 \end{itemize}

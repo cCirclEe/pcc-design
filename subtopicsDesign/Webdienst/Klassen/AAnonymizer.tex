@@ -1,6 +1,6 @@
 \subsubsection{<<Abstract>> AAnonymizer} \label{service:klasse:AAnonymizer}
 \textbf{implements} \nameref{service:klasse:IStage} \newline
-IAnonymizer bietet eine Schnittstelle für Video-Anonymisierungsverfahren. Die Schnittstelle ist bewusst sehr allgemein gehalten um verschiedenste Anonymisierungsverfahren zu erlauben. \newline
+IAnonymizer bietet eine Schnittstelle für Video-Anonymisierungsverfahren. Die Schnittstelle ist bewusst sehr allgemein gehalten, um verschiedenste Anonymisierungsverfahren zu erlauben. \newline
 
 \underline{Methoden}
 \begin{itemize}
@@ -13,6 +13,6 @@ Implementiert die Methode execute(..) von IStage. Ruft die Methode anonymize(..)
 \item \textbf{<<abstract>> anonymize (input: File, output: File): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Analysiert zunächst das input-Video um Bildbereiche zu identifizieren, die pesonenbezogene Daten zeigen. Wendet daraufhin einen Bildfilter auf die Bildbereiche an, um diese unkenntlich zu machen.
+Analysiert zunächst das input-Video um Bildbereiche zu identifizieren, die personenbezogene Daten zeigen. Wendet daraufhin einen Bildfilter auf die Bildbereiche an, um diese unkenntlich zu machen.
 
 \end{itemize}

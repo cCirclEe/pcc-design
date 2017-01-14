@@ -38,7 +38,7 @@ Bearbeitet eine Anfrage vom ServerProxy zum Hochladen mehrerer Dateien. Da der U
 \item \textbf{download(videoId: int): File}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zum Herunterladen eines Videos. Dabei wird vom DatabaseManager die Methode getVideoInfo() aufgerufen um mittels der VideoId den Videonamen über das VideoInfo Objekt zu bekommen. Somit kann dann das gewünschte File gefunden und zurückgegeben werden.
+Bearbeitet eine Anfrage vom ServerProxy zum Herunterladen eines Videos. Dabei wird vom DatabaseManager die Methode getVideoInfo() aufgerufen, um mittels der VideoId den Videonamen über das VideoInfo Objekt zu bekommen. Somit kann dann das gewünschte File gefunden und zurückgegeben werden.
 
 \item \textbf{deleteVideo(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -48,6 +48,5 @@ Bearbeitet eine Anfrage vom SererProxy zum Löschen eines Videos. Zunächst wird
 \item \textbf{getMetadata(videoId :int): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet die Anfrage vom ServerProxy zum Ausgeben der Metadata eines Videos. Es wird im DatabaseManager die Methode getMetadata() aufgerufen, welche ein Metadata-Objekt zurückgibt. Die relevanten Attribute werden in ein Json-String umgewandelt und dann an den ServerProxy zurückgeben.
-
+Bearbeitet die Anfrage vom ServerProxy zum Ausgeben der Metadata eines Videos. Es wird im DatabaseManager die Methode getMetadata() aufgerufen, die ein Metadata-Objekt zurückgibt. Die relevanten Attribute werden in ein JSON-String umgewandelt und dann an den ServerProxy zurückgeben.
 \end{itemize}

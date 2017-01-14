@@ -35,12 +35,12 @@ Bearbeitet eine Anfrage vom ServerProxy zur Ersetzung eines Passwort eines Accou
 \item \textbf{getAccountId(): int}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Mail-Adresse. Die Anfrage wird zum DatabaseManager weitegeleitet und somit die Methode getAccountId() aufgerufen. Von dort aus wird sie bis zum ServerProxy zurückgegeben.  
+Bearbeitet eine Anfrage vom ServerProxy zur Bestimmung der AccountId zu einer Mail-Adresse. Die Anfrage wird zum DatabaseManager weitergeleitet und somit die Methode getAccountId() aufgerufen. Von dort aus wird sie bis zum ServerProxy zurückgegeben.  
 
 \item \textbf{registerAccount(uuid :String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird beim DatabaseManager die Methode register() aufgerufen und die Accountdaten im zugehörigen Accountattribut gesetzt. 
+Bearbeitet eine Anfrage vom ServerProxy zur Accountregistrierung. Die Die Übergabe ``uuid'' stellt eine eindeutige Id des Accounts dar, die zur Accountverifizierung dient. Dabei wird beim DatabaseManager die Methode register() aufgerufen und die Accountdaten im zugehörigen Accountattribut gesetzt. 
 
 \item \textbf{deleteAccount(vm :VideoManager): String}\hfill\\
 \textbf{Sichtbarkeit} public

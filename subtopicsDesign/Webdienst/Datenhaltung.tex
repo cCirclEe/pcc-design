@@ -1,5 +1,5 @@
 \section{Datenhaltung}
-Die Daten des Web-Service werden in einer Datenbank und in Ordnern organisiert. 
+Die Daten des Web-Dienstes werden in einer Datenbank und in Ordnern organisiert. 
 Nutzerdaten und Videodaten werden in Tabellen gespeichert. Als Syntax wird PostgreSQL verwendet. 
 
 \begin{figure}[ht]
@@ -11,8 +11,8 @@ Nutzerdaten und Videodaten werden in Tabellen gespeichert. Als Syntax wird Postg
 
 \subsection{Datenbank}
 
-Die User-Tabelle für die Nutzerdaten speichert eine einzigartige Nutzer-Id, die Email-Adresse, das Passwort und ob der Nutzer bereits seinen Account verifiziert hat.\newline
-Die Video-Tabelle für Videodaten speichert eine einzigartige  Video-Id, die Nutzer-Id des Nutzers, der das Video hochgeladen hat sowie den Videodateiname und den Metadatendateiname. die Nutzer-Id agiert hier als Fremdschlüssel, die Dateinamen werden zum referenizieren der Dateien aus den Ordnern verwendet.\newline
+Die User-Tabelle für die Nutzerdaten speichert eine einzigartige Nutzer-Id, die Mail-Adresse, das Passwort und ob der Nutzer bereits seinen Account verifiziert hat.\newline
+Die Video-Tabelle für Videodaten speichert eine einzigartige  Video-Id, die Nutzer-Id des Nutzers, der das Video hochgeladen hat sowie den Videodateiname und den Metadatendateiname. die Nutzer-Id agiert hier als Fremdschlüssel, die Dateinamen werden zum referenzieren der Dateien aus den Ordnern verwendet.\newline
 Video und Metadaten werden in jeweils einem eigenen Ordner organisiert. Dabei teilen sich Videodateien aller Nutzer einen Ordner und Metadatendateien aller Nutzer einen Ordner. Der Dateiname wird stets aus einem statischen Anfang und der Kombination aus Nutzer-Id und Video-Id zusammengesetzt und ist daher einzigartig.
 
 \subsection{Temporäre Dateien}
@@ -21,5 +21,5 @@ Der \nameref{service:klasse:EditingContext} erzeugt dann alle für die Bearbeitu
 \textit{benutzerid\_videoname\_attribut.endung}
 
 \subsection{Verwendete Resourcen}
-Für die Bearbeitung der Videos verwendete Resourcen (z.B. der private Key des \nameref{service:klasse:RSADecryptor} oder der CascadeClassifier des \nameref{service:klasse:ExampleAnalyzer}) werden im "'resources"' Ordner abgelegt.
+Für die Bearbeitung der Videos verwendete Ressourcen (z.B. der private Key des \nameref{service:klasse:RSADecryptor} oder der CascadeClassifier des \nameref{service:klasse:ExampleAnalyzer}) werden im "'resources"' Ordner abgelegt.
 \newpage

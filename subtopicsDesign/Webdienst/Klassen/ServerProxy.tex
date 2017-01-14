@@ -24,7 +24,7 @@ Standardkonstruktor
 \item \textbf{videoUpload (video: InputStream, metadata: InputStrem, encryptedSymmetricKey: String, accountData: String, response: AsyncResponse): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine VideoUpload Anfrage der App. Übergibt die videobezogenen Parameter (video, metadata und encryptedSymmetricKey) und die AsyncResponse an die upload()-Methode im \nameref{service:klasse:VideoManager}. Die Rückgabe als Json-String gibt an, ob die Dateien vollständig angekommen sind. 
+Bearbeitet eine VideoUpload Anfrage der App. Übergibt die videobezogenen Parameter (video, metadata und encryptedSymmetricKey) und die AsyncResponse an die upload()-Methode im \nameref{service:klasse:VideoManager}. Die Rückgabe als JSON-String gibt an, ob die Dateien vollständig angekommen sind. 
 
 \item \textbf{videoDownload(videoId: int, accountData: String): Response}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -44,7 +44,7 @@ Bearbeitet eine Anfrage zum Löschen eines Videos des Web-Interfaces. Diese wird
 \item \textbf{getVideosByAccount(accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public  
 
-Bearbeitet eine Anfrage zur Videolistenrückgabe des Web-Interface für einen bestimmten Nutzer. Dabei wird im VideoManager die getVideoListMethode aufgerufen. Diese bearbeitet die Anfrage und gibt einen Json-String mit den Videoinformationen zurück. Dieser Json-String wird aus dem ArrayList<VideoInfo> erstellt. Diese werden dann auch an das Web-Interface zurückgegeben. 
+Bearbeitet eine Anfrage zur Videolistenrückgabe des Web-Interface für einen bestimmten Nutzer. Dabei wird im VideoManager die getVideoListMethode aufgerufen. Diese bearbeitet die Anfrage und gibt einen JSON-String mit den Videoinformationen zurück. Dieser JSON-String wird aus dem ArrayList<VideoInfo> erstellt. Diese werden dann auch an das Web-Interface zurückgegeben. 
 
 \item \textbf{authenticateAccount(accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -54,7 +54,7 @@ Bearbeitet eine Anfrage zur Authentifizierungs des Web-Interfaces oder App. Dabe
 \item \textbf{createAccount(accountData: String uuid :String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage zur Accounterstellungs des Web-Interfaces. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird im \nameref{service:klasse:AccountManager} die Methode registerAccount(uuid :String) aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
+Bearbeitet eine Anfrage zur Accounterstellung des Web-Interfaces. Die Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar, die zur Accountverifizierung dient. Dabei wird im \nameref{service:klasse:AccountManager} die Methode registerAccount(uuid :String) aufgerufen. Die Rückgabe gibt Meldung über das Ergebnis der Anfrage an das Web-Interface.
 
 \item \textbf{changeAccount(accountDataNew: String, accountData: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
@@ -69,7 +69,7 @@ Bearbeitet eine Anfrage zur Löschung eines Accounts des Web-Interfaces. Es wird
 \item \textbf{verifyAccount(accountData :String, uuid: String): String}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine Eindeutige id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück.
+Bearbeitet eine Anfrage zur Verifizierung der E-Mail eines Accounts. Die Übergabe ``uuid'' stellt eine eindeutige Id des Accounts dar. Die Methode gibt einen JSON-String mit dem Ergebnis zurück.
 
 \item \textbf{setUpForRequest(accountData: String)}\hfill\\
 \textbf{Sichtbarkeit} private

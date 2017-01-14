@@ -17,8 +17,7 @@ PasswordHash des Accounts.
 \item \textbf{id: int} \hfill\\ 
 \textbf{Sichtbarkeit} private  
 
-Die ``id'' ist identisch der ``id'' in der Tabelle User der Datenbank.
-
+Die ``id'' ist identisch mit der ``id'' in der Tabelle User der Datenbank.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -28,7 +27,6 @@ Die ``id'' ist identisch der ``id'' in der Tabelle User der Datenbank.
 \textbf{Sichtbarkeit} public
 
 Der Konstruktor nimmt ein JSON-Objekt entgegen, wertet die Informationen aus und setzt die Attribute. Die Information ``password'' wird mit der Methode ``hashPassword(password: String)'' gehasht und dann gesetzt.
-
 \end{itemize}
 
 \underline{Methoden}
@@ -38,5 +36,4 @@ Der Konstruktor nimmt ein JSON-Objekt entgegen, wertet die Informationen aus und
 \textbf{Sichtbarkeit} private
 
 Die Methode nimmt das im Klartext gegebene Passwort und hasht dieses.
-
 \end{itemize}

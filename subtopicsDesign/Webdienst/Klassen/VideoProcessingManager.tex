@@ -8,13 +8,13 @@ Der VideoProcessingManager ist dafür zuständig, die Bearbeitung der hochgelade
 \textbf{Sichtbarkeit} private \newline
 \textbf{statisch}
 
-Größe des Worker-Thread-Pools
+Größe des Worker-Thread-Pools.
 
 \item \textbf{QUEUE\_SIZE: int} \hfill\\ 
 \textbf{Sichtbarkeit} private \newline
 \textbf{statisch}
 
-Größe der Warteschlange für die Anfragen
+Größe der Warteschlange für die Anfragen.
 
 \item \textbf{instance: VideoProcessingManager} \hfill\\
 \textbf{Sichtbarkeit} private \newline
@@ -25,12 +25,12 @@ Einzelstück des VideoProcessingManagers.
 \item \textbf{queue: BlockingQueue} \hfill\\
 \textbf{Sichtbarkeit} private 
 
-Warteschlange für die Anfragen
+Warteschlange für die Anfragen.
 
 \item \textbf{executor: ExecutorService} \hfill\\ 
 \textbf{Sichtbarkeit} private
 
-Koordinator für die Verteilung der Aufgaben auf die Worker-Threads
+Koordinator für die Verteilung der Aufgaben auf die Worker-Threads.
 \end{itemize}
 
 \underline{Konstruktoren}
@@ -61,5 +61,4 @@ Erzeugt aus den gegebenen Parametern eine neue \nameref{service:klasse:VideoProc
 \textbf{Sichtbarkeit} public
 
 Beendet den ExecutorService nachdem alle Worker-Threads ihre Arbeit beendet haben.
-
 \end{itemize}

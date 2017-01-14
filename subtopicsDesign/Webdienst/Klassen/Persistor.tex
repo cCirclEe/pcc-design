@@ -6,6 +6,7 @@ Der Persistor fügt die Metadaten in die Video-Datei ein und legt das Video lang
 \begin{itemize}
 \itemsep0pt
 \item \textbf{Persistor()} \hfill\\
+
 Standardkonstruktor
 \end{itemize}
 
@@ -20,6 +21,6 @@ Implementiert die Methode execute(..) von IStage. Ruft die Methode anonymize(..)
 \item \textbf{persist (video: File, metadata: Metadata): boolean}\hfill\\
 \textbf{Sichtbarkeit} public
 
-Lädt das video und fügt alle metadata in die Metadaten des Videos ab. Daraufhin wird das Video mithilfe des \nameref{service:klasse:DatabaseManager}s in den permanenten Speicher des Services abgelegt und der Datenbank hinzugefügt.
+Lädt das Video und fügt alle Metadaten in die Metadaten des Videos ab. Daraufhin wird das Video mithilfe des \nameref{service:klasse:DatabaseManager}s in den permanenten Speicher des Services abgelegt und der Datenbank hinzugefügt.
 
 \end{itemize}
