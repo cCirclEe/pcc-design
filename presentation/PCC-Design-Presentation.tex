@@ -19,6 +19,14 @@
 
 \usepackage{templates/beamerthemekit}
 \usepackage{wrapfig}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}	% german hyphenation, quotes, etc
+\usepackage{tikz}
+\usepackage{hyperref}
+% \usepackage[ngerman]{translator}
+
 % \usepackage{templates/beamerthemekitwide}
 
 %% TITLE PICTURE
@@ -64,97 +72,220 @@
 \begin{document}
 
 % change the following line to "ngerman" for German style date and logos
-\selectlanguage{english}
+\selectlanguage{ngerman}
 
 %title page
 \begin{frame}
 	\titlepage
 \end{frame}
 
-\section{Aufgabenstellung}
-\subsection{Szenario}
-\begin{frame}{Szenario}
-	\begin{center}
-		%\includegraphics[scale=0.55]{logos/UnfallSzenario} 
-		%\includegraphics[scale=0.25]{logos/UnfallSzenario2} 
-		%\includegraphics[scale=0.25]{logos/UnfallSzenario3} 
-	\end{center}
-\end{frame}
+%###############################################################################################
 
-\subsection{Aufgabenstellung}
+\section{Aufgabenstellung}
 \begin{frame}{Aufgabenstellung}
 	\begin{itemize}
 		\item Funktionsfähiger Entwurf nach Vorgaben des Pflichtenhefts
 		\pause
-		\item Aussagekäftige Klassendiagramme
+		\item Aussagekräftige Klassendiagramme
 		\pause
-		\item Beschreibung der Klassen
+		\item Beschreibung der Klassen, Module, Datenspeicherung und Architektur
 	\end{itemize}
 \end{frame}
+\subsection{Ziel}
+\begin{frame}{Ziel}
+\begin{center}
+\begin{tikzpicture}
+  \node (img1) {\includegraphics[height=7cm]{resources/explosion.jpg}};
+  \node (img2) at (img1.center) {\includegraphics[height=3cm]{resources/cross.png}};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\section{Vorgehensweise}
+\begin{frame}{Vorgehensweise}
+\begin{center}
+\includegraphics[scale=1]{resources/fing_hard.jpg}
+\end{center}
+\end{frame}
+\subsection{Skizzieren}
+\begin{frame}{Skizzieren}
+\begin{center}
+\includegraphics[scale=0.3]{resources/draft.jpg}
+\end{center}
+\end{frame}
+\subsection{Klassenabhängigkeiten + Schnittstellen}
+\begin{frame}{Klassenabhängigkeiten + Schnittstellen}
+\begin{center}
+\includegraphics[scale=0.3]{resources/basic_relations.jpg}
+\end{center}
+\end{frame}
+\subsection{Ausarbeitung Klassen + Module}
+\begin{frame}{Ausarbeitung Klassen + Module}
+\begin{center}
+\includegraphics[scale=0.3]{resources/outline.jpg}
+\end{center}
+\end{frame}
+\subsection{Feinschliff}
+\begin{frame}{Feinschliff}
+\begin{center}
+\includegraphics[scale=0.2]{resources/review.jpg}
+\end{center}
+\end{frame}
+
+% ______________________________ 2 MINUTE MARK
 
 \section{App}
 \begin{frame}{App}
-  \begin{columns}[T]
-    \begin{column}{.5\textwidth}
+	\begin{itemize}
+    	\item Vorbereitung
 		\begin{itemize}
-    		\item Grundlegendes
-			\begin{itemize}
-				\item Vertraut machen mit Android API und Designprinzipien
-				\item Grundlegender Entwurf durch Anwenden von Entwurfsmustern
-				\item Feinschliff durch bessere Strukturierung und Namensgebung
-			\end{itemize}
-			\item Besondere Probleme
-			\begin{itemize}
-				\item Ringpuffer
-				\item Asynchrone Vorgänge in Android
-			\end{itemize}
+			\item Vertraut machen mit Android Framework und Designprinzipien
+			\pause
+			\item Einarbeiten in Camera API und Sensor API
+			\pause
 		\end{itemize}
-    \end{column}
-  \end{columns}
+		\item Umsetzung Entwurf
+		\begin{itemize}
+			\item GUI erweiterbar
+			\pause
+			\item Datenverarbeitung, Netzwerkanfragen, Kamera austauschbar / abgeschottet
+			\item -> Entwurfsmuster und -prinzipien angewendet
+			\pause
+			\item Feinschliff durch bessere Strukturierung und Namensgebung
+		\end{itemize}
+		\item Besondere Probleme
+		\begin{itemize}
+			\item Ringpuffer
+			\pause
+			\item Asynchrone Vorgänge in Android
+			\pause 
+			\item Kamera-Handling
+		\end{itemize}
+	\end{itemize}
 \end{frame}
+\subsection{Ringpuffer}
+\begin{frame}{Ringpuffer}
+\begin{center}
+\includegraphics[scale=0.33]{resources/ringbuffer_old.jpg}
+\end{center}
+\end{frame}
+\subsection{Ringpuffer}
+\begin{frame}{Ringpuffer}
+\begin{center}
+% \includegraphics[scale=0.3]{resources/ringbuffer_new.jpg}
+\end{center}
+\end{frame}
+
+% ______ LEAVE OUT CAMERA (or old new comparison) IF TIME TOO SHORT _______
+\subsection{Kamera}
+\begin{frame}{Kamera}
+\begin{center}
+\includegraphics[scale=0.33]{resources/camera_old.jpg}
+\end{center}
+\end{frame}
+\subsection{Kamera}
+\begin{frame}{Kamera}
+\begin{center}
+% \includegraphics[scale=0.3]{resources/camera_new.jpg}
+\end{center}
+\end{frame}
+
+% __________________________ 4 MINUTE MARK
 
 
 \section{Web-Interface}
 \begin{frame}{Web-Interface}
-  \begin{columns}[T]
-    \begin{column}{.5\textwidth}
-    		\begin{itemize}
-    			\item Grundlegendes
-    			\begin{itemize}
-					\item Vertraut machen mit Vaadin
-					\item Entwerfen Grundlegender Struktur einer Gui
-					\item Anzeige und Logik Funktionalität sinnvoll trennen
-				\end{itemize}
-    			\item Besondere Probleme
-    			\begin{itemize}
-					\item Kommunikation mit dem Web-Dienst
-					\item Entkoppeln von Logik und Anzeige
-				\end{itemize}
-    		\end{itemize}
-    \end{column}
-    \begin{column}{.5\textwidth}
-    		%\includegraphics[scale=0.5]{../subtopicsFuncspec/Res/Mockups/Webinterface_small_pres}
-    \end{column}
-  \end{columns}
+    \begin{itemize}
+    	\item Vorbereitung
+    	\begin{itemize}
+			\item Vertraut machen mit Vaadin
+			\pause
+			\item Analyse von Beispielen und Demos
+			\pause
+		\end{itemize}
+		\item Umsetzung Entwurf
+		\begin{itemize}
+			\item Entwerfen Grundlegender Struktur einer Gui
+			\pause
+			\item Anzeige und Logik entkoppeln
+			\pause
+		\end{itemize}
+    	\item Besondere Probleme
+    	\begin{itemize}
+			\item Entkoppeln von Logik und Anzeige
+			\pause
+			\item Kommunikation mit dem Web-Dienst
+		\end{itemize}
+    \end{itemize}
 \end{frame}
+\subsection{GUI}
+\begin{frame}{GUI}
+\begin{center}
+\includegraphics[scale=0.35]{resources/interface_gui.png}
+\end{center}
+\end{frame}
+\subsection{Logik}
+\begin{frame}{Logik}
+\begin{center}
+\includegraphics[scale=0.35]{resources/interface_logic.png}
+\end{center}
+\end{frame}
+\subsection{Serveranfragen}
+\begin{frame}{Serveranfragen}
+\begin{center}
+\includegraphics[scale=0.35]{resources/interface_serverconnection.png}
+\end{center}
+\end{frame}
+
+% __________________________6 MINUTE MARK
 
 \section{Web-Dienst}
 \begin{frame}{Web-Dienst}
 	\begin{itemize}
-		\item Grundlegendes
-			\begin{itemize}
-				\item Vertraut machen mit Jetty and Jersey
-				\item Rest Anfragen und JSON Objekte
-				\item Erstellen eines Grundlegenden Entwurfs
-			\end{itemize}
-		\pause
+		\item Vorbereitung
+		\begin{itemize}
+			\item Vertraut machen mit Jetty und Jersey
+			\pause
+			\item Einarbeiten in Rest Anfragen und JSON Objekte
+			\pause
+		\end{itemize}
+		\item Umsetzung Entwurf
+		\begin{itemize}
+			\item Einheitliche Schnittstelle nach außen
+			\pause
+			\item Authentifizierung bei jeder Anfrage
+			\pause
+			\item Schnittstellen, Datenablage und Videoverarbeitung trennen
+			\pause
+		\end{itemize}
 		\item Besondere Probleme
-			\begin{itemize}
-				\item Videoverarbeitung mit per Pipeline
-				\item Großer Umfang an Funktionalität
-			\end{itemize}
+		\begin{itemize}
+			\item Videoverarbeitung per Pipeline
+			\pause
+			\item Großer Umfang an Funktionalität
+		\end{itemize}
 	\end{itemize}
 \end{frame}
+\subsection{Schnittstelle}
+\begin{frame}{Schnittstelle}
+\begin{center}
+\includegraphics[scale=0.3]{resources/service_rest.png}
+\end{center}
+\end{frame}
+\subsection{Video Chain}
+\begin{frame}{Video Chain}
+\begin{center}
+\includegraphics[scale=0.3]{resources/service_vidchain.png}
+\end{center}
+\end{frame}
+\subsection{Datenbank}
+\begin{frame}{Datenbank}
+\begin{center}
+\includegraphics[scale=0.35]{resources/service_db.png}
+\end{center}
+\end{frame}
+
+% __________________________ 8 MINUTE MARK
 
 \section{Organisation}
 
@@ -195,39 +326,20 @@
   \end{columns}
 \end{frame}
 
-\subsection{Fazit}
-\begin{frame}{Fazit}
-   \begin{columns}[T]
-    \begin{column}{.5\textwidth}
-    		\begin{itemize}
-    		\item SCHEIS SCHWER DAS MAL ZU MACHEN
-    		\end{itemize}
-    \end{column}
-   \end{columns}
-\end{frame}
-
 \subsection{JIRA}
-\begin{frame}[allowframebreaks]{JIRA}
+\begin{frame}{JIRA}
 	\begin{figure}
 		\begin{center}
-			%\includegraphics[scale=0.18]{logos/JIRA01} 
-		\end{center}
-		\framebreak
-		\begin{center}
-			%\includegraphics[scale=0.18]{logos/JIRA02} 
+			\includegraphics[scale=0.25]{resources/jira_1.jpg} 
 		\end{center}
 	\end{figure}				
 \end{frame}
 
 \subsection{Github}
-\begin{frame}[allowframebreaks]{Github}
+\begin{frame}{Github} % [allowframebreaks]
 	\begin{figure}
 		\begin{center}
-			%\includegraphics[scale=0.20]{logos/Github} 
-		\end{center}
-		\framebreak
-		\begin{center}
-			%\includegraphics[scale=0.23]{logos/GithubStats} 
+			\includegraphics[scale=0.27]{resources/github_stats_commits.png}
 		\end{center}
 	\end{figure}				
 \end{frame}
@@ -236,8 +348,20 @@
 \begin{frame}{Gruppenarbeit}
 	\begin{figure}
 		\begin{center}
-			%\includegraphics[scale=0.16]{logos/Gruppenarbeit} 
+			\includegraphics[scale=0.16]{resources/Gruppenarbeit} 
 		\end{center}
-	\end{figure}	
+	\end{figure}	 
 \end{frame}
+
+\section{Quellen}
+\begin{frame}{Quellen}
+	\begin{itemize}
+		\item \url{https://www.planetdeadly.com/wp-content/uploads/massive-nuclear-explosion.jpg}
+		\item \url{http://www.unternehmer-portal.net/wp-content/uploads/rotes-kreuz-fehler-200x200.png}
+		\item \url{http://www.instructables.com/id/Traditional-Portrait-Painting-Step-by-Step/?ALLSTEPS}
+		\item \url{http://www.alifechangingjourney.com/wp-content/uploads/2013/01/too-many-thoughts.jpg}
+		\item \url{https://de.wikipedia.org/wiki/Mona_Lisa}
+	\end{itemize}	
+\end{frame}
+
 \end{document}
