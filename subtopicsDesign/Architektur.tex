@@ -37,11 +37,11 @@ Das Model ist dafür zuständig, Daten zu verwalten und zu bearbeiten. Die App h
 
 \section{REST-Architektur} \label{allg:Rest}
 
-Der Web-Dienst stellt bestimmte Funktionalitäten für die App und das Web-Interface bereit. Um diese Funktionen auszuführen, haben wir den Web-Dienst mit einer REST-Architektur  versehen. Das bedeutet im Allgemeinen das wir die Prinzipien dieser Architektur in dem Web-Dienst verwirklicht haben.\newline
+Der Web-Dienst stellt bestimmte Funktionalitäten für die App und das Web-Interface bereit. Um diese Funktionen auszuführen, haben wir den Web-Dienst mit einer REST-Architektur versehen. Das bedeutet, dass wir die Prinzipien dieser Architektur in dem Web-Dienst verwirklicht haben.\newline
 
 Das Client-Server Prinzip besagt zum einen, das unser Web-Dienst Funktionen bereit stellt, welche über die Clients angefragt werden können. Eine weiteres Prinzip der REST-Architektur ist den Clients nur eine Schnittstelle zum Server anzubieten. Somit sind die dahinter liegenden Schichten für App und Web-Interface verborgen. Diese einheitliche Schnittstelle lässt sich via URLs von den Clients aus erreichen.\newline
 
-Die Clients versenden POST- und GET-Anfragen an den Server, welcher die REST-API verwendet, um Daten zurückzugeben(GET) oder zu sichern(POST). Dabei wird die URL ausgelesen, welche Informationen und Daten über Hypermedia beinhalten können. Diese werden für die Funktion verwendet und gegebenen falls an untere Schichten des Servers weitergeleitet.\newline
+Die Clients versenden POST- und GET-Anfragen an den Server, welcher die REST-API verwendet, um Daten zurückzugeben (GET) oder zu sichern (POST). Dabei wird die URL ausgelesen, die Informationen und Daten über Hypermedia beinhalten kann. Diese werden für die Funktion verwendet und an die Module des Servers weitergeleitet.\newline
 
 \section{Entwurfsmuster} \label{allg:Entwurfsmuster}
 Der Einsatz weiterer Enwurfsmuster innerhalb der Module erleichtert die Lesbarkeit und begünstigt die Flexibilität des Codes noch weiter. Eingesetzte Muster sind in den entsprechenden Kapiteln für App~\eqref{chap:app}, Web Interface~\eqref{chap:interface} und Web Dienst~\eqref{chap:service} genauer beschrieben.
