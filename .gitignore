@@ -6,7 +6,7 @@
 *.toc
 *.swp
 *.synctex.gz
-*.pdf
+presentation/*/*.pdf
 *.cb*
 *.glg
 *.acn
