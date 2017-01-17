@@ -20,7 +20,7 @@ Zusätzlich wird die Webanwendung in Web-Dienst und Web-Interface unterteilt, um
 
 \section{Model View Presenter (MVP)} \label{allg:MVP}
 
-Beim Design der Privacy-Crash-Cam wird schnell deutlich, dass eine strikte Trennung zwischen Datenbank, Applikationslogik und Benutzeroberfläche von Vorteil ist. Das Model-View-Presenter-Prinzip (kurz: MVP) realisiert diese Trennung und wird auf auf App und Webanwendung eingesetzt.\newline\par
+Beim Design der Privacy-Crash-Cam wird schnell deutlich, dass eine strikte Trennung zwischen Datenbank, Applikationslogik und Benutzeroberfläche von Vorteil ist. Das Model-View-Presenter-Prinzip (MVP) realisiert diese Trennung und wird in der App und in der Webanwendung eingesetzt.\newline\par
 
 \begin{figure}[ht]
 	\centering
@@ -29,11 +29,11 @@ Beim Design der Privacy-Crash-Cam wird schnell deutlich, dass eine strikte Trenn
 	\label{fig:overview_mvp}
 \end{figure}
 
-Sowohl App, als auch Web-Interface besitzen ein eigenes View-Modul. Dieses ist für die graphische Benutzeroberfläche zuständig. In der App wird die View durch XML-Dokumente und Activities implementiert, die das Layout definieren. Das Web-Interface verwendet dafür die von Vaadin bereitgestellte View-Klasse, von der man eigene Klassen ableiten kann.\newline\par
+Sowohl App als auch Web-Interface besitzen ein eigenes View-Modul. Dieses ist für die graphische Benutzeroberfläche zuständig. In der App wird die View durch XML-Dokumente und Activities implementiert, die das Layout definieren. Das Web-Interface verwendet dafür die von Vaadin bereitgestellte View-Klasse, von der man eigene Klassen ableiten kann.\newline\par
 
 Die Applikationslogik wird durch die Presenter-Ebene umgesetzt. App und Web-Interface besitzen eigene Presenter-Module, die an die jeweilige Plattform angepasst sind. Der Presenter handhabt Eingaben durch Nutzer oder Sensoren und koordiniert die darauf folgenden Aktionen, wie das Aktualisieren der Ansichten und Änderungen des Models.\newline\par
 
-Das Model ist dafür zuständig, Daten zu verwalten und zu bearbeiten. Die App hat dafür ein eigenes Modul, das den Speicherzugriff regelt. Das Model des Web-Interfaces ist der Web-Dienst, der alle Videodaten verwaltet.\newline\par
+Das Model ist dafür zuständig, Daten zu verwalten und zu bearbeiten. Die App hat dafür ein eigenes Modul, das den Speicherzugriff regelt. Das Model des Web-Interfaces ist der Web-Dienst, der alle Nutzer- und Videodaten verwaltet.\newline\par
 
 \section{REST-Architektur} \label{allg:Rest}
 
