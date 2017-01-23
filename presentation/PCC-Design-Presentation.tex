@@ -144,14 +144,12 @@
 			\item Einarbeiten in Camera API und Sensor API
 			\pause
 		\end{itemize}
-		\item Umsetzung Entwurf
+		\item Ziele für Entwurf
 		\begin{itemize}
 			\item GUI erweiterbar
 			\pause
 			\item Datenverarbeitung, Netzwerkanfragen, Kamera austauschbar / abgeschottet
-			\item -> Entwurfsmuster und -prinzipien angewendet
 			\pause
-			\item Feinschliff durch bessere Strukturierung und Namensgebung
 		\end{itemize}
 		\item Besondere Probleme
 		\begin{itemize}
@@ -159,16 +157,16 @@
 			\pause
 			\item Asynchrone Vorgänge in Android
 			\pause 
-			\item Kamera-Handling
+			\item Kamera-Handling + Austauschbarkeit
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-\subsection{Ringpuffer}
-\begin{frame}{Ringpuffer}
-\begin{center}
-\includegraphics[scale=0.33]{resources/ringbuffer_old.jpg}
-\end{center}
-\end{frame}
+%\subsection{Ringpuffer}
+%\begin{frame}{Ringpuffer}
+%\begin{center}
+%\includegraphics[scale=0.33]{resources/ringbuffer_old.jpg}
+%\end{center}
+%\end{frame}
 \subsection{Ringpuffer}
 \begin{frame}{Ringpuffer}
 \begin{center}
@@ -177,12 +175,12 @@
 \end{frame}
 
 % ______ LEAVE OUT CAMERA (or old new comparison) IF TIME TOO SHORT _______
-\subsection{Kamera}
-\begin{frame}{Kamera}
-\begin{center}
-\includegraphics[scale=0.33]{resources/camera_old.jpg}
-\end{center}
-\end{frame}
+%\subsection{Kamera}
+%\begin{frame}{Kamera}
+%\begin{center}
+%\includegraphics[scale=0.33]{resources/camera_old.jpg}
+%\end{center}
+%\end{frame}
 \subsection{Kamera}
 \begin{frame}{Kamera}
 \begin{center}
@@ -203,9 +201,9 @@
 			\item Analyse von Beispielen und Demos
 			\pause
 		\end{itemize}
-		\item Umsetzung Entwurf
+		\item Ziele für Entwurf
 		\begin{itemize}
-			\item Entwerfen Grundlegender Struktur einer Gui
+			\item Gute Usability
 			\pause
 			\item Anzeige und Logik entkoppeln
 			\pause
@@ -249,7 +247,7 @@
 			\item Einarbeiten in Rest Anfragen und JSON Objekte
 			\pause
 		\end{itemize}
-		\item Umsetzung Entwurf
+		\item Ziele für Entwurf
 		\begin{itemize}
 			\item Einheitliche Schnittstelle nach außen
 			\pause
@@ -263,8 +261,16 @@
 			\item Videoverarbeitung per Pipeline
 			\pause
 			\item Großer Umfang an Funktionalität
+			\pause
+			\item Schnittstelle
 		\end{itemize}
 	\end{itemize}
+\end{frame}
+\subsection{Schnittstelle}
+\begin{frame}{Schnittstelle}
+\begin{center}
+\includegraphics[scale=0.3]{resources/overview_mvp.jpg}
+\end{center}
 \end{frame}
 \subsection{Schnittstelle}
 \begin{frame}{Schnittstelle}
