@@ -59,7 +59,7 @@
 
 \title[PCC]{Privacy Crash Cam:\\ Entwurf}
 \subtitle{App, Web-Interface und Web-Dienst}
-\author{Giorgio G., Christoph H., David L.,  Josh R.,  Fabian W.}
+\author{Giorgio G., Christoph H., \textbf{David L.},  Josh R.,  \textbf{Fabian W.}}
 
 \institute{Karlsruher Institut f\"ur Technologie, Fraunhofer Institut f\"ur Optronik, Systemtechnik und Bildauswertung}
 
@@ -80,155 +80,157 @@
 \end{frame}
 
 %###############################################################################################
-
+%									Aufgabenstellung											  %
+%###############################################################################################
 \section{Aufgabenstellung}
+\subsection{Szenario}
+\begin{frame}{Szenario}
+	\begin{center}
+		%\includegraphics[scale=0.55]{logos/UnfallSzenario} 
+		\includegraphics[scale=0.25]{logos/UnfallSzenario2} 
+		%\includegraphics[scale=0.25]{logos/UnfallSzenario3} 
+	\end{center}
+\end{frame}
+
+\subsection{Aufgabenstellung}
 \begin{frame}{Aufgabenstellung}
 	\begin{itemize}
-		\item Funktionsfähiger Entwurf nach Vorgaben des Pflichtenhefts
-		\pause
-		\item Aussagekräftige Klassendiagramme
-		\pause
-		\item Beschreibung der Klassen, Module, Datenspeicherung und Architektur
+		\item Verschl\"usselnde Crashcam-App
+		\item Web-Interface zur Videoverwaltung
+		\item Web-Dienst f\"ur Entschl\"usselung, Bildauswertung und Anonymisierung
 	\end{itemize}
 \end{frame}
-\subsection{Ziel}
-\begin{frame}{Ziel}
-\begin{center}
-\begin{tikzpicture}
-  \node (img1) {\includegraphics[height=7cm]{resources/explosion.jpg}};
-  \node (img2) at (img1.center) {\includegraphics[height=3cm]{resources/cross.png}};
-\end{tikzpicture}
-\end{center}
+
+\subsection{Aufgabenstellung - App}
+\begin{frame}{Aufgabenstellung - App}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Ansichten
+			\begin{itemize}
+				\item Kamera
+				\item Videos
+				\item Einstellungen
+			\end{itemize}
+			\item 2 Kamera-Modi
+			\begin{itemize}
+				\item Beobachtungsmodus
+				\begin{itemize}
+					\item Ringpuffer (1 min)
+				\end{itemize}
+				\item Aufnahmemodus
+				\begin{itemize}
+					\item persistieren
+					\item verschl\"usseln
+				\end{itemize}
+			\end{itemize}
+			\item Verschl\"usselung
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		\includegraphics[scale=0.075]{logos/Mockups/Portrait_camera_view_menu_phone}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\section{Vorgehensweise}
-\begin{frame}{Vorgehensweise}
-\begin{center}
-\includegraphics[scale=1]{resources/fing_hard.jpg}
-\end{center}
-\end{frame}
-\subsection{Skizzieren}
-\begin{frame}{Skizzieren}
-\begin{center}
-\includegraphics[scale=0.3]{resources/draft.jpg}
-\end{center}
-\end{frame}
-\subsection{Klassenabhängigkeiten + Schnittstellen}
-\begin{frame}{Klassenabhängigkeiten + Schnittstellen}
-\begin{center}
-\includegraphics[scale=0.3]{resources/basic_relations.jpg}
-\end{center}
-\end{frame}
-\subsection{Ausarbeitung Klassen + Module}
-\begin{frame}{Ausarbeitung Klassen + Module}
-\begin{center}
-\includegraphics[scale=0.3]{resources/outline.jpg}
-\end{center}
-\end{frame}
-\subsection{Feinschliff}
-\begin{frame}{Feinschliff}
-\begin{center}
-\includegraphics[scale=0.2]{resources/review.jpg}
-\end{center}
+
+\subsection{Aufgabenstellung - Web-Interface}
+\begin{frame}{Aufgabenstellung - Web-Interface}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Ansicht anonymisierter Videos
+    			\begin{itemize}
+					\item Herunterladen
+					\item Info
+					\item L\"oschen
+				\end{itemize}
+    			\item Accountverwaltung
+    			\begin{itemize}
+					\item Erstellen
+					\item \"Andern
+					\item L\"oschen
+				\end{itemize}
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		\includegraphics[scale=0.5]{logos/Mockups/Webinterface_small_pres}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-% ______________________________ 2 MINUTE MARK
-
-\section{App}
-\begin{frame}{App}
+\subsection{Aufgabenstellung - Web-Dienst}
+\begin{frame}{Aufgabenstellung - Web-Dienst}
 	\begin{itemize}
-    	\item Vorbereitung
-		\begin{itemize}
-			\item Vertraut machen mit Android Framework und Designprinzipien
-			\pause
-			\item Einarbeiten in Camera API und Sensor API
-			\pause
-		\end{itemize}
-		\item Ziele für Entwurf
+		\item Bearbeitet Anfragen der App und des Web-Interface
+		\item Videoverarbeitung
+			\begin{itemize}
+				\item entschl\"usseln
+				\item analysieren
+				\item anonymisieren
+			\end{itemize}
+		\item Datenverwaltung
+			\begin{itemize}
+				\item Accountdaten
+				\item Videodaten
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%###############################################################################################
+%											Ziele											      %
+%###############################################################################################
+
+\section{Ziele}
+\subsection{Ziele Entwurf - App}
+\begin{frame}{Ziele Entwurf - App}
+	\begin{itemize}
+    	\item Ziele für Entwurf
 		\begin{itemize}
 			\item GUI erweiterbar
-			\pause
 			\item Datenverarbeitung, Netzwerkanfragen, Kamera austauschbar / abgeschottet
-			\pause
 		\end{itemize}
 		\item Besondere Probleme
 		\begin{itemize}
 			\item Ringpuffer
-			\pause
 			\item Asynchrone Vorgänge in Android
-			\pause 
 			\item Kamera-Handling + Austauschbarkeit
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-%\subsection{Ringpuffer}
-%\begin{frame}{Ringpuffer}
-%\begin{center}
-%\includegraphics[scale=0.33]{resources/ringbuffer_old.jpg}
-%\end{center}
-%\end{frame}
-\subsection{Ringpuffer}
-\begin{frame}{Ringpuffer}
-\begin{center}
-\includegraphics[scale=0.3]{resources/ringbuffer_new.png}
-\end{center}
-\end{frame}
-
-% ______ LEAVE OUT CAMERA (or old new comparison) IF TIME TOO SHORT _______
-%\subsection{Kamera}
-%\begin{frame}{Kamera}
-%\begin{center}
-%\includegraphics[scale=0.33]{resources/camera_old.jpg}
-%\end{center}
-%\end{frame}
-\subsection{Kamera}
-\begin{frame}{Kamera}
-\begin{center}
-\includegraphics[scale=0.3]{resources/camera_new.png}
-\end{center}
-\end{frame}
-
-% __________________________ 4 MINUTE MARK
 
 
-\section{Web-Interface}
-\begin{frame}{Web-Interface}
+
+
+\subsection{Ziele Entwurf - Web-Interface}
+\begin{frame}{Ziele Entwurf - Web-Interface}
     \begin{itemize}
-    	\item Vorbereitung
-    	\begin{itemize}
-			\item Vertraut machen mit Vaadin
-			\pause
-			\item Analyse von Beispielen und Demos
-			\pause
-		\end{itemize}
 		\item Ziele für Entwurf
 		\begin{itemize}
 			\item Gute Usability
-			\pause
 			\item Anzeige und Logik entkoppeln
-			\pause
 		\end{itemize}
     	\item Besondere Probleme
     	\begin{itemize}
 			\item Entkoppeln von Logik und Anzeige
-			\pause
 			\item Kommunikation mit dem Web-Dienst
+			\item Vaadin
 		\end{itemize}
     \end{itemize}
 \end{frame}
-\subsection{GUI}
+\subsubsection{GUI}
 \begin{frame}{GUI}
 \begin{center}
 \includegraphics[scale=0.35]{resources/interface_gui.png}
 \end{center}
 \end{frame}
-\subsection{Logik}
+\subsubsection{Logik}
 \begin{frame}{Logik}
 \begin{center}
 \includegraphics[scale=0.35]{resources/interface_logic.png}
 \end{center}
 \end{frame}
-\subsection{Serveranfragen}
+\subsubsection{Serveranfragen}
 \begin{frame}{Serveranfragen}
 \begin{center}
 \includegraphics[scale=0.35]{resources/interface_serverconnection.png}
@@ -237,31 +239,24 @@
 
 % __________________________6 MINUTE MARK
 
-\section{Web-Dienst}
-\begin{frame}{Web-Dienst}
+\subsection{Ziele Entwurf - Web-Dienst}
+\begin{frame}{Ziele Entwurf - Web-Dienst}
 	\begin{itemize}
 		\item Vorbereitung
 		\begin{itemize}
 			\item Vertraut machen mit Jetty und Jersey
-			\pause
 			\item Einarbeiten in Rest Anfragen und JSON Objekte
-			\pause
 		\end{itemize}
 		\item Ziele für Entwurf
 		\begin{itemize}
 			\item Einheitliche Schnittstelle nach außen
-			\pause
 			\item Authentifizierung bei jeder Anfrage
-			\pause
 			\item Schnittstellen, Datenablage und Videoverarbeitung trennen
-			\pause
 		\end{itemize}
 		\item Besondere Probleme
 		\begin{itemize}
 			\item Videoverarbeitung per Pipeline
-			\pause
 			\item Großer Umfang an Funktionalität
-			\pause
 			\item Schnittstelle
 		\end{itemize}
 	\end{itemize}
@@ -291,83 +286,38 @@
 \end{center}
 \end{frame}
 
-% __________________________ 8 MINUTE MARK
+%###############################################################################################
+%											Github											      %
+%###############################################################################################
 
-\section{Organisation}
+\section{Github}
+\subsection{Github - Einf\"{u}hrung}
+\begin{frame}{Github - Einf\"{u}hrung}
+\begin{itemize}
+\item PSE Phasen in Git Repos \textbf{\href{https://github.com/rocklyve}{https://github.com/rocklyve}} \\
 
-\subsection{Aufgabenverteilung}
-\begin{frame}{Aufgabenverteilung}
-  \begin{columns}[T]
-    \begin{column}{.5\textwidth}
-    		\begin{itemize}
-    	\item Christoph H.
-			\begin{itemize}
+    	\begin{tabular}{| p{0.4\textwidth} | p{0.5\textwidth} |}
+  			\hline			
+  			Pflichtenheft & \textbf{\href{https://github.com/rocklyve/pcc-funcspec}{pcc-funcspec}}\\
+  			\hline			
+  			Entwurf & \textbf{\href{https://github.com/rocklyve/pcc-design}{pcc-design}}\\
+  			\hline			
+  			Implementierung 
+  			\begin{itemize}
+				\item App
 				\item Web-Interface
-				\item Präsentation
-			\end{itemize}
-		\item David L.
-			\begin{itemize}
 				\item Web-Dienst
-			\end{itemize}
-		\item Fabian W.
-			\begin{itemize}
-				\item Web-Dienst
-			\end{itemize}
-    		\end{itemize}
-    \end{column}
-    \begin{column}{.5\textwidth}
-    \begin{itemize}
-		\item Giorgio G.
-			\begin{itemize}
-				\item App
-				\item Präsentation
-			\end{itemize}
-		\item Josh R.
-			\begin{itemize}
-				\item App
-				\item Web-Dienst
-			\end{itemize}
+			\end{itemize} & \textbf{\href{https://github.com/rocklyve/pcc-imp}{pcc-imp}} \begin{itemize}
+				\item \textbf{\href{https://github.com/rocklyve/pcc-imp-app}{pcc-imp-app}}
+				\item \textbf{\href{https://github.com/rocklyve/pcc-imp-webinterface}{pcc-imp-webinterface}}
+				\item \textbf{\href{https://github.com/rocklyve/pcc-imp-webservice}{pcc-imp-webservice}}
+			\end{itemize}\\
+  			\hline
+  			Testphase & \textbf{\href{https://github.com/rocklyve/pcc-qa}{pcc-qa}}\\
+  			\hline
+  			Abschlusspr\"{a}sentation & \textbf{\href{https://github.com/rocklyve/pcc-present}{pcc-present}}\\
+		  	\hline  
+		\end{tabular}
 	\end{itemize}
-    \end{column}
-  \end{columns}
 \end{frame}
-
-\subsection{JIRA}
-\begin{frame}{JIRA}
-	\begin{figure}
-		\begin{center}
-			\includegraphics[scale=0.25]{resources/jira_1.jpg} 
-		\end{center}
-	\end{figure}				
-\end{frame}
-
-\subsection{Github}
-\begin{frame}{Github} % [allowframebreaks]
-	\begin{figure}
-		\begin{center}
-			\includegraphics[scale=0.27]{resources/github_stats_commits.png}
-		\end{center}
-	\end{figure}				
-\end{frame}
-
-\section{Gruppenarbeit}
-\begin{frame}{Gruppenarbeit}
-	\begin{figure}
-		\begin{center}
-			\includegraphics[scale=0.16]{resources/Gruppenarbeit} 
-		\end{center}
-	\end{figure}	 
-\end{frame}
-
-\subsection{Quellen}
-\begin{frame}{Quellen}
-	\begin{itemize}
-		\item \url{https://www.planetdeadly.com/wp-content/uploads/massive-nuclear-explosion.jpg}
-		\item \url{http://www.unternehmer-portal.net/wp-content/uploads/rotes-kreuz-fehler-200x200.png}
-		\item \url{http://www.instructables.com/id/Traditional-Portrait-Painting-Step-by-Step/?ALLSTEPS}
-		\item \url{http://www.alifechangingjourney.com/wp-content/uploads/2013/01/too-many-thoughts.jpg}
-		\item \url{https://de.wikipedia.org/wiki/Mona_Lisa}
-	\end{itemize}	
-\end{frame}
-
 \end{document}
