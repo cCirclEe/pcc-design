@@ -44,7 +44,7 @@
 % for a custom logo on the front page, copy your file into the 'logos'
 % directory, insert the filename in the line below and uncomment it
 
-\titlelogo{Logo_IOSB}
+%\titlelogo{Logo_IOSB}
 
 % (*.eps format if you use latex+dvips+ps2pdf,
 % *.jpg/*.png/*.pdf if you use pdflatex)
@@ -59,9 +59,9 @@
 
 \title[PCC]{Privacy Crash Cam:\\ Entwurf}
 \subtitle{App, Web-Interface und Web-Dienst}
-\author{Giorgio G., Christoph H., \textbf{David L.},  Josh R.,  \textbf{Fabian W.}}
+\author{David L., Fabian W.}
 
-\institute{Karlsruher Institut f\"ur Technologie, Fraunhofer Institut f\"ur Optronik, Systemtechnik und Bildauswertung}
+\institute{Fraunhofer Institut f\"ur Optronik, Systemtechnik und Bildauswertung, (KIT)}
 
 % Bibliography
 
@@ -185,11 +185,8 @@
 \subsection{Ziele Entwurf - App}
 \begin{frame}{Ziele Entwurf - App}
 	\begin{itemize}
-    	\item Ziele für Entwurf
-		\begin{itemize}
-			\item GUI erweiterbar
-			\item Datenverarbeitung, Netzwerkanfragen, Kamera austauschbar / abgeschottet
-		\end{itemize}
+		\item GUI erweiterbar
+		\item Datenverarbeitung, Netzwerkanfragen, Kamera austauschbar / abgeschottet
 		\item Besondere Probleme
 		\begin{itemize}
 			\item Ringpuffer
@@ -199,17 +196,11 @@
 	\end{itemize}
 \end{frame}
 
-
-
-
 \subsection{Ziele Entwurf - Web-Interface}
 \begin{frame}{Ziele Entwurf - Web-Interface}
     \begin{itemize}
-		\item Ziele für Entwurf
-		\begin{itemize}
-			\item Gute Usability
-			\item Anzeige und Logik entkoppeln
-		\end{itemize}
+		\item Gute Usability
+		\item Anzeige und Logik entkoppeln
     	\item Besondere Probleme
     	\begin{itemize}
 			\item Entkoppeln von Logik und Anzeige
@@ -218,41 +209,13 @@
 		\end{itemize}
     \end{itemize}
 \end{frame}
-\subsubsection{GUI}
-\begin{frame}{GUI}
-\begin{center}
-\includegraphics[scale=0.35]{resources/interface_gui.png}
-\end{center}
-\end{frame}
-\subsubsection{Logik}
-\begin{frame}{Logik}
-\begin{center}
-\includegraphics[scale=0.35]{resources/interface_logic.png}
-\end{center}
-\end{frame}
-\subsubsection{Serveranfragen}
-\begin{frame}{Serveranfragen}
-\begin{center}
-\includegraphics[scale=0.35]{resources/interface_serverconnection.png}
-\end{center}
-\end{frame}
-
-% __________________________6 MINUTE MARK
 
 \subsection{Ziele Entwurf - Web-Dienst}
 \begin{frame}{Ziele Entwurf - Web-Dienst}
 	\begin{itemize}
-		\item Vorbereitung
-		\begin{itemize}
-			\item Vertraut machen mit Jetty und Jersey
-			\item Einarbeiten in Rest Anfragen und JSON Objekte
-		\end{itemize}
-		\item Ziele für Entwurf
-		\begin{itemize}
-			\item Einheitliche Schnittstelle nach außen
-			\item Authentifizierung bei jeder Anfrage
-			\item Schnittstellen, Datenablage und Videoverarbeitung trennen
-		\end{itemize}
+		\item Einheitliche Schnittstelle nach außen
+		\item Authentifizierung bei jeder Anfrage
+		\item Schnittstellen, Datenablage und Videoverarbeitung trennen
 		\item Besondere Probleme
 		\begin{itemize}
 			\item Videoverarbeitung per Pipeline
@@ -261,28 +224,52 @@
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-\subsection{Schnittstelle}
-\begin{frame}{Schnittstelle}
+
+%###############################################################################################
+%											UML-Webdienst									      %
+%###############################################################################################
+
+\section{UML}
+\subsection{Web-Dienst - Schnittstelle}
+\begin{frame}{Web-Dienst - Schnittstelle}
 \begin{center}
 \includegraphics[scale=0.3]{resources/overview_mvp.jpg}
 \end{center}
 \end{frame}
-\subsection{Schnittstelle}
-\begin{frame}{Schnittstelle}
+\subsection{Web-Dienst - UML \"{U}berblick}
+\begin{frame}{Web-Dienst - UML \"{U}berblick}
+\begin{center}
+\includegraphics[scale=0.5]{resources/modules_overview.jpg}
+\end{center}
+\end{frame}
+\subsection{Web-Dienst - UML Diagramm}
+\begin{frame}{Web-Dienst - UML Diagramm}
+\begin{center}
+\includegraphics[scale=0.093]{resources/UMLSERVERPCC.jpg}
+\end{center}
+\end{frame}
+\subsection{Web-Dienst - Schnittstelle}
+\begin{frame}{Web-Dienst - Schnittstelle}
 \begin{center}
 \includegraphics[scale=0.3]{resources/service_rest.png}
 \end{center}
 \end{frame}
-\subsection{Video Chain}
-\begin{frame}{Video Chain}
-\begin{center}
-\includegraphics[scale=0.3]{resources/service_vidchain.png}
-\end{center}
-\end{frame}
-\subsection{Datenbank}
-\begin{frame}{Datenbank}
+\subsection{Web-Dienst - Datenbank}
+\begin{frame}{Web-Dienst - Datenbank}
 \begin{center}
 \includegraphics[scale=0.35]{resources/service_db.png}
+\end{center}
+\end{frame}
+\subsection{Web-Dienst - Datenbank}
+\begin{frame}{Web-Dienst - Datenbank}
+\begin{center}
+\includegraphics[scale=0.3]{resources/database_scheme.jpg}
+\end{center}
+\end{frame}
+\subsection{Web-Dienst - Video Chain}
+\begin{frame}{Web-Dienst - Video Chain}
+\begin{center}
+\includegraphics[scale=0.3]{resources/service_vidchain.png}
 \end{center}
 \end{frame}
 
@@ -320,4 +307,27 @@
 		\end{tabular}
 	\end{itemize}
 \end{frame}
+
+%###############################################################################################
+%											Demo											      %
+%###############################################################################################
+
+\section{Demo}
+\begin{frame}{Demo}
+	\begin{center}
+		\textbf{DEMO}
+	\end{center}
+\end{frame}
+
+%###############################################################################################
+%											Ende											      %
+%###############################################################################################
+
+\begin{frame}{Ende}
+	\begin{center}
+		\textbf{Vielen Dank f\"{u}r eure Aufmerksamkeit} \\
+		\textbf{Gibt es fragen?}
+	\end{center}
+\end{frame}
+
 \end{document}
